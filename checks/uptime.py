@@ -5,7 +5,7 @@ import os
 from urllib.parse import urlparse
 from concurrent.futures import ThreadPoolExecutor
 from playwright.sync_api import sync_playwright
-from playwright_stealth import stealth_sync
+from playwright_stealth import Stealth
 
 # Disable insecure request warnings for broken govt SSL certs
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -42,7 +42,7 @@ def check_portal_uptime(url: str) -> dict:
             user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
         )
         page = context.new_page()
-        stealth_sync(page)
+        Stealth().apply_stealth_sync(page)
         
         try:
             start_time = time.time()

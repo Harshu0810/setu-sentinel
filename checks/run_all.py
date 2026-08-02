@@ -3,6 +3,9 @@ import os
 from datetime import datetime, timezone
 from dotenv import load_dotenv
 from checks.uptime import check_portal_uptime
+from checks.accessibility import check_portal_accessibility
+from checks.translation import check_portal_translation
+from scoring.composite import calculate_composite_score
 
 load_dotenv()
 
@@ -24,7 +27,17 @@ def main():
         uptime_data = check_portal_uptime(url)
         print(f"  Uptime result: {uptime_data}")
         
-        # We will add accessibility and translation checks here later
+        # 2. Accessibility Check
+        accessibility_data = check_portal_accessibility(url)
+        print(f"  Accessibility result: {accessibility_data}")
+        
+        # 3. Translation Check
+        translation_data = check_portal_translation(url, target_lang="hi")
+        print(f"  Translation result: {translation_data}")
+        
+        # 4. Composite Scoring
+        comp_score = calculate_composite_score(uptime_data, accessibility_data, translation_data)
+        print(f"  Composite Score: {comp_score}")
         
         results.append({
             "name": p["name"],
@@ -32,10 +45,9 @@ def main():
             "category": p["category"],
             "languages": p["languages"],
             "uptime": uptime_data,
-            # Placeholders for future phases
-            "accessibility": {},
-            "translation": {},
-            "composite_score": 0
+            "accessibility": accessibility_data,
+            "translation": translation_data,
+            "composite_score": comp_score
         })
         
     # Generate timestamped snapshot

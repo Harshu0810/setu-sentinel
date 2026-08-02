@@ -8,12 +8,12 @@ PROVIDERS = {
     "groq": {
         "base_url": "https://api.groq.com/openai/v1",
         "api_key_env": "GROQ_API_KEY",
-        "model": "llama-4-scout-17b-16e-instruct",
+        "model": "llama-3.3-70b-versatile",
     },
     "gemini": {
         "base_url": "https://generativelanguage.googleapis.com/v1beta/openai/",
         "api_key_env": "GEMINI_API_KEY",
-        "model": "gemini-2.5-flash-lite",
+        "model": "gemini-2.0-flash",
     },
     # Ollama fallback (requires local setup)
     "ollama": {
