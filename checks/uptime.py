@@ -11,13 +11,30 @@ from playwright_stealth import Stealth
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 def check_link(url: str) -> tuple[str, bool, int]:
-    """Returns (url, is_broken, status_code)."""
+    """
+    Checks if a URL link is broken.
+    Uses HTTP GET with stream=True (only fetches response headers) instead of HTTP HEAD,
+    because many Indian Govt servers return 405 Method Not Allowed or 404 to HEAD requests.
+    """
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+        'Accept-Language': 'en-US,en;q=0.5'
+    }
+    
     try:
-        headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
-        resp = requests.head(url, timeout=5, headers=headers, verify=False, allow_redirects=True)
-        return (url, resp.status_code >= 400, resp.status_code)
+        # Use GET with stream=True so we only fetch headers without downloading body payload
+        resp = requests.get(url, timeout=6, headers=headers, verify=False, stream=True, allow_redirects=True)
+        status = resp.status_code
+        resp.close() # Close socket immediately
+        return (url, status >= 400, status)
     except requests.RequestException:
-        return (url, True, 0) # 0 means unreachable / Timeout / DNS error
+        # Fallback to HEAD if GET raises a connection error
+        try:
+            r_head = requests.head(url, timeout=5, headers=headers, verify=False, allow_redirects=True)
+            return (url, r_head.status_code >= 400, r_head.status_code)
+        except requests.RequestException:
+            return (url, True, 0) # 0 means unreachable / Timeout / DNS error
 
 def count_broken_links(links: list[str]) -> tuple[int, list[dict]]:
     valid_links = [l for l in links if l and l.startswith('http')]
