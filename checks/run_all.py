@@ -1,7 +1,13 @@
 import json
 import os
+import sys
 from datetime import datetime, timezone
 from dotenv import load_dotenv
+
+# Ensure UTF-8 output encoding for Windows terminals handling Devanagari text
+if hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(encoding='utf-8')
+
 from checks.uptime import check_portal_uptime
 from checks.accessibility import check_portal_accessibility
 from checks.translation import check_portal_translation
