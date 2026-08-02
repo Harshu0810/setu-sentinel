@@ -371,14 +371,28 @@
                 tr.onclick = () => openModal(p);
 
                 const subcat = p.subcategory || '';
-                const priorityBadge = p.priority === 1 ? '🔴' : p.priority === 2 ? '🟡' : '🟢';
+                
+                // Colored dot reflects true HEALTH SCORE & UPTIME status
+                let healthDot = '🔴';
+                if (isUp && score >= 75) healthDot = '🟢';
+                else if (isUp && score >= 50) healthDot = '🟡';
+
+                // Priority rendered as a distinct text badge (P1/P2/P3)
+                const priorityBadge = p.priority === 1 
+                    ? '<span class="px-1.5 py-0.5 text-[10px] font-semibold bg-rose-500/20 text-rose-300 border border-rose-500/30 rounded" title="Priority 1: High Citizen Usage">P1</span>' 
+                    : p.priority === 2 
+                    ? '<span class="px-1.5 py-0.5 text-[10px] font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/30 rounded" title="Priority 2: Important Portal">P2</span>' 
+                    : '<span class="px-1.5 py-0.5 text-[10px] font-semibold bg-gray-700/50 text-gray-400 border border-gray-700 rounded" title="Priority 3: General Portal">P3</span>';
 
                 tr.innerHTML = `
                     <td class="py-4 px-6 font-semibold text-white">
                         <div class="flex items-center gap-2">
-                            <span>${priorityBadge}</span>
+                            <span>${healthDot}</span>
                             <div>
-                                ${p.name}
+                                <div class="flex items-center gap-2">
+                                    <span>${p.name}</span>
+                                    ${priorityBadge}
+                                </div>
                                 <span class="block text-xs font-normal text-gray-400 mt-0.5 truncate max-w-xs">${p.url}</span>
                             </div>
                         </div>
