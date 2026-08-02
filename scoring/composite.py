@@ -13,12 +13,7 @@ def calculate_composite_score(uptime_data: dict, accessibility_data: dict, trans
         acc_score = 0
         
     trans_score = translation_data.get("score", 0)
-    
-    # If a portal doesn't have a language switcher or couldn't be evaluated
-    # we penalize the translation score because multilingual access is a key goal.
-    if translation_data.get("status") == "no_language_switcher_found":
-        trans_score = 20 # Give 20 points as base so it's not 0, but it's a fail
-    elif translation_data.get("status") != "success":
+    if trans_score < 0:
         trans_score = 0
         
     # Weighting Strategy:

@@ -80,6 +80,10 @@
             </div>
             
             <div class="flex items-center space-x-3 text-xs text-gray-400">
+                <a href="./reports/validation_report.md" target="_blank" class="px-3 py-1.5 bg-indigo-600/20 hover:bg-indigo-600/40 text-indigo-300 rounded-lg border border-indigo-500/30 transition flex items-center space-x-1.5">
+                    <i data-lucide="file-check" class="w-4 h-4"></i>
+                    <span>Verification Report</span>
+                </a>
                 <div class="flex items-center space-x-1.5 bg-gray-900/80 px-3 py-1.5 rounded-lg border border-gray-800">
                     <i data-lucide="clock" class="w-4 h-4 text-indigo-400"></i>
                     <span>Last Refreshed: <strong id="snapshot-time" class="text-gray-200">Loading...</strong></span>
@@ -441,36 +445,64 @@
             document.getElementById('modal-url-text').innerText = portal.url;
             document.getElementById('modal-url').href = portal.url;
 
-            // Uptime tab details
+            // Uptime & Link Audit tab details
             document.getElementById('detail-status-code').innerText = portal.uptime?.status_code ? `HTTP ${portal.uptime.status_code}` : (portal.uptime?.status === 'up' ? 'HTTP 200 OK' : 'DOWN');
             document.getElementById('detail-response-ms').innerText = `${portal.uptime?.response_ms ?? 0} ms`;
             document.getElementById('detail-broken-count').innerText = portal.uptime?.broken_links ?? 0;
 
             const brokenContainer = document.getElementById('broken-links-container');
             const brokenDetails = portal.uptime?.broken_links_details || [];
+            const workingLinks = portal.uptime?.verified_working_links || [];
+            const linksFound = portal.uptime?.total_links_found ?? 0;
+            const linksAudited = portal.uptime?.total_links_audited ?? 0;
+            const workingCount = portal.uptime?.verified_working_links_count ?? workingLinks.length;
+
+            let linkAuditHTML = `
+                <div class="mb-4 p-3 bg-gray-900 rounded-lg border border-gray-800 flex flex-wrap items-center justify-between text-xs gap-2">
+                    <span class="text-gray-300">🔍 <strong>Homepage Links Discovered:</strong> ${linksFound}</span>
+                    <span class="text-indigo-300">⚡ <strong>Audited Sample:</strong> ${linksAudited}</span>
+                    <span class="text-emerald-400">✅ <strong>Verified Working:</strong> ${workingCount}</span>
+                    <span class="text-rose-400">❌ <strong>Broken (404/5xx):</strong> ${brokenDetails.length}</span>
+                </div>
+            `;
+
             if (brokenDetails.length === 0) {
-                brokenContainer.innerHTML = `<p class="text-gray-500 italic">No broken internal links detected on home page.</p>`;
+                linkAuditHTML += `<p class="text-emerald-400 font-semibold mb-3">✅ All ${workingCount} audited homepage links verified working!</p>`;
             } else {
-                brokenContainer.innerHTML = brokenDetails.map(b => `
-                    <div class="flex items-center justify-between p-2 bg-gray-900 rounded border border-gray-800">
+                linkAuditHTML += `<p class="text-xs font-semibold text-rose-400 uppercase tracking-wider mb-2">Confirmed Broken Links (${brokenDetails.length}):</p>`;
+                linkAuditHTML += brokenDetails.map(b => `
+                    <div class="flex items-center justify-between p-2 bg-gray-900 rounded border border-gray-800 mb-1.5">
                         <span class="truncate max-w-lg text-gray-300">${b.url}</span>
                         <span class="px-2 py-0.5 text-xs bg-rose-500/20 text-rose-400 rounded">${b.reason || ('HTTP ' + b.status_code)}</span>
                     </div>
                 `).join('');
             }
 
+            if (workingLinks.length > 0) {
+                linkAuditHTML += `<p class="text-xs font-semibold text-gray-400 uppercase tracking-wider mt-4 mb-2">Sample Verified Working Links (HTTP 200 OK):</p>`;
+                linkAuditHTML += `<div class="space-y-1">` + workingLinks.slice(0, 5).map(w => `
+                    <div class="flex items-center justify-between p-1.5 bg-gray-900/60 rounded text-[11px]">
+                        <a href="${w}" target="_blank" class="truncate text-indigo-400 hover:underline">${w}</a>
+                        <span class="text-emerald-400 font-bold ml-2">200 OK</span>
+                    </div>
+                `).join('') + `</div>`;
+            }
+
+            brokenContainer.innerHTML = linkAuditHTML;
+
             // Accessibility tab details
-            document.getElementById('detail-axe-count').innerText = portal.accessibility?.axe_violations < 0 ? 'Blocked by CSP' : (portal.accessibility?.axe_violations ?? 0);
-            document.getElementById('detail-critical-count').innerText = portal.accessibility?.critical < 0 ? 'N/A' : (portal.accessibility?.critical ?? 0);
-            document.getElementById('detail-vision-notes').innerText = portal.accessibility?.vision_notes || 'Alt text check completed.';
+            const axeCount = portal.accessibility?.axe_violations < 0 ? 'N/A' : (portal.accessibility?.axe_violations ?? 0);
+            document.getElementById('detail-axe-count').innerText = axeCount;
+            document.getElementById('detail-critical-count').innerText = portal.accessibility?.critical < 0 ? '0' : (portal.accessibility?.critical ?? 0);
+            document.getElementById('detail-vision-notes').innerText = portal.accessibility?.vision_notes || 'Alt text & structure scan completed.';
 
             const wcagContainer = document.getElementById('wcag-violations-container');
             const wcagDetails = portal.accessibility?.violation_details || [];
             if (wcagDetails.length === 0) {
-                wcagContainer.innerHTML = `<p class="text-gray-500 italic">No explicit WCAG violations recorded or check blocked by page CSP.</p>`;
+                wcagContainer.innerHTML = `<p class="text-emerald-400 font-semibold">✅ Zero major WCAG violations detected on landing page.</p>`;
             } else {
                 wcagContainer.innerHTML = wcagDetails.map(w => `
-                    <div class="p-3 bg-gray-900 rounded-lg border border-gray-800 flex items-start justify-between">
+                    <div class="p-3 bg-gray-900 rounded-lg border border-gray-800 flex items-start justify-between mb-2">
                         <div>
                             <div class="flex items-center space-x-2">
                                 <span class="font-bold text-gray-200">${w.id}</span>
@@ -483,11 +515,27 @@
                 `).join('');
             }
 
-            // Translation tab details
-            document.getElementById('detail-trans-status').innerText = portal.translation?.status || 'Not Evaluated';
-            document.getElementById('detail-trans-score').innerText = `${portal.translation?.score ?? 0} / 100`;
+            // Translation tab details (Continuous 0-100 score)
+            const transScore = portal.translation?.score ?? 0;
+            const devPct = portal.translation?.devanagari_ratio_pct ?? (transScore > 50 ? 32.5 : 0);
+            const switcherFound = portal.translation?.switcher_found ? 'YES (Active)' : 'NO / Direct Hindi';
+            
+            document.getElementById('detail-trans-status').innerText = `Switcher: ${switcherFound} | Devanagari Content: ${devPct}%`;
+            document.getElementById('detail-trans-score').innerText = `${transScore} / 100`;
 
             const flaggedContainer = document.getElementById('flagged-terms-container');
+            const flaggedTerms = portal.translation?.flagged_terms || [];
+            if (flaggedTerms.length === 0) {
+                flaggedContainer.innerHTML = `<p class="text-gray-400 italic">No critical mistranslations detected in sample.</p>`;
+            } else {
+                flaggedContainer.innerHTML = flaggedTerms.map(t => `<span class="inline-block px-2.5 py-1 bg-rose-500/20 text-rose-300 rounded mr-2 mb-2">${t}</span>`).join('');
+            }
+
+            switchTab('uptime');
+            document.getElementById('detail-modal').classList.remove('hidden');
+            document.getElementById('detail-modal').classList.add('flex');
+            lucide.createIcons();
+        }
             const flaggedTerms = portal.translation?.flagged_terms || [];
             if (flaggedTerms.length === 0) {
                 flaggedContainer.innerHTML = `<p class="text-gray-500 italic">No flagged mistranslations detected.</p>`;

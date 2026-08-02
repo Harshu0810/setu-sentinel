@@ -37,14 +37,20 @@ def check_link_with_context(context, url: str) -> tuple[str, bool, int]:
         except Exception:
             return (url, True, 0) # 0 means unreachable / Timeout / DNS error
 
-def count_broken_links_context(context, links: list[str]) -> tuple[int, list[dict]]:
+def audit_portal_links(context, links: list[str]) -> tuple[int, int, list[str], list[dict]]:
+    """
+    Audits extracted portal links and returns:
+    (total_found, total_audited, working_links_list, broken_links_details)
+    """
     valid_links = [l for l in links if l and l.startswith('http') and not any(l.endswith(ext) for ext in ['.pdf', '.zip', '.doc', '.xlsx'])]
     valid_links = list(set(valid_links))
     
-    # Cap at 25 links per page to avoid overloading portals
-    to_check = valid_links[:25]
+    total_found = len(valid_links)
+    to_check = valid_links[:30] # Audit sample cap
     
+    working_links = []
     broken_details = []
+    
     for url in to_check:
         url_res, is_broken, status = check_link_with_context(context, url)
         if is_broken:
@@ -54,8 +60,10 @@ def count_broken_links_context(context, links: list[str]) -> tuple[int, list[dic
                 "status_code": status,
                 "reason": reason
             })
+        else:
+            working_links.append(url_res)
         
-    return len(broken_details), broken_details
+    return total_found, len(to_check), working_links, broken_details
 
 def check_portal_uptime(url: str) -> dict:
     is_ci = os.environ.get("CI", "").lower() == "true"
@@ -85,17 +93,30 @@ def check_portal_uptime(url: str) -> dict:
                 status = 200 # WAF anti-bot block, site is up for humans
                 
             links = page.eval_on_selector_all("a[href]", "els => els.map(e => e.href)")
-            broken_count, broken_details = count_broken_links_context(context, links)
+            total_found, total_audited, working_links, broken_details = audit_portal_links(context, links)
             
             return {
                 "status": "up" if status and status < 400 else "down",
                 "response_ms": load_time_ms,
-                "broken_links": broken_count,
+                "total_links_found": total_found,
+                "total_links_audited": total_audited,
+                "verified_working_links_count": len(working_links),
+                "verified_working_links": working_links[:10], # Sample of verified working links
+                "broken_links": len(broken_details),
                 "broken_links_details": broken_details,
                 "broken_forms": 0,
                 "status_code": status or 200
             }
         except Exception as e:
-            return {"status": "down", "error": str(e), "broken_links": 0, "broken_links_details": []}
+            return {
+                "status": "down",
+                "error": str(e),
+                "total_links_found": 0,
+                "total_links_audited": 0,
+                "verified_working_links_count": 0,
+                "verified_working_links": [],
+                "broken_links": 0,
+                "broken_links_details": []
+            }
         finally:
             browser.close()
