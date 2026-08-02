@@ -1,0 +1,192 @@
+{
+  "run_at": "2026-08-02T06:48:33.068158Z",
+  "portals": [
+    {
+      "name": "National Portal of India",
+      "url": "https://www.india.gov.in",
+      "category": "Central",
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "down",
+        "response_ms": 287,
+        "broken_links": 0,
+        "broken_forms": 0,
+        "status_code": 403
+      },
+      "accessibility": {},
+      "translation": {},
+      "composite_score": 0
+    },
+    {
+      "name": "DigiLocker",
+      "url": "https://www.digilocker.gov.in",
+      "category": "Central",
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 1188,
+        "broken_links": 1,
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {},
+      "translation": {},
+      "composite_score": 0
+    },
+    {
+      "name": "UMANG",
+      "url": "https://web.umang.gov.in",
+      "category": "Central",
+      "languages": [
+        "hi",
+        "bn",
+        "ta"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 1077,
+        "broken_links": 0,
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {},
+      "translation": {},
+      "composite_score": 0
+    },
+    {
+      "name": "eCourts",
+      "url": "https://ecourts.gov.in",
+      "category": "Judiciary",
+      "languages": [
+        "hi",
+        "mr"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 6480,
+        "broken_links": 27,
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {},
+      "translation": {},
+      "composite_score": 0
+    },
+    {
+      "name": "MyGov",
+      "url": "https://www.mygov.in",
+      "category": "Central",
+      "languages": [
+        "hi",
+        "ta",
+        "te"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 3581,
+        "broken_links": 0,
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {},
+      "translation": {},
+      "composite_score": 0
+    },
+    {
+      "name": "Income Tax e-Filing",
+      "url": "https://www.incometax.gov.in",
+      "category": "Central",
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 1999,
+        "broken_links": 3,
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {},
+      "translation": {},
+      "composite_score": 0
+    },
+    {
+      "name": "UIDAI",
+      "url": "https://uidai.gov.in",
+      "category": "Central",
+      "languages": [
+        "hi",
+        "bn",
+        "gu"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 118,
+        "broken_links": 0,
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {},
+      "translation": {},
+      "composite_score": 0
+    },
+    {
+      "name": "e-Mitra Rajasthan",
+      "url": "https://emitra.rajasthan.gov.in",
+      "category": "State",
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 2335,
+        "broken_links": 2,
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {},
+      "translation": {},
+      "composite_score": 0
+    },
+    {
+      "name": "Rajasthan Single Sign On",
+      "url": "https://sso.rajasthan.gov.in",
+      "category": "State",
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 642,
+        "broken_links": 7,
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {},
+      "translation": {},
+      "composite_score": 0
+    },
+    {
+      "name": "UP Bhulekh",
+      "url": "https://upbhulekh.gov.in",
+      "category": "State",
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 7648,
+        "broken_links": 6,
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {},
+      "translation": {},
+      "composite_score": 0
+    }
+  ]
+}

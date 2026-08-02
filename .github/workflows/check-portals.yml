@@ -1,0 +1,39 @@
+name: check-portals
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"   # every 6 hours
+  workflow_dispatch: {}       # manual trigger — your main test loop
+
+jobs:
+  check:
+    runs-on: ubuntu-latest    # 4 vCPU / 16GB RAM / 14GB SSD on public repos, free
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          playwright install --with-deps chromium
+
+      - name: Run checks
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python -m checks.run_all
+
+      - name: Commit results
+        run: |
+          git config user.name "setu-sentinel-bot"
+          git config user.email "actions@github.com"
+          git add data/history/
+          git commit -m "Portal health snapshot $(date -u +%Y-%m-%dT%H-%M)" || echo "No changes"
+          git push

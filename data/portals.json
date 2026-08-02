@@ -1,0 +1,80 @@
+[
+  {
+    "name": "National Portal of India",
+    "url": "https://www.india.gov.in",
+    "category": "Central",
+    "languages": ["hi"]
+  },
+  {
+    "name": "DigiLocker",
+    "url": "https://www.digilocker.gov.in",
+    "category": "Central",
+    "languages": ["hi"]
+  },
+  {
+    "name": "UMANG",
+    "url": "https://web.umang.gov.in",
+    "category": "Central",
+    "languages": ["hi"]
+  },
+  {
+    "name": "eCourts",
+    "url": "https://ecourts.gov.in",
+    "category": "Judiciary",
+    "languages": ["hi"]
+  },
+  {
+    "name": "MyGov",
+    "url": "https://www.mygov.in",
+    "category": "Central",
+    "languages": ["hi"]
+  },
+  {
+    "name": "Income Tax e-Filing",
+    "url": "https://www.incometax.gov.in",
+    "category": "Central",
+    "languages": ["hi"]
+  },
+  {
+    "name": "UIDAI",
+    "url": "https://uidai.gov.in",
+    "category": "Central",
+    "languages": ["hi"]
+  },
+  {
+    "name": "e-Mitra Rajasthan",
+    "url": "https://emitra.rajasthan.gov.in",
+    "category": "State",
+    "languages": ["hi"]
+  },
+  {
+    "name": "Rajasthan Single Sign On",
+    "url": "https://sso.rajasthan.gov.in",
+    "category": "State",
+    "languages": ["hi"]
+  },
+  {
+    "name": "Rajasthan Sampark",
+    "url": "https://sampark.rajasthan.gov.in",
+    "category": "State",
+    "languages": ["hi"]
+  },
+  {
+    "name": "Gujarat State Portal",
+    "url": "https://gujaratindia.gov.in",
+    "category": "State",
+    "languages": ["hi"]
+  },
+  {
+    "name": "Aaple Sarkar Maharashtra",
+    "url": "https://aaplesarkar.mahaonline.gov.in",
+    "category": "State",
+    "languages": ["hi"]
+  },
+  {
+    "name": "UP Bhulekh",
+    "url": "https://upbhulekh.gov.in",
+    "category": "State",
+    "languages": ["hi"]
+  }
+]
