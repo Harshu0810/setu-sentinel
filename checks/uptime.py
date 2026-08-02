@@ -13,28 +13,27 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 def check_link(url: str) -> tuple[str, bool, int]:
     """
     Checks if a URL link is broken.
-    Uses HTTP GET with stream=True (only fetches response headers) instead of HTTP HEAD,
-    because many Indian Govt servers return 405 Method Not Allowed or 404 to HEAD requests.
+    - True Broken Links: HTTP 404 Not Found, 5xx Server Errors, or 0 (Unreachable/DNS/Timeout).
+    - HTTP 403 (Forbidden / WAF Access Denied): Indicates WAF anti-bot security blocking the automated script,
+      not a broken link for human citizens. We do NOT treat 403 as a broken link.
     """
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-        'Accept-Language': 'en-US,en;q=0.5'
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+        'Accept-Language': 'en-US,en;q=0.9'
     }
     
     try:
-        # Use GET with stream=True so we only fetch headers without downloading body payload
         resp = requests.get(url, timeout=6, headers=headers, verify=False, stream=True, allow_redirects=True)
         status = resp.status_code
-        resp.close() # Close socket immediately
-        return (url, status >= 400, status)
+        resp.close()
+        
+        # 403 is WAF anti-bot protection, NOT a broken link for real human users.
+        # Only 404, 5xx, or connection timeouts (status 0) indicate actual dead/broken links.
+        is_broken = (status == 404 or status >= 500)
+        return (url, is_broken, status)
     except requests.RequestException:
-        # Fallback to HEAD if GET raises a connection error
-        try:
-            r_head = requests.head(url, timeout=5, headers=headers, verify=False, allow_redirects=True)
-            return (url, r_head.status_code >= 400, r_head.status_code)
-        except requests.RequestException:
-            return (url, True, 0) # 0 means unreachable / Timeout / DNS error
+        return (url, True, 0) # 0 means unreachable / Timeout / DNS error
 
 def count_broken_links(links: list[str]) -> tuple[int, list[dict]]:
     valid_links = [l for l in links if l and l.startswith('http')]
