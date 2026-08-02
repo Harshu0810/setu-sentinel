@@ -1,6 +1,7 @@
 import time
 import os
 import json
+import re
 from playwright.sync_api import sync_playwright
 from playwright_stealth import Stealth
 from checks.llm_client import get_client
@@ -15,7 +16,6 @@ def extract_page_text(page) -> str:
     return text.strip() if text else ""
 
 def score_translation_quality(client, model, english_text: str, hindi_text: str) -> dict:
-    # Truncate text to avoid token limits (check first 2000 chars)
     eng_sample = english_text[:2000]
     hin_sample = hindi_text[:2000]
     
@@ -44,6 +44,56 @@ Respond strictly as JSON: {{"score": <0-100>, "flagged_terms": ["term1", "term2"
             return {"score": 75, "flagged_terms": [], "error": "Rate limited - default fallback score"}
         return {"score": 0, "flagged_terms": [], "error": str(e)}
 
+def find_and_click_hindi_switcher(page) -> bool:
+    """Multi-strategy locator for finding and clicking Hindi language switchers."""
+    # List of candidate locators for Hindi switcher
+    locators = [
+        "text=हिंदी",
+        "text=हिन्दी",
+        "a:has-text('Hindi')",
+        "button:has-text('Hindi')",
+        "a:has-text('हिंदी')",
+        "button:has-text('हिंदी')",
+        "[aria-label*='Hindi' i]",
+        "[aria-label*='हिंदी']",
+        "[title*='Hindi' i]",
+        "[title*='हिंदी']",
+        "a[href*='/hi']",
+        "a[href*='lang=hi']",
+        "a[href*='lang=1']"
+    ]
+    
+    for loc in locators:
+        try:
+            switcher = page.query_selector(loc)
+            if switcher and switcher.is_visible():
+                try:
+                    with page.expect_navigation(timeout=8000):
+                        page.evaluate("el => el.click()", switcher)
+                except Exception:
+                    page.evaluate("el => el.click()", switcher)
+                    page.wait_for_timeout(2000)
+                return True
+        except Exception:
+            continue
+            
+    # Check for <select> dropdowns with Hindi option
+    try:
+        selects = page.query_selector_all("select")
+        for sel in selects:
+            options = sel.query_selector_all("option")
+            for opt in options:
+                txt = opt.inner_text().strip()
+                val = opt.get_attribute("value") or ""
+                if "हिंदी" in txt or "हिन्दी" in txt or "hindi" in txt.lower() or val.lower() in ["hi", "hin", "hindi"]:
+                    sel.select_option(value=val)
+                    page.wait_for_timeout(2000)
+                    return True
+    except Exception:
+        pass
+        
+    return False
+
 def check_portal_translation(url: str, target_lang: str = "hi") -> dict:
     is_ci = os.environ.get("CI", "").lower() == "true"
     
@@ -62,27 +112,28 @@ def check_portal_translation(url: str, target_lang: str = "hi") -> dict:
                 print(f"\n[!] Translation Check Blocked by {url}.")
                 input("    Press ENTER here once the page is fully loaded...")
                 
-            # 1. Get English text
             english_text = extract_page_text(page)
             if len(english_text) < 50:
-                return {"language": target_lang, "score": 0, "status": "insufficient_english_text"}
+                return {"language": target_lang, "score": 0, "status": "insufficient_english_text", "flagged_terms": []}
             
-            # 2. Try to find the Hindi switcher
-            # Common patterns: text "हिन्दी", "Hindi"
-            switcher = page.query_selector("text=हिन्दी") or page.query_selector("text=Hindi")
+            # Check if current page is ALREADY in Hindi (contains Devanagari script)
+            devanagari_count = len(re.findall(r'[\u0900-\u097F]', english_text))
+            if devanagari_count > 100:
+                # Page is already in Hindi/multilingual!
+                client, model = get_client("gemini")
+                result = score_translation_quality(client, model, english_text, english_text)
+                return {
+                    "language": target_lang,
+                    "score": max(70, result.get("score", 75)),
+                    "flagged_terms": result.get("flagged_terms", []),
+                    "status": "native_multilingual_detected"
+                }
+
+            # Attempt multi-strategy switcher click
+            clicked = find_and_click_hindi_switcher(page)
             
-            if switcher and switcher.is_visible():
-                try:
-                    with page.expect_navigation(timeout=10000):
-                        page.evaluate("el => el.click()", switcher)
-                except:
-                    page.evaluate("el => el.click()", switcher)
-                    page.wait_for_timeout(3000)
-                    
+            if clicked:
                 hindi_text = extract_page_text(page)
-                
-                # Use Gemini as fallback for translation as recommended in the plan
-                # The user added both keys. We'll use Gemini for Hindi translation evaluation.
                 client, model = get_client("gemini")
                 result = score_translation_quality(client, model, english_text, hindi_text)
                 
@@ -92,13 +143,32 @@ def check_portal_translation(url: str, target_lang: str = "hi") -> dict:
                     "flagged_terms": result.get("flagged_terms", []),
                     "status": "success"
                 }
-            else:
-                return {
-                    "language": target_lang,
-                    "score": 0,
-                    "flagged_terms": [],
-                    "status": "no_language_switcher_found"
-                }
+                
+            # Direct URL fallback: check if /hi or ?lang=hi works
+            fallback_urls = [url.rstrip('/') + '/hi', url.rstrip('/') + '?lang=hi']
+            for fb_url in fallback_urls:
+                try:
+                    fb_resp = page.goto(fb_url, timeout=10000, wait_until="domcontentloaded")
+                    if fb_resp and fb_resp.status == 200:
+                        fb_text = extract_page_text(page)
+                        if len(re.findall(r'[\u0900-\u097F]', fb_text)) > 50:
+                            client, model = get_client("gemini")
+                            result = score_translation_quality(client, model, english_text, fb_text)
+                            return {
+                                "language": target_lang,
+                                "score": result.get("score", 0),
+                                "flagged_terms": result.get("flagged_terms", []),
+                                "status": "url_fallback_success"
+                            }
+                except Exception:
+                    continue
+
+            return {
+                "language": target_lang,
+                "score": 0,
+                "flagged_terms": [],
+                "status": "no_language_switcher_found"
+            }
                 
         except Exception as e:
             return {"language": target_lang, "score": 0, "flagged_terms": [], "status": f"error: {str(e)}"}

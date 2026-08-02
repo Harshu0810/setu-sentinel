@@ -12,7 +12,7 @@ def get_base64_screenshot(element) -> str:
     return base64.b64encode(image_bytes).decode('utf-8')
 
 def evaluate_alt_text(client, model, alt_text: str, base64_image: str) -> dict:
-    """Uses Groq Vision model to evaluate if alt text matches the image."""
+    """Uses LLM Vision model to evaluate if alt text matches the image."""
     prompt = f"Does the following alt text accurately and descriptively describe the image? Alt text: '{alt_text}'. Answer strictly in JSON format: {{\"accurate\": true/false, \"reason\": \"short reason\"}}"
     try:
         response = client.chat.completions.create(
@@ -57,7 +57,6 @@ def check_portal_accessibility(url: str) -> dict:
         try:
             response = page.goto(url, timeout=30000, wait_until="domcontentloaded")
             
-            # Anti-bot human-in-the-loop fallback
             if response and response.status in [403, 503] and not is_ci:
                 print(f"\n[!] Accessibility Check Blocked by {url} with status {response.status}.")
                 input("    Press ENTER here once the page is fully loaded...")
@@ -77,7 +76,18 @@ def check_portal_accessibility(url: str) -> dict:
             axe_violations_count = sum(len(v.get("nodes", [])) for v in violations)
             critical_count = sum(len(v.get("nodes", [])) for v in violations if v.get("impact") == "critical")
             
-            # Find images for alt text validation (sample up to 3 to save time/tokens)
+            # Detailed violation breakdown
+            violation_details = []
+            for v in violations:
+                violation_details.append({
+                    "id": v.get("id"),
+                    "impact": v.get("impact", "minor"),
+                    "description": v.get("description"),
+                    "help": v.get("help"),
+                    "nodes": len(v.get("nodes", []))
+                })
+            
+            # Find images for alt text validation (sample up to 3)
             images = page.query_selector_all("img")
             images_checked = 0
             vision_notes = []
@@ -89,16 +99,13 @@ def check_portal_accessibility(url: str) -> dict:
                     break
                     
                 alt_text = img.get_attribute("alt")
-                # Skip decorative images (empty alt or no alt)
                 if not alt_text or alt_text.strip() == "":
                     continue
                 
-                # Check if image is visible
                 if not img.is_visible():
                     continue
                     
                 try:
-                    # Some images might fail to screenshot if they have zero dimensions
                     box = img.bounding_box()
                     if not box or box['width'] < 10 or box['height'] < 10:
                         continue
@@ -110,12 +117,9 @@ def check_portal_accessibility(url: str) -> dict:
                         vision_notes.append(f"Inaccurate alt text '{alt_text}': {eval_result.get('reason')}")
                     
                     images_checked += 1
-                except Exception as e:
-                    # Ignore screenshot errors (e.g. cross-origin issues)
+                except Exception:
                     pass
             
-            # Calculate a simple score out of 100
-            # 100 - (5 * critical) - (1 * other violations) - (10 * inaccurate alt texts)
             inaccurate_alts = len(vision_notes)
             score = 100 - (critical_count * 5) - ((axe_violations_count - critical_count) * 1) - (inaccurate_alts * 10)
             score = max(0, min(100, score))
@@ -123,11 +127,12 @@ def check_portal_accessibility(url: str) -> dict:
             return {
                 "axe_violations": axe_violations_count,
                 "critical": critical_count,
+                "violation_details": violation_details,
                 "vision_notes": "; ".join(vision_notes) if vision_notes else "Alt texts appear accurate or no descriptive images found.",
                 "score": score
             }
             
         except Exception as e:
-            return {"axe_violations": -1, "critical": -1, "vision_notes": f"Error: {str(e)}", "score": 0}
+            return {"axe_violations": -1, "critical": -1, "violation_details": [], "vision_notes": f"Error: {str(e)}", "score": 0}
         finally:
             browser.close()

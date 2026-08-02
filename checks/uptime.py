@@ -10,28 +10,35 @@ from playwright_stealth import Stealth
 # Disable insecure request warnings for broken govt SSL certs
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-def check_link(url: str) -> bool:
-    """Returns True if link is broken (4xx/5xx or timeout/error)."""
+def check_link(url: str) -> tuple[str, bool, int]:
+    """Returns (url, is_broken, status_code)."""
     try:
         headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
         resp = requests.head(url, timeout=5, headers=headers, verify=False, allow_redirects=True)
-        return resp.status_code >= 400
+        return (url, resp.status_code >= 400, resp.status_code)
     except requests.RequestException:
-        return True # broken or unreachable
+        return (url, True, 0) # 0 means unreachable / Timeout / DNS error
 
-def count_broken_links(links: list[str]) -> int:
+def count_broken_links(links: list[str]) -> tuple[int, list[dict]]:
     valid_links = [l for l in links if l and l.startswith('http')]
     valid_links = list(set(valid_links))
     
     # Cap at 30 links per page to avoid overloading portals
     to_check = valid_links[:30]
     
-    broken_count = 0
+    broken_details = []
     with ThreadPoolExecutor(max_workers=5) as executor:
         results = executor.map(check_link, to_check)
-        broken_count = sum(1 for r in results if r)
+        for url, is_broken, status in results:
+            if is_broken:
+                reason = "Unreachable / Timeout" if status == 0 else f"HTTP {status}"
+                broken_details.append({
+                    "url": url,
+                    "status_code": status,
+                    "reason": reason
+                })
         
-    return broken_count
+    return len(broken_details), broken_details
 
 def check_portal_uptime(url: str) -> dict:
     is_ci = os.environ.get("CI", "").lower() == "true"
@@ -57,21 +64,21 @@ def check_portal_uptime(url: str) -> dict:
             load_time_ms = int((time.time() - start_time) * 1000)
             
             status = response.status if response else None
-            # If human intervened, assume it's up now
             if not is_ci and status in [403, 503]:
                 status = 200
                 
             links = page.eval_on_selector_all("a[href]", "els => els.map(e => e.href)")
-            broken = count_broken_links(links)
+            broken_count, broken_details = count_broken_links(links)
             
             return {
                 "status": "up" if status and status < 400 else "down",
                 "response_ms": load_time_ms,
-                "broken_links": broken,
-                "broken_forms": 0, # Placeholder for Phase 1 forms
+                "broken_links": broken_count,
+                "broken_links_details": broken_details,
+                "broken_forms": 0,
                 "status_code": status
             }
         except Exception as e:
-            return {"status": "down", "error": str(e)}
+            return {"status": "down", "error": str(e), "broken_links": 0, "broken_links_details": []}
         finally:
             browser.close()
