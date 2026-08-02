@@ -3,78 +3,342 @@
     "name": "National Portal of India",
     "url": "https://www.india.gov.in",
     "category": "Central",
+    "subcategory": "Hub",
+    "purpose": "National single-window access to central and state government information and services",
+    "priority": 1,
     "languages": ["hi"]
   },
   {
     "name": "DigiLocker",
     "url": "https://www.digilocker.gov.in",
     "category": "Central",
+    "subcategory": "Documents",
+    "purpose": "Cloud-based storage, sharing and verification of official government documents",
+    "priority": 1,
     "languages": ["hi"]
   },
   {
     "name": "UMANG",
     "url": "https://web.umang.gov.in",
     "category": "Central",
+    "subcategory": "Service Aggregator",
+    "purpose": "Unified app/portal bundling 1,600+ central and state government services",
+    "priority": 1,
     "languages": ["hi"]
   },
   {
     "name": "eCourts",
     "url": "https://ecourts.gov.in",
     "category": "Judiciary",
-    "languages": ["hi"]
-  },
-  {
-    "name": "MyGov",
-    "url": "https://www.mygov.in",
-    "category": "Central",
+    "subcategory": "Courts",
+    "purpose": "Case status, cause lists and judgments; National Judicial Data Grid",
+    "priority": 1,
     "languages": ["hi"]
   },
   {
     "name": "Income Tax e-Filing",
     "url": "https://www.incometax.gov.in",
     "category": "Central",
+    "subcategory": "High-Stakes",
+    "purpose": "ITR filing, refund tracking, PAN-Aadhaar linking",
+    "priority": 1,
     "languages": ["hi"]
   },
   {
-    "name": "UIDAI",
-    "url": "https://uidai.gov.in",
+    "name": "Passport Seva",
+    "url": "https://www.passportindia.gov.in",
     "category": "Central",
+    "subcategory": "High-Stakes",
+    "purpose": "Passport application, appointment booking and status tracking",
+    "priority": 1,
+    "languages": ["hi"]
+  },
+  {
+    "name": "Rajasthan State Portal",
+    "url": "https://rajasthan.gov.in",
+    "category": "State",
+    "subcategory": "Hub",
+    "purpose": "Gateway to Rajasthan state government departments and schemes",
+    "priority": 1,
+    "languages": ["hi"]
+  },
+  {
+    "name": "Rajasthan SSO",
+    "url": "https://sso.rajasthan.gov.in",
+    "category": "State",
+    "subcategory": "Single Sign-On",
+    "purpose": "Single login for 100+ Rajasthan state services (e-Mitra, GST, recruitment, etc.)",
+    "priority": 1,
     "languages": ["hi"]
   },
   {
     "name": "e-Mitra Rajasthan",
     "url": "https://emitra.rajasthan.gov.in",
     "category": "State",
+    "subcategory": "Citizen Services",
+    "purpose": "600+ G2C/B2C citizen services via kiosks and online",
+    "priority": 1,
     "languages": ["hi"]
   },
   {
-    "name": "Rajasthan Single Sign On",
-    "url": "https://sso.rajasthan.gov.in",
+    "name": "Jan Soochna Portal",
+    "url": "https://jansoochna.rajasthan.gov.in",
     "category": "State",
+    "subcategory": "Transparency",
+    "purpose": "Public scheme and beneficiary data for 117+ Rajasthan departments, no login required",
+    "priority": 1,
+    "languages": ["hi"]
+  },
+  {
+    "name": "MyGov",
+    "url": "https://www.mygov.in",
+    "category": "Central",
+    "subcategory": "Citizen Engagement",
+    "purpose": "Crowdsourced policy input and citizen engagement platform",
+    "priority": 2,
+    "languages": ["hi"]
+  },
+  {
+    "name": "UIDAI (Aadhaar)",
+    "url": "https://uidai.gov.in",
+    "category": "Central",
+    "subcategory": "Identity",
+    "purpose": "Aadhaar enrollment, updates and authentication",
+    "priority": 2,
+    "languages": ["hi"]
+  },
+  {
+    "name": "Jan Aadhaar Rajasthan",
+    "url": "https://janaadhaar.rajasthan.gov.in",
+    "category": "State",
+    "subcategory": "Identity",
+    "purpose": "Rajasthan family-ID system; successor to the earlier Bhamashah scheme",
+    "priority": 2,
+    "languages": ["hi"]
+  },
+  {
+    "name": "GeM (Govt e-Marketplace)",
+    "url": "https://gem.gov.in",
+    "category": "Central",
+    "subcategory": "Procurement",
+    "purpose": "Public procurement platform for central/state government buyers",
+    "priority": 2,
+    "languages": ["hi"]
+  },
+  {
+    "name": "RTU Kota",
+    "url": "https://www.rtu.ac.in",
+    "category": "Education",
+    "subcategory": "University",
+    "purpose": "Public technical university portal",
+    "priority": 2,
+    "languages": ["hi"]
+  },
+  {
+    "name": "Ayushman Bharat (PM-JAY)",
+    "url": "https://pmjay.gov.in",
+    "category": "Central",
+    "subcategory": "Healthcare",
+    "purpose": "World's largest govt-funded health insurance scheme; hospital empanelment and coverage lookup",
+    "priority": 2,
+    "languages": ["hi"]
+  },
+  {
+    "name": "GST Portal",
+    "url": "https://www.gst.gov.in",
+    "category": "Central",
+    "subcategory": "Taxation",
+    "purpose": "Goods & Services Tax registration, returns filing, e-way bills",
+    "priority": 2,
+    "languages": ["hi"]
+  },
+  {
+    "name": "EPFO Unified Portal",
+    "url": "https://unifiedportal-epfo.epfindia.gov.in",
+    "category": "Central",
+    "subcategory": "Labour/Pension",
+    "purpose": "Provident fund balance, withdrawal, passbook for salaried employees",
+    "priority": 2,
+    "languages": ["hi"]
+  },
+  {
+    "name": "Parivahan Sewa",
+    "url": "https://parivahan.gov.in",
+    "category": "Central",
+    "subcategory": "Transport",
+    "purpose": "Vehicle registration (Vahan) and driving licence (Sarathi) services",
+    "priority": 2,
     "languages": ["hi"]
   },
   {
     "name": "Rajasthan Sampark",
     "url": "https://sampark.rajasthan.gov.in",
     "category": "State",
+    "subcategory": "Grievance",
+    "purpose": "Rajasthan grievance and complaint tracking portal",
+    "priority": 2,
     "languages": ["hi"]
   },
   {
     "name": "Gujarat State Portal",
     "url": "https://gujaratindia.gov.in",
     "category": "State",
+    "subcategory": "Hub",
+    "purpose": "Gateway to Gujarat state government departments and schemes",
+    "priority": 2,
     "languages": ["hi"]
   },
   {
     "name": "Aaple Sarkar Maharashtra",
     "url": "https://aaplesarkar.mahaonline.gov.in",
     "category": "State",
+    "subcategory": "Citizen Services",
+    "purpose": "500+ Maharashtra citizen services (certificates, licenses, registrations)",
+    "priority": 3,
     "languages": ["hi"]
   },
   {
-    "name": "UP Bhulekh",
-    "url": "https://upbhulekh.gov.in",
+    "name": "Seva Sindhu Karnataka",
+    "url": "https://sevasindhu.karnataka.gov.in",
     "category": "State",
+    "subcategory": "Citizen Services",
+    "purpose": "880+ Karnataka citizen services under the e-District Mission Mode Project",
+    "priority": 3,
+    "languages": ["hi"]
+  },
+  {
+    "name": "e-District UP",
+    "url": "https://edistrict.up.gov.in",
+    "category": "State",
+    "subcategory": "Citizen Services",
+    "purpose": "District-level citizen services for Uttar Pradesh",
+    "priority": 3,
+    "languages": ["hi"]
+  },
+  {
+    "name": "Mee Seva (Andhra Pradesh)",
+    "url": "https://ap.meeseva.gov.in",
+    "category": "State",
+    "subcategory": "Citizen Services",
+    "purpose": "Andhra Pradesh citizen services successor to e-Seva",
+    "priority": 3,
+    "languages": ["hi"]
+  },
+  {
+    "name": "Mee Seva (Telangana)",
+    "url": "https://meeseva.telangana.gov.in",
+    "category": "State",
+    "subcategory": "Citizen Services",
+    "purpose": "Telangana's Mee Seva instance after the 2014 AP/Telangana split",
+    "priority": 3,
+    "languages": ["hi"]
+  },
+  {
+    "name": "Digital Gujarat",
+    "url": "https://www.digitalgujarat.gov.in",
+    "category": "State",
+    "subcategory": "Citizen Services",
+    "purpose": "100+ online services, single window for Gujarat citizen services",
+    "priority": 3,
+    "languages": ["hi"]
+  },
+  {
+    "name": "RTPS Bihar",
+    "url": "https://serviceonline.bihar.gov.in",
+    "category": "State",
+    "subcategory": "Citizen Services",
+    "purpose": "Right to Public Services portal: caste, income, residence certificates",
+    "priority": 3,
+    "languages": ["hi"]
+  },
+  {
+    "name": "SARAL Haryana",
+    "url": "https://saralharyana.gov.in",
+    "category": "State",
+    "subcategory": "Citizen Services",
+    "purpose": "545+ schemes/services across 44 Haryana departments on one platform",
+    "priority": 3,
+    "languages": ["hi"]
+  },
+  {
+    "name": "Akshaya Kerala",
+    "url": "https://akshaya.kerala.gov.in",
+    "category": "State",
+    "subcategory": "Citizen Services",
+    "purpose": "Kerala's e-governance/digital literacy citizen service centre network",
+    "priority": 3,
+    "languages": ["hi"]
+  },
+  {
+    "name": "Tamil Nadu e-Sevai",
+    "url": "https://tnesevai.tn.gov.in",
+    "category": "State",
+    "subcategory": "Citizen Services",
+    "purpose": "Certificates and land record e-services under the state e-District project",
+    "priority": 3,
+    "languages": ["hi"]
+  },
+  {
+    "name": "MP e-District",
+    "url": "https://mpedistrict.gov.in",
+    "category": "State",
+    "subcategory": "Citizen Services",
+    "purpose": "Lok Seva Kendra-linked certificate and citizen services for Madhya Pradesh",
+    "priority": 3,
+    "languages": ["hi"]
+  },
+  {
+    "name": "e-Shram",
+    "url": "https://eshram.gov.in",
+    "category": "Central",
+    "subcategory": "Labour",
+    "purpose": "National Database of Unorganised Workers, UAN registration",
+    "priority": 3,
+    "languages": ["hi"]
+  },
+  {
+    "name": "National Scholarship Portal",
+    "url": "https://scholarships.gov.in",
+    "category": "Central",
+    "subcategory": "Education",
+    "purpose": "Single portal for 100+ central/state student scholarship schemes",
+    "priority": 3,
+    "languages": ["hi"]
+  },
+  {
+    "name": "National Career Service",
+    "url": "https://www.ncs.gov.in",
+    "category": "Central",
+    "subcategory": "Employment",
+    "purpose": "Digital job-matching platform, modernised employment exchanges",
+    "priority": 3,
+    "languages": ["hi"]
+  },
+  {
+    "name": "Swachh Bharat Mission",
+    "url": "https://swachhbharatmission.ddws.gov.in",
+    "category": "Central",
+    "subcategory": "Sanitation",
+    "purpose": "National sanitation/cleanliness mission tracking and reporting",
+    "priority": 3,
+    "languages": ["hi"]
+  },
+  {
+    "name": "Skill India",
+    "url": "https://www.skillindia.gov.in",
+    "category": "Central",
+    "subcategory": "Skill Development",
+    "purpose": "Curriculum-based skill training, certification and job-readiness programs",
+    "priority": 3,
+    "languages": ["hi"]
+  },
+  {
+    "name": "Startup India",
+    "url": "https://www.startupindia.gov.in",
+    "category": "Central",
+    "subcategory": "Entrepreneurship",
+    "purpose": "Startup recognition, tax benefits, funding scheme access",
+    "priority": 3,
     "languages": ["hi"]
   }
 ]

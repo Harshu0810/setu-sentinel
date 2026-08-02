@@ -146,6 +146,7 @@
                 <button onclick="filterCategory('Central')" class="cat-btn px-3 py-1.5 text-xs font-medium rounded-lg text-gray-400 hover:text-gray-200 transition">Central</button>
                 <button onclick="filterCategory('State')" class="cat-btn px-3 py-1.5 text-xs font-medium rounded-lg text-gray-400 hover:text-gray-200 transition">State</button>
                 <button onclick="filterCategory('Judiciary')" class="cat-btn px-3 py-1.5 text-xs font-medium rounded-lg text-gray-400 hover:text-gray-200 transition">Judiciary</button>
+                <button onclick="filterCategory('Education')" class="cat-btn px-3 py-1.5 text-xs font-medium rounded-lg text-gray-400 hover:text-gray-200 transition">Education</button>
             </div>
 
             <!-- Search Bar -->
@@ -365,13 +366,24 @@
                 tr.className = 'hover:bg-gray-800/40 transition cursor-pointer';
                 tr.onclick = () => openModal(p);
 
+                const subcat = p.subcategory || '';
+                const priorityBadge = p.priority === 1 ? '🔴' : p.priority === 2 ? '🟡' : '🟢';
+
                 tr.innerHTML = `
                     <td class="py-4 px-6 font-semibold text-white">
-                        ${p.name}
-                        <span class="block text-xs font-normal text-gray-400 mt-0.5">${p.url}</span>
+                        <div class="flex items-center gap-2">
+                            <span>${priorityBadge}</span>
+                            <div>
+                                ${p.name}
+                                <span class="block text-xs font-normal text-gray-400 mt-0.5 truncate max-w-xs">${p.url}</span>
+                            </div>
+                        </div>
                     </td>
                     <td class="py-4 px-4 text-xs">
-                        <span class="px-2.5 py-1 rounded-md bg-gray-800 text-gray-300 border border-gray-700">${p.category}</span>
+                        <div class="flex flex-col gap-1">
+                            <span class="px-2.5 py-1 rounded-md bg-gray-800 text-gray-300 border border-gray-700">${p.category}</span>
+                            ${subcat ? '<span class="px-2 py-0.5 rounded text-[10px] bg-gray-700/50 text-gray-400">' + subcat + '</span>' : ''}
+                        </div>
                     </td>
                     <td class="py-4 px-4">
                         <span class="inline-flex items-center space-x-1.5 px-2.5 py-1 rounded-full text-xs font-medium ${isUp ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20' : 'bg-rose-500/10 text-rose-400 border border-rose-500/20'}">
@@ -424,7 +436,8 @@
 
         function openModal(portal) {
             document.getElementById('modal-title').innerText = portal.name;
-            document.getElementById('modal-category').innerText = portal.category;
+            const catLabel = portal.subcategory ? `${portal.category} · ${portal.subcategory}` : portal.category;
+            document.getElementById('modal-category').innerText = catLabel;
             document.getElementById('modal-url-text').innerText = portal.url;
             document.getElementById('modal-url').href = portal.url;
 
