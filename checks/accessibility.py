@@ -49,28 +49,38 @@ def check_portal_accessibility(url: str) -> dict:
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=is_ci)
         context = browser.new_context(
-            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            ignore_https_errors=True
         )
         page = context.new_page()
         Stealth().apply_stealth_sync(page)
         
         try:
-            response = page.goto(url, timeout=30000, wait_until="domcontentloaded")
+            response = page.goto(url, timeout=35000, wait_until="commit")
             
-            if response and response.status in [403, 503] and not is_ci:
-                print(f"\n[!] Accessibility Check Blocked by {url} with status {response.status}.")
-                input("    Press ENTER here once the page is fully loaded...")
+            try:
+                page.wait_for_load_state("domcontentloaded", timeout=15000)
+            except Exception:
+                pass
             
             # Run axe-core via local bundled script to bypass Content Security Policy domain restrictions
             axe_path = os.path.join(os.path.dirname(__file__), "axe.min.js")
             if os.path.exists(axe_path):
                 with open(axe_path, "r", encoding="utf-8") as f:
                     axe_script = f.read()
-                page.add_script_tag(content=axe_script)
+                try:
+                    page.add_script_tag(content=axe_script)
+                except Exception:
+                    time.sleep(1.5) # Wait if redirect in progress
+                    page.add_script_tag(content=axe_script)
             else:
                 page.add_script_tag(url="https://cdnjs.cloudflare.com/ajax/libs/axe-core/4.9.0/axe.min.js")
                 
-            results = page.evaluate("async () => await axe.run()")
+            try:
+                results = page.evaluate("async () => await axe.run()")
+            except Exception:
+                time.sleep(2) # Retry after redirect completes
+                results = page.evaluate("async () => await axe.run()")
             
             violations = results.get("violations", [])
             axe_violations_count = sum(len(v.get("nodes", [])) for v in violations)

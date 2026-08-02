@@ -8,12 +8,20 @@ from checks.llm_client import get_client
 
 def extract_page_text(page) -> str:
     """Extract visible text from body, removing scripts/styles."""
-    text = page.evaluate("""() => {
-        const elements = document.body.querySelectorAll('script, style, noscript, iframe, svg');
-        elements.forEach(el => el.remove());
-        return document.body.innerText;
-    }""")
-    return text.strip() if text else ""
+    try:
+        text = page.evaluate("""() => {
+            const elements = document.body.querySelectorAll('script, style, noscript, iframe, svg');
+            elements.forEach(el => el.remove());
+            return document.body.innerText;
+        }""")
+        return text.strip() if text else ""
+    except Exception:
+        time.sleep(1.5)
+        try:
+            text = page.evaluate("() => document.body.innerText")
+            return text.strip() if text else ""
+        except Exception:
+            return ""
 
 def score_translation_quality(client, model, english_text: str, hindi_text: str) -> dict:
     eng_sample = english_text[:2000]
@@ -46,7 +54,6 @@ Respond strictly as JSON: {{"score": <0-100>, "flagged_terms": ["term1", "term2"
 
 def find_and_click_hindi_switcher(page) -> bool:
     """Multi-strategy locator for finding and clicking Hindi language switchers."""
-    # List of candidate locators for Hindi switcher
     locators = [
         "text=हिंदी",
         "text=हिन्दी",
@@ -77,7 +84,6 @@ def find_and_click_hindi_switcher(page) -> bool:
         except Exception:
             continue
             
-    # Check for <select> dropdowns with Hindi option
     try:
         selects = page.query_selector_all("select")
         for sel in selects:
@@ -100,17 +106,19 @@ def check_portal_translation(url: str, target_lang: str = "hi") -> dict:
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=is_ci)
         context = browser.new_context(
-            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            ignore_https_errors=True
         )
         page = context.new_page()
         Stealth().apply_stealth_sync(page)
         
         try:
-            response = page.goto(url, timeout=30000, wait_until="domcontentloaded")
+            response = page.goto(url, timeout=35000, wait_until="commit")
             
-            if response and response.status in [403, 503] and not is_ci:
-                print(f"\n[!] Translation Check Blocked by {url}.")
-                input("    Press ENTER here once the page is fully loaded...")
+            try:
+                page.wait_for_load_state("domcontentloaded", timeout=15000)
+            except Exception:
+                pass
                 
             english_text = extract_page_text(page)
             if len(english_text) < 50:
@@ -119,7 +127,6 @@ def check_portal_translation(url: str, target_lang: str = "hi") -> dict:
             # Check if current page is ALREADY in Hindi (contains Devanagari script)
             devanagari_count = len(re.findall(r'[\u0900-\u097F]', english_text))
             if devanagari_count > 100:
-                # Page is already in Hindi/multilingual!
                 client, model = get_client("gemini")
                 result = score_translation_quality(client, model, english_text, english_text)
                 return {
@@ -148,18 +155,17 @@ def check_portal_translation(url: str, target_lang: str = "hi") -> dict:
             fallback_urls = [url.rstrip('/') + '/hi', url.rstrip('/') + '?lang=hi']
             for fb_url in fallback_urls:
                 try:
-                    fb_resp = page.goto(fb_url, timeout=10000, wait_until="domcontentloaded")
-                    if fb_resp and fb_resp.status == 200:
-                        fb_text = extract_page_text(page)
-                        if len(re.findall(r'[\u0900-\u097F]', fb_text)) > 50:
-                            client, model = get_client("gemini")
-                            result = score_translation_quality(client, model, english_text, fb_text)
-                            return {
-                                "language": target_lang,
-                                "score": result.get("score", 0),
-                                "flagged_terms": result.get("flagged_terms", []),
-                                "status": "url_fallback_success"
-                            }
+                    fb_resp = page.goto(fb_url, timeout=10000, wait_until="commit")
+                    fb_text = extract_page_text(page)
+                    if len(re.findall(r'[\u0900-\u097F]', fb_text)) > 50:
+                        client, model = get_client("gemini")
+                        result = score_translation_quality(client, model, english_text, fb_text)
+                        return {
+                            "language": target_lang,
+                            "score": result.get("score", 0),
+                            "flagged_terms": result.get("flagged_terms", []),
+                            "status": "url_fallback_success"
+                        }
                 except Exception:
                     continue
 
