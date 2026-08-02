@@ -46,7 +46,7 @@ def audit_portal_links(context, links: list[str]) -> tuple[int, int, list[str], 
     valid_links = list(set(valid_links))
     
     total_found = len(valid_links)
-    to_check = valid_links[:30] # Audit sample cap
+    to_check = valid_links[:100] # Audit up to 100 unique links per portal for deep coverage
     
     working_links = []
     broken_details = []
