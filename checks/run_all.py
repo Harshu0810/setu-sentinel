@@ -69,10 +69,15 @@ def main():
     filename = now_utc.strftime("%Y-%m-%dT%H-%M.json")
     filepath = os.path.join(history_dir, filename)
     
-    with open(filepath, "w") as f:
+    with open(filepath, "w", encoding="utf-8") as f:
         json.dump(snapshot, f, indent=2)
         
-    print(f"Snapshot saved to {filepath}")
+    # Save latest snapshot for live GitHub Pages dashboard
+    latest_path = os.path.join(os.path.dirname(__file__), "..", "data", "latest.json")
+    with open(latest_path, "w", encoding="utf-8") as f:
+        json.dump(snapshot, f, indent=2)
+        
+    print(f"Snapshot saved to {filepath} and {latest_path}")
 
 if __name__ == "__main__":
     main()

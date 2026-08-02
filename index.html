@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setu Sentinel — Public Health & Accessibility Scorecard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eef2ff',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            900: '#312e81',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0b0f19;
+            color: #f3f4f6;
+            font-family: 'Inter', sans-serif;
+        }
+        .glass-panel {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card {
+            background: rgba(31, 41, 55, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.2s ease-in-out;
+        }
+        .glass-card:hover {
+            border-color: rgba(99, 102, 241, 0.4);
+            transform: translateY(-2px);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(15, 23, 42, 0.6);
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(51, 65, 85, 0.8);
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="min-h-screen antialiased flex flex-col justify-between custom-scrollbar">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-30 glass-panel border-b border-gray-800 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-center space-x-3">
+                <div class="p-2.5 bg-indigo-600/20 text-indigo-400 rounded-xl border border-indigo-500/30">
+                    <i data-lucide="shield-check" class="w-7 h-7"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-extrabold tracking-tight text-white flex items-center gap-2">
+                        Setu Sentinel
+                        <span class="px-2 py-0.5 text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-full">Live Dashboard</span>
+                    </h1>
+                    <p class="text-xs text-gray-400">Automated Health, WCAG Accessibility & Translation Scorecard for Indian Govt Portals</p>
+                </div>
+            </div>
+            
+            <div class="flex items-center space-x-3 text-xs text-gray-400">
+                <div class="flex items-center space-x-1.5 bg-gray-900/80 px-3 py-1.5 rounded-lg border border-gray-800">
+                    <i data-lucide="clock" class="w-4 h-4 text-indigo-400"></i>
+                    <span>Last Refreshed: <strong id="snapshot-time" class="text-gray-200">Loading...</strong></span>
+                </div>
+                <button onclick="loadLatestData()" class="p-2 bg-gray-800 hover:bg-gray-700 text-gray-200 rounded-lg border border-gray-700 transition flex items-center space-x-1.5" title="Refresh Data">
+                    <i data-lucide="refresh-cw" class="w-4 h-4"></i>
+                    <span class="hidden sm:inline">Refresh</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-7xl mx-auto px-6 py-8 w-full flex-grow space-y-8">
+
+        <!-- Top Summary Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div class="glass-panel p-5 rounded-2xl flex items-center space-x-4">
+                <div class="p-3 bg-blue-500/10 text-blue-400 rounded-xl border border-blue-500/20">
+                    <i data-lucide="globe" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <p class="text-xs text-gray-400 font-medium">Tracked Portals</p>
+                    <h3 id="stat-total" class="text-2xl font-bold text-white mt-0.5">--</h3>
+                </div>
+            </div>
+
+            <div class="glass-panel p-5 rounded-2xl flex items-center space-x-4">
+                <div class="p-3 bg-emerald-500/10 text-emerald-400 rounded-xl border border-emerald-500/20">
+                    <i data-lucide="activity" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <p class="text-xs text-gray-400 font-medium">Portals Online</p>
+                    <h3 id="stat-online" class="text-2xl font-bold text-white mt-0.5">--</h3>
+                </div>
+            </div>
+
+            <div class="glass-panel p-5 rounded-2xl flex items-center space-x-4">
+                <div class="p-3 bg-indigo-500/10 text-indigo-400 rounded-xl border border-indigo-500/20">
+                    <i data-lucide="award" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <p class="text-xs text-gray-400 font-medium">Average Health Score</p>
+                    <h3 id="stat-avg-score" class="text-2xl font-bold text-white mt-0.5">--</h3>
+                </div>
+            </div>
+
+            <div class="glass-panel p-5 rounded-2xl flex items-center space-x-4">
+                <div class="p-3 bg-rose-500/10 text-rose-400 rounded-xl border border-rose-500/20">
+                    <i data-lucide="alert-triangle" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <p class="text-xs text-gray-400 font-medium">Total WCAG Violations</p>
+                    <h3 id="stat-violations" class="text-2xl font-bold text-white mt-0.5">--</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filter & Search Controls -->
+        <div class="glass-panel p-4 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-4">
+            <!-- Category Tabs -->
+            <div class="flex items-center space-x-1.5 bg-gray-900/60 p-1.5 rounded-xl border border-gray-800/80 w-full md:w-auto overflow-x-auto">
+                <button onclick="filterCategory('All')" class="cat-btn active px-3 py-1.5 text-xs font-medium rounded-lg text-white bg-indigo-600 transition">All Portals</button>
+                <button onclick="filterCategory('Central')" class="cat-btn px-3 py-1.5 text-xs font-medium rounded-lg text-gray-400 hover:text-gray-200 transition">Central</button>
+                <button onclick="filterCategory('State')" class="cat-btn px-3 py-1.5 text-xs font-medium rounded-lg text-gray-400 hover:text-gray-200 transition">State</button>
+                <button onclick="filterCategory('Judiciary')" class="cat-btn px-3 py-1.5 text-xs font-medium rounded-lg text-gray-400 hover:text-gray-200 transition">Judiciary</button>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="relative w-full md:w-72">
+                <i data-lucide="search" class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                <input type="text" id="search-input" onkeyup="handleSearch()" placeholder="Search portal name or URL..." class="w-full bg-gray-900/80 text-sm text-gray-200 pl-9 pr-4 py-2 rounded-xl border border-gray-800 focus:outline-none focus:border-indigo-500 transition">
+            </div>
+        </div>
+
+        <!-- Leaderboard Table -->
+        <div class="glass-panel rounded-2xl overflow-hidden border border-gray-800">
+            <div class="px-6 py-4 border-b border-gray-800/80 flex items-center justify-between">
+                <h3 class="text-base font-semibold text-white flex items-center gap-2">
+                    <i data-lucide="bar-chart-3" class="w-5 h-5 text-indigo-400"></i>
+                    Portal Health Scorecard
+                </h3>
+                <span class="text-xs text-gray-400">Click any row for full diagnostic inspection</span>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse text-sm">
+                    <thead>
+                        <tr class="bg-gray-900/60 text-xs uppercase text-gray-400 font-semibold border-b border-gray-800">
+                            <th class="py-3.5 px-6">Portal Name</th>
+                            <th class="py-3.5 px-4">Category</th>
+                            <th class="py-3.5 px-4">Status</th>
+                            <th class="py-3.5 px-4">Health Score</th>
+                            <th class="py-3.5 px-4">Broken Links</th>
+                            <th class="py-3.5 px-4">WCAG Violations</th>
+                            <th class="py-3.5 px-4">Hindi Score</th>
+                            <th class="py-3.5 px-6 text-right">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="portal-table-body" class="divide-y divide-gray-800/50">
+                        <!-- Dynamic rows injected here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="glass-panel border-t border-gray-800 py-6 px-6 mt-12">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between text-xs text-gray-400 gap-3">
+            <p>🛡️ Setu Sentinel — Independent Civic-Tech Project. Not affiliated with the Government of India.</p>
+            <p>Powered by Playwright, axe-core, Groq & Google Gemini Vision.</p>
+        </div>
+    </footer>
+
+    <!-- Detailed Diagnostic Modal / Drawer -->
+    <div id="detail-modal" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden items-center justify-center p-4 sm:p-6 transition-opacity">
+        <div class="glass-panel bg-gray-900 border border-gray-800 rounded-2xl w-full max-w-4xl max-h-[90vh] flex flex-col shadow-2xl overflow-hidden">
+            <!-- Modal Header -->
+            <div class="px-6 py-5 border-b border-gray-800 flex items-center justify-between bg-gray-900/90">
+                <div>
+                    <div class="flex items-center space-x-2">
+                        <h2 id="modal-title" class="text-xl font-bold text-white">Portal Diagnostics</h2>
+                        <span id="modal-category" class="px-2 py-0.5 text-xs font-semibold bg-indigo-500/20 text-indigo-400 rounded-md">Central</span>
+                    </div>
+                    <a id="modal-url" href="#" target="_blank" class="text-xs text-indigo-400 hover:underline flex items-center space-x-1 mt-1">
+                        <span id="modal-url-text">https://...</span>
+                        <i data-lucide="external-link" class="w-3 h-3"></i>
+                    </a>
+                </div>
+                <button onclick="closeModal()" class="p-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded-xl transition">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <!-- Modal Content Tabs -->
+            <div class="px-6 border-b border-gray-800 bg-gray-900/50 flex space-x-4 text-xs font-semibold text-gray-400">
+                <button onclick="switchTab('uptime')" id="tab-btn-uptime" class="py-3 border-b-2 border-indigo-500 text-indigo-400">⚡ Uptime & Broken Links</button>
+                <button onclick="switchTab('accessibility')" id="tab-btn-accessibility" class="py-3 border-b-2 border-transparent hover:text-gray-200">♿ WCAG Accessibility</button>
+                <button onclick="switchTab('translation')" id="tab-btn-translation" class="py-3 border-b-2 border-transparent hover:text-gray-200">🌐 Translation Audit</button>
+            </div>
+
+            <!-- Modal Body Scrollable -->
+            <div class="p-6 overflow-y-auto custom-scrollbar flex-grow space-y-6">
+                <!-- Tab: Uptime -->
+                <div id="tab-content-uptime" class="space-y-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="bg-gray-800/50 p-4 rounded-xl border border-gray-800">
+                            <span class="text-xs text-gray-400 font-medium">Status Code</span>
+                            <p id="detail-status-code" class="text-lg font-bold text-white mt-1">200 OK</p>
+                        </div>
+                        <div class="bg-gray-800/50 p-4 rounded-xl border border-gray-800">
+                            <span class="text-xs text-gray-400 font-medium">Response Speed</span>
+                            <p id="detail-response-ms" class="text-lg font-bold text-white mt-1">1200 ms</p>
+                        </div>
+                        <div class="bg-gray-800/50 p-4 rounded-xl border border-gray-800">
+                            <span class="text-xs text-gray-400 font-medium">Broken Internal Links</span>
+                            <p id="detail-broken-count" class="text-lg font-bold text-rose-400 mt-1">0</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Broken Links Diagnostic Log</h4>
+                        <div id="broken-links-container" class="bg-gray-950/60 rounded-xl border border-gray-800 p-4 text-xs font-mono max-h-60 overflow-y-auto custom-scrollbar space-y-2">
+                            <!-- Broken links injected here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab: Accessibility -->
+                <div id="tab-content-accessibility" class="space-y-4 hidden">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="bg-gray-800/50 p-4 rounded-xl border border-gray-800">
+                            <span class="text-xs text-gray-400 font-medium">Total WCAG Violations</span>
+                            <p id="detail-axe-count" class="text-lg font-bold text-amber-400 mt-1">0</p>
+                        </div>
+                        <div class="bg-gray-800/50 p-4 rounded-xl border border-gray-800">
+                            <span class="text-xs text-gray-400 font-medium">Critical Impact Violations</span>
+                            <p id="detail-critical-count" class="text-lg font-bold text-rose-400 mt-1">0</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-800/40 p-4 rounded-xl border border-gray-800">
+                        <h4 class="text-xs font-semibold text-gray-300 uppercase tracking-wider mb-1">Vision AI Alt-Text Audit Notes</h4>
+                        <p id="detail-vision-notes" class="text-xs text-gray-300">Alt texts checked.</p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Exact WCAG Rule Violations</h4>
+                        <div id="wcag-violations-container" class="bg-gray-950/60 rounded-xl border border-gray-800 p-4 text-xs space-y-3 max-h-60 overflow-y-auto custom-scrollbar">
+                            <!-- WCAG violations injected here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab: Translation -->
+                <div id="tab-content-translation" class="space-y-4 hidden">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="bg-gray-800/50 p-4 rounded-xl border border-gray-800">
+                            <span class="text-xs text-gray-400 font-medium">Hindi Switcher Status</span>
+                            <p id="detail-trans-status" class="text-sm font-semibold text-white mt-1">--</p>
+                        </div>
+                        <div class="bg-gray-800/50 p-4 rounded-xl border border-gray-800">
+                            <span class="text-xs text-gray-400 font-medium">LLM Semantic Preservation Score</span>
+                            <p id="detail-trans-score" class="text-lg font-bold text-indigo-400 mt-1">-- / 100</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Flagged Terms & Mistranslations</h4>
+                        <div id="flagged-terms-container" class="bg-gray-950/60 rounded-xl border border-gray-800 p-4 text-xs font-mono">
+                            <!-- Flagged terms -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script>
+        let allPortals = [];
+        let currentFilter = 'All';
+
+        async function loadLatestData() {
+            try {
+                // Fetch live latest snapshot
+                const res = await fetch('./data/latest.json');
+                const data = await res.json();
+                
+                const dateObj = new Date(data.run_at);
+                document.getElementById('snapshot-time').innerText = isNaN(dateObj) ? (data.run_at || 'Just now') : dateObj.toLocaleString();
+                allPortals = data.portals || [];
+                
+                renderMetrics();
+                renderTable();
+            } catch (err) {
+                console.error("Failed loading latest snapshot", err);
+                document.getElementById('snapshot-time').innerText = 'Offline Mode';
+            }
+        }
+
+        function renderMetrics() {
+            const total = allPortals.length;
+            const online = allPortals.filter(p => p.uptime?.status === 'up').length;
+            const avgScore = total > 0 ? (allPortals.reduce((sum, p) => sum + (p.composite_score || 0), 0) / total).toFixed(1) : 0;
+            const violations = allPortals.reduce((sum, p) => sum + (p.accessibility?.axe_violations > 0 ? p.accessibility.axe_violations : 0), 0);
+
+            document.getElementById('stat-total').innerText = total;
+            document.getElementById('stat-online').innerText = `${online} / ${total}`;
+            document.getElementById('stat-avg-score').innerText = `${avgScore} / 100`;
+            document.getElementById('stat-violations').innerText = violations;
+        }
+
+        function renderTable() {
+            const tbody = document.getElementById('portal-table-body');
+            tbody.innerHTML = '';
+
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+
+            const filtered = allPortals.filter(p => {
+                const matchesCat = currentFilter === 'All' || p.category === currentFilter;
+                const matchesSearch = p.name.toLowerCase().includes(searchTerm) || p.url.toLowerCase().includes(searchTerm);
+                return matchesCat && matchesSearch;
+            });
+
+            filtered.sort((a, b) => (b.composite_score || 0) - (a.composite_score || 0));
+
+            if (filtered.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="8" class="text-center py-8 text-gray-500">No portals found matching criteria.</td></tr>`;
+                return;
+            }
+
+            filtered.forEach(p => {
+                const isUp = p.uptime?.status === 'up';
+                const score = p.composite_score || 0;
+                
+                let scoreBadge = 'bg-rose-500/10 text-rose-400 border-rose-500/20';
+                if (score >= 75) scoreBadge = 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20';
+                else if (score >= 50) scoreBadge = 'bg-amber-500/10 text-amber-400 border-amber-500/20';
+
+                const tr = document.createElement('tr');
+                tr.className = 'hover:bg-gray-800/40 transition cursor-pointer';
+                tr.onclick = () => openModal(p);
+
+                tr.innerHTML = `
+                    <td class="py-4 px-6 font-semibold text-white">
+                        ${p.name}
+                        <span class="block text-xs font-normal text-gray-400 mt-0.5">${p.url}</span>
+                    </td>
+                    <td class="py-4 px-4 text-xs">
+                        <span class="px-2.5 py-1 rounded-md bg-gray-800 text-gray-300 border border-gray-700">${p.category}</span>
+                    </td>
+                    <td class="py-4 px-4">
+                        <span class="inline-flex items-center space-x-1.5 px-2.5 py-1 rounded-full text-xs font-medium ${isUp ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20' : 'bg-rose-500/10 text-rose-400 border border-rose-500/20'}">
+                            <span class="w-1.5 h-1.5 rounded-full ${isUp ? 'bg-emerald-400 animate-pulse' : 'bg-rose-400'}"></span>
+                            <span>${isUp ? 'UP' : 'DOWN'}</span>
+                        </span>
+                    </td>
+                    <td class="py-4 px-4">
+                        <span class="px-3 py-1 rounded-lg border text-xs font-bold ${scoreBadge}">
+                            ${score}
+                        </span>
+                    </td>
+                    <td class="py-4 px-4 text-xs font-mono ${p.uptime?.broken_links > 0 ? 'text-amber-400' : 'text-gray-400'}">
+                        ${p.uptime?.broken_links ?? 0}
+                    </td>
+                    <td class="py-4 px-4 text-xs font-mono ${p.accessibility?.axe_violations > 0 ? 'text-rose-400' : 'text-gray-400'}">
+                        ${p.accessibility?.axe_violations < 0 ? 'Blocked' : (p.accessibility?.axe_violations ?? 0)}
+                    </td>
+                    <td class="py-4 px-4 text-xs font-mono text-gray-300">
+                        ${p.translation?.score ?? 0} / 100
+                    </td>
+                    <td class="py-4 px-6 text-right">
+                        <button class="px-3 py-1.5 bg-indigo-600/20 hover:bg-indigo-600/40 text-indigo-300 border border-indigo-500/30 text-xs font-medium rounded-lg transition">
+                            Inspect
+                        </button>
+                    </td>
+                `;
+
+                tbody.appendChild(tr);
+            });
+
+            lucide.createIcons();
+        }
+
+        function filterCategory(cat) {
+            currentFilter = cat;
+            document.querySelectorAll('.cat-btn').forEach(btn => {
+                if (btn.innerText.includes(cat)) {
+                    btn.className = 'cat-btn active px-3 py-1.5 text-xs font-medium rounded-lg text-white bg-indigo-600 transition';
+                } else {
+                    btn.className = 'cat-btn px-3 py-1.5 text-xs font-medium rounded-lg text-gray-400 hover:text-gray-200 transition';
+                }
+            });
+            renderTable();
+        }
+
+        function handleSearch() {
+            renderTable();
+        }
+
+        function openModal(portal) {
+            document.getElementById('modal-title').innerText = portal.name;
+            document.getElementById('modal-category').innerText = portal.category;
+            document.getElementById('modal-url-text').innerText = portal.url;
+            document.getElementById('modal-url').href = portal.url;
+
+            // Uptime tab details
+            document.getElementById('detail-status-code').innerText = portal.uptime?.status_code ? `HTTP ${portal.uptime.status_code}` : (portal.uptime?.status === 'up' ? 'HTTP 200 OK' : 'DOWN');
+            document.getElementById('detail-response-ms').innerText = `${portal.uptime?.response_ms ?? 0} ms`;
+            document.getElementById('detail-broken-count').innerText = portal.uptime?.broken_links ?? 0;
+
+            const brokenContainer = document.getElementById('broken-links-container');
+            const brokenDetails = portal.uptime?.broken_links_details || [];
+            if (brokenDetails.length === 0) {
+                brokenContainer.innerHTML = `<p class="text-gray-500 italic">No broken internal links detected on home page.</p>`;
+            } else {
+                brokenContainer.innerHTML = brokenDetails.map(b => `
+                    <div class="flex items-center justify-between p-2 bg-gray-900 rounded border border-gray-800">
+                        <span class="truncate max-w-lg text-gray-300">${b.url}</span>
+                        <span class="px-2 py-0.5 text-xs bg-rose-500/20 text-rose-400 rounded">${b.reason || ('HTTP ' + b.status_code)}</span>
+                    </div>
+                `).join('');
+            }
+
+            // Accessibility tab details
+            document.getElementById('detail-axe-count').innerText = portal.accessibility?.axe_violations < 0 ? 'Blocked by CSP' : (portal.accessibility?.axe_violations ?? 0);
+            document.getElementById('detail-critical-count').innerText = portal.accessibility?.critical < 0 ? 'N/A' : (portal.accessibility?.critical ?? 0);
+            document.getElementById('detail-vision-notes').innerText = portal.accessibility?.vision_notes || 'Alt text check completed.';
+
+            const wcagContainer = document.getElementById('wcag-violations-container');
+            const wcagDetails = portal.accessibility?.violation_details || [];
+            if (wcagDetails.length === 0) {
+                wcagContainer.innerHTML = `<p class="text-gray-500 italic">No explicit WCAG violations recorded or check blocked by page CSP.</p>`;
+            } else {
+                wcagContainer.innerHTML = wcagDetails.map(w => `
+                    <div class="p-3 bg-gray-900 rounded-lg border border-gray-800 flex items-start justify-between">
+                        <div>
+                            <div class="flex items-center space-x-2">
+                                <span class="font-bold text-gray-200">${w.id}</span>
+                                <span class="px-2 py-0.5 text-[10px] uppercase font-bold rounded ${w.impact === 'critical' ? 'bg-rose-500/20 text-rose-400' : 'bg-amber-500/20 text-amber-400'}">${w.impact}</span>
+                            </div>
+                            <p class="text-gray-400 text-xs mt-1">${w.description}</p>
+                        </div>
+                        <span class="px-2 py-1 bg-gray-800 text-gray-300 rounded text-xs font-mono">${w.nodes} nodes</span>
+                    </div>
+                `).join('');
+            }
+
+            // Translation tab details
+            document.getElementById('detail-trans-status').innerText = portal.translation?.status || 'Not Evaluated';
+            document.getElementById('detail-trans-score').innerText = `${portal.translation?.score ?? 0} / 100`;
+
+            const flaggedContainer = document.getElementById('flagged-terms-container');
+            const flaggedTerms = portal.translation?.flagged_terms || [];
+            if (flaggedTerms.length === 0) {
+                flaggedContainer.innerHTML = `<p class="text-gray-500 italic">No flagged mistranslations detected.</p>`;
+            } else {
+                flaggedContainer.innerHTML = flaggedTerms.map(t => `<span class="inline-block px-2.5 py-1 bg-rose-500/20 text-rose-300 rounded mr-2 mb-2">${t}</span>`).join('');
+            }
+
+            switchTab('uptime');
+            document.getElementById('detail-modal').classList.remove('hidden');
+            document.getElementById('detail-modal').classList.add('flex');
+            lucide.createIcons();
+        }
+
+        function closeModal() {
+            document.getElementById('detail-modal').classList.add('hidden');
+            document.getElementById('detail-modal').classList.remove('flex');
+        }
+
+        function switchTab(tab) {
+            ['uptime', 'accessibility', 'translation'].forEach(t => {
+                document.getElementById(`tab-content-${t}`).classList.add('hidden');
+                const btn = document.getElementById(`tab-btn-${t}`);
+                btn.className = 'py-3 border-b-2 border-transparent text-gray-400 hover:text-gray-200';
+            });
+
+            document.getElementById(`tab-content-${tab}`).classList.remove('hidden');
+            const activeBtn = document.getElementById(`tab-btn-${tab}`);
+            activeBtn.className = 'py-3 border-b-2 border-indigo-500 text-indigo-400 font-semibold';
+        }
+
+        // Initial Load
+        loadLatestData();
+    </script>
+</body>
+</html>

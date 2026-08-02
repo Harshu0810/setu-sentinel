@@ -2,6 +2,8 @@
 
 A live, public health scorecard for Indian government portals — uptime, accessibility, and translation quality, refreshed automatically, on entirely free infrastructure.
 
+🌐 **Live Dashboard:** [https://harshu0810.github.io/setu-sentinel/](https://harshu0810.github.io/setu-sentinel/)
+
 > **Note on Languages:** During the development phase, Setu Sentinel will focus exclusively on **English and Hindi** translation quality. Support for additional regional languages may be added in future production releases.
 
 ## Project Structure

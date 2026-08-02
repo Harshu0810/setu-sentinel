@@ -1,0 +1,369 @@
+{
+  "run_at": "2026-08-02T08:25:44.548924+00:00",
+  "portals": [
+    {
+      "name": "National Portal of India",
+      "url": "https://www.india.gov.in",
+      "category": "Central",
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 1078,
+        "broken_links": 2,
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": -1,
+        "critical": -1,
+        "vision_notes": "Error: Page.add_script_tag: Loading the script 'https://cdnjs.cloudflare.com/ajax/libs/axe-core/4.9.0/axe.min.js' violates the following Content Security Policy directive: \"script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://code.jquery.com https://cdn.jsdelivr.net https://swalekh.blob.core.windows.net https://reverie-stt-sdk https://www.google-analytics.com https://fonts.googleapis.com\". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback. The action has been blocked.",
+        "score": 0
+      },
+      "translation": {
+        "language": "hi",
+        "score": 0,
+        "flagged_terms": [],
+        "status": "no_language_switcher_found"
+      },
+      "composite_score": 44.4
+    },
+    {
+      "name": "DigiLocker",
+      "url": "https://www.digilocker.gov.in",
+      "category": "Central",
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 705,
+        "broken_links": 1,
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": -1,
+        "critical": -1,
+        "vision_notes": "Error: Page.add_script_tag: Loading the script 'https://cdnjs.cloudflare.com/ajax/libs/axe-core/4.9.0/axe.min.js' violates the following Content Security Policy directive: \"script-src 'self' 'unsafe-eval' *.gov.in *.digilocker.gov.in *.dl6.in *.digitallocker.gov.in *.api-setu.in *.apisetu.gov.in *.mybharat.gov.in *.myscheme.in *.wcd.gov.in *.my.salesforce.com *.my.site.com\". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback. The action has been blocked.",
+        "score": 0
+      },
+      "translation": {
+        "language": "hi",
+        "score": 0,
+        "flagged_terms": [],
+        "status": "no_language_switcher_found"
+      },
+      "composite_score": 45.2
+    },
+    {
+      "name": "UMANG",
+      "url": "https://web.umang.gov.in",
+      "category": "Central",
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 1071,
+        "broken_links": 0,
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": 79,
+        "critical": 0,
+        "vision_notes": "Inaccurate alt text 'meity': API Error: Error code: 404 - {'error': {'message': 'The model `llama-4-scout-17b-16e-instruct` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}; Inaccurate alt text 'digital india': API Error: Error code: 404 - {'error': {'message': 'The model `llama-4-scout-17b-16e-instruct` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}; Inaccurate alt text 'icon': API Error: Error code: 404 - {'error': {'message': 'The model `llama-4-scout-17b-16e-instruct` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+        "score": 0
+      },
+      "translation": {
+        "language": "hi",
+        "score": 0,
+        "flagged_terms": [],
+        "status": "no_language_switcher_found"
+      },
+      "composite_score": 46.0
+    },
+    {
+      "name": "eCourts",
+      "url": "https://ecourts.gov.in",
+      "category": "Judiciary",
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 17278,
+        "broken_links": 28,
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": 38,
+        "critical": 0,
+        "vision_notes": "Inaccurate alt text 'eCourt India Services': API Error: Error code: 404 - {'error': {'message': 'The model `llama-4-scout-17b-16e-instruct` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}; Inaccurate alt text 'eCourts LOGO': API Error: Error code: 404 - {'error': {'message': 'The model `llama-4-scout-17b-16e-instruct` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}; Inaccurate alt text 'slide 1': API Error: Error code: 404 - {'error': {'message': 'The model `llama-4-scout-17b-16e-instruct` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+        "score": 32
+      },
+      "translation": {
+        "language": "hi",
+        "score": 0,
+        "flagged_terms": [],
+        "status": "no_language_switcher_found"
+      },
+      "composite_score": 35.6
+    },
+    {
+      "name": "MyGov",
+      "url": "https://www.mygov.in",
+      "category": "Central",
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 3190,
+        "broken_links": 1,
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": 200,
+        "critical": 17,
+        "vision_notes": "Inaccurate alt text 'Government of India': API Error: Error code: 404 - {'error': {'message': 'The model `llama-4-scout-17b-16e-instruct` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}; Inaccurate alt text 'Meri Sarkar Logo': API Error: Error code: 404 - {'error': {'message': 'The model `llama-4-scout-17b-16e-instruct` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}; Inaccurate alt text 'user-profile': API Error: Error code: 404 - {'error': {'message': 'The model `llama-4-scout-17b-16e-instruct` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+        "score": 0
+      },
+      "translation": {
+        "language": "hi",
+        "score": 0,
+        "flagged_terms": [],
+        "status": "no_language_switcher_found"
+      },
+      "composite_score": 45.2
+    },
+    {
+      "name": "Income Tax e-Filing",
+      "url": "https://www.incometax.gov.in",
+      "category": "Central",
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 1997,
+        "broken_links": 2,
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": 83,
+        "critical": 15,
+        "vision_notes": "Inaccurate alt text 'EFiling Logo': API Error: Error code: 404 - {'error': {'message': 'The model `llama-4-scout-17b-16e-instruct` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}; Inaccurate alt text 'down-arrow': API Error: Error code: 404 - {'error': {'message': 'The model `llama-4-scout-17b-16e-instruct` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}; Inaccurate alt text 'contrast': API Error: Error code: 404 - {'error': {'message': 'The model `llama-4-scout-17b-16e-instruct` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+        "score": 0
+      },
+      "translation": {
+        "language": "hi",
+        "score": 0,
+        "flagged_terms": [],
+        "status": "success"
+      },
+      "composite_score": 38.4
+    },
+    {
+      "name": "UIDAI",
+      "url": "https://uidai.gov.in",
+      "category": "Central",
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 315,
+        "broken_links": 0,
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": -1,
+        "critical": -1,
+        "vision_notes": "Error: Page.add_script_tag: Loading the script 'https://cdnjs.cloudflare.com/ajax/libs/axe-core/4.9.0/axe.min.js' violates the following Content Security Policy directive: \"script-src 'self' 'unsafe-inline' 'unsafe-eval' cdn.syndication.twimg.com *.twitter.com *.uidai.gov.in uidai.in *.facebook.net\". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback. The action has been blocked.",
+        "score": 0
+      },
+      "translation": {
+        "language": "hi",
+        "score": 0,
+        "flagged_terms": [],
+        "status": "error: ElementHandle.click: Element is not attached to the DOM\nCall log:\n  - attempting click action\n    - waiting for element to be visible, enabled and stable\n"
+      },
+      "composite_score": 40.0
+    },
+    {
+      "name": "e-Mitra Rajasthan",
+      "url": "https://emitra.rajasthan.gov.in",
+      "category": "State",
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 3818,
+        "broken_links": 4,
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": 90,
+        "critical": 8,
+        "vision_notes": "Inaccurate alt text 'Government of Rajasthan': API Error: Error code: 404 - {'error': {'message': 'The model `llama-4-scout-17b-16e-instruct` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}; Inaccurate alt text 'Government of Rajasthan': API Error: Error code: 404 - {'error': {'message': 'The model `llama-4-scout-17b-16e-instruct` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}; Inaccurate alt text 'Government of Rajasthan': API Error: Error code: 404 - {'error': {'message': 'The model `llama-4-scout-17b-16e-instruct` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+        "score": 0
+      },
+      "translation": {
+        "language": "hi",
+        "score": 0,
+        "flagged_terms": [],
+        "status": "no_language_switcher_found"
+      },
+      "composite_score": 42.8
+    },
+    {
+      "name": "Rajasthan Single Sign On",
+      "url": "https://sso.rajasthan.gov.in",
+      "category": "State",
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 706,
+        "broken_links": 7,
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": -1,
+        "critical": -1,
+        "vision_notes": "Error: Page.add_script_tag: Loading the script 'https://cdnjs.cloudflare.com/ajax/libs/axe-core/4.9.0/axe.min.js' violates the following Content Security Policy directive: \"script-src 'self' 'unsafe-inline' *.rajasthan.gov.in/ 'unsafe-eval' https://ssocdn.rajasthan.gov.in/ https://apis.google.com/ http://connect.facebook.net/ https://www.google.com/ https://seal.geotrust.com/\". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback. The action has been blocked.",
+        "score": 0
+      },
+      "translation": {
+        "language": "hi",
+        "score": 0,
+        "flagged_terms": [],
+        "status": "no_language_switcher_found"
+      },
+      "composite_score": 40.4
+    },
+    {
+      "name": "Rajasthan Sampark",
+      "url": "https://sampark.rajasthan.gov.in",
+      "category": "State",
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 4246,
+        "broken_links": 1,
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": 71,
+        "critical": 21,
+        "vision_notes": "Inaccurate alt text 'CMO Icon': API Error: Error code: 404 - {'error': {'message': 'The model `llama-4-scout-17b-16e-instruct` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}; Inaccurate alt text 'DOIT&C Icon': API Error: Error code: 404 - {'error': {'message': 'The model `llama-4-scout-17b-16e-instruct` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}; Inaccurate alt text 'Rajasthan Gov. Icon': API Error: Error code: 404 - {'error': {'message': 'The model `llama-4-scout-17b-16e-instruct` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+        "score": 0
+      },
+      "translation": {
+        "language": "hi",
+        "score": 0,
+        "flagged_terms": [],
+        "status": "no_language_switcher_found"
+      },
+      "composite_score": 45.2
+    },
+    {
+      "name": "Gujarat State Portal",
+      "url": "https://gujaratindia.gov.in",
+      "category": "State",
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 2529,
+        "broken_links": 23,
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": -1,
+        "critical": -1,
+        "vision_notes": "Error: Page.add_script_tag: Loading the script 'https://cdnjs.cloudflare.com/ajax/libs/axe-core/4.9.0/axe.min.js' violates the following Content Security Policy directive: \"script-src 'self' 'unsafe-inline' 'unsafe-eval' http://localhost:55815 https://staging-gil1.gujarat.gov.in https://translation-plugin.bhashini.co.in https://aiservices.duckdns.org/ https://encrypted-tbn0.gstatic.com/\". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback. The action has been blocked.",
+        "score": 0
+      },
+      "translation": {
+        "language": "hi",
+        "score": 0,
+        "flagged_terms": [],
+        "status": "no_language_switcher_found"
+      },
+      "composite_score": 27.6
+    },
+    {
+      "name": "Aaple Sarkar Maharashtra",
+      "url": "https://aaplesarkar.mahaonline.gov.in",
+      "category": "State",
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 2525,
+        "broken_links": 30,
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": 73,
+        "critical": 8,
+        "vision_notes": "Inaccurate alt text 'Shri. Devendra Fadnavis': API Error: Error code: 404 - {'error': {'message': 'The model `llama-4-scout-17b-16e-instruct` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}; Inaccurate alt text 'Shri. Eknath Shinde': API Error: Error code: 404 - {'error': {'message': 'The model `llama-4-scout-17b-16e-instruct` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}; Inaccurate alt text 'Smt. Sunetra Ajit Pawar': API Error: Error code: 404 - {'error': {'message': 'The model `llama-4-scout-17b-16e-instruct` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+        "score": 0
+      },
+      "translation": {
+        "language": "hi",
+        "score": 0,
+        "flagged_terms": [],
+        "status": "no_language_switcher_found"
+      },
+      "composite_score": 26.0
+    },
+    {
+      "name": "UP Bhulekh",
+      "url": "https://upbhulekh.gov.in",
+      "category": "State",
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 8351,
+        "broken_links": 5,
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": 13,
+        "critical": 0,
+        "vision_notes": "Inaccurate alt text 'State Emblem of India': API Error: Error code: 404 - {'error': {'message': 'The model `llama-4-scout-17b-16e-instruct` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}; Inaccurate alt text 'PM Narendra Modi': API Error: Error code: 404 - {'error': {'message': 'The model `llama-4-scout-17b-16e-instruct` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}; Inaccurate alt text 'CM Yogi Adityanath': API Error: Error code: 404 - {'error': {'message': 'The model `llama-4-scout-17b-16e-instruct` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+        "score": 57
+      },
+      "translation": {
+        "language": "hi",
+        "score": 0,
+        "flagged_terms": [],
+        "status": "no_language_switcher_found"
+      },
+      "composite_score": 59.1
+    }
+  ]
+}
