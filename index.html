@@ -306,8 +306,8 @@
 
         async function loadLatestData() {
             try {
-                // Fetch live latest snapshot
-                const res = await fetch('./data/latest.json');
+                // Fetch live latest snapshot with cache-busting
+                const res = await fetch('./data/latest.json?t=' + Date.now(), { cache: 'no-store' });
                 const data = await res.json();
                 
                 const dateObj = new Date(data.run_at);

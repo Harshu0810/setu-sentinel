@@ -306,9 +306,8 @@
 
         async function loadLatestData() {
             try {
-                // Try fetching latest history snapshot
-                // We'll search for the snapshot files dynamically or load from history directory
-                const res = await fetch('../data/history/2026-08-02T08-25.json');
+                // Try fetching latest history snapshot with cache-busting
+                const res = await fetch('../data/latest.json?t=' + Date.now(), { cache: 'no-store' });
                 const data = await res.json();
                 
                 document.getElementById('snapshot-time').innerText = data.run_at || 'Just now';

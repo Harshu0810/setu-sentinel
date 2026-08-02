@@ -10,32 +10,31 @@ from playwright_stealth import Stealth
 # Disable insecure request warnings for broken govt SSL certs
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-def check_link(url: str) -> tuple[str, bool, int]:
+def check_link_with_context(context, url: str) -> tuple[str, bool, int]:
     """
-    Checks if a URL link is broken.
-    - True Broken Links: HTTP 404 Not Found, 5xx Server Errors, or 0 (Unreachable/DNS/Timeout).
-    - HTTP 403 (Forbidden / WAF Access Denied): Indicates WAF anti-bot security blocking the automated script,
-      not a broken link for human citizens. We do NOT treat 403 as a broken link.
+    Checks if a URL link is broken using Playwright's browser context.
+    Uses Chromium's native TLS handshake engine & headers, preventing connection reset errors 
+    on sites like ddnews.gov.in and avoiding false positive 403 WAF blocks.
     """
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
-        'Accept-Language': 'en-US,en;q=0.9'
-    }
-    
     try:
-        resp = requests.get(url, timeout=6, headers=headers, verify=False, stream=True, allow_redirects=True)
-        status = resp.status_code
-        resp.close()
-        
-        # 403 is WAF anti-bot protection, NOT a broken link for real human users.
-        # Only 404, 5xx, or connection timeouts (status 0) indicate actual dead/broken links.
+        resp = context.request.get(url, timeout=7000)
+        status = resp.status
+        # True broken links: 404 Not Found, 5xx Server Errors
+        # 403 Forbidden is WAF anti-bot protection, NOT a broken link for human citizens.
         is_broken = (status == 404 or status >= 500)
         return (url, is_broken, status)
-    except requests.RequestException:
-        return (url, True, 0) # 0 means unreachable / Timeout / DNS error
+    except Exception:
+        # Fallback to requests if context request raises exception
+        try:
+            headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
+            r = requests.get(url, timeout=5, headers=headers, verify=False, stream=True, allow_redirects=True)
+            st = r.status_code
+            r.close()
+            return (url, st == 404 or st >= 500, st)
+        except Exception:
+            return (url, True, 0) # 0 means unreachable / Timeout / DNS error
 
-def count_broken_links(links: list[str]) -> tuple[int, list[dict]]:
+def count_broken_links_context(context, links: list[str]) -> tuple[int, list[dict]]:
     valid_links = [l for l in links if l and l.startswith('http')]
     valid_links = list(set(valid_links))
     
@@ -43,16 +42,15 @@ def count_broken_links(links: list[str]) -> tuple[int, list[dict]]:
     to_check = valid_links[:30]
     
     broken_details = []
-    with ThreadPoolExecutor(max_workers=5) as executor:
-        results = executor.map(check_link, to_check)
-        for url, is_broken, status in results:
-            if is_broken:
-                reason = "Unreachable / Timeout" if status == 0 else f"HTTP {status}"
-                broken_details.append({
-                    "url": url,
-                    "status_code": status,
-                    "reason": reason
-                })
+    for url in to_check:
+        url_res, is_broken, status = check_link_with_context(context, url)
+        if is_broken:
+            reason = "Unreachable / Timeout" if status == 0 else f"HTTP {status}"
+            broken_details.append({
+                "url": url_res,
+                "status_code": status,
+                "reason": reason
+            })
         
     return len(broken_details), broken_details
 
@@ -84,7 +82,7 @@ def check_portal_uptime(url: str) -> dict:
                 status = 200
                 
             links = page.eval_on_selector_all("a[href]", "els => els.map(e => e.href)")
-            broken_count, broken_details = count_broken_links(links)
+            broken_count, broken_details = count_broken_links_context(context, links)
             
             return {
                 "status": "up" if status and status < 400 else "down",
