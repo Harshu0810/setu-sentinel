@@ -134,7 +134,8 @@ def check_portal_uptime(url: str) -> dict:
         browser = p.chromium.launch(headless=is_ci)
         context = browser.new_context(
             user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-            ignore_https_errors=True
+            ignore_https_errors=True,
+            permissions=["geolocation", "notifications"]
         )
         page = context.new_page()
         Stealth().apply_stealth_sync(page)
@@ -145,6 +146,14 @@ def check_portal_uptime(url: str) -> dict:
             
             try:
                 page.wait_for_load_state("domcontentloaded", timeout=15000)
+            except Exception:
+                pass
+                
+            # Auto-dismiss popups / modal dialogs / cookie banners
+            try:
+                page.evaluate("""() => {
+                    document.querySelectorAll('.modal .close, .popup-close, [aria-label="Close"], .btn-close, #cookie-accept, .close-btn, .modal-close').forEach(b => b.click());
+                }""")
             except Exception:
                 pass
                 

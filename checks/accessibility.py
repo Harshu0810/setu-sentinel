@@ -169,6 +169,7 @@ def check_portal_accessibility(url: str) -> dict:
         context = browser.new_context(
             user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
             ignore_https_errors=True,
+            permissions=["geolocation", "notifications"],
             viewport={"width": 1920, "height": 1080}
         )
         page = context.new_page()
@@ -179,6 +180,14 @@ def check_portal_accessibility(url: str) -> dict:
             
             try:
                 page.wait_for_load_state("domcontentloaded", timeout=15000)
+            except Exception:
+                pass
+                
+            # Auto-dismiss popups / modal dialogs / cookie banners before WCAG scanning
+            try:
+                page.evaluate("""() => {
+                    document.querySelectorAll('.modal .close, .popup-close, [aria-label="Close"], .btn-close, #cookie-accept, .close-btn, .modal-close').forEach(b => b.click());
+                }""")
             except Exception:
                 pass
             
