@@ -2,6 +2,7 @@ import time
 import requests
 import urllib3
 import os
+import json
 from urllib.parse import urlparse
 from concurrent.futures import ThreadPoolExecutor
 from playwright.sync_api import sync_playwright
@@ -37,14 +38,17 @@ def check_link_with_context(context, url: str) -> tuple[str, bool, int]:
         except Exception:
             return (url, True, 0) # 0 means unreachable / Timeout / DNS error
 
-CACHE_FILE = os.path.join(os.path.dirname(__file__), "..", "data", "link_cache.json")
+CACHE_FILE = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data", "link_cache.json"))
 
 def load_link_cache() -> dict:
-    if os.path.exists(CACHE_FILE):
+    if os.path.exists(CACHE_FILE) and os.path.getsize(CACHE_FILE) > 0:
         try:
             with open(CACHE_FILE, "r", encoding="utf-8") as f:
-                return json.load(f)
-        except Exception:
+                content = f.read().strip()
+                if content:
+                    return json.loads(content)
+        except Exception as e:
+            print(f"  [Cache Warning] Failed to load cache file: {e}")
             return {}
     return {}
 
@@ -53,8 +57,8 @@ def save_link_cache(cache: dict):
         os.makedirs(os.path.dirname(CACHE_FILE), exist_ok=True)
         with open(CACHE_FILE, "w", encoding="utf-8") as f:
             json.dump(cache, f, indent=2)
-    except Exception:
-        pass
+    except Exception as e:
+        print(f"  [Cache Warning] Failed to save cache file: {e}")
 
 def audit_portal_links(context, links: list[str]) -> tuple[int, int, list[str], list[dict]]:
     """
@@ -100,13 +104,16 @@ def audit_portal_links(context, links: list[str]) -> tuple[int, int, list[str], 
         url_res, is_broken, status = check_link_with_context(context, url)
         reason = ("Unreachable / Timeout" if status == 0 else f"HTTP {status}") if is_broken else "OK"
         
-        # Update cache entry
-        cache[url_res] = {
+        entry = {
             "status_code": status,
             "is_broken": is_broken,
             "reason": reason,
             "last_checked": now
         }
+        
+        # Save both original url and returned url_res for redirect robustness
+        cache[url] = entry
+        cache[url_res] = entry
         
         if is_broken:
             fresh_broken.append({
@@ -118,11 +125,17 @@ def audit_portal_links(context, links: list[str]) -> tuple[int, int, list[str], 
             fresh_working.append(url_res)
             
     # Save updated cache to disk
-    if batch_to_audit:
+    if batch_to_audit or not os.path.exists(CACHE_FILE) or os.path.getsize(CACHE_FILE) == 0:
         save_link_cache(cache)
         
-    all_working = cached_working + fresh_working
-    all_broken = cached_broken + fresh_broken
+    all_working = list(set(cached_working + fresh_working))
+    
+    # Deduplicate broken links
+    broken_map = {}
+    for b in cached_broken + fresh_broken:
+        broken_map[b["url"]] = b
+    all_broken = list(broken_map.values())
+    
     total_audited = len(all_working) + len(all_broken)
     
     return total_found, total_audited, all_working, all_broken
