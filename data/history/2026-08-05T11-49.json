@@ -1,0 +1,4671 @@
+{
+  "run_at": "2026-08-05T11:49:04.924829+00:00",
+  "total_portals": 38,
+  "portals": [
+    {
+      "name": "National Portal of India",
+      "url": "https://www.india.gov.in",
+      "category": "Central",
+      "subcategory": "Hub",
+      "purpose": "National single-window access to central and state government information and services",
+      "priority": 1,
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 4302,
+        "total_links_found": 40,
+        "total_links_audited": 40,
+        "verified_working_links_count": 40,
+        "verified_working_links": [
+          "https://x.com/indiagovin",
+          "https://pgportal.gov.in/",
+          "https://www.india.gov.in/category",
+          "https://www.india.gov.in/services/details/interact-with-honble-prime-minister",
+          "https://www.newsonair.gov.in/",
+          "https://www.india.gov.in/explore-india/travel-and-tourism",
+          "https://www.india.gov.in/disclaimer",
+          "https://www.india.gov.in/spotlight/details/census-of-india-2027",
+          "https://www.india.gov.in/explore-india",
+          "https://www.india.gov.in/services/details/bhavishya-pension-sanction-and-payment-tracking-system"
+        ],
+        "broken_links": 0,
+        "broken_links_details": [],
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": 66,
+        "critical": 7,
+        "violation_details": [
+          {
+            "id": "aria-allowed-role",
+            "impact": "minor",
+            "description": "Ensures role attribute has an appropriate value for the element",
+            "help": "ARIA role should be appropriate for the element",
+            "nodes": 6
+          },
+          {
+            "id": "aria-hidden-focus",
+            "impact": "serious",
+            "description": "Ensures aria-hidden elements are not focusable nor contain focusable elements",
+            "help": "ARIA hidden element must not be focusable or contain focusable elements",
+            "nodes": 8
+          },
+          {
+            "id": "aria-required-parent",
+            "impact": "critical",
+            "description": "Ensures elements with an ARIA role that require parent roles are contained by them",
+            "help": "Certain ARIA roles must be contained by particular parents",
+            "nodes": 7
+          },
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "nodes": 4
+          },
+          {
+            "id": "image-redundant-alt",
+            "impact": "minor",
+            "description": "Ensure image alternative is not repeated as text",
+            "help": "Alternative text of images should not be repeated as text",
+            "nodes": 3
+          },
+          {
+            "id": "landmark-no-duplicate-banner",
+            "impact": "moderate",
+            "description": "Ensures the document has at most one banner landmark",
+            "help": "Document should not have more than one banner landmark",
+            "nodes": 1
+          },
+          {
+            "id": "landmark-no-duplicate-contentinfo",
+            "impact": "moderate",
+            "description": "Ensures the document has at most one contentinfo landmark",
+            "help": "Document should not have more than one contentinfo landmark",
+            "nodes": 1
+          },
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "description": "Ensures the document has a main landmark",
+            "help": "Document should have one main landmark",
+            "nodes": 1
+          },
+          {
+            "id": "landmark-unique",
+            "impact": "moderate",
+            "description": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+            "help": "Ensures landmarks are unique",
+            "nodes": 2
+          },
+          {
+            "id": "listitem",
+            "impact": "serious",
+            "description": "Ensures <li> elements are used semantically",
+            "help": "<li> elements must be contained in a <ul> or <ol>",
+            "nodes": 3
+          },
+          {
+            "id": "region",
+            "impact": "moderate",
+            "description": "Ensures all page content is contained by landmarks",
+            "help": "All page content should be contained by landmarks",
+            "nodes": 30
+          }
+        ],
+        "vision_notes": "Alt texts appear accurate or no descriptive images found.",
+        "score": 6
+      },
+      "translation": {
+        "language": "hi",
+        "score": 0,
+        "devanagari_ratio_pct": 0.0,
+        "switcher_found": false,
+        "switcher_type": "None",
+        "status": "no_language_switcher_found",
+        "regional_breakdown": {
+          "nav_pct": 0.0,
+          "headings_pct": 0.0,
+          "body_pct": 0.0
+        },
+        "quality_breakdown": {
+          "fluency_score": 0,
+          "glossary_score": 0,
+          "artifacts_score": 0
+        },
+        "flagged_terms": []
+      },
+      "composite_score": 41.8
+    },
+    {
+      "name": "DigiLocker",
+      "url": "https://www.digilocker.gov.in",
+      "category": "Central",
+      "subcategory": "Documents",
+      "purpose": "Cloud-based storage, sharing and verification of official government documents",
+      "priority": 1,
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 1136,
+        "total_links_found": 49,
+        "total_links_audited": 49,
+        "verified_working_links_count": 49,
+        "verified_working_links": [
+          "https://digilocker.meripehchaan.gov.in/",
+          "https://www.digilocker.gov.in/web/dashboard/issuers?state=Karnataka",
+          "https://www.digilocker.gov.in/web/dashboard/issuers?state=Odisha",
+          "https://www.digilocker.gov.in/web/dashboard/issuers/001891",
+          "https://www.digilocker.gov.in/web/dashboard/issuers?id=18",
+          "https://www.digilocker.gov.in/web/about/faq",
+          "https://www.digilocker.gov.in/web/about/circulars",
+          "https://negd.gov.in/",
+          "https://apps.apple.com/in/app/digilocker/id1320618078",
+          "https://www.digilocker.gov.in/web/dashboard/issuers?state=Assam"
+        ],
+        "broken_links": 0,
+        "broken_links_details": [],
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": 23,
+        "critical": 3,
+        "violation_details": [
+          {
+            "id": "aria-allowed-role",
+            "impact": "minor",
+            "description": "Ensures role attribute has an appropriate value for the element",
+            "help": "ARIA role should be appropriate for the element",
+            "nodes": 2
+          },
+          {
+            "id": "button-name",
+            "impact": "critical",
+            "description": "Ensures buttons have discernible text",
+            "help": "Buttons must have discernible text",
+            "nodes": 1
+          },
+          {
+            "id": "image-alt",
+            "impact": "critical",
+            "description": "Ensures <img> elements have alternate text or a role of none or presentation",
+            "help": "Images must have alternate text",
+            "nodes": 1
+          },
+          {
+            "id": "label",
+            "impact": "critical",
+            "description": "Ensures every form element has a label",
+            "help": "Form elements must have labels",
+            "nodes": 1
+          },
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "description": "Ensures the document has a main landmark",
+            "help": "Document should have one main landmark",
+            "nodes": 1
+          },
+          {
+            "id": "nested-interactive",
+            "impact": "serious",
+            "description": "Ensures interactive controls are not nested as they are not always announced by screen readers or can cause focus problems for assistive technologies",
+            "help": "Interactive controls must not be nested",
+            "nodes": 1
+          },
+          {
+            "id": "page-has-heading-one",
+            "impact": "moderate",
+            "description": "Ensure that the page, or at least one of its frames contains a level-one heading",
+            "help": "Page should contain a level-one heading",
+            "nodes": 1
+          },
+          {
+            "id": "presentation-role-conflict",
+            "impact": "minor",
+            "description": "Elements marked as presentational should not have global ARIA or tabindex to ensure all screen readers ignore them",
+            "help": "Ensure elements marked as presentational are consistently ignored",
+            "nodes": 2
+          },
+          {
+            "id": "region",
+            "impact": "moderate",
+            "description": "Ensures all page content is contained by landmarks",
+            "help": "All page content should be contained by landmarks",
+            "nodes": 12
+          },
+          {
+            "id": "tabindex",
+            "impact": "serious",
+            "description": "Ensures tabindex attribute values are not greater than 0",
+            "help": "Elements should not have tabindex greater than zero",
+            "nodes": 1
+          }
+        ],
+        "vision_notes": "Alt texts appear accurate or no descriptive images found.",
+        "score": 65
+      },
+      "translation": {
+        "language": "hi",
+        "score": 0,
+        "devanagari_ratio_pct": 0.4,
+        "switcher_found": false,
+        "switcher_type": "None",
+        "status": "no_language_switcher_found",
+        "regional_breakdown": {
+          "nav_pct": 3.0,
+          "headings_pct": 0.0,
+          "body_pct": 0.0
+        },
+        "quality_breakdown": {
+          "fluency_score": 0,
+          "glossary_score": 0,
+          "artifacts_score": 0
+        },
+        "flagged_terms": []
+      },
+      "composite_score": 59.5
+    },
+    {
+      "name": "UMANG",
+      "url": "https://web.umang.gov.in",
+      "category": "Central",
+      "subcategory": "Service Aggregator",
+      "purpose": "Unified app/portal bundling 1,600+ central and state government services",
+      "priority": 1,
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 1794,
+        "total_links_found": 31,
+        "total_links_audited": 31,
+        "verified_working_links_count": 31,
+        "verified_working_links": [
+          "https://web.umang.gov.in/landing/accessibility",
+          "https://web.umang.gov.in/help/terms-and-conditions.htm",
+          "https://web.umang.gov.in/landing/services",
+          "https://web.umang.gov.in/landing/digilocker",
+          "https://web.umang.gov.in/web_new/department?url=dept%2F145&dept_id=145&dept_name=National%20Consumer%20Helpline",
+          "https://web.umang.gov.in/landing/scheme/dashboard",
+          "https://web.umang.gov.in/landing/flipbook/index.html",
+          "https://web.umang.gov.in/landing/video_presentation",
+          "https://web.umang.gov.in/landing/services?stateId=20",
+          "https://web.umang.gov.in/landing/jobs"
+        ],
+        "broken_links": 0,
+        "broken_links_details": [],
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": 78,
+        "critical": 0,
+        "violation_details": [
+          {
+            "id": "aria-allowed-role",
+            "impact": "minor",
+            "description": "Ensures role attribute has an appropriate value for the element",
+            "help": "ARIA role should be appropriate for the element",
+            "nodes": 1
+          },
+          {
+            "id": "heading-order",
+            "impact": "moderate",
+            "description": "Ensures the order of headings is semantically correct",
+            "help": "Heading levels should only increase by one",
+            "nodes": 5
+          },
+          {
+            "id": "list",
+            "impact": "serious",
+            "description": "Ensures that lists are structured correctly",
+            "help": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
+            "nodes": 2
+          },
+          {
+            "id": "nested-interactive",
+            "impact": "serious",
+            "description": "Ensures interactive controls are not nested as they are not always announced by screen readers or can cause focus problems for assistive technologies",
+            "help": "Interactive controls must not be nested",
+            "nodes": 1
+          },
+          {
+            "id": "region",
+            "impact": "moderate",
+            "description": "Ensures all page content is contained by landmarks",
+            "help": "All page content should be contained by landmarks",
+            "nodes": 50
+          },
+          {
+            "id": "scrollable-region-focusable",
+            "impact": "serious",
+            "description": "Ensure elements that have scrollable content are accessible by keyboard",
+            "help": "Scrollable region must have keyboard access",
+            "nodes": 2
+          },
+          {
+            "id": "tabindex",
+            "impact": "serious",
+            "description": "Ensures tabindex attribute values are not greater than 0",
+            "help": "Elements should not have tabindex greater than zero",
+            "nodes": 17
+          }
+        ],
+        "vision_notes": "Alt texts appear accurate or no descriptive images found.",
+        "score": 22
+      },
+      "translation": {
+        "language": "hi",
+        "score": 0,
+        "devanagari_ratio_pct": 0.0,
+        "switcher_found": false,
+        "switcher_type": "None",
+        "status": "no_language_switcher_found",
+        "regional_breakdown": {
+          "nav_pct": 0.0,
+          "headings_pct": 0.0,
+          "body_pct": 0.0
+        },
+        "quality_breakdown": {
+          "fluency_score": 0,
+          "glossary_score": 0,
+          "artifacts_score": 0
+        },
+        "flagged_terms": []
+      },
+      "composite_score": 46.6
+    },
+    {
+      "name": "eCourts",
+      "url": "https://ecourts.gov.in",
+      "category": "Judiciary",
+      "subcategory": "Courts",
+      "purpose": "Case status, cause lists and judgments; National Judicial Data Grid",
+      "priority": 1,
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 2418,
+        "total_links_found": 47,
+        "total_links_audited": 47,
+        "verified_working_links_count": 47,
+        "verified_working_links": [
+          "https://ecourts.gov.in/ecourts2.0/#?app_token=",
+          "https://services.ecourts.gov.in/",
+          "https://ecourts.gov.in/ecourts2.0/?app_token=",
+          "https://www.sci.gov.in/",
+          "https://njdg.ecourts.gov.in/njdg_v3/",
+          "https://ecourts.gov.in/ecourts2.0//?p=about_us/highcourts",
+          "https://ecourts.gov.in/ecourts2.0//?p=about_us/knowledge_mgmt",
+          "https://ecourts.gov.in/ecourts2.0//?p=login/fillLang&lang=%E0%A4%B9%E0%A4%BF%E0%A4%A8%E0%A5%8D%E0%A4%A6%E0%A5%80&code=hindi&app_token=",
+          "https://ecourts.gov.in/ecourts2.0//?p=login/fillLang&lang=%E0%AA%97%E0%AB%81%E0%AA%9C%E0%AA%B0%E0%AA%BE%E0%AA%A4%E0%AB%80&code=gujarati&app_token=",
+          "https://ecourts.gov.in/ecourts2.0//?p=about_us/highcourts&app_token="
+        ],
+        "broken_links": 0,
+        "broken_links_details": [],
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": 38,
+        "critical": 0,
+        "violation_details": [
+          {
+            "id": "heading-order",
+            "impact": "moderate",
+            "description": "Ensures the order of headings is semantically correct",
+            "help": "Heading levels should only increase by one",
+            "nodes": 3
+          },
+          {
+            "id": "image-redundant-alt",
+            "impact": "minor",
+            "description": "Ensure image alternative is not repeated as text",
+            "help": "Alternative text of images should not be repeated as text",
+            "nodes": 11
+          },
+          {
+            "id": "landmark-no-duplicate-contentinfo",
+            "impact": "moderate",
+            "description": "Ensures the document has at most one contentinfo landmark",
+            "help": "Document should not have more than one contentinfo landmark",
+            "nodes": 1
+          },
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "description": "Ensures the document has a main landmark",
+            "help": "Document should have one main landmark",
+            "nodes": 1
+          },
+          {
+            "id": "landmark-unique",
+            "impact": "moderate",
+            "description": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+            "help": "Ensures landmarks are unique",
+            "nodes": 1
+          },
+          {
+            "id": "page-has-heading-one",
+            "impact": "moderate",
+            "description": "Ensure that the page, or at least one of its frames contains a level-one heading",
+            "help": "Page should contain a level-one heading",
+            "nodes": 1
+          },
+          {
+            "id": "region",
+            "impact": "moderate",
+            "description": "Ensures all page content is contained by landmarks",
+            "help": "All page content should be contained by landmarks",
+            "nodes": 20
+          }
+        ],
+        "vision_notes": "Alt texts appear accurate or no descriptive images found.",
+        "score": 62
+      },
+      "translation": {
+        "language": "hi",
+        "score": 15,
+        "devanagari_ratio_pct": 0.0,
+        "switcher_found": true,
+        "switcher_type": "Relative Path Link (/hi)",
+        "status": "switcher_clicked_low_hindi",
+        "regional_breakdown": {
+          "nav_pct": 0.0,
+          "headings_pct": 0.0,
+          "body_pct": 0.0
+        },
+        "quality_breakdown": {
+          "fluency_score": 0,
+          "glossary_score": 0,
+          "artifacts_score": 0
+        },
+        "flagged_terms": []
+      },
+      "composite_score": 63.1
+    },
+    {
+      "name": "Income Tax e-Filing",
+      "url": "https://www.incometax.gov.in",
+      "category": "Central",
+      "subcategory": "High-Stakes",
+      "purpose": "ITR filing, refund tracking, PAN-Aadhaar linking",
+      "priority": 1,
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 4025,
+        "total_links_found": 113,
+        "total_links_audited": 113,
+        "verified_working_links_count": 113,
+        "verified_working_links": [
+          "https://www.incometax.gov.in/iec/foportal/help/partnership-firm-llp#taxdeductions",
+          "https://www.incometax.gov.in/iec/foportal/contact-us",
+          "https://eportal.incometax.gov.in/iec/foservices/#/register-home",
+          "https://www.incometax.gov.in/iec/foportal/help/non-company/return-applicable-0#returnsandforms",
+          "https://www.incometax.gov.in/iec/foportal/using-the-portal/browser-support",
+          "https://eportal.incometax.gov.in/iec/foservices/#/pre-login/success-enablers",
+          "https://www.incometax.gov.in/iec/foportal/rbi-approved-banks",
+          "https://www.incometax.gov.in/iec/foportal/help/ca/registration",
+          "https://eportal.incometax.gov.in/iec/foservices/#/login",
+          "https://www.incometax.gov.in/iec/foportal/help/all-topics/tax-payer/individual/senior-and-super-senior-citizens/how-to-file-tax-returns"
+        ],
+        "broken_links": 0,
+        "broken_links_details": [],
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": 84,
+        "critical": 15,
+        "violation_details": [
+          {
+            "id": "aria-allowed-attr",
+            "impact": "critical",
+            "description": "Ensures an element's role supports its ARIA attributes",
+            "help": "Elements must only use supported ARIA attributes",
+            "nodes": 2
+          },
+          {
+            "id": "aria-allowed-role",
+            "impact": "minor",
+            "description": "Ensures role attribute has an appropriate value for the element",
+            "help": "ARIA role should be appropriate for the element",
+            "nodes": 27
+          },
+          {
+            "id": "aria-hidden-focus",
+            "impact": "serious",
+            "description": "Ensures aria-hidden elements are not focusable nor contain focusable elements",
+            "help": "ARIA hidden element must not be focusable or contain focusable elements",
+            "nodes": 1
+          },
+          {
+            "id": "aria-prohibited-attr",
+            "impact": "serious",
+            "description": "Ensures ARIA attributes are not prohibited for an element's role",
+            "help": "Elements must only use permitted ARIA attributes",
+            "nodes": 1
+          },
+          {
+            "id": "aria-required-children",
+            "impact": "critical",
+            "description": "Ensures elements with an ARIA role that require child roles contain them",
+            "help": "Certain ARIA roles must contain particular children",
+            "nodes": 2
+          },
+          {
+            "id": "aria-required-parent",
+            "impact": "critical",
+            "description": "Ensures elements with an ARIA role that require parent roles are contained by them",
+            "help": "Certain ARIA roles must be contained by particular parents",
+            "nodes": 4
+          },
+          {
+            "id": "aria-roles",
+            "impact": "critical",
+            "description": "Ensures all elements with a role attribute use a valid value",
+            "help": "ARIA roles used must conform to valid values",
+            "nodes": 3
+          },
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "nodes": 14
+          },
+          {
+            "id": "heading-order",
+            "impact": "moderate",
+            "description": "Ensures the order of headings is semantically correct",
+            "help": "Heading levels should only increase by one",
+            "nodes": 2
+          },
+          {
+            "id": "image-alt",
+            "impact": "critical",
+            "description": "Ensures <img> elements have alternate text or a role of none or presentation",
+            "help": "Images must have alternate text",
+            "nodes": 3
+          },
+          {
+            "id": "label",
+            "impact": "critical",
+            "description": "Ensures every form element has a label",
+            "help": "Form elements must have labels",
+            "nodes": 1
+          },
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "description": "Ensures the document has a main landmark",
+            "help": "Document should have one main landmark",
+            "nodes": 1
+          },
+          {
+            "id": "landmark-unique",
+            "impact": "moderate",
+            "description": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+            "help": "Ensures landmarks are unique",
+            "nodes": 1
+          },
+          {
+            "id": "nested-interactive",
+            "impact": "serious",
+            "description": "Ensures interactive controls are not nested as they are not always announced by screen readers or can cause focus problems for assistive technologies",
+            "help": "Interactive controls must not be nested",
+            "nodes": 2
+          },
+          {
+            "id": "presentation-role-conflict",
+            "impact": "minor",
+            "description": "Elements marked as presentational should not have global ARIA or tabindex to ensure all screen readers ignore them",
+            "help": "Ensure elements marked as presentational are consistently ignored",
+            "nodes": 10
+          },
+          {
+            "id": "region",
+            "impact": "moderate",
+            "description": "Ensures all page content is contained by landmarks",
+            "help": "All page content should be contained by landmarks",
+            "nodes": 10
+          }
+        ],
+        "vision_notes": "Alt texts appear accurate or no descriptive images found.",
+        "score": 0
+      },
+      "translation": {
+        "language": "hi",
+        "score": 15,
+        "devanagari_ratio_pct": 0.0,
+        "switcher_found": true,
+        "switcher_type": "Navigation Link ('Hindi')",
+        "status": "switcher_clicked_low_hindi",
+        "regional_breakdown": {
+          "nav_pct": 0.0,
+          "headings_pct": 0.0,
+          "body_pct": 0.0
+        },
+        "quality_breakdown": {
+          "fluency_score": 0,
+          "glossary_score": 0,
+          "artifacts_score": 0
+        },
+        "flagged_terms": []
+      },
+      "composite_score": 44.5
+    },
+    {
+      "name": "Passport Seva",
+      "url": "https://www.passportindia.gov.in",
+      "category": "Central",
+      "subcategory": "High-Stakes",
+      "purpose": "Passport application, appointment booking and status tracking",
+      "priority": 1,
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 4267,
+        "total_links_found": 0,
+        "total_links_audited": 0,
+        "verified_working_links_count": 0,
+        "verified_working_links": [],
+        "broken_links": 0,
+        "broken_links_details": [],
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": 2,
+        "critical": 0,
+        "violation_details": [
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "description": "Ensures the document has a main landmark",
+            "help": "Document should have one main landmark",
+            "nodes": 1
+          },
+          {
+            "id": "page-has-heading-one",
+            "impact": "moderate",
+            "description": "Ensure that the page, or at least one of its frames contains a level-one heading",
+            "help": "Page should contain a level-one heading",
+            "nodes": 1
+          }
+        ],
+        "vision_notes": "Alt texts appear accurate or no descriptive images found.",
+        "score": 98
+      },
+      "translation": {
+        "language": "hi",
+        "score": 0,
+        "devanagari_ratio_pct": 0.0,
+        "switcher_found": false,
+        "switcher_type": "None",
+        "status": "insufficient_text",
+        "flagged_terms": []
+      },
+      "composite_score": 69.4
+    },
+    {
+      "name": "Rajasthan State Portal",
+      "url": "https://rajasthan.gov.in",
+      "category": "State",
+      "subcategory": "Hub",
+      "purpose": "Gateway to Rajasthan state government departments and schemes",
+      "priority": 1,
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 1715,
+        "total_links_found": 65,
+        "total_links_audited": 65,
+        "verified_working_links_count": 65,
+        "verified_working_links": [
+          "https://rajasthan.gov.in/pages/sm/department-page/149119/928",
+          "https://rajasthan.gov.in/pages/sm/state-contact-directory/354900",
+          "https://rajasthan.gov.in/sm/order/activity-grid/149090/409/41/2928",
+          "https://rajasthan.gov.in/pages/sm/department-page/149123/932",
+          "https://rajasthan.gov.in/pages/sitemap",
+          "https://rajasthan.gov.in/pages/sm/press-release/gallery/0/0/36/57",
+          "https://rajasthan.gov.in/sm/order/activity-grid/149105/409/41/2937",
+          "https://www.facebook.com/RajCMO/",
+          "https://rajasthan.gov.in/pages/sm/district-info-detail/354923/0/53",
+          "https://rajasthan.gov.in/pages/sm/assembly-constituency/354894/0/1"
+        ],
+        "broken_links": 0,
+        "broken_links_details": [],
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": 7,
+        "critical": 1,
+        "violation_details": [
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "description": "Ensures the document has a main landmark",
+            "help": "Document should have one main landmark",
+            "nodes": 1
+          },
+          {
+            "id": "meta-viewport",
+            "impact": "critical",
+            "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+            "help": "Zooming and scaling must not be disabled",
+            "nodes": 1
+          },
+          {
+            "id": "page-has-heading-one",
+            "impact": "moderate",
+            "description": "Ensure that the page, or at least one of its frames contains a level-one heading",
+            "help": "Page should contain a level-one heading",
+            "nodes": 1
+          },
+          {
+            "id": "region",
+            "impact": "moderate",
+            "description": "Ensures all page content is contained by landmarks",
+            "help": "All page content should be contained by landmarks",
+            "nodes": 4
+          }
+        ],
+        "vision_notes": "Alt texts appear accurate or no descriptive images found.",
+        "score": 89
+      },
+      "translation": {
+        "language": "hi",
+        "score": 100,
+        "devanagari_ratio_pct": 60.9,
+        "switcher_found": true,
+        "switcher_type": "Native Multilingual Portal",
+        "status": "native_multilingual_detected",
+        "regional_breakdown": {
+          "nav_pct": 86.5,
+          "headings_pct": 100.0,
+          "body_pct": 100.0
+        },
+        "quality_breakdown": {
+          "fluency_score": 15,
+          "glossary_score": 15,
+          "artifacts_score": 10
+        },
+        "flagged_terms": []
+      },
+      "composite_score": 96.7
+    },
+    {
+      "name": "Rajasthan SSO",
+      "url": "https://sso.rajasthan.gov.in",
+      "category": "State",
+      "subcategory": "Single Sign-On",
+      "purpose": "Single login for 100+ Rajasthan state services (e-Mitra, GST, recruitment, etc.)",
+      "priority": 1,
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 785,
+        "total_links_found": 9,
+        "total_links_audited": 9,
+        "verified_working_links_count": 9,
+        "verified_working_links": [
+          "https://onelink.to/mshz7g",
+          "https://ucc.rajasthan.gov.in/",
+          "https://www.bis.gov.in/",
+          "https://sso.rajasthan.gov.in/register",
+          "https://sso.rajasthan.gov.in/signin",
+          "https://sso.rajasthan.gov.in/",
+          "https://sso.rajasthan.gov.in/sitemap",
+          "https://sso.rajasthan.gov.in/policies",
+          "https://sso.rajasthan.gov.in/passwordpolicy"
+        ],
+        "broken_links": 0,
+        "broken_links_details": [],
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": 1,
+        "critical": 0,
+        "violation_details": [
+          {
+            "id": "html-has-lang",
+            "impact": "serious",
+            "description": "Ensures every HTML document has a lang attribute",
+            "help": "<html> element must have a lang attribute",
+            "nodes": 1
+          }
+        ],
+        "vision_notes": "Alt texts appear accurate or no descriptive images found.",
+        "score": 99
+      },
+      "translation": {
+        "language": "hi",
+        "score": 0,
+        "devanagari_ratio_pct": 0.0,
+        "switcher_found": false,
+        "switcher_type": "None",
+        "status": "no_language_switcher_found",
+        "regional_breakdown": {
+          "nav_pct": 0.0,
+          "headings_pct": 0.0,
+          "body_pct": 0.0
+        },
+        "quality_breakdown": {
+          "fluency_score": 0,
+          "glossary_score": 0,
+          "artifacts_score": 0
+        },
+        "flagged_terms": []
+      },
+      "composite_score": 69.7
+    },
+    {
+      "name": "e-Mitra Rajasthan",
+      "url": "https://emitra.rajasthan.gov.in",
+      "category": "State",
+      "subcategory": "Citizen Services",
+      "purpose": "600+ G2C/B2C citizen services via kiosks and online",
+      "priority": 1,
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 3005,
+        "total_links_found": 30,
+        "total_links_audited": 30,
+        "verified_working_links_count": 30,
+        "verified_working_links": [
+          "https://emitra.rajasthan.gov.in/emitra/rate",
+          "https://emitra.rajasthan.gov.in/emitra/home",
+          "https://eproc.rajasthan.gov.in/nicgep/app",
+          "https://emitra.rajasthan.gov.in/emitra/services",
+          "https://emitra.rajasthan.gov.in/emitra/district-summary",
+          "https://play.google.com/store/apps/details?id=in.gov.semt.rajeev.emitrapayment&hl=en",
+          "https://www.instagram.com/raj_emitra/?hl=en",
+          "https://emitra.rajasthan.gov.in/emitra/about",
+          "https://emitra.rajasthan.gov.in/emitra/online-verification",
+          "https://emitra.rajasthan.gov.in/emitra/emitra-lsp"
+        ],
+        "broken_links": 0,
+        "broken_links_details": [],
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": 82,
+        "critical": 7,
+        "violation_details": [
+          {
+            "id": "button-name",
+            "impact": "critical",
+            "description": "Ensures buttons have discernible text",
+            "help": "Buttons must have discernible text",
+            "nodes": 2
+          },
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "nodes": 21
+          },
+          {
+            "id": "heading-order",
+            "impact": "moderate",
+            "description": "Ensures the order of headings is semantically correct",
+            "help": "Heading levels should only increase by one",
+            "nodes": 1
+          },
+          {
+            "id": "image-alt",
+            "impact": "critical",
+            "description": "Ensures <img> elements have alternate text or a role of none or presentation",
+            "help": "Images must have alternate text",
+            "nodes": 5
+          },
+          {
+            "id": "link-name",
+            "impact": "serious",
+            "description": "Ensures links have discernible text",
+            "help": "Links must have discernible text",
+            "nodes": 5
+          },
+          {
+            "id": "list",
+            "impact": "serious",
+            "description": "Ensures that lists are structured correctly",
+            "help": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
+            "nodes": 1
+          },
+          {
+            "id": "marquee",
+            "impact": "serious",
+            "description": "Ensures <marquee> elements are not used",
+            "help": "<marquee> elements are deprecated and must not be used",
+            "nodes": 1
+          },
+          {
+            "id": "nested-interactive",
+            "impact": "serious",
+            "description": "Ensures interactive controls are not nested as they are not always announced by screen readers or can cause focus problems for assistive technologies",
+            "help": "Interactive controls must not be nested",
+            "nodes": 1
+          },
+          {
+            "id": "region",
+            "impact": "moderate",
+            "description": "Ensures all page content is contained by landmarks",
+            "help": "All page content should be contained by landmarks",
+            "nodes": 28
+          },
+          {
+            "id": "tabindex",
+            "impact": "serious",
+            "description": "Ensures tabindex attribute values are not greater than 0",
+            "help": "Elements should not have tabindex greater than zero",
+            "nodes": 17
+          }
+        ],
+        "vision_notes": "Alt texts appear accurate or no descriptive images found.",
+        "score": 0
+      },
+      "translation": {
+        "language": "hi",
+        "score": 42,
+        "devanagari_ratio_pct": 4.5,
+        "switcher_found": false,
+        "switcher_type": "None",
+        "status": "no_language_switcher_found",
+        "regional_breakdown": {
+          "nav_pct": 0.0,
+          "headings_pct": 32.4,
+          "body_pct": 68.0
+        },
+        "quality_breakdown": {
+          "fluency_score": 3,
+          "glossary_score": 0,
+          "artifacts_score": 10
+        },
+        "flagged_terms": [
+          "Missing GIGW Term: 'Home' (Expected: \u092e\u0941\u0916\u094d\u092f \u092a\u0943\u0937\u094d\u0920)",
+          "Missing GIGW Term: 'State' (Expected: \u0930\u093e\u091c\u094d\u092f)",
+          "Missing GIGW Term: 'Download' (Expected: \u0921\u093e\u0909\u0928\u0932\u094b\u0921)"
+        ]
+      },
+      "composite_score": 52.6
+    },
+    {
+      "name": "Jan Soochna Portal",
+      "url": "https://jansoochna.rajasthan.gov.in",
+      "category": "State",
+      "subcategory": "Transparency",
+      "purpose": "Public scheme and beneficiary data for 117+ Rajasthan departments, no login required",
+      "priority": 1,
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 1927,
+        "total_links_found": 19,
+        "total_links_audited": 19,
+        "verified_working_links_count": 18,
+        "verified_working_links": [
+          "https://jansoochna.rajasthan.gov.in/CMS/FeedBack",
+          "https://jansoochna.rajasthan.gov.in/#",
+          "https://jansoochna.rajasthan.gov.in/CMS/Sitemap",
+          "https://dipr.rajasthan.gov.in/home",
+          "https://jansoochna.rajasthan.gov.in/CMS/FlashModule",
+          "https://jansoochna.rajasthan.gov.in/CMS/ScreenReader",
+          "https://jansoochna.rajasthan.gov.in/Home/JanSoochna",
+          "https://jansoochna.rajasthan.gov.in/#demo",
+          "https://api.whatsapp.com/send?phone=9413502834",
+          "https://jansoochna.rajasthan.gov.in/Home/Schemes"
+        ],
+        "broken_links": 1,
+        "broken_links_details": [
+          {
+            "url": "https://bioscope.rajasthan.gov.in/",
+            "status_code": 500,
+            "reason": "HTTP 500"
+          }
+        ],
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": 9,
+        "critical": 5,
+        "violation_details": [
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "nodes": 2
+          },
+          {
+            "id": "html-has-lang",
+            "impact": "serious",
+            "description": "Ensures every HTML document has a lang attribute",
+            "help": "<html> element must have a lang attribute",
+            "nodes": 1
+          },
+          {
+            "id": "image-alt",
+            "impact": "critical",
+            "description": "Ensures <img> elements have alternate text or a role of none or presentation",
+            "help": "Images must have alternate text",
+            "nodes": 3
+          },
+          {
+            "id": "meta-viewport",
+            "impact": "critical",
+            "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+            "help": "Zooming and scaling must not be disabled",
+            "nodes": 1
+          },
+          {
+            "id": "region",
+            "impact": "moderate",
+            "description": "Ensures all page content is contained by landmarks",
+            "help": "All page content should be contained by landmarks",
+            "nodes": 1
+          },
+          {
+            "id": "select-name",
+            "impact": "critical",
+            "description": "Ensures select element has an accessible name",
+            "help": "Select element must have an accessible name",
+            "nodes": 1
+          }
+        ],
+        "vision_notes": "Alt texts appear accurate or no descriptive images found.",
+        "score": 71
+      },
+      "translation": {
+        "language": "hi",
+        "score": 55,
+        "devanagari_ratio_pct": 9.4,
+        "switcher_found": true,
+        "switcher_type": "Native Multilingual Portal",
+        "status": "native_multilingual_detected",
+        "regional_breakdown": {
+          "nav_pct": 3.0,
+          "headings_pct": 23.6,
+          "body_pct": 10.4
+        },
+        "quality_breakdown": {
+          "fluency_score": 3,
+          "glossary_score": 3,
+          "artifacts_score": 10
+        },
+        "flagged_terms": [
+          "Missing GIGW Term: 'Department' (Expected: \u0935\u093f\u092d\u093e\u0917)",
+          "Missing GIGW Term: 'About Us' (Expected: \u0939\u092e\u093e\u0930\u0947 \u092c\u093e\u0930\u0947 \u092e\u0947\u0902)",
+          "Missing GIGW Term: 'Home' (Expected: \u092e\u0941\u0916\u094d\u092f \u092a\u0943\u0937\u094d\u0920)"
+        ]
+      },
+      "composite_score": 77.0
+    },
+    {
+      "name": "MyGov",
+      "url": "https://www.mygov.in",
+      "category": "Central",
+      "subcategory": "Citizen Engagement",
+      "purpose": "Crowdsourced policy input and citizen engagement platform",
+      "priority": 2,
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 2914,
+        "total_links_found": 208,
+        "total_links_audited": 208,
+        "verified_working_links_count": 208,
+        "verified_working_links": [
+          "https://arunachal.mygov.in/",
+          "https://www.mygov.in/#mygov-media",
+          "https://www.mygov.in/groups/",
+          "https://twitter.com/intent/tweet?url=https://www.mygov.in/task/e-upahaar-presidential-gifts-auction-2026",
+          "https://pmevents.mygov.in/",
+          "https://www.mygov.in/skills",
+          "https://innovateindia.mygov.in/csir-societal-platform-2024/",
+          "https://www.mygov.in/campaigns",
+          "https://www.mygov.in/simple-page/help",
+          "https://www.messenger.com/t/MyGovIndia"
+        ],
+        "broken_links": 0,
+        "broken_links_details": [],
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": 201,
+        "critical": 17,
+        "violation_details": [
+          {
+            "id": "aria-allowed-role",
+            "impact": "minor",
+            "description": "Ensures role attribute has an appropriate value for the element",
+            "help": "ARIA role should be appropriate for the element",
+            "nodes": 14
+          },
+          {
+            "id": "button-name",
+            "impact": "critical",
+            "description": "Ensures buttons have discernible text",
+            "help": "Buttons must have discernible text",
+            "nodes": 16
+          },
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "nodes": 33
+          },
+          {
+            "id": "heading-order",
+            "impact": "moderate",
+            "description": "Ensures the order of headings is semantically correct",
+            "help": "Heading levels should only increase by one",
+            "nodes": 1
+          },
+          {
+            "id": "image-redundant-alt",
+            "impact": "minor",
+            "description": "Ensure image alternative is not repeated as text",
+            "help": "Alternative text of images should not be repeated as text",
+            "nodes": 8
+          },
+          {
+            "id": "link-in-text-block",
+            "impact": "serious",
+            "description": "Ensure links are distinguished from surrounding text in a way that does not rely on color",
+            "help": "Links must be distinguishable without relying on color",
+            "nodes": 1
+          },
+          {
+            "id": "link-name",
+            "impact": "serious",
+            "description": "Ensures links have discernible text",
+            "help": "Links must have discernible text",
+            "nodes": 2
+          },
+          {
+            "id": "presentation-role-conflict",
+            "impact": "minor",
+            "description": "Elements marked as presentational should not have global ARIA or tabindex to ensure all screen readers ignore them",
+            "help": "Ensure elements marked as presentational are consistently ignored",
+            "nodes": 14
+          },
+          {
+            "id": "region",
+            "impact": "moderate",
+            "description": "Ensures all page content is contained by landmarks",
+            "help": "All page content should be contained by landmarks",
+            "nodes": 103
+          },
+          {
+            "id": "scrollable-region-focusable",
+            "impact": "serious",
+            "description": "Ensure elements that have scrollable content are accessible by keyboard",
+            "help": "Scrollable region must have keyboard access",
+            "nodes": 8
+          },
+          {
+            "id": "select-name",
+            "impact": "critical",
+            "description": "Ensures select element has an accessible name",
+            "help": "Select element must have an accessible name",
+            "nodes": 1
+          }
+        ],
+        "vision_notes": "Alt texts appear accurate or no descriptive images found.",
+        "score": 0
+      },
+      "translation": {
+        "language": "hi",
+        "score": 0,
+        "devanagari_ratio_pct": 0.0,
+        "switcher_found": false,
+        "switcher_type": "None",
+        "status": "no_language_switcher_found",
+        "regional_breakdown": {
+          "nav_pct": 0.0,
+          "headings_pct": 0.0,
+          "body_pct": 0.0
+        },
+        "quality_breakdown": {
+          "fluency_score": 0,
+          "glossary_score": 0,
+          "artifacts_score": 0
+        },
+        "flagged_terms": []
+      },
+      "composite_score": 40.0
+    },
+    {
+      "name": "UIDAI (Aadhaar)",
+      "url": "https://uidai.gov.in",
+      "category": "Central",
+      "subcategory": "Identity",
+      "purpose": "Aadhaar enrollment, updates and authentication",
+      "priority": 2,
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 611,
+        "total_links_found": 0,
+        "total_links_audited": 0,
+        "verified_working_links_count": 0,
+        "verified_working_links": [],
+        "broken_links": 0,
+        "broken_links_details": [],
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": 0,
+        "critical": 0,
+        "violation_details": [],
+        "vision_notes": "WAF protection active; basic structure verified.",
+        "score": 70
+      },
+      "translation": {
+        "language": "hi",
+        "score": 82,
+        "devanagari_ratio_pct": 54.1,
+        "switcher_found": true,
+        "switcher_type": "Native Multilingual Portal",
+        "status": "native_multilingual_detected",
+        "regional_breakdown": {
+          "nav_pct": 0.0,
+          "headings_pct": 0.0,
+          "body_pct": 52.7
+        },
+        "quality_breakdown": {
+          "fluency_score": 11,
+          "glossary_score": 15,
+          "artifacts_score": 10
+        },
+        "flagged_terms": []
+      },
+      "composite_score": 85.6
+    },
+    {
+      "name": "Jan Aadhaar Rajasthan",
+      "url": "https://janaadhaar.rajasthan.gov.in",
+      "category": "State",
+      "subcategory": "Identity",
+      "purpose": "Rajasthan family-ID system; successor to the earlier Bhamashah scheme",
+      "priority": 2,
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 9170,
+        "total_links_found": 89,
+        "total_links_audited": 89,
+        "verified_working_links_count": 87,
+        "verified_working_links": [
+          "https://janaadhaar.rajasthan.gov.in/content/raj/janaadhaar/en/circulars-and-letters/meeting-minutes/mom-of-executive-committee-of-rajasthan-jan-aadhaar-authority-.html",
+          "https://janaadhaar.rajasthan.gov.in/content/raj/janaadhaar/en/what-s-new.html",
+          "https://janaadhaarapp.rajasthan.gov.in/publicJanAadhaar/eTransaction",
+          "https://janaadhaar.rajasthan.gov.in/content/raj/janaadhaar/en/employee-corner0/promotion-order.html",
+          "https://janaadhaar.rajasthan.gov.in/content/dam/doitassets/janaadhaar/images/Gallery/award%202024.JPG",
+          "https://janaadhaar.rajasthan.gov.in/content/raj/janaadhaar/en/home-page_detail/jan-aadhaar-e-kyc.html",
+          "https://janaadhaar.rajasthan.gov.in/content/raj/janaadhaar/en/downloads0/jan-aadhaar-2-0-training-material.html",
+          "https://janaadhaar.rajasthan.gov.in/content/raj/janaadhaar/en/home-page_detail/janaadhaar-e-card-.html",
+          "https://janaadhaar.rajasthan.gov.in/content/raj/janaadhaar/en/circulars-and-letters/circulars.html",
+          "https://janaadhaar.rajasthan.gov.in/content/dam/doitassets/janaadhaar/PDF/News/arunachal%20pradesh.jpeg"
+        ],
+        "broken_links": 2,
+        "broken_links_details": [
+          {
+            "url": "https://janaadhaar.rajasthan.gov.in/content/raj/janaadhaar/en/latest-news/Jan_Aadhaar_on_DigiLocker.html",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "https://janapp.rajasthan.gov.in/janaadhaar/viewaadharstatus",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          }
+        ],
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": 36,
+        "critical": 0,
+        "violation_details": [
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "nodes": 3
+          },
+          {
+            "id": "frame-title",
+            "impact": "serious",
+            "description": "Ensures <iframe> and <frame> elements have an accessible name",
+            "help": "Frames must have an accessible name",
+            "nodes": 2
+          },
+          {
+            "id": "image-redundant-alt",
+            "impact": "minor",
+            "description": "Ensure image alternative is not repeated as text",
+            "help": "Alternative text of images should not be repeated as text",
+            "nodes": 7
+          },
+          {
+            "id": "link-name",
+            "impact": "serious",
+            "description": "Ensures links have discernible text",
+            "help": "Links must have discernible text",
+            "nodes": 1
+          },
+          {
+            "id": "list",
+            "impact": "serious",
+            "description": "Ensures that lists are structured correctly",
+            "help": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
+            "nodes": 1
+          },
+          {
+            "id": "listitem",
+            "impact": "serious",
+            "description": "Ensures <li> elements are used semantically",
+            "help": "<li> elements must be contained in a <ul> or <ol>",
+            "nodes": 15
+          },
+          {
+            "id": "region",
+            "impact": "moderate",
+            "description": "Ensures all page content is contained by landmarks",
+            "help": "All page content should be contained by landmarks",
+            "nodes": 7
+          }
+        ],
+        "vision_notes": "Alt texts appear accurate or no descriptive images found.",
+        "score": 64
+      },
+      "translation": {
+        "language": "hi",
+        "score": 94,
+        "devanagari_ratio_pct": 84.6,
+        "switcher_found": true,
+        "switcher_type": "Navigation Link ('Hindi')",
+        "status": "switcher_success",
+        "regional_breakdown": {
+          "nav_pct": 86.7,
+          "headings_pct": 7.6,
+          "body_pct": 48.8
+        },
+        "quality_breakdown": {
+          "fluency_score": 15,
+          "glossary_score": 13,
+          "artifacts_score": 6
+        },
+        "flagged_terms": [
+          "Missing GIGW Term: 'About Us' (Expected: \u0939\u092e\u093e\u0930\u0947 \u092c\u093e\u0930\u0947 \u092e\u0947\u0902)",
+          "Untranslated UI Elements: Screen Reader Access, Copyright"
+        ]
+      },
+      "composite_score": 85.8
+    },
+    {
+      "name": "GeM (Govt e-Marketplace)",
+      "url": "https://gem.gov.in",
+      "category": "Central",
+      "subcategory": "Procurement",
+      "purpose": "Public procurement platform for central/state government buyers",
+      "priority": 2,
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 3176,
+        "total_links_found": 199,
+        "total_links_audited": 199,
+        "verified_working_links_count": 189,
+        "verified_working_links": [
+          "https://www.instagram.com/government.e.marketplace/",
+          "https://gem.gov.in/testimonial_buyers",
+          "https://assets-bg.gem.gov.in/resources/upload/shared_doc/gem_certificate_1651680716.PDF",
+          "https://gem.gov.in/support/terms_conditions",
+          "https://gem.gov.in/gemtickets/create",
+          "https://mkp.gem.gov.in/services#!/browse/services_home_rest_ca18172618/open",
+          "https://gem.gov.in/odop-category",
+          "https://mkp.gem.gov.in/circuit-protection-devices-and-accessories-molded-case-circuit-breakers-mccb-/search",
+          "https://gem.gov.in/gem-exclusive",
+          "https://ui.gem.gov.in/buyer/registration"
+        ],
+        "broken_links": 10,
+        "broken_links_details": [
+          {
+            "url": "http://mkp.gem.gov.in/home/search?q=Furniture",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://wcd.nic.in/schemes/beti-bachao-beti-padhao-scheme",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "http://mkp.gem.gov.in/home/search?q=detectors+Fire",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "http://mkp.gem.gov.in/home/search?q=Fire+Safety",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "http://mkp.gem.gov.in/home/search?q=oxygen",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "http://mkp.gem.gov.in/home/search?q=Sprinklers+Smoke",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "http://mkp.gem.gov.in/home/search?q=Computers",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "http://mkp.gem.gov.in/home/search?q=Storage+Rack",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://mkp.gemorion.org/security-and-protection-software-security-and-protective-software-including-antivirus/search#/?q=PC%20Software",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "http://mkp.gem.gov.in/home/search?q=Medical",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          }
+        ],
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": 119,
+        "critical": 12,
+        "violation_details": [
+          {
+            "id": "aria-allowed-attr",
+            "impact": "critical",
+            "description": "Ensures an element's role supports its ARIA attributes",
+            "help": "Elements must only use supported ARIA attributes",
+            "nodes": 1
+          },
+          {
+            "id": "aria-input-field-name",
+            "impact": "serious",
+            "description": "Ensures every ARIA input field has an accessible name",
+            "help": "ARIA input fields must have an accessible name",
+            "nodes": 1
+          },
+          {
+            "id": "aria-required-children",
+            "impact": "critical",
+            "description": "Ensures elements with an ARIA role that require child roles contain them",
+            "help": "Certain ARIA roles must contain particular children",
+            "nodes": 2
+          },
+          {
+            "id": "aria-required-parent",
+            "impact": "critical",
+            "description": "Ensures elements with an ARIA role that require parent roles are contained by them",
+            "help": "Certain ARIA roles must be contained by particular parents",
+            "nodes": 2
+          },
+          {
+            "id": "aria-valid-attr-value",
+            "impact": "critical",
+            "description": "Ensures all ARIA attributes have valid values",
+            "help": "ARIA attributes must conform to valid values",
+            "nodes": 2
+          },
+          {
+            "id": "button-name",
+            "impact": "critical",
+            "description": "Ensures buttons have discernible text",
+            "help": "Buttons must have discernible text",
+            "nodes": 1
+          },
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "nodes": 70
+          },
+          {
+            "id": "heading-order",
+            "impact": "moderate",
+            "description": "Ensures the order of headings is semantically correct",
+            "help": "Heading levels should only increase by one",
+            "nodes": 5
+          },
+          {
+            "id": "image-alt",
+            "impact": "critical",
+            "description": "Ensures <img> elements have alternate text or a role of none or presentation",
+            "help": "Images must have alternate text",
+            "nodes": 3
+          },
+          {
+            "id": "image-redundant-alt",
+            "impact": "minor",
+            "description": "Ensure image alternative is not repeated as text",
+            "help": "Alternative text of images should not be repeated as text",
+            "nodes": 6
+          },
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "description": "Ensures the document has a main landmark",
+            "help": "Document should have one main landmark",
+            "nodes": 1
+          },
+          {
+            "id": "link-name",
+            "impact": "serious",
+            "description": "Ensures links have discernible text",
+            "help": "Links must have discernible text",
+            "nodes": 6
+          },
+          {
+            "id": "listitem",
+            "impact": "serious",
+            "description": "Ensures <li> elements are used semantically",
+            "help": "<li> elements must be contained in a <ul> or <ol>",
+            "nodes": 2
+          },
+          {
+            "id": "nested-interactive",
+            "impact": "serious",
+            "description": "Ensures interactive controls are not nested as they are not always announced by screen readers or can cause focus problems for assistive technologies",
+            "help": "Interactive controls must not be nested",
+            "nodes": 1
+          },
+          {
+            "id": "presentation-role-conflict",
+            "impact": "minor",
+            "description": "Elements marked as presentational should not have global ARIA or tabindex to ensure all screen readers ignore them",
+            "help": "Ensure elements marked as presentational are consistently ignored",
+            "nodes": 1
+          },
+          {
+            "id": "region",
+            "impact": "moderate",
+            "description": "Ensures all page content is contained by landmarks",
+            "help": "All page content should be contained by landmarks",
+            "nodes": 14
+          },
+          {
+            "id": "select-name",
+            "impact": "critical",
+            "description": "Ensures select element has an accessible name",
+            "help": "Select element must have an accessible name",
+            "nodes": 1
+          }
+        ],
+        "vision_notes": "Alt texts appear accurate or no descriptive images found.",
+        "score": 0
+      },
+      "translation": {
+        "language": "hi",
+        "score": 45,
+        "devanagari_ratio_pct": 2.5,
+        "switcher_found": true,
+        "switcher_type": "Native Multilingual Portal",
+        "status": "native_multilingual_detected",
+        "regional_breakdown": {
+          "nav_pct": 0.4,
+          "headings_pct": 0.0,
+          "body_pct": 3.0
+        },
+        "quality_breakdown": {
+          "fluency_score": 3,
+          "glossary_score": 1,
+          "artifacts_score": 10
+        },
+        "flagged_terms": [
+          "Missing GIGW Term: 'Government of India' (Expected: \u092d\u093e\u0930\u0924 \u0938\u0930\u0915\u093e\u0930)",
+          "Missing GIGW Term: 'Ministry' (Expected: \u092e\u0902\u0924\u094d\u0930\u093e\u0932\u092f)",
+          "Missing GIGW Term: 'Department' (Expected: \u0935\u093f\u092d\u093e\u0917)",
+          "Missing GIGW Term: 'Services' (Expected: \u0938\u0947\u0935\u093e\u090f\u0902)",
+          "Missing GIGW Term: 'Grievance' (Expected: \u0936\u093f\u0915\u093e\u092f\u0924)"
+        ]
+      },
+      "composite_score": 45.5
+    },
+    {
+      "name": "RTU Kota",
+      "url": "https://www.rtu.ac.in",
+      "category": "Education",
+      "subcategory": "University",
+      "purpose": "Public technical university portal",
+      "priority": 2,
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 672,
+        "total_links_found": 2,
+        "total_links_audited": 2,
+        "verified_working_links_count": 2,
+        "verified_working_links": [
+          "https://www.cloudflare.com/privacypolicy/",
+          "https://www.cloudflare.com/?utm_source=challenge&utm_campaign=m"
+        ],
+        "broken_links": 0,
+        "broken_links_details": [],
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": 2,
+        "critical": 1,
+        "violation_details": [
+          {
+            "id": "meta-refresh",
+            "impact": "critical",
+            "description": "Ensures <meta http-equiv=\"refresh\"> is not used for delayed refresh",
+            "help": "Delayed refresh under 20 hours must not be used",
+            "nodes": 1
+          },
+          {
+            "id": "page-has-heading-one",
+            "impact": "moderate",
+            "description": "Ensure that the page, or at least one of its frames contains a level-one heading",
+            "help": "Page should contain a level-one heading",
+            "nodes": 1
+          }
+        ],
+        "vision_notes": "Alt texts appear accurate or no descriptive images found.",
+        "score": 94
+      },
+      "translation": {
+        "language": "hi",
+        "score": 0,
+        "devanagari_ratio_pct": 0.0,
+        "switcher_found": false,
+        "switcher_type": "None",
+        "status": "no_language_switcher_found",
+        "regional_breakdown": {
+          "nav_pct": 0.0,
+          "headings_pct": 0.0,
+          "body_pct": 0.0
+        },
+        "quality_breakdown": {
+          "fluency_score": 0,
+          "glossary_score": 0,
+          "artifacts_score": 0
+        },
+        "flagged_terms": []
+      },
+      "composite_score": 68.2
+    },
+    {
+      "name": "Ayushman Bharat (PM-JAY)",
+      "url": "https://pmjay.gov.in",
+      "category": "Central",
+      "subcategory": "Healthcare",
+      "purpose": "World's largest govt-funded health insurance scheme; hospital empanelment and coverage lookup",
+      "priority": 2,
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "down",
+        "error": "Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://pmjay.gov.in/\nCall log:\n  - navigating to \"https://pmjay.gov.in/\", waiting until \"commit\"\n",
+        "total_links_found": 0,
+        "total_links_audited": 0,
+        "verified_working_links_count": 0,
+        "verified_working_links": [],
+        "broken_links": 0,
+        "broken_links_details": []
+      },
+      "accessibility": {
+        "axe_violations": 0,
+        "critical": 0,
+        "violation_details": [],
+        "vision_notes": "WAF protection active; basic structure verified.",
+        "score": 70
+      },
+      "translation": {
+        "language": "hi",
+        "score": 0,
+        "status": "error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://pmjay.gov.in/\nCall log:\n  - navigating to \"https://pmjay.gov.in/\", waiting until \"commit\"\n",
+        "flagged_terms": []
+      },
+      "composite_score": 0.0
+    },
+    {
+      "name": "GST Portal",
+      "url": "https://www.gst.gov.in",
+      "category": "Central",
+      "subcategory": "Taxation",
+      "purpose": "Goods & Services Tax registration, returns filing, e-way bills",
+      "priority": 2,
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 1748,
+        "total_links_found": 173,
+        "total_links_audited": 173,
+        "verified_working_links_count": 172,
+        "verified_working_links": [
+          "https://payment.gst.gov.in/payment/auth/ledger/instalmentcalendar",
+          "https://services.gst.gov.in/services/auth/holiday",
+          "https://www.gst.gov.in/#",
+          "https://reg.gst.gov.in/registration/auth/register/dsc",
+          "https://www.gst.gov.in/help/relatedsites",
+          "https://services.gst.gov.in/services/HelpandTaxpayer/HelpandTaxpayerfacilities",
+          "https://services.gst.gov.in/services/auth/verifyRfn",
+          "https://www.gst.gov.in/system/",
+          "https://services.gst.gov.in/services/auth/trackstatus",
+          "https://www.facebook.com/Goods-and-Services-Tax-1674179706229522/?fref=ts"
+        ],
+        "broken_links": 1,
+        "broken_links_details": [
+          {
+            "url": "http://www.cbic.gov.in/",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          }
+        ],
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": 26,
+        "critical": 0,
+        "violation_details": [
+          {
+            "id": "heading-order",
+            "impact": "moderate",
+            "description": "Ensures the order of headings is semantically correct",
+            "help": "Heading levels should only increase by one",
+            "nodes": 1
+          },
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "description": "Ensures the document has a main landmark",
+            "help": "Document should have one main landmark",
+            "nodes": 1
+          },
+          {
+            "id": "link-name",
+            "impact": "serious",
+            "description": "Ensures links have discernible text",
+            "help": "Links must have discernible text",
+            "nodes": 6
+          },
+          {
+            "id": "region",
+            "impact": "moderate",
+            "description": "Ensures all page content is contained by landmarks",
+            "help": "All page content should be contained by landmarks",
+            "nodes": 18
+          }
+        ],
+        "vision_notes": "Alt texts appear accurate or no descriptive images found.",
+        "score": 74
+      },
+      "translation": {
+        "language": "hi",
+        "score": 15,
+        "devanagari_ratio_pct": 0.0,
+        "switcher_found": true,
+        "switcher_type": "Relative Path Link (/hi)",
+        "status": "switcher_clicked_low_hindi",
+        "regional_breakdown": {
+          "nav_pct": 0.0,
+          "headings_pct": 0.0,
+          "body_pct": 0.0
+        },
+        "quality_breakdown": {
+          "fluency_score": 0,
+          "glossary_score": 0,
+          "artifacts_score": 0
+        },
+        "flagged_terms": []
+      },
+      "composite_score": 65.9
+    },
+    {
+      "name": "EPFO Unified Portal",
+      "url": "https://unifiedportal-epfo.epfindia.gov.in",
+      "category": "Central",
+      "subcategory": "Labour/Pension",
+      "purpose": "Provident fund balance, withdrawal, passbook for salaried employees",
+      "priority": 2,
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "down",
+        "error": "Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://unifiedportal-epfo.epfindia.gov.in/\nCall log:\n  - navigating to \"https://unifiedportal-epfo.epfindia.gov.in/\", waiting until \"commit\"\n",
+        "total_links_found": 0,
+        "total_links_audited": 0,
+        "verified_working_links_count": 0,
+        "verified_working_links": [],
+        "broken_links": 0,
+        "broken_links_details": []
+      },
+      "accessibility": {
+        "axe_violations": 0,
+        "critical": 0,
+        "violation_details": [],
+        "vision_notes": "WAF protection active; basic structure verified.",
+        "score": 70
+      },
+      "translation": {
+        "language": "hi",
+        "score": 0,
+        "status": "error: Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://unifiedportal-epfo.epfindia.gov.in/\nCall log:\n  - navigating to \"https://unifiedportal-epfo.epfindia.gov.in/\", waiting until \"commit\"\n",
+        "flagged_terms": []
+      },
+      "composite_score": 0.0
+    },
+    {
+      "name": "Parivahan Sewa",
+      "url": "https://parivahan.gov.in",
+      "category": "Central",
+      "subcategory": "Transport",
+      "purpose": "Vehicle registration (Vahan) and driving licence (Sarathi) services",
+      "priority": 2,
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 2016,
+        "total_links_found": 155,
+        "total_links_audited": 155,
+        "verified_working_links_count": 153,
+        "verified_working_links": [
+          "https://parivahan.gov.in/en/content/hp-endorsement",
+          "https://parivahan.gov.in/en/content/trade-certificate",
+          "https://parivahan.gov.in/en/content/press-coverage-2021",
+          "https://parivahan.gov.in/en/content/registration-display",
+          "https://echallan.parivahan.gov.in/",
+          "https://amritmahotsav.nic.in/",
+          "https://parivahan.gov.in/en/content/licensing-related-fees-charges",
+          "https://nmba.dosje.gov.in/",
+          "https://parivahan.gov.in/en/press-coverage/2021/november",
+          "https://parivahan.gov.in/en/content/learners-license"
+        ],
+        "broken_links": 2,
+        "broken_links_details": [
+          {
+            "url": "https://nextmile.gov.in/",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "http://nextmile.gov.in/",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          }
+        ],
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": 56,
+        "critical": 1,
+        "violation_details": [
+          {
+            "id": "aria-dialog-name",
+            "impact": "serious",
+            "description": "Ensures every ARIA dialog and alertdialog node has an accessible name",
+            "help": "ARIA dialog and alertdialog nodes should have an accessible name",
+            "nodes": 2
+          },
+          {
+            "id": "button-name",
+            "impact": "critical",
+            "description": "Ensures buttons have discernible text",
+            "help": "Buttons must have discernible text",
+            "nodes": 1
+          },
+          {
+            "id": "heading-order",
+            "impact": "moderate",
+            "description": "Ensures the order of headings is semantically correct",
+            "help": "Heading levels should only increase by one",
+            "nodes": 2
+          },
+          {
+            "id": "label-title-only",
+            "impact": "serious",
+            "description": "Ensures that every form element has a visible label and is not solely labeled using hidden labels, or the title or aria-describedby attributes",
+            "help": "Form elements should have a visible label",
+            "nodes": 1
+          },
+          {
+            "id": "link-name",
+            "impact": "serious",
+            "description": "Ensures links have discernible text",
+            "help": "Links must have discernible text",
+            "nodes": 4
+          },
+          {
+            "id": "list",
+            "impact": "serious",
+            "description": "Ensures that lists are structured correctly",
+            "help": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
+            "nodes": 2
+          },
+          {
+            "id": "listitem",
+            "impact": "serious",
+            "description": "Ensures <li> elements are used semantically",
+            "help": "<li> elements must be contained in a <ul> or <ol>",
+            "nodes": 8
+          },
+          {
+            "id": "region",
+            "impact": "moderate",
+            "description": "Ensures all page content is contained by landmarks",
+            "help": "All page content should be contained by landmarks",
+            "nodes": 36
+          }
+        ],
+        "vision_notes": "Alt texts appear accurate or no descriptive images found.",
+        "score": 40
+      },
+      "translation": {
+        "language": "hi",
+        "score": 95,
+        "devanagari_ratio_pct": 88.0,
+        "switcher_found": true,
+        "switcher_type": "Direct Text Link ('\u0939\u093f\u0928\u094d\u0926\u0940')",
+        "status": "switcher_success",
+        "regional_breakdown": {
+          "nav_pct": 96.2,
+          "headings_pct": 88.5,
+          "body_pct": 96.6
+        },
+        "quality_breakdown": {
+          "fluency_score": 15,
+          "glossary_score": 12,
+          "artifacts_score": 8
+        },
+        "flagged_terms": [
+          "Missing GIGW Term: 'Department' (Expected: \u0935\u093f\u092d\u093e\u0917)",
+          "Missing GIGW Term: 'Home' (Expected: \u092e\u0941\u0916\u094d\u092f \u092a\u0943\u0937\u094d\u0920)",
+          "Untranslated UI Elements: Screen Reader Access"
+        ]
+      },
+      "composite_score": 78.9
+    },
+    {
+      "name": "Rajasthan Sampark",
+      "url": "https://sampark.rajasthan.gov.in",
+      "category": "State",
+      "subcategory": "Grievance",
+      "purpose": "Rajasthan grievance and complaint tracking portal",
+      "priority": 2,
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 6507,
+        "total_links_found": 7,
+        "total_links_audited": 7,
+        "verified_working_links_count": 7,
+        "verified_working_links": [
+          "https://pgportal.gov.in/Home/LodgeGrievance",
+          "https://ard.rajasthan.gov.in/",
+          "https://cmo.rajasthan.gov.in/",
+          "https://rajasthan.gov.in/",
+          "https://play.google.com/store/apps/details?id=com.rajsampark.versiontwo",
+          "https://apps.apple.com/in/app/raj-sampark-2-0/id6739140124",
+          "https://doitc.rajasthan.gov.in/"
+        ],
+        "broken_links": 0,
+        "broken_links_details": [],
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": 40,
+        "critical": 8,
+        "violation_details": [
+          {
+            "id": "aria-command-name",
+            "impact": "serious",
+            "description": "Ensures every ARIA button, link and menuitem has an accessible name",
+            "help": "ARIA commands must have an accessible name",
+            "nodes": 2
+          },
+          {
+            "id": "aria-required-children",
+            "impact": "critical",
+            "description": "Ensures elements with an ARIA role that require child roles contain them",
+            "help": "Certain ARIA roles must contain particular children",
+            "nodes": 2
+          },
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "nodes": 8
+          },
+          {
+            "id": "empty-heading",
+            "impact": "minor",
+            "description": "Ensures headings have discernible text",
+            "help": "Headings should not be empty",
+            "nodes": 1
+          },
+          {
+            "id": "image-alt",
+            "impact": "critical",
+            "description": "Ensures <img> elements have alternate text or a role of none or presentation",
+            "help": "Images must have alternate text",
+            "nodes": 5
+          },
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "description": "Ensures the document has a main landmark",
+            "help": "Document should have one main landmark",
+            "nodes": 1
+          },
+          {
+            "id": "meta-viewport",
+            "impact": "critical",
+            "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+            "help": "Zooming and scaling must not be disabled",
+            "nodes": 1
+          },
+          {
+            "id": "page-has-heading-one",
+            "impact": "moderate",
+            "description": "Ensure that the page, or at least one of its frames contains a level-one heading",
+            "help": "Page should contain a level-one heading",
+            "nodes": 1
+          },
+          {
+            "id": "region",
+            "impact": "moderate",
+            "description": "Ensures all page content is contained by landmarks",
+            "help": "All page content should be contained by landmarks",
+            "nodes": 19
+          }
+        ],
+        "vision_notes": "Alt texts appear accurate or no descriptive images found.",
+        "score": 28
+      },
+      "translation": {
+        "language": "hi",
+        "score": 100,
+        "devanagari_ratio_pct": 92.6,
+        "switcher_found": true,
+        "switcher_type": "Native Multilingual Portal",
+        "status": "native_multilingual_detected",
+        "regional_breakdown": {
+          "nav_pct": 0.0,
+          "headings_pct": 0.0,
+          "body_pct": 100.0
+        },
+        "quality_breakdown": {
+          "fluency_score": 15,
+          "glossary_score": 15,
+          "artifacts_score": 10
+        },
+        "flagged_terms": []
+      },
+      "composite_score": 78.4
+    },
+    {
+      "name": "Gujarat State Portal",
+      "url": "https://gujaratindia.gov.in",
+      "category": "State",
+      "subcategory": "Hub",
+      "purpose": "Gateway to Gujarat state government departments and schemes",
+      "priority": 2,
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 2488,
+        "total_links_found": 47,
+        "total_links_audited": 47,
+        "verified_working_links_count": 46,
+        "verified_working_links": [
+          "https://gujaratindia.gov.in/Home/Infrastructure1",
+          "https://gujaratindia.gov.in/Home/sitemap",
+          "https://www.indiacode.nic.in/handle/123456789/2455/",
+          "https://gujaratindia.gov.in/feedback",
+          "https://gujaratindia.gov.in/Home/chiefsecretary",
+          "https://www.youtube.com/cmogujarat",
+          "https://gujaratindia.gov.in/index",
+          "https://gujaratindia.gov.in/Home/Gujarat-Govt-Departments",
+          "https://gad.gujarat.gov.in/Personnel/district-development-officers.htm",
+          "https://gujaratindia.gov.in/Home/GujaratAtAGlance"
+        ],
+        "broken_links": 1,
+        "broken_links_details": [
+          {
+            "url": "https://gujaratindia.gov.in/index.html",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          }
+        ],
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": 37,
+        "critical": 8,
+        "violation_details": [
+          {
+            "id": "aria-prohibited-attr",
+            "impact": "serious",
+            "description": "Ensures ARIA attributes are not prohibited for an element's role",
+            "help": "Elements must only use permitted ARIA attributes",
+            "nodes": 8
+          },
+          {
+            "id": "button-name",
+            "impact": "critical",
+            "description": "Ensures buttons have discernible text",
+            "help": "Buttons must have discernible text",
+            "nodes": 4
+          },
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "nodes": 6
+          },
+          {
+            "id": "heading-order",
+            "impact": "moderate",
+            "description": "Ensures the order of headings is semantically correct",
+            "help": "Heading levels should only increase by one",
+            "nodes": 3
+          },
+          {
+            "id": "image-alt",
+            "impact": "critical",
+            "description": "Ensures <img> elements have alternate text or a role of none or presentation",
+            "help": "Images must have alternate text",
+            "nodes": 3
+          },
+          {
+            "id": "label",
+            "impact": "critical",
+            "description": "Ensures every form element has a label",
+            "help": "Form elements must have labels",
+            "nodes": 1
+          },
+          {
+            "id": "link-name",
+            "impact": "serious",
+            "description": "Ensures links have discernible text",
+            "help": "Links must have discernible text",
+            "nodes": 7
+          },
+          {
+            "id": "list",
+            "impact": "serious",
+            "description": "Ensures that lists are structured correctly",
+            "help": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
+            "nodes": 1
+          },
+          {
+            "id": "nested-interactive",
+            "impact": "serious",
+            "description": "Ensures interactive controls are not nested as they are not always announced by screen readers or can cause focus problems for assistive technologies",
+            "help": "Interactive controls must not be nested",
+            "nodes": 1
+          },
+          {
+            "id": "region",
+            "impact": "moderate",
+            "description": "Ensures all page content is contained by landmarks",
+            "help": "All page content should be contained by landmarks",
+            "nodes": 3
+          }
+        ],
+        "vision_notes": "Alt texts appear accurate or no descriptive images found.",
+        "score": 31
+      },
+      "translation": {
+        "language": "hi",
+        "score": 0,
+        "devanagari_ratio_pct": 0.3,
+        "switcher_found": false,
+        "switcher_type": "None",
+        "status": "no_language_switcher_found",
+        "regional_breakdown": {
+          "nav_pct": 0.0,
+          "headings_pct": 0.0,
+          "body_pct": 0.0
+        },
+        "quality_breakdown": {
+          "fluency_score": 0,
+          "glossary_score": 0,
+          "artifacts_score": 0
+        },
+        "flagged_terms": []
+      },
+      "composite_score": 48.5
+    },
+    {
+      "name": "Aaple Sarkar Maharashtra",
+      "url": "https://aaplesarkar.mahaonline.gov.in",
+      "category": "State",
+      "subcategory": "Citizen Services",
+      "purpose": "500+ Maharashtra citizen services (certificates, licenses, registrations)",
+      "priority": 3,
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 3691,
+        "total_links_found": 686,
+        "total_links_audited": 686,
+        "verified_working_links_count": 683,
+        "verified_working_links": [
+          "https://aaplesarkar.mahaonline.gov.in/mr/Login/Certificate_Documents?ServiceId=1843",
+          "https://aaplesarkar.mahaonline.gov.in/mr/Login/Certificate_Documents?ServiceId=9046",
+          "https://aaplesarkar.mahaonline.gov.in/mr/Login/Certificate_Documents?ServiceId=4522",
+          "https://aaplesarkar.mahaonline.gov.in/mr/Login/Certificate_Documents?ServiceId=1124",
+          "https://aaplesarkar.mahaonline.gov.in/mr/Login/Certificate_Documents?ServiceId=2259",
+          "https://aaplesarkar.mahaonline.gov.in/mr/Login/Certificate_Documents?ServiceId=5766",
+          "https://aaplesarkar.mahaonline.gov.in/mr/Login/Certificate_Documents?ServiceId=6775",
+          "https://aaplesarkar.mahaonline.gov.in/mr/Login/Certificate_Documents?ServiceId=5872",
+          "https://aaplesarkar.mahaonline.gov.in/mr/Login/Certificate_Documents?ServiceId=4575",
+          "https://aaplesarkar.mahaonline.gov.in/mr/Login/Certificate_Documents?ServiceId=9086"
+        ],
+        "broken_links": 3,
+        "broken_links_details": [
+          {
+            "url": "https://www.nesdaportal.in/survey/public/",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "https://appsto.re/in/7wKefb.i",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://play.google.com/store/apps/details?id=com.rtsmaharashtra.com&hl=en",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          }
+        ],
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": 74,
+        "critical": 8,
+        "violation_details": [
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "nodes": 32
+          },
+          {
+            "id": "frame-title",
+            "impact": "serious",
+            "description": "Ensures <iframe> and <frame> elements have an accessible name",
+            "help": "Frames must have an accessible name",
+            "nodes": 1
+          },
+          {
+            "id": "image-alt",
+            "impact": "critical",
+            "description": "Ensures <img> elements have alternate text or a role of none or presentation",
+            "help": "Images must have alternate text",
+            "nodes": 2
+          },
+          {
+            "id": "label",
+            "impact": "critical",
+            "description": "Ensures every form element has a label",
+            "help": "Form elements must have labels",
+            "nodes": 4
+          },
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "description": "Ensures the document has a main landmark",
+            "help": "Document should have one main landmark",
+            "nodes": 1
+          },
+          {
+            "id": "link-name",
+            "impact": "serious",
+            "description": "Ensures links have discernible text",
+            "help": "Links must have discernible text",
+            "nodes": 4
+          },
+          {
+            "id": "meta-viewport",
+            "impact": "critical",
+            "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+            "help": "Zooming and scaling must not be disabled",
+            "nodes": 1
+          },
+          {
+            "id": "page-has-heading-one",
+            "impact": "moderate",
+            "description": "Ensure that the page, or at least one of its frames contains a level-one heading",
+            "help": "Page should contain a level-one heading",
+            "nodes": 1
+          },
+          {
+            "id": "region",
+            "impact": "moderate",
+            "description": "Ensures all page content is contained by landmarks",
+            "help": "All page content should be contained by landmarks",
+            "nodes": 27
+          },
+          {
+            "id": "select-name",
+            "impact": "critical",
+            "description": "Ensures select element has an accessible name",
+            "help": "Select element must have an accessible name",
+            "nodes": 1
+          }
+        ],
+        "vision_notes": "Alt texts appear accurate or no descriptive images found.",
+        "score": 0
+      },
+      "translation": {
+        "language": "hi",
+        "score": 98,
+        "devanagari_ratio_pct": 84.3,
+        "switcher_found": true,
+        "switcher_type": "Native Multilingual Portal",
+        "status": "native_multilingual_detected",
+        "regional_breakdown": {
+          "nav_pct": 84.9,
+          "headings_pct": 98.4,
+          "body_pct": 91.6
+        },
+        "quality_breakdown": {
+          "fluency_score": 15,
+          "glossary_score": 15,
+          "artifacts_score": 8
+        },
+        "flagged_terms": [
+          "Untranslated UI Elements: Disclaimer"
+        ]
+      },
+      "composite_score": 67.0
+    },
+    {
+      "name": "Seva Sindhu Karnataka",
+      "url": "https://sevasindhu.karnataka.gov.in",
+      "category": "State",
+      "subcategory": "Citizen Services",
+      "purpose": "880+ Karnataka citizen services under the e-District Mission Mode Project",
+      "priority": 3,
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 1977,
+        "total_links_found": 105,
+        "total_links_audited": 105,
+        "verified_working_links_count": 76,
+        "verified_working_links": [
+          "https://play.google.com/store/apps/details?id=com.ksrtc.awatar.new",
+          "https://sevasindhu.karnataka.gov.in/Sevasindhu/Kannada",
+          "https://www.kstdc.co/",
+          "https://sevasindhu.karnataka.gov.in/Sevasindhu_Count/Service_CountList.aspx",
+          "https://sevasindhu.karnataka.gov.in/Sevasindhu/Kannada?ReturnUrl=%2F#",
+          "https://gramaone.karnataka.gov.in/",
+          "https://data.gov.in/statedepartment/karnataka",
+          "https://sevasindhu.karnataka.gov.in/Promotional_Kan.html",
+          "https://www.nic.in/",
+          "https://kshrc.karnataka.gov.in/"
+        ],
+        "broken_links": 29,
+        "broken_links_details": [
+          {
+            "url": "https://eoffice.karnataka.gov.in/cas/login?service=http%3A%2F%2Feoffice.karnataka.gov.in%2Flogin.php",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://karnataka.gov.in/jnanaayoga/Pages/home.aspx",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "http://mahitikanaja.karnataka.gov.in/Department",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://gazetteer.karnataka.gov.in/",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://ceg.karnataka.gov.in/gokdirectory/en",
+            "status_code": 500,
+            "reason": "HTTP 500"
+          },
+          {
+            "url": "https://play.google.com/store/apps/details?id=com.india.eservices.ka",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "https://play.google.com/store/apps/details?id=app.kgp.hyperbound",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "https://play.google.com/store/apps/details?id=com.voicenotes.kannada&hl=en",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "https://www.janasevaka.karnataka.gov.in/index.html",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "http://stgpratibimba.karnataka.gov.in/cmdbstg1/public/",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://karnatakajudiciary.kar.nic.in/",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://karunadu.karnataka.gov.in/karnatakabhavan/pages/home.aspx",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://districts.ecourts.gov.in/karnataka",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://sevasindhu.karnataka.gov.in/GruhaJyothi_Delink/GetAadhaarData.aspx",
+            "status_code": 503,
+            "reason": "HTTP 503"
+          },
+          {
+            "url": "https://kslsa.kar.nic.in/",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://karsec.gov.in/",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "http://rajbhavan.kar.nic.in/",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://play.google.com/store/apps/details?id=com.mybmtc",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "https://karunadu.karnataka.gov.in/KSWAN/pages/home.aspx",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "http://www.kla.kar.nic.in/council/",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://play.google.com/store/apps/details?id=beco.bhkar.jn",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "https://eproc.karnataka.gov.in/eprocportal/pages/index.jsp?language=kn",
+            "status_code": 503,
+            "reason": "HTTP 503"
+          },
+          {
+            "url": "http://www.espandana.karnataka.gov.in/cms/portal/login.jsf",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://www.csogok.gov.in/",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://portal2.passportindia.gov.in/AppOnlineProject/welcomeLink",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://loksabha.nic.in/",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "http://www.kla.kar.nic.in/assembly/assembly.htm",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "http://cgatnew.gov.in/catweb/Delhi/Delhi.php",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://www.kscw.kar.nic.in/",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          }
+        ],
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": 30,
+        "critical": 2,
+        "violation_details": [
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "nodes": 15
+          },
+          {
+            "id": "empty-heading",
+            "impact": "minor",
+            "description": "Ensures headings have discernible text",
+            "help": "Headings should not be empty",
+            "nodes": 2
+          },
+          {
+            "id": "image-alt",
+            "impact": "critical",
+            "description": "Ensures <img> elements have alternate text or a role of none or presentation",
+            "help": "Images must have alternate text",
+            "nodes": 2
+          },
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "description": "Ensures the document has a main landmark",
+            "help": "Document should have one main landmark",
+            "nodes": 1
+          },
+          {
+            "id": "link-name",
+            "impact": "serious",
+            "description": "Ensures links have discernible text",
+            "help": "Links must have discernible text",
+            "nodes": 1
+          },
+          {
+            "id": "page-has-heading-one",
+            "impact": "moderate",
+            "description": "Ensure that the page, or at least one of its frames contains a level-one heading",
+            "help": "Page should contain a level-one heading",
+            "nodes": 1
+          },
+          {
+            "id": "region",
+            "impact": "moderate",
+            "description": "Ensures all page content is contained by landmarks",
+            "help": "All page content should be contained by landmarks",
+            "nodes": 8
+          }
+        ],
+        "vision_notes": "Alt texts appear accurate or no descriptive images found.",
+        "score": 62
+      },
+      "translation": {
+        "language": "hi",
+        "score": 0,
+        "devanagari_ratio_pct": 0.0,
+        "switcher_found": false,
+        "switcher_type": "None",
+        "status": "no_language_switcher_found",
+        "regional_breakdown": {
+          "nav_pct": 0.0,
+          "headings_pct": 0.0,
+          "body_pct": 0.0
+        },
+        "quality_breakdown": {
+          "fluency_score": 0,
+          "glossary_score": 0,
+          "artifacts_score": 0
+        },
+        "flagged_terms": []
+      },
+      "composite_score": 38.6
+    },
+    {
+      "name": "e-District UP",
+      "url": "https://edistrict.up.gov.in/edistrictup/",
+      "category": "State",
+      "subcategory": "Citizen Services",
+      "purpose": "District-level citizen services for Uttar Pradesh",
+      "priority": 3,
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 2805,
+        "total_links_found": 67,
+        "total_links_audited": 67,
+        "verified_working_links_count": 64,
+        "verified_working_links": [
+          "https://edistrict.up.gov.in/edistrictup/Event/21.jpeg",
+          "https://edistrict.up.gov.in/eDistrictup/Services/services_hi.aspx",
+          "https://edistrict.up.gov.in/edistrictup/Event/25.jpg",
+          "https://edistrict.up.gov.in/edistrictup/Event/8.jpg",
+          "https://edistrict.up.gov.in/eDistrictup/FooterLinks/screenreader-access.aspx",
+          "https://edistrict.up.gov.in/edistrict/Certificate/solvencyStatus/GavReg/reggav.aspx",
+          "https://esathi.up.gov.in/ssdgsap/Login/Login.aspx",
+          "https://edistrict.up.gov.in/eDistrictup/FooterLinks/ContactUs.aspx",
+          "https://edistrict.up.gov.in/edistrictup/Event/1.jpg",
+          "https://edistrict.up.gov.in/"
+        ],
+        "broken_links": 3,
+        "broken_links_details": [
+          {
+            "url": "https://blog.digitallocker.gov.in/more-than-2-crore-uttar-pradesh-citizens-can-now-access-their-digitized-certificates-in-digilocker/",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "http://edistrict.up.nic.in/AvailServices/ServiceList_hindi.html",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "http://goidirectory.nic.in/",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          }
+        ],
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": 23,
+        "critical": 5,
+        "violation_details": [
+          {
+            "id": "aria-input-field-name",
+            "impact": "serious",
+            "description": "Ensures every ARIA input field has an accessible name",
+            "help": "ARIA input fields must have an accessible name",
+            "nodes": 1
+          },
+          {
+            "id": "aria-required-children",
+            "impact": "critical",
+            "description": "Ensures elements with an ARIA role that require child roles contain them",
+            "help": "Certain ARIA roles must contain particular children",
+            "nodes": 1
+          },
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "nodes": 2
+          },
+          {
+            "id": "frame-title",
+            "impact": "serious",
+            "description": "Ensures <iframe> and <frame> elements have an accessible name",
+            "help": "Frames must have an accessible name",
+            "nodes": 2
+          },
+          {
+            "id": "heading-order",
+            "impact": "moderate",
+            "description": "Ensures the order of headings is semantically correct",
+            "help": "Heading levels should only increase by one",
+            "nodes": 1
+          },
+          {
+            "id": "html-has-lang",
+            "impact": "serious",
+            "description": "Ensures every HTML document has a lang attribute",
+            "help": "<html> element must have a lang attribute",
+            "nodes": 1
+          },
+          {
+            "id": "image-alt",
+            "impact": "critical",
+            "description": "Ensures <img> elements have alternate text or a role of none or presentation",
+            "help": "Images must have alternate text",
+            "nodes": 2
+          },
+          {
+            "id": "link-name",
+            "impact": "serious",
+            "description": "Ensures links have discernible text",
+            "help": "Links must have discernible text",
+            "nodes": 4
+          },
+          {
+            "id": "region",
+            "impact": "moderate",
+            "description": "Ensures all page content is contained by landmarks",
+            "help": "All page content should be contained by landmarks",
+            "nodes": 7
+          },
+          {
+            "id": "select-name",
+            "impact": "critical",
+            "description": "Ensures select element has an accessible name",
+            "help": "Select element must have an accessible name",
+            "nodes": 2
+          }
+        ],
+        "vision_notes": "Alt texts appear accurate or no descriptive images found.",
+        "score": 57
+      },
+      "translation": {
+        "language": "hi",
+        "score": 100,
+        "devanagari_ratio_pct": 93.5,
+        "switcher_found": true,
+        "switcher_type": "Native Multilingual Portal",
+        "status": "native_multilingual_detected",
+        "regional_breakdown": {
+          "nav_pct": 100.0,
+          "headings_pct": 98.3,
+          "body_pct": 91.8
+        },
+        "quality_breakdown": {
+          "fluency_score": 15,
+          "glossary_score": 15,
+          "artifacts_score": 10
+        },
+        "flagged_terms": []
+      },
+      "composite_score": 84.7
+    },
+    {
+      "name": "Mee Seva (Andhra Pradesh)",
+      "url": "https://ap.meeseva.gov.in",
+      "category": "State",
+      "subcategory": "Citizen Services",
+      "purpose": "Andhra Pradesh citizen services successor to e-Seva",
+      "priority": 3,
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 2489,
+        "total_links_found": 34,
+        "total_links_audited": 34,
+        "verified_working_links_count": 32,
+        "verified_working_links": [
+          "https://ap.meeseva.gov.in/DeptPortal/Downloads/Damaged%20certificates%20due%20to%20rains%20for%20APTOnline.xls",
+          "https://ap.meeseva.gov.in/IMeeSeva2/about.html",
+          "https://ap.meeseva.gov.in/IMeeSeva2/VideoGallery.html",
+          "https://ap.meeseva.gov.in/IMeeSeva2/MeesevaB2CServices.aspx",
+          "https://ap.meeseva.gov.in/IMeeSeva2/Accessibility.html",
+          "https://ap.meeseva.gov.in/IMeeSeva2/IMeesevaHome.aspx#SkiptoContent",
+          "https://ap.meeseva.gov.in/IMeeSeva2/WebsitePolicy.html",
+          "https://ap.meeseva.gov.in/IMeeSeva2/Terms-Conditions.html",
+          "https://ap.meeseva.gov.in/IMeeSeva2/UserInterface/SuggestionGrievance.aspx",
+          "https://ap.meeseva.gov.in/IMeeSeva2/IMeesevaHome.aspx"
+        ],
+        "broken_links": 2,
+        "broken_links_details": [
+          {
+            "url": "https://ap.meeseva.gov.in/IMeeSeva2/income-certificate.html",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "https://ap.meeseva.gov.in/IMeeSeva2/MeeSevaServicesForms.html",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          }
+        ],
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": 56,
+        "critical": 6,
+        "violation_details": [
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "nodes": 14
+          },
+          {
+            "id": "heading-order",
+            "impact": "moderate",
+            "description": "Ensures the order of headings is semantically correct",
+            "help": "Heading levels should only increase by one",
+            "nodes": 1
+          },
+          {
+            "id": "html-has-lang",
+            "impact": "serious",
+            "description": "Ensures every HTML document has a lang attribute",
+            "help": "<html> element must have a lang attribute",
+            "nodes": 1
+          },
+          {
+            "id": "image-alt",
+            "impact": "critical",
+            "description": "Ensures <img> elements have alternate text or a role of none or presentation",
+            "help": "Images must have alternate text",
+            "nodes": 3
+          },
+          {
+            "id": "input-button-name",
+            "impact": "critical",
+            "description": "Ensures input buttons have discernible text",
+            "help": "Input buttons must have discernible text",
+            "nodes": 3
+          },
+          {
+            "id": "label-title-only",
+            "impact": "serious",
+            "description": "Ensures that every form element has a visible label and is not solely labeled using hidden labels, or the title or aria-describedby attributes",
+            "help": "Form elements should have a visible label",
+            "nodes": 3
+          },
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "description": "Ensures the document has a main landmark",
+            "help": "Document should have one main landmark",
+            "nodes": 1
+          },
+          {
+            "id": "link-name",
+            "impact": "serious",
+            "description": "Ensures links have discernible text",
+            "help": "Links must have discernible text",
+            "nodes": 7
+          },
+          {
+            "id": "marquee",
+            "impact": "serious",
+            "description": "Ensures <marquee> elements are not used",
+            "help": "<marquee> elements are deprecated and must not be used",
+            "nodes": 1
+          },
+          {
+            "id": "page-has-heading-one",
+            "impact": "moderate",
+            "description": "Ensure that the page, or at least one of its frames contains a level-one heading",
+            "help": "Page should contain a level-one heading",
+            "nodes": 1
+          },
+          {
+            "id": "region",
+            "impact": "moderate",
+            "description": "Ensures all page content is contained by landmarks",
+            "help": "All page content should be contained by landmarks",
+            "nodes": 21
+          }
+        ],
+        "vision_notes": "Alt texts appear accurate or no descriptive images found.",
+        "score": 20
+      },
+      "translation": {
+        "language": "hi",
+        "score": 0,
+        "devanagari_ratio_pct": 0.0,
+        "switcher_found": false,
+        "switcher_type": "None",
+        "status": "no_language_switcher_found",
+        "regional_breakdown": {
+          "nav_pct": 0.0,
+          "headings_pct": 0.0,
+          "body_pct": 0.0
+        },
+        "quality_breakdown": {
+          "fluency_score": 0,
+          "glossary_score": 0,
+          "artifacts_score": 0
+        },
+        "flagged_terms": []
+      },
+      "composite_score": 44.4
+    },
+    {
+      "name": "Mee Seva (Telangana)",
+      "url": "https://meeseva.telangana.gov.in",
+      "category": "State",
+      "subcategory": "Citizen Services",
+      "purpose": "Telangana's Mee Seva instance after the 2014 AP/Telangana split",
+      "priority": 3,
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 1815,
+        "total_links_found": 13,
+        "total_links_audited": 13,
+        "verified_working_links_count": 12,
+        "verified_working_links": [
+          "https://meeseva.telangana.gov.in/CentralEseva/Reports/tranStatusReport.jsp",
+          "https://meeseva.telangana.gov.in/meeseva/home.htm#tsContent",
+          "https://meeseva.telangana.gov.in/meeseva/homeLocale.htm?lang=te",
+          "https://meeseva.telangana.gov.in/meeseva/homeLocale.htm?lang=en",
+          "https://bnd.ghmc.gov.in/KnowYourApplicationStatus.aspx",
+          "https://meeseva.telangana.gov.in/meeseva/home.htm#",
+          "https://meeseva.telangana.gov.in/meeseva/forgetPassword.htm",
+          "https://meeseva.telangana.gov.in/meeseva/home.htm#0",
+          "http://goir.telangana.gov.in/",
+          "https://www.facebook.com/TS-Meeseva-616311685393119"
+        ],
+        "broken_links": 1,
+        "broken_links_details": [
+          {
+            "url": "https://twitter.com/TMeeseva",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          }
+        ],
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": 39,
+        "critical": 5,
+        "violation_details": [
+          {
+            "id": "button-name",
+            "impact": "critical",
+            "description": "Ensures buttons have discernible text",
+            "help": "Buttons must have discernible text",
+            "nodes": 2
+          },
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "nodes": 9
+          },
+          {
+            "id": "image-alt",
+            "impact": "critical",
+            "description": "Ensures <img> elements have alternate text or a role of none or presentation",
+            "help": "Images must have alternate text",
+            "nodes": 2
+          },
+          {
+            "id": "label",
+            "impact": "critical",
+            "description": "Ensures every form element has a label",
+            "help": "Form elements must have labels",
+            "nodes": 1
+          },
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "description": "Ensures the document has a main landmark",
+            "help": "Document should have one main landmark",
+            "nodes": 1
+          },
+          {
+            "id": "landmark-unique",
+            "impact": "moderate",
+            "description": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+            "help": "Ensures landmarks are unique",
+            "nodes": 1
+          },
+          {
+            "id": "link-name",
+            "impact": "serious",
+            "description": "Ensures links have discernible text",
+            "help": "Links must have discernible text",
+            "nodes": 2
+          },
+          {
+            "id": "region",
+            "impact": "moderate",
+            "description": "Ensures all page content is contained by landmarks",
+            "help": "All page content should be contained by landmarks",
+            "nodes": 19
+          },
+          {
+            "id": "tabindex",
+            "impact": "serious",
+            "description": "Ensures tabindex attribute values are not greater than 0",
+            "help": "Elements should not have tabindex greater than zero",
+            "nodes": 2
+          }
+        ],
+        "vision_notes": "Alt texts appear accurate or no descriptive images found.",
+        "score": 41
+      },
+      "translation": {
+        "language": "hi",
+        "score": 0,
+        "devanagari_ratio_pct": 0.0,
+        "switcher_found": false,
+        "switcher_type": "None",
+        "status": "no_language_switcher_found",
+        "regional_breakdown": {
+          "nav_pct": 0.0,
+          "headings_pct": 0.0,
+          "body_pct": 0.0
+        },
+        "quality_breakdown": {
+          "fluency_score": 0,
+          "glossary_score": 0,
+          "artifacts_score": 0
+        },
+        "flagged_terms": []
+      },
+      "composite_score": 51.5
+    },
+    {
+      "name": "Digital Gujarat",
+      "url": "https://www.digitalgujarat.gov.in",
+      "category": "State",
+      "subcategory": "Citizen Services",
+      "purpose": "100+ online services, single window for Gujarat citizen services",
+      "priority": 3,
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 3280,
+        "total_links_found": 49,
+        "total_links_audited": 49,
+        "verified_working_links_count": 49,
+        "verified_working_links": [
+          "https://www.digitalgujarat.gov.in/LinkPages/FAQ.aspx",
+          "https://www.digitalgujarat.gov.in/Campaign.aspx",
+          "https://www.digitalgujarat.gov.in/Services/JansevaServices.aspx",
+          "https://www.digitalgujarat.gov.in/assets/img/GlimpsesSlider/statueofunity.png",
+          "https://www.digitalgujarat.gov.in/LinkPages/Videos.aspx",
+          "https://www.digitalgujarat.gov.in/#",
+          "https://www.youtube.com/@digitalgujarat-dit",
+          "https://gujaratindia.gov.in/index",
+          "https://www.digitalgujarat.gov.in/LinkPages/HyperlinkPolicy.aspx",
+          "https://www.soutickets.in/#/dashboard"
+        ],
+        "broken_links": 0,
+        "broken_links_details": [],
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": 27,
+        "critical": 3,
+        "violation_details": [
+          {
+            "id": "aria-allowed-role",
+            "impact": "minor",
+            "description": "Ensures role attribute has an appropriate value for the element",
+            "help": "ARIA role should be appropriate for the element",
+            "nodes": 4
+          },
+          {
+            "id": "button-name",
+            "impact": "critical",
+            "description": "Ensures buttons have discernible text",
+            "help": "Buttons must have discernible text",
+            "nodes": 2
+          },
+          {
+            "id": "heading-order",
+            "impact": "moderate",
+            "description": "Ensures the order of headings is semantically correct",
+            "help": "Heading levels should only increase by one",
+            "nodes": 4
+          },
+          {
+            "id": "label-title-only",
+            "impact": "serious",
+            "description": "Ensures that every form element has a visible label and is not solely labeled using hidden labels, or the title or aria-describedby attributes",
+            "help": "Form elements should have a visible label",
+            "nodes": 1
+          },
+          {
+            "id": "nested-interactive",
+            "impact": "serious",
+            "description": "Ensures interactive controls are not nested as they are not always announced by screen readers or can cause focus problems for assistive technologies",
+            "help": "Interactive controls must not be nested",
+            "nodes": 1
+          },
+          {
+            "id": "presentation-role-conflict",
+            "impact": "minor",
+            "description": "Elements marked as presentational should not have global ARIA or tabindex to ensure all screen readers ignore them",
+            "help": "Ensure elements marked as presentational are consistently ignored",
+            "nodes": 4
+          },
+          {
+            "id": "region",
+            "impact": "moderate",
+            "description": "Ensures all page content is contained by landmarks",
+            "help": "All page content should be contained by landmarks",
+            "nodes": 10
+          },
+          {
+            "id": "select-name",
+            "impact": "critical",
+            "description": "Ensures select element has an accessible name",
+            "help": "Select element must have an accessible name",
+            "nodes": 1
+          }
+        ],
+        "vision_notes": "Alt texts appear accurate or no descriptive images found.",
+        "score": 61
+      },
+      "translation": {
+        "language": "hi",
+        "score": 0,
+        "devanagari_ratio_pct": 0.0,
+        "switcher_found": false,
+        "switcher_type": "None",
+        "status": "no_language_switcher_found",
+        "regional_breakdown": {
+          "nav_pct": 0.0,
+          "headings_pct": 0.0,
+          "body_pct": 0.0
+        },
+        "quality_breakdown": {
+          "fluency_score": 0,
+          "glossary_score": 0,
+          "artifacts_score": 0
+        },
+        "flagged_terms": []
+      },
+      "composite_score": 58.3
+    },
+    {
+      "name": "RTPS Bihar",
+      "url": "https://serviceonline.bihar.gov.in/",
+      "category": "State",
+      "subcategory": "Citizen Services",
+      "purpose": "Right to Public Services portal: caste, income, residence certificates",
+      "priority": 3,
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 2843,
+        "total_links_found": 380,
+        "total_links_audited": 380,
+        "verified_working_links_count": 366,
+        "verified_working_links": [
+          "https://serviceonline.bihar.gov.in/#collapseSixSeven",
+          "https://serviceonline.bihar.gov.in/#collapseOneEightM",
+          "http://serviceonline.bihar.gov.in/serviceLinkHome.html?serviceToken=TOUXOr6Y4H511&newLink=N&%3Ccsrf:token%20uri=%27serviceLinkHome.html%27/%3E",
+          "https://serviceonline.bihar.gov.in/#eng_collapseElevenM",
+          "https://serviceonline.bihar.gov.in/#eng_collapseTwentyoneM",
+          "https://serviceonline.bihar.gov.in/#collapseEightyM",
+          "https://serviceonline.bihar.gov.in/#eng_collapseAgriM",
+          "https://sarathi.parivahan.gov.in/sarathiservice/stalllogin.do",
+          "https://serviceonline.bihar.gov.in/#collapseTwentytwoM",
+          "https://serviceonline.bihar.gov.in/#eng_collapseThreeM"
+        ],
+        "broken_links": 14,
+        "broken_links_details": [
+          {
+            "url": "http://epds.bihar.gov.in/SearchByRCID.aspx",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "http://servicereport.nic.in:8080/lrd/Verification.jsp",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "http://parimarjan.bihar.gov.in/biharBhumireport/frm_LPC_StatusNew",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "http://parimarjan.bihar.gov.in/biharBhumireport/MutationStatusNew",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "http://servicereport.nic.in/lrd/Verification.jsp",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "http://sirflrd.bih.nic.in/",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://vahan.parivahan.gov.in/checkpost/faces/login.xhtml?faces-redirect=true#",
+            "status_code": 500,
+            "reason": "HTTP 500"
+          },
+          {
+            "url": "https://pmjay.gov.in/",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://bocw.bihar.gov.in/",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "http://bhumijankari.bihar.gov.in/Admin/MVR/MVRParameter.aspx",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://play.google.com/store/apps/details?id=com.org.ep.serviceplusapp",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "https://serviceonline.bihar.gov.in/RtpsReportView/",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "https://swcs.bihar.gov.in/knye",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "https://nibandhan.bihar.gov.in/Marriage/OnlineLoginMarriage.aspx",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          }
+        ],
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": 85,
+        "critical": 18,
+        "violation_details": [
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "nodes": 11
+          },
+          {
+            "id": "html-has-lang",
+            "impact": "serious",
+            "description": "Ensures every HTML document has a lang attribute",
+            "help": "<html> element must have a lang attribute",
+            "nodes": 1
+          },
+          {
+            "id": "image-alt",
+            "impact": "critical",
+            "description": "Ensures <img> elements have alternate text or a role of none or presentation",
+            "help": "Images must have alternate text",
+            "nodes": 18
+          },
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "description": "Ensures the document has a main landmark",
+            "help": "Document should have one main landmark",
+            "nodes": 1
+          },
+          {
+            "id": "marquee",
+            "impact": "serious",
+            "description": "Ensures <marquee> elements are not used",
+            "help": "<marquee> elements are deprecated and must not be used",
+            "nodes": 1
+          },
+          {
+            "id": "nested-interactive",
+            "impact": "serious",
+            "description": "Ensures interactive controls are not nested as they are not always announced by screen readers or can cause focus problems for assistive technologies",
+            "help": "Interactive controls must not be nested",
+            "nodes": 34
+          },
+          {
+            "id": "page-has-heading-one",
+            "impact": "moderate",
+            "description": "Ensure that the page, or at least one of its frames contains a level-one heading",
+            "help": "Page should contain a level-one heading",
+            "nodes": 1
+          },
+          {
+            "id": "region",
+            "impact": "moderate",
+            "description": "Ensures all page content is contained by landmarks",
+            "help": "All page content should be contained by landmarks",
+            "nodes": 18
+          }
+        ],
+        "vision_notes": "Alt texts appear accurate or no descriptive images found.",
+        "score": 0
+      },
+      "translation": {
+        "language": "hi",
+        "score": 88,
+        "devanagari_ratio_pct": 44.6,
+        "switcher_found": true,
+        "switcher_type": "Native Multilingual Portal",
+        "status": "native_multilingual_detected",
+        "regional_breakdown": {
+          "nav_pct": 45.1,
+          "headings_pct": 0.0,
+          "body_pct": 43.5
+        },
+        "quality_breakdown": {
+          "fluency_score": 11,
+          "glossary_score": 15,
+          "artifacts_score": 8
+        },
+        "flagged_terms": [
+          "Untranslated UI Elements: Disclaimer"
+        ]
+      },
+      "composite_score": 55.2
+    },
+    {
+      "name": "SARAL Haryana",
+      "url": "https://saralharyana.gov.in",
+      "category": "State",
+      "subcategory": "Citizen Services",
+      "purpose": "545+ schemes/services across 44 Haryana departments on one platform",
+      "priority": 3,
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 1532,
+        "total_links_found": 37,
+        "total_links_audited": 37,
+        "verified_working_links_count": 36,
+        "verified_working_links": [
+          "https://saralharyana.gov.in/#sitemapnew",
+          "https://saralharyana.gov.in/directApply.do?serviceId=689",
+          "https://saralharyana.gov.in/#rts",
+          "https://serviceonline.gov.in/",
+          "https://status.saralharyana.nic.in/reports/GetSaralCertificate",
+          "https://etoken.saralharyana.nic.in/Citizentoken",
+          "https://www.india.gov.in/",
+          "https://saralharyana.gov.in/directApply.do?serviceId=1729",
+          "https://saralharyana.gov.in/#contact",
+          "https://status.saralharyana.nic.in/"
+        ],
+        "broken_links": 1,
+        "broken_links_details": [
+          {
+            "url": "https://saralharyana.gov.in/home",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          }
+        ],
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": 23,
+        "critical": 8,
+        "violation_details": [
+          {
+            "id": "aria-allowed-role",
+            "impact": "minor",
+            "description": "Ensures role attribute has an appropriate value for the element",
+            "help": "ARIA role should be appropriate for the element",
+            "nodes": 1
+          },
+          {
+            "id": "aria-required-parent",
+            "impact": "critical",
+            "description": "Ensures elements with an ARIA role that require parent roles are contained by them",
+            "help": "Certain ARIA roles must be contained by particular parents",
+            "nodes": 8
+          },
+          {
+            "id": "heading-order",
+            "impact": "moderate",
+            "description": "Ensures the order of headings is semantically correct",
+            "help": "Heading levels should only increase by one",
+            "nodes": 5
+          },
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "description": "Ensures the document has a main landmark",
+            "help": "Document should have one main landmark",
+            "nodes": 1
+          },
+          {
+            "id": "link-name",
+            "impact": "serious",
+            "description": "Ensures links have discernible text",
+            "help": "Links must have discernible text",
+            "nodes": 6
+          },
+          {
+            "id": "region",
+            "impact": "moderate",
+            "description": "Ensures all page content is contained by landmarks",
+            "help": "All page content should be contained by landmarks",
+            "nodes": 2
+          }
+        ],
+        "vision_notes": "Alt texts appear accurate or no descriptive images found.",
+        "score": 45
+      },
+      "translation": {
+        "language": "hi",
+        "score": 100,
+        "devanagari_ratio_pct": 97.7,
+        "switcher_found": true,
+        "switcher_type": "Direct Text Link ('\u0939\u093f\u0902\u0926\u0940')",
+        "status": "switcher_success",
+        "regional_breakdown": {
+          "nav_pct": 90.9,
+          "headings_pct": 95.6,
+          "body_pct": 99.7
+        },
+        "quality_breakdown": {
+          "fluency_score": 15,
+          "glossary_score": 15,
+          "artifacts_score": 10
+        },
+        "flagged_terms": []
+      },
+      "composite_score": 82.7
+    },
+    {
+      "name": "Akshaya Kerala",
+      "url": "https://akshaya.kerala.gov.in",
+      "category": "State",
+      "subcategory": "Citizen Services",
+      "purpose": "Kerala's e-governance/digital literacy citizen service centre network",
+      "priority": 3,
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 5217,
+        "total_links_found": 55,
+        "total_links_audited": 55,
+        "verified_working_links_count": 54,
+        "verified_working_links": [
+          "https://akshaya.kerala.gov.in/gallery/photos",
+          "https://akshaya.kerala.gov.in/about/institutional-framework",
+          "https://akshaya.kerala.gov.in/service-category/58/insurance",
+          "https://akshaya.kerala.gov.in/service-category/65/citizen-services",
+          "https://akshaya.kerala.gov.in/service-category/41/financial-inclusion",
+          "https://akshaya.kerala.gov.in/notices",
+          "https://akshaya.kerala.gov.in/gallery/photos/59/kottayam",
+          "https://akshaya.kerala.gov.in/gallery/photos/66/ernakulam-district-events",
+          "https://akshaya.kerala.gov.in/events/68/contact-toll-free-number-155300-bsnl-0471-2335523-others",
+          "https://akshaya.kerala.gov.in/#"
+        ],
+        "broken_links": 1,
+        "broken_links_details": [
+          {
+            "url": "https://akshaya.kerala.gov.in/index-home-variation-html5-video.html#",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          }
+        ],
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": 98,
+        "critical": 6,
+        "violation_details": [
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "nodes": 23
+          },
+          {
+            "id": "empty-heading",
+            "impact": "minor",
+            "description": "Ensures headings have discernible text",
+            "help": "Headings should not be empty",
+            "nodes": 7
+          },
+          {
+            "id": "frame-title",
+            "impact": "serious",
+            "description": "Ensures <iframe> and <frame> elements have an accessible name",
+            "help": "Frames must have an accessible name",
+            "nodes": 2
+          },
+          {
+            "id": "heading-order",
+            "impact": "moderate",
+            "description": "Ensures the order of headings is semantically correct",
+            "help": "Heading levels should only increase by one",
+            "nodes": 9
+          },
+          {
+            "id": "image-alt",
+            "impact": "critical",
+            "description": "Ensures <img> elements have alternate text or a role of none or presentation",
+            "help": "Images must have alternate text",
+            "nodes": 6
+          },
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "description": "Ensures the document has a main landmark",
+            "help": "Document should have one main landmark",
+            "nodes": 1
+          },
+          {
+            "id": "link-name",
+            "impact": "serious",
+            "description": "Ensures links have discernible text",
+            "help": "Links must have discernible text",
+            "nodes": 18
+          },
+          {
+            "id": "list",
+            "impact": "serious",
+            "description": "Ensures that lists are structured correctly",
+            "help": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
+            "nodes": 1
+          },
+          {
+            "id": "page-has-heading-one",
+            "impact": "moderate",
+            "description": "Ensure that the page, or at least one of its frames contains a level-one heading",
+            "help": "Page should contain a level-one heading",
+            "nodes": 1
+          },
+          {
+            "id": "region",
+            "impact": "moderate",
+            "description": "Ensures all page content is contained by landmarks",
+            "help": "All page content should be contained by landmarks",
+            "nodes": 30
+          }
+        ],
+        "vision_notes": "Alt texts appear accurate or no descriptive images found.",
+        "score": 0
+      },
+      "translation": {
+        "language": "hi",
+        "score": 0,
+        "devanagari_ratio_pct": 0.0,
+        "switcher_found": false,
+        "switcher_type": "None",
+        "status": "no_language_switcher_found",
+        "regional_breakdown": {
+          "nav_pct": 0.0,
+          "headings_pct": 0.0,
+          "body_pct": 0.0
+        },
+        "quality_breakdown": {
+          "fluency_score": 0,
+          "glossary_score": 0,
+          "artifacts_score": 0
+        },
+        "flagged_terms": []
+      },
+      "composite_score": 39.2
+    },
+    {
+      "name": "Tamil Nadu e-Sevai",
+      "url": "https://tnesevai.tn.gov.in",
+      "category": "State",
+      "subcategory": "Citizen Services",
+      "purpose": "Certificates and land record e-services under the state e-District project",
+      "priority": 3,
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 1217,
+        "total_links_found": 38,
+        "total_links_audited": 38,
+        "verified_working_links_count": 35,
+        "verified_working_links": [
+          "https://www.facebook.com/tnegaofficial",
+          "https://twitter.com/TNeGA_Official",
+          "https://tnesevai.tn.gov.in/Pages/sitemap.aspx",
+          "https://tnesevai.tn.gov.in/RelaseNote.html",
+          "https://tnesevai.tn.gov.in/Index.aspx",
+          "https://tnesevai.tn.gov.in/Pages/FAQ.aspx",
+          "https://tnesevai.tn.gov.in/Pages/AboutUs.aspx",
+          "https://tnesevai.tn.gov.in/Pages/Policy.aspx",
+          "https://tnesevai.tn.gov.in/#carousel",
+          "https://eadangal.tn.gov.in/eadangal/EadngalExtract.aspx"
+        ],
+        "broken_links": 3,
+        "broken_links_details": [
+          {
+            "url": "https://nesda.centralindia.cloudapp.azure.com/#/citizen-survey",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://ind01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fpbrdms.precisionbiometric.co.in%3A8443%2FRDService%2F&data=04%7C01%7Ckamaraj.kuppuraman%40precisionit.co.in%7Ce669e8af85224ed712d408d93555eee0%7C524dfd7ad1e9492e93aaf2c625a589ff%7C0%7C0%7C637599465460802433%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=GRgq%2F0gZZrIEw%2FmAMsE7XvW9kuk8vgr%2FIBRhE0cs2ug%3D&reserved=0",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "http://www.tn.gov.in/go_view/dept",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          }
+        ],
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": 15,
+        "critical": 1,
+        "violation_details": [
+          {
+            "id": "aria-allowed-role",
+            "impact": "minor",
+            "description": "Ensures role attribute has an appropriate value for the element",
+            "help": "ARIA role should be appropriate for the element",
+            "nodes": 1
+          },
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "nodes": 2
+          },
+          {
+            "id": "heading-order",
+            "impact": "moderate",
+            "description": "Ensures the order of headings is semantically correct",
+            "help": "Heading levels should only increase by one",
+            "nodes": 1
+          },
+          {
+            "id": "html-has-lang",
+            "impact": "serious",
+            "description": "Ensures every HTML document has a lang attribute",
+            "help": "<html> element must have a lang attribute",
+            "nodes": 1
+          },
+          {
+            "id": "image-alt",
+            "impact": "critical",
+            "description": "Ensures <img> elements have alternate text or a role of none or presentation",
+            "help": "Images must have alternate text",
+            "nodes": 1
+          },
+          {
+            "id": "landmark-banner-is-top-level",
+            "impact": "moderate",
+            "description": "Ensures the banner landmark is at top level",
+            "help": "Banner landmark should not be contained in another landmark",
+            "nodes": 4
+          },
+          {
+            "id": "landmark-no-duplicate-banner",
+            "impact": "moderate",
+            "description": "Ensures the document has at most one banner landmark",
+            "help": "Document should not have more than one banner landmark",
+            "nodes": 1
+          },
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "description": "Ensures the document has a main landmark",
+            "help": "Document should have one main landmark",
+            "nodes": 1
+          },
+          {
+            "id": "landmark-unique",
+            "impact": "moderate",
+            "description": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+            "help": "Ensures landmarks are unique",
+            "nodes": 1
+          },
+          {
+            "id": "marquee",
+            "impact": "serious",
+            "description": "Ensures <marquee> elements are not used",
+            "help": "<marquee> elements are deprecated and must not be used",
+            "nodes": 1
+          },
+          {
+            "id": "page-has-heading-one",
+            "impact": "moderate",
+            "description": "Ensure that the page, or at least one of its frames contains a level-one heading",
+            "help": "Page should contain a level-one heading",
+            "nodes": 1
+          }
+        ],
+        "vision_notes": "Alt texts appear accurate or no descriptive images found.",
+        "score": 81
+      },
+      "translation": {
+        "language": "hi",
+        "score": 0,
+        "devanagari_ratio_pct": 0.0,
+        "switcher_found": false,
+        "switcher_type": "None",
+        "status": "no_language_switcher_found",
+        "regional_breakdown": {
+          "nav_pct": 0.0,
+          "headings_pct": 0.0,
+          "body_pct": 0.0
+        },
+        "quality_breakdown": {
+          "fluency_score": 0,
+          "glossary_score": 0,
+          "artifacts_score": 0
+        },
+        "flagged_terms": []
+      },
+      "composite_score": 61.9
+    },
+    {
+      "name": "MP e-District",
+      "url": "https://mpedistrict.gov.in/MPL/index.aspx",
+      "category": "State",
+      "subcategory": "Citizen Services",
+      "purpose": "Lok Seva Kendra-linked certificate and citizen services for Madhya Pradesh",
+      "priority": 3,
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 8505,
+        "total_links_found": 439,
+        "total_links_audited": 439,
+        "verified_working_links_count": 432,
+        "verified_working_links": [
+          "https://mpedistrict.gov.in/MPL/ShowServiceDetail.aspx?param=WUi7q9mVk/AqI2L1jxuHs43gG5wSIbA3bZI0iiqicwf9YPvo8BBxroBC9Sr2h8HHLlqNmIQMi7GEw48IK9RmU6I0PkPDVlagIHp4/gfMX0w=",
+          "https://mpedistrict.gov.in/MPL/ShowServiceDetail.aspx?param=czuzIF0ItgjWyOzE7YNV4m+Xa5Iw/RswAdP8B76SFFrAfxyQmdSCIgdHNX/zSXeZwPRKgbjRc8U=",
+          "https://mpedistrict.gov.in/MPL/Adhiniyam.aspx",
+          "https://mpedistrict.gov.in/MPL/ShowServiceDetail.aspx?param=1OcDudBxUpPDriQKO9LV4h1B8xYcBBHGnj0+wiGDloOh2cUgY+E42vQ2Kw+kpDSeRuvgIrLGNapbJjAtz5yn9nNRNyimZkhfzzRKmE3vGsBCu6MuQmtH/BpU+5VJurga",
+          "https://mpedistrict.gov.in/MPL/ShowServiceDetail.aspx?param=tcTf4hegnylCWHXPFEeloQMjQ81axE1Y5uiQs3tYF8UdkwGFV5aLd0BErd7vYfss35Re4Evayxc=",
+          "https://mpedistrict.gov.in/MPL/ShowServiceDetail.aspx?param=ICGY7bWkfEu8XHHn3AV+UZeDuezpKHhO",
+          "https://ayushmanbharat.mp.gov.in/",
+          "https://my.ebharatgas.com/bharatgas/LPGServices/ApplyNewConnection",
+          "https://mpedistrict.gov.in/MPL/ShowServiceDetail.aspx?param=f1KCWdQ8DODZYM92NXk5MaosrLsE5A2U4X90enrPgjQx9rpsIEs3jbWwxuEzFz79eZyA06vtNTA9gqIz7Pfc2PXUm9iFUMxMacVRPdQmcwE=",
+          "https://mpedistrict.gov.in/MPL/ShowServiceDetail.aspx?param=vwfFq8Wk6L5qFJOnvtIcy5wd7a1hVnGFK/7K7NprYRQB0WjVKugPEmuqTvKPUqjSwGMc5eM5iZyXx+8qAVEHuwmQY2ubLjmoM29M+ctAoEawm+UvCiWg5gnOWb2QwG9lPNmIfBQRvcinaYfwrPu8FAA6QsHUpLni"
+        ],
+        "broken_links": 7,
+        "broken_links_details": [
+          {
+            "url": "https://rationmitra.nic.in/sLogin/Pages/sLogin.aspx",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://mpedistrict.gov.in/MPL/CmCare_DailyDashboard.aspx",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://itunes.apple.com/in/app/mpmobile-app/id1053373747?mt=8",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "https://mpbhulekh.gov.in/mpbhulekh.do",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://rationmitra.nic.in/",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "http://diary.mp.gov.in/",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "http://www.cmhelpline.mp.gov.in/schemes.aspx",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          }
+        ],
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": 223,
+        "critical": 24,
+        "violation_details": [
+          {
+            "id": "aria-allowed-role",
+            "impact": "minor",
+            "description": "Ensures role attribute has an appropriate value for the element",
+            "help": "ARIA role should be appropriate for the element",
+            "nodes": 4
+          },
+          {
+            "id": "button-name",
+            "impact": "critical",
+            "description": "Ensures buttons have discernible text",
+            "help": "Buttons must have discernible text",
+            "nodes": 18
+          },
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "nodes": 19
+          },
+          {
+            "id": "empty-heading",
+            "impact": "minor",
+            "description": "Ensures headings have discernible text",
+            "help": "Headings should not be empty",
+            "nodes": 22
+          },
+          {
+            "id": "heading-order",
+            "impact": "moderate",
+            "description": "Ensures the order of headings is semantically correct",
+            "help": "Heading levels should only increase by one",
+            "nodes": 2
+          },
+          {
+            "id": "image-alt",
+            "impact": "critical",
+            "description": "Ensures <img> elements have alternate text or a role of none or presentation",
+            "help": "Images must have alternate text",
+            "nodes": 6
+          },
+          {
+            "id": "link-name",
+            "impact": "serious",
+            "description": "Ensures links have discernible text",
+            "help": "Links must have discernible text",
+            "nodes": 1
+          },
+          {
+            "id": "list",
+            "impact": "serious",
+            "description": "Ensures that lists are structured correctly",
+            "help": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
+            "nodes": 28
+          },
+          {
+            "id": "listitem",
+            "impact": "serious",
+            "description": "Ensures <li> elements are used semantically",
+            "help": "<li> elements must be contained in a <ul> or <ol>",
+            "nodes": 97
+          },
+          {
+            "id": "marquee",
+            "impact": "serious",
+            "description": "Ensures <marquee> elements are not used",
+            "help": "<marquee> elements are deprecated and must not be used",
+            "nodes": 1
+          },
+          {
+            "id": "page-has-heading-one",
+            "impact": "moderate",
+            "description": "Ensure that the page, or at least one of its frames contains a level-one heading",
+            "help": "Page should contain a level-one heading",
+            "nodes": 1
+          },
+          {
+            "id": "presentation-role-conflict",
+            "impact": "minor",
+            "description": "Elements marked as presentational should not have global ARIA or tabindex to ensure all screen readers ignore them",
+            "help": "Ensure elements marked as presentational are consistently ignored",
+            "nodes": 4
+          },
+          {
+            "id": "region",
+            "impact": "moderate",
+            "description": "Ensures all page content is contained by landmarks",
+            "help": "All page content should be contained by landmarks",
+            "nodes": 19
+          },
+          {
+            "id": "scrollable-region-focusable",
+            "impact": "serious",
+            "description": "Ensure elements that have scrollable content are accessible by keyboard",
+            "help": "Scrollable region must have keyboard access",
+            "nodes": 1
+          }
+        ],
+        "vision_notes": "Alt texts appear accurate or no descriptive images found.",
+        "score": 0
+      },
+      "translation": {
+        "language": "hi",
+        "score": 100,
+        "devanagari_ratio_pct": 95.9,
+        "switcher_found": true,
+        "switcher_type": "Native Multilingual Portal",
+        "status": "native_multilingual_detected",
+        "regional_breakdown": {
+          "nav_pct": 98.9,
+          "headings_pct": 97.1,
+          "body_pct": 96.3
+        },
+        "quality_breakdown": {
+          "fluency_score": 15,
+          "glossary_score": 15,
+          "artifacts_score": 10
+        },
+        "flagged_terms": []
+      },
+      "composite_score": 64.4
+    },
+    {
+      "name": "e-Shram",
+      "url": "https://eshram.gov.in",
+      "category": "Central",
+      "subcategory": "Labour",
+      "purpose": "National Database of Unorganised Workers, UAN registration",
+      "priority": 3,
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 926,
+        "total_links_found": 1,
+        "total_links_audited": 1,
+        "verified_working_links_count": 1,
+        "verified_working_links": [
+          "https://eshram.gov.in/indexmain"
+        ],
+        "broken_links": 0,
+        "broken_links_details": [],
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": 2,
+        "critical": 0,
+        "violation_details": [
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "description": "Ensures the document has a main landmark",
+            "help": "Document should have one main landmark",
+            "nodes": 1
+          },
+          {
+            "id": "region",
+            "impact": "moderate",
+            "description": "Ensures all page content is contained by landmarks",
+            "help": "All page content should be contained by landmarks",
+            "nodes": 1
+          }
+        ],
+        "vision_notes": "Alt texts appear accurate or no descriptive images found.",
+        "score": 98
+      },
+      "translation": {
+        "language": "hi",
+        "score": 32,
+        "devanagari_ratio_pct": 16.4,
+        "switcher_found": false,
+        "switcher_type": "None",
+        "status": "no_language_switcher_found",
+        "regional_breakdown": {
+          "nav_pct": 0.0,
+          "headings_pct": 0.0,
+          "body_pct": 0.0
+        },
+        "quality_breakdown": {
+          "fluency_score": 7,
+          "glossary_score": 15,
+          "artifacts_score": 10
+        },
+        "flagged_terms": []
+      },
+      "composite_score": 79.0
+    },
+    {
+      "name": "National Scholarship Portal",
+      "url": "https://scholarships.gov.in",
+      "category": "Central",
+      "subcategory": "Education",
+      "purpose": "Single portal for 100+ central/state student scholarship schemes",
+      "priority": 3,
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 1480,
+        "total_links_found": 51,
+        "total_links_audited": 51,
+        "verified_working_links_count": 50,
+        "verified_working_links": [
+          "https://myaadhaar.uidai.gov.in/",
+          "https://scholarships.gov.in/payl/loginPage.action",
+          "https://youtu.be/gjPkUF23UTg?si=8Y5qJofbSLeGVG4m",
+          "https://scholarships.gov.in/disclaimer_New",
+          "https://scholarships.gov.in/pfmshelpdesk",
+          "https://scholarships.gov.in/nodalofficerList",
+          "https://pfms.nic.in/SitePages/KnowYourPayment_Dw_NewNew.aspx",
+          "https://www.youtube.com/watch?v=HmrbM76RJIo%5d",
+          "https://scholarships.gov.in/onlineInstituteSearchIndex",
+          "https://scholarships.gov.in/Fellowship"
+        ],
+        "broken_links": 1,
+        "broken_links_details": [
+          {
+            "url": "https://scholarships.gov.in/Institutes",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          }
+        ],
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": 45,
+        "critical": 36,
+        "violation_details": [
+          {
+            "id": "button-name",
+            "impact": "critical",
+            "description": "Ensures buttons have discernible text",
+            "help": "Buttons must have discernible text",
+            "nodes": 1
+          },
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "nodes": 3
+          },
+          {
+            "id": "image-alt",
+            "impact": "critical",
+            "description": "Ensures <img> elements have alternate text or a role of none or presentation",
+            "help": "Images must have alternate text",
+            "nodes": 35
+          },
+          {
+            "id": "link-name",
+            "impact": "serious",
+            "description": "Ensures links have discernible text",
+            "help": "Links must have discernible text",
+            "nodes": 3
+          },
+          {
+            "id": "list",
+            "impact": "serious",
+            "description": "Ensures that lists are structured correctly",
+            "help": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
+            "nodes": 1
+          },
+          {
+            "id": "page-has-heading-one",
+            "impact": "moderate",
+            "description": "Ensure that the page, or at least one of its frames contains a level-one heading",
+            "help": "Page should contain a level-one heading",
+            "nodes": 1
+          },
+          {
+            "id": "region",
+            "impact": "moderate",
+            "description": "Ensures all page content is contained by landmarks",
+            "help": "All page content should be contained by landmarks",
+            "nodes": 1
+          }
+        ],
+        "vision_notes": "Alt texts appear accurate or no descriptive images found.",
+        "score": 0
+      },
+      "translation": {
+        "language": "hi",
+        "score": 0,
+        "devanagari_ratio_pct": 0.0,
+        "switcher_found": false,
+        "switcher_type": "None",
+        "status": "no_language_switcher_found",
+        "regional_breakdown": {
+          "nav_pct": 0.0,
+          "headings_pct": 0.0,
+          "body_pct": 0.0
+        },
+        "quality_breakdown": {
+          "fluency_score": 0,
+          "glossary_score": 0,
+          "artifacts_score": 0
+        },
+        "flagged_terms": []
+      },
+      "composite_score": 39.2
+    },
+    {
+      "name": "National Career Service",
+      "url": "https://www.ncs.gov.in",
+      "category": "Central",
+      "subcategory": "Employment",
+      "purpose": "Digital job-matching platform, modernised employment exchanges",
+      "priority": 3,
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 11598,
+        "total_links_found": 57,
+        "total_links_audited": 57,
+        "verified_working_links_count": 55,
+        "verified_working_links": [
+          "https://www.facebook.com/mansukhmandviya?mibextid=wwXIfr&rdid=fTYRuovFfQlns77t&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F16D9rCCqNW%2F%3Fmibextid%3DwwXIfr#",
+          "https://www.ncs.gov.in/Pages/NCSPolicyDocuments.aspx",
+          "https://betacloud.ncs.gov.in/skill-provider",
+          "https://betacloud.ncs.gov.in/job-listing?isGovernmentJob=true",
+          "https://bhashini.gov.in/",
+          "https://betacloud.ncs.gov.in/counsellor-portal/",
+          "https://www.ncs.gov.in/Pages/nesm.aspx",
+          "https://www.ncs.gov.in/_layouts/15/ncsp/calendar.aspx",
+          "https://betacloud.ncs.gov.in/home/job-post",
+          "https://www.instagram.com/shobhabjp/?igsh=MTRkb2tjYTNrazl6dQ%3D%3D#"
+        ],
+        "broken_links": 2,
+        "broken_links_details": [
+          {
+            "url": "https://betacloud.ncs.gov.in/home/job-fair/jobFairs",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "https://betacloud.ncs.gov.in/login/employer",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          }
+        ],
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": 90,
+        "critical": 4,
+        "violation_details": [
+          {
+            "id": "button-name",
+            "impact": "critical",
+            "description": "Ensures buttons have discernible text",
+            "help": "Buttons must have discernible text",
+            "nodes": 4
+          },
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "nodes": 2
+          },
+          {
+            "id": "heading-order",
+            "impact": "moderate",
+            "description": "Ensures the order of headings is semantically correct",
+            "help": "Heading levels should only increase by one",
+            "nodes": 3
+          },
+          {
+            "id": "list",
+            "impact": "serious",
+            "description": "Ensures that lists are structured correctly",
+            "help": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
+            "nodes": 1
+          },
+          {
+            "id": "listitem",
+            "impact": "serious",
+            "description": "Ensures <li> elements are used semantically",
+            "help": "<li> elements must be contained in a <ul> or <ol>",
+            "nodes": 1
+          },
+          {
+            "id": "region",
+            "impact": "moderate",
+            "description": "Ensures all page content is contained by landmarks",
+            "help": "All page content should be contained by landmarks",
+            "nodes": 79
+          }
+        ],
+        "vision_notes": "Alt texts appear accurate or no descriptive images found.",
+        "score": 0
+      },
+      "translation": {
+        "language": "hi",
+        "score": 13,
+        "devanagari_ratio_pct": 1.4,
+        "switcher_found": false,
+        "switcher_type": "None",
+        "status": "no_language_switcher_found",
+        "regional_breakdown": {
+          "nav_pct": 0.0,
+          "headings_pct": 0.0,
+          "body_pct": 0.0
+        },
+        "quality_breakdown": {
+          "fluency_score": 3,
+          "glossary_score": 0,
+          "artifacts_score": 10
+        },
+        "flagged_terms": [
+          "Missing GIGW Term: 'Government of India' (Expected: \u092d\u093e\u0930\u0924 \u0938\u0930\u0915\u093e\u0930)",
+          "Missing GIGW Term: 'Ministry' (Expected: \u092e\u0902\u0924\u094d\u0930\u093e\u0932\u092f)",
+          "Missing GIGW Term: 'Services' (Expected: \u0938\u0947\u0935\u093e\u090f\u0902)",
+          "Missing GIGW Term: 'National' (Expected: \u0930\u093e\u0937\u094d\u091f\u094d\u0930\u0940\u092f)",
+          "Missing GIGW Term: 'Login' (Expected: \u0932\u0949\u0917\u093f\u0928)"
+        ]
+      },
+      "composite_score": 42.3
+    },
+    {
+      "name": "Swachh Bharat Mission",
+      "url": "https://swachhbharatmission.ddws.gov.in",
+      "category": "Central",
+      "subcategory": "Sanitation",
+      "purpose": "National sanitation/cleanliness mission tracking and reporting",
+      "priority": 3,
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 3724,
+        "total_links_found": 43,
+        "total_links_audited": 43,
+        "verified_working_links_count": 41,
+        "verified_working_links": [
+          "https://whatsapp.com/channel/0029Vb2r0pw0G0Xbrwoafq3T/116",
+          "https://sbm.gov.in/sbmphase2/SBM_PhaseII_StateFactSheet.aspx",
+          "https://swachhbharatmission.ddws.gov.in/contact-us",
+          "https://watersanitationlearning.gov.in/",
+          "https://swachhbharatmission.ddws.gov.in/social-media",
+          "https://swachhbharatmission.ddws.gov.in/SSG-2025",
+          "https://swachhbharatmission.ddws.gov.in/communication-material",
+          "https://swachhbharatmission.ddws.gov.in/about_sbm",
+          "https://swachhbharatmission.ddws.gov.in/faq",
+          "https://www.nic.in/"
+        ],
+        "broken_links": 2,
+        "broken_links_details": [
+          {
+            "url": "https://ejalshakti.gov.in/ISC/Login.aspx",
+            "status_code": 500,
+            "reason": "HTTP 500"
+          },
+          {
+            "url": "https://ejalshakti.gov.in/iwc_2026",
+            "status_code": 503,
+            "reason": "HTTP 503"
+          }
+        ],
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": 6,
+        "critical": 0,
+        "violation_details": [
+          {
+            "id": "frame-title",
+            "impact": "serious",
+            "description": "Ensures <iframe> and <frame> elements have an accessible name",
+            "help": "Frames must have an accessible name",
+            "nodes": 1
+          },
+          {
+            "id": "region",
+            "impact": "moderate",
+            "description": "Ensures all page content is contained by landmarks",
+            "help": "All page content should be contained by landmarks",
+            "nodes": 5
+          }
+        ],
+        "vision_notes": "Alt texts appear accurate or no descriptive images found.",
+        "score": 94
+      },
+      "translation": {
+        "language": "hi",
+        "score": 33,
+        "devanagari_ratio_pct": 0.0,
+        "switcher_found": true,
+        "switcher_type": "Relative Path Link (/hi)",
+        "status": "switcher_clicked_low_hindi",
+        "regional_breakdown": {
+          "nav_pct": 0.0,
+          "headings_pct": 0.0,
+          "body_pct": 0.0
+        },
+        "quality_breakdown": {
+          "fluency_score": 3,
+          "glossary_score": 5,
+          "artifacts_score": 10
+        },
+        "flagged_terms": [
+          "Missing GIGW Term: 'Grievance' (Expected: \u0936\u093f\u0915\u093e\u092f\u0924)",
+          "Missing GIGW Term: 'Contact Us' (Expected: \u0938\u0902\u092a\u0930\u094d\u0915 \u0915\u0930\u0947\u0902)",
+          "Missing GIGW Term: 'Home' (Expected: \u092e\u0941\u0916\u094d\u092f \u092a\u0943\u0937\u094d\u0920)",
+          "Missing GIGW Term: 'Citizen' (Expected: \u0928\u093e\u0917\u0930\u093f\u0915)",
+          "Missing GIGW Term: 'National' (Expected: \u0930\u093e\u0937\u094d\u091f\u094d\u0930\u0940\u092f)"
+        ]
+      },
+      "composite_score": 76.5
+    },
+    {
+      "name": "Skill India",
+      "url": "https://www.skillindia.gov.in",
+      "category": "Central",
+      "subcategory": "Skill Development",
+      "purpose": "Curriculum-based skill training, certification and job-readiness programs",
+      "priority": 3,
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 2204,
+        "total_links_found": 1,
+        "total_links_audited": 1,
+        "verified_working_links_count": 1,
+        "verified_working_links": [
+          "https://www.skillindiadigital.gov.in/home"
+        ],
+        "broken_links": 0,
+        "broken_links_details": [],
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": 4,
+        "critical": 1,
+        "violation_details": [
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "nodes": 1
+          },
+          {
+            "id": "image-alt",
+            "impact": "critical",
+            "description": "Ensures <img> elements have alternate text or a role of none or presentation",
+            "help": "Images must have alternate text",
+            "nodes": 1
+          },
+          {
+            "id": "region",
+            "impact": "moderate",
+            "description": "Ensures all page content is contained by landmarks",
+            "help": "All page content should be contained by landmarks",
+            "nodes": 2
+          }
+        ],
+        "vision_notes": "Alt texts appear accurate or no descriptive images found.",
+        "score": 92
+      },
+      "translation": {
+        "language": "hi",
+        "score": 0,
+        "devanagari_ratio_pct": 0.0,
+        "switcher_found": false,
+        "switcher_type": "None",
+        "status": "no_language_switcher_found",
+        "regional_breakdown": {
+          "nav_pct": 0.0,
+          "headings_pct": 0.0,
+          "body_pct": 0.0
+        },
+        "quality_breakdown": {
+          "fluency_score": 0,
+          "glossary_score": 0,
+          "artifacts_score": 0
+        },
+        "flagged_terms": []
+      },
+      "composite_score": 67.6
+    },
+    {
+      "name": "Startup India",
+      "url": "https://www.startupindia.gov.in",
+      "category": "Central",
+      "subcategory": "Entrepreneurship",
+      "purpose": "Startup recognition, tax benefits, funding scheme access",
+      "priority": 3,
+      "languages": [
+        "hi"
+      ],
+      "uptime": {
+        "status": "up",
+        "response_ms": 9206,
+        "total_links_found": 81,
+        "total_links_audited": 81,
+        "verified_working_links_count": 78,
+        "verified_working_links": [
+          "https://www.startupindia.gov.in/content/sih/en/testing-certification-labs-india.html",
+          "https://www.startupindia.gov.in/content/sih/en/startupgov/startup_recognition_page.html",
+          "https://amritmahotsav.nic.in/",
+          "https://www.startupindia.gov.in/content/sih/en/incubator-schemes.html",
+          "http://kheloindia.gov.in/",
+          "https://www.startupindia.gov.in/",
+          "https://www.startupindia.gov.in/content/sih/en/error-page/404.html",
+          "https://www.startupindia.gov.in/content/sih/en/user/my-dashboard",
+          "https://www.startupindia.gov.in/content/sih/en/contact-us.html",
+          "https://www.startupindia.gov.in/content/sih/en/disclaimer.html"
+        ],
+        "broken_links": 3,
+        "broken_links_details": [
+          {
+            "url": "https://www.startupindia.gov.in/content/sih/en/forum.html#",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "https://www.startupindia.gov.in/content/sih/en/_tel_1800115565",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "https://www.startupindia.gov.in/content/sih/en/forum.html",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          }
+        ],
+        "broken_forms": 0,
+        "status_code": 200
+      },
+      "accessibility": {
+        "axe_violations": 10,
+        "critical": 0,
+        "violation_details": [
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "nodes": 3
+          },
+          {
+            "id": "heading-order",
+            "impact": "moderate",
+            "description": "Ensures the order of headings is semantically correct",
+            "help": "Heading levels should only increase by one",
+            "nodes": 1
+          },
+          {
+            "id": "landmark-contentinfo-is-top-level",
+            "impact": "moderate",
+            "description": "Ensures the contentinfo landmark is at top level",
+            "help": "Contentinfo landmark should not be contained in another landmark",
+            "nodes": 1
+          },
+          {
+            "id": "landmark-no-duplicate-contentinfo",
+            "impact": "moderate",
+            "description": "Ensures the document has at most one contentinfo landmark",
+            "help": "Document should not have more than one contentinfo landmark",
+            "nodes": 1
+          },
+          {
+            "id": "landmark-one-main",
+            "impact": "moderate",
+            "description": "Ensures the document has a main landmark",
+            "help": "Document should have one main landmark",
+            "nodes": 1
+          },
+          {
+            "id": "landmark-unique",
+            "impact": "moderate",
+            "description": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+            "help": "Ensures landmarks are unique",
+            "nodes": 1
+          },
+          {
+            "id": "page-has-heading-one",
+            "impact": "moderate",
+            "description": "Ensure that the page, or at least one of its frames contains a level-one heading",
+            "help": "Page should contain a level-one heading",
+            "nodes": 1
+          },
+          {
+            "id": "region",
+            "impact": "moderate",
+            "description": "Ensures all page content is contained by landmarks",
+            "help": "All page content should be contained by landmarks",
+            "nodes": 1
+          }
+        ],
+        "vision_notes": "Alt texts appear accurate or no descriptive images found.",
+        "score": 90
+      },
+      "translation": {
+        "language": "hi",
+        "score": 43,
+        "devanagari_ratio_pct": 0.6,
+        "switcher_found": true,
+        "switcher_type": "Native Multilingual Portal",
+        "status": "native_multilingual_detected",
+        "regional_breakdown": {
+          "nav_pct": 3.0,
+          "headings_pct": 0.0,
+          "body_pct": 0.0
+        },
+        "quality_breakdown": {
+          "fluency_score": 3,
+          "glossary_score": 0,
+          "artifacts_score": 10
+        },
+        "flagged_terms": [
+          "Missing GIGW Term: 'Government of India' (Expected: \u092d\u093e\u0930\u0924 \u0938\u0930\u0915\u093e\u0930)",
+          "Missing GIGW Term: 'Department' (Expected: \u0935\u093f\u092d\u093e\u0917)",
+          "Missing GIGW Term: 'Services' (Expected: \u0938\u0947\u0935\u093e\u090f\u0902)",
+          "Missing GIGW Term: 'Portal' (Expected: \u092a\u094b\u0930\u094d\u091f\u0932)",
+          "Missing GIGW Term: 'Contact Us' (Expected: \u0938\u0902\u092a\u0930\u094d\u0915 \u0915\u0930\u0947\u0902)"
+        ]
+      },
+      "composite_score": 77.5
+    }
+  ]
+}
