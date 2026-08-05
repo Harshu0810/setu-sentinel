@@ -58,4 +58,4 @@
 ## 🔬 Methodology & Verification Transparency
 1. **Link Validation**: Executed directly within Playwright Chromium browser context using native TLS engines, bypassing non-browser WAF blocks (HTTP 403) while detecting true 404/5xx dead links.
 2. **WCAG Accessibility**: Audited via axe-core with direct CSP script execution fallback to a native 10-point DOM scanner.
-3. **Hindi Translation Score**: Continuous 0-100 metric calculated via Devanagari Script Density Ratio (30 pts), Language Switcher Functionality (30 pts), and LLM Semantic Quality Audit (40 pts).
+3. **Hindi Translation Score**: Continuous 0-100 metric calculated via Multi-Region Devanagari Script Density (30 pts), Multi-Strategy Language Switcher Discovery across 5 UI paradigms (30 pts), and GIGW Official Terminology & LLM Semantic Quality Audit (40 pts).

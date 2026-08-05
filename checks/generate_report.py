@@ -126,8 +126,78 @@ def generate_validation_report(latest_data_path: str, output_dir: str):
     md_path = os.path.join(output_dir, "validation_report.md")
     with open(md_path, "w", encoding="utf-8") as f:
         f.write("\n".join(md_lines))
+
+    # Save Beautiful Rendered HTML Report
+    html_lines = [
+        "<!DOCTYPE html>",
+        "<html lang='en' class='dark'>",
+        "<head>",
+        "  <meta charset='UTF-8'>",
+        "  <meta name='viewport' content='width=device-width, initial-scale=1.0'>",
+        "  <title>Setu Sentinel — Comprehensive Validation & Verification Report</title>",
+        "  <script src='https://cdn.tailwindcss.com'></script>",
+        "  <link href='https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap' rel='stylesheet'>",
+        "  <style>body{background-color:#080c14;color:#f1f5f9;font-family:'Plus Jakarta Sans',sans-serif;}.glass-panel{background:rgba(15,23,42,0.7);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.08);}</style>",
+        "</head>",
+        "<body class='min-h-screen p-6 sm:p-10 max-w-7xl mx-auto space-y-8'>",
+        "  <header class='glass-panel p-6 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4 border border-slate-800 shadow-xl'>",
+        "    <div>",
+        "      <h1 class='text-2xl font-extrabold text-white tracking-tight flex items-center gap-2'>🛡️ Setu Sentinel Verification Report</h1>",
+        f"      <p class='text-xs text-slate-400 mt-1 font-mono'>Generated: {run_at} | Target Portals: {total_portals} | Independent Audit</p>",
+        "    </div>",
+        "    <div class='flex items-center space-x-3 text-xs'>",
+        "      <a href='../index.html' class='px-3.5 py-2 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded-xl transition shadow-lg'>Back to Dashboard</a>",
+        "      <a href='./validation_report.md' target='_blank' class='px-3.5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium rounded-xl border border-slate-700 transition'>Raw Markdown</a>",
+        "    </div>",
+        "  </header>",
+        "",
+        "  <section class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4'>",
+        "    <div class='glass-panel p-4 rounded-xl border border-slate-800'><p class='text-xs text-slate-400'>Evaluated Portals</p><h3 class='text-xl font-bold text-white mt-1'>" + f"{total_portals} ({portals_up} Online, {total_portals - portals_up} Offline)" + "</h3></div>",
+        "    <div class='glass-panel p-4 rounded-xl border border-slate-800'><p class='text-xs text-slate-400'>Total Homepage Links Discovered</p><h3 class='text-xl font-bold text-indigo-400 mt-1'>" + str(total_links_found) + "</h3></div>",
+        "    <div class='glass-panel p-4 rounded-xl border border-slate-800'><p class='text-xs text-slate-400'>Verified Working Links</p><h3 class='text-xl font-bold text-emerald-400 mt-1'>" + str(total_verified_working) + "</h3></div>",
+        "    <div class='glass-panel p-4 rounded-xl border border-slate-800'><p class='text-xs text-slate-400'>Confirmed Broken Links (404/5xx)</p><h3 class='text-xl font-bold text-rose-400 mt-1'>" + str(total_broken_links) + "</h3></div>",
+        "  </section>",
+        "",
+        "  <section class='glass-panel rounded-2xl overflow-hidden border border-slate-800 shadow-2xl'>",
+        "    <div class='px-6 py-4 border-b border-slate-800 bg-slate-900/60'><h2 class='text-base font-bold text-white'>🔍 Portal-by-Portal Link Verification & Pillar Audit Log</h2></div>",
+        "    <div class='overflow-x-auto'>",
+        "      <table class='w-full text-left text-xs'>",
+        "        <thead><tr class='bg-slate-900 text-slate-400 font-semibold border-b border-slate-800 uppercase text-[11px]'><th class='p-3.5 px-6'>Portal Name</th><th class='p-3.5'>Category</th><th class='p-3.5'>Uptime</th><th class='p-3.5'>Discovered</th><th class='p-3.5'>Audited</th><th class='p-3.5'>Working</th><th class='p-3.5'>Broken</th><th class='p-3.5'>WCAG</th><th class='p-3.5'>Hindi</th><th class='p-3.5 px-6 text-right'>Composite</th></tr></thead>",
+        "        <tbody class='divide-y divide-slate-800/60'>"
+    ]
+
+    for p in portals:
+        name = p.get("name", "Unknown")
+        cat = p.get("category", "General")
+        up = p.get("uptime", {})
+        acc = p.get("accessibility", {})
+        trans = p.get("translation", {})
+        status_badge = "<span class='px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20'>✅ UP</span>" if up.get("status") == "up" else "<span class='px-2 py-0.5 rounded text-[11px] font-bold bg-rose-500/10 text-rose-400 border border-rose-500/20'>❌ DOWN</span>"
+        comp = p.get("composite_score", 0)
         
-    print(f"Validation & Verification Reports generated at:\n  - {json_path}\n  - {md_path}")
+        html_lines.append(f"<tr class='hover:bg-slate-800/40 transition'><td class='p-3.5 px-6 font-bold text-white'>{name}</td><td class='p-3.5 text-slate-400'>{cat}</td><td class='p-3.5'>{status_badge}</td><td class='p-3.5 font-mono'>{up.get('total_links_found', 0)}</td><td class='p-3.5 font-mono'>{up.get('total_links_audited', 0)}</td><td class='p-3.5 font-mono text-emerald-400'>{up.get('verified_working_links_count', 0)}</td><td class='p-3.5 font-mono text-rose-400'>{up.get('broken_links', 0)}</td><td class='p-3.5 font-mono'>{acc.get('score', 0)}/100</td><td class='p-3.5 font-mono'>{trans.get('score', 0)}/100</td><td class='p-3.5 px-6 text-right font-bold text-indigo-400'>{comp}</td></tr>")
+
+    html_lines.extend([
+        "        </tbody>",
+        "      </table>",
+        "    </div>",
+        "  </section>",
+        "",
+        "  <footer class='glass-panel p-6 rounded-2xl border border-slate-800 text-xs space-y-2'>",
+        "    <h3 class='font-bold text-white text-sm'>🔬 Methodology & Verification Transparency</h3>",
+        "    <p class='text-slate-400'>1. <strong>Link Validation</strong>: Executed directly within Playwright Chromium browser context using native TLS engines, bypassing non-browser WAF blocks (HTTP 403) while detecting true 404/5xx dead links.</p>",
+        "    <p class='text-slate-400'>2. <strong>WCAG Accessibility</strong>: Audited via axe-core with direct CSP script execution fallback to a native 10-point DOM scanner.</p>",
+        "    <p class='text-slate-400'>3. <strong>Hindi Translation Score</strong>: Continuous 0-100 metric calculated via Multi-Region Devanagari Script Density (30 pts), Multi-Strategy Language Switcher Discovery across 5 UI paradigms (30 pts), and GIGW Official Terminology & LLM Semantic Quality Audit (40 pts).</p>",
+        "  </footer>",
+        "</body>",
+        "</html>"
+    ])
+
+    html_path = os.path.join(output_dir, "validation_report.html")
+    with open(html_path, "w", encoding="utf-8") as f:
+        f.write("\n".join(html_lines))
+        
+    print(f"Validation & Verification Reports generated at:\n  - {json_path}\n  - {md_path}\n  - {html_path}")
 
 if __name__ == "__main__":
     latest_path = os.path.join(os.path.dirname(__file__), "..", "data", "latest.json")
