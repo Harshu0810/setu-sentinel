@@ -98,7 +98,11 @@ def generate_validation_report(latest_data_path: str, output_dir: str):
                 "score": trans_score,
                 "devanagari_pct": trans.get("devanagari_ratio_pct", 0),
                 "switcher_found": trans.get("switcher_found", False),
-                "status": trans.get("status")
+                "switcher_type": trans.get("switcher_type", "None"),
+                "status": trans.get("status"),
+                "regional_breakdown": trans.get("regional_breakdown", {}),
+                "quality_breakdown": trans.get("quality_breakdown", {}),
+                "flagged_terms": trans.get("flagged_terms", [])
             },
             "composite_score": comp_score
         })
@@ -110,7 +114,7 @@ def generate_validation_report(latest_data_path: str, output_dir: str):
         "## 🔬 Methodology & Verification Transparency",
         "1. **Link Validation**: Executed directly within Playwright Chromium browser context using native TLS engines, bypassing non-browser WAF blocks (HTTP 403) while detecting true 404/5xx dead links.",
         "2. **WCAG Accessibility**: Audited via axe-core with direct CSP script execution fallback to a native 10-point DOM scanner.",
-        "3. **Hindi Translation Score**: Continuous 0-100 metric calculated via Devanagari Script Density Ratio (30 pts), Language Switcher Functionality (30 pts), and LLM Semantic Quality Audit (40 pts)."
+        "3. **Hindi Translation Score**: Continuous 0-100 metric calculated via Multi-Region Devanagari Script Density (30 pts), Multi-Strategy Language Switcher Discovery across 5 UI paradigms (30 pts), and GIGW Official Terminology & LLM Semantic Quality Audit (40 pts)."
     ])
     
     # Save JSON report

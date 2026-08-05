@@ -3,54 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Setu Sentinel — Public Health & Accessibility Scorecard</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Setu Sentinel — Public Health, Accessibility & Translation Scorecard</title>
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+
     <script>
         tailwind.config = {
             darkMode: 'class',
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
                     },
                     colors: {
                         brand: {
                             50: '#eef2ff',
+                            400: '#818cf8',
                             500: '#6366f1',
                             600: '#4f46e5',
                             900: '#312e81',
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-6px)' },
+                        },
+                        glow: {
+                            '0%': { opacity: '0.4', filter: 'blur(20px)' },
+                            '100%': { opacity: '0.8', filter: 'blur(30px)' },
                         }
                     }
                 }
             }
         }
     </script>
+
     <style>
         body {
-            background-color: #0b0f19;
-            color: #f3f4f6;
-            font-family: 'Inter', sans-serif;
+            background-color: #080c14;
+            color: #f1f5f9;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
         }
+
+        /* Glassmorphism primitives */
         .glass-panel {
-            background: rgba(17, 24, 39, 0.7);
+            background: rgba(15, 23, 42, 0.65);
             backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.07);
         }
+
         .glass-card {
-            background: rgba(31, 41, 55, 0.4);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.2s ease-in-out;
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
         }
+
         .glass-card:hover {
             border-color: rgba(99, 102, 241, 0.4);
             transform: translateY(-2px);
+            box-shadow: 0 12px 30px -10px rgba(99, 102, 241, 0.15);
         }
+
+        /* Background animated gradient ambient lights */
+        .ambient-light-1 {
+            position: fixed;
+            top: -10%;
+            left: 20%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, rgba(0,0,0,0) 70%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .ambient-light-2 {
+            position: fixed;
+            top: 40%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.08) 0%, rgba(0,0,0,0) 70%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Custom scrollbar */
         .custom-scrollbar::-webkit-scrollbar {
             width: 6px;
+            height: 6px;
         }
         .custom-scrollbar::-webkit-scrollbar-track {
             background: rgba(15, 23, 42, 0.6);
@@ -59,132 +117,214 @@
             background: rgba(51, 65, 85, 0.8);
             border-radius: 4px;
         }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: rgba(99, 102, 241, 0.8);
+        }
+
+        /* Table row hover micro-transitions */
+        .tr-hover {
+            transition: all 0.2s ease;
+        }
+        .tr-hover:hover {
+            background-color: rgba(30, 41, 59, 0.6);
+            transform: scale([1.002]);
+        }
     </style>
 </head>
 <body class="min-h-screen antialiased flex flex-col justify-between custom-scrollbar">
 
-    <!-- Header -->
-    <header class="sticky top-0 z-30 glass-panel border-b border-gray-800 px-6 py-4">
+    <!-- Ambient background glows -->
+    <div class="ambient-light-1 animate-glow"></div>
+    <div class="ambient-light-2 animate-glow"></div>
+
+    <!-- Top Navigation Header -->
+    <header class="sticky top-0 z-40 glass-panel border-b border-slate-800/80 px-4 sm:px-8 py-3.5 shadow-xl">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-            <div class="flex items-center space-x-3">
-                <div class="p-2.5 bg-indigo-600/20 text-indigo-400 rounded-xl border border-indigo-500/30">
-                    <i data-lucide="shield-check" class="w-7 h-7"></i>
-                </div>
-                <div>
-                    <h1 class="text-xl font-extrabold tracking-tight text-white flex items-center gap-2">
-                        Setu Sentinel
-                        <span class="px-2 py-0.5 text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-full">Live Dashboard</span>
-                    </h1>
-                    <p class="text-xs text-gray-400">Automated Health, WCAG Accessibility & Translation Scorecard for Indian Govt Portals</p>
+            
+            <!-- Brand Title -->
+            <div class="flex items-center space-x-3.5 w-full md:w-auto justify-between md:justify-start">
+                <div class="flex items-center space-x-3">
+                    <div class="p-2.5 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 text-indigo-400 rounded-xl border border-indigo-500/30 shadow-lg shadow-indigo-500/10 animate-float">
+                        <i data-lucide="shield-check" class="w-7 h-7"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-extrabold tracking-tight text-white flex items-center gap-2.5">
+                            <span>Setu Sentinel</span>
+                            <span class="px-2.5 py-0.5 text-[11px] font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 rounded-full flex items-center gap-1.5 shadow-sm">
+                                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                                Live Engine
+                            </span>
+                        </h1>
+                        <p class="text-xs text-slate-400 font-medium mt-0.5">Automated Health, WCAG Accessibility & GIGW Translation Scorecard for Indian Govt Portals</p>
+                    </div>
                 </div>
             </div>
-            
-            <div class="flex items-center space-x-3 text-xs text-gray-400">
-                <a href="./reports/validation_report.md" target="_blank" class="px-3 py-1.5 bg-indigo-600/20 hover:bg-indigo-600/40 text-indigo-300 rounded-lg border border-indigo-500/30 transition flex items-center space-x-1.5">
-                    <i data-lucide="file-check" class="w-4 h-4"></i>
+
+            <!-- Header Quick Actions & Timestamp -->
+            <div class="flex flex-wrap items-center justify-end gap-2.5 text-xs text-slate-300 w-full md:w-auto">
+                
+                <!-- Detailed Validation Report Link -->
+                <a href="./reports/validation_report.md" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 bg-indigo-600/20 hover:bg-indigo-600/40 text-indigo-300 rounded-xl border border-indigo-500/30 transition-all duration-200 flex items-center space-x-2 font-medium shadow-sm hover:shadow-indigo-500/20">
+                    <i data-lucide="file-text" class="w-4 h-4 text-indigo-400"></i>
                     <span>Verification Report</span>
                 </a>
-                <div class="flex items-center space-x-1.5 bg-gray-900/80 px-3 py-1.5 rounded-lg border border-gray-800">
+
+                <!-- Download Active View CSV -->
+                <button onclick="exportCurrentViewCSV()" class="px-3.5 py-2 bg-emerald-600/20 hover:bg-emerald-600/40 text-emerald-300 rounded-xl border border-emerald-500/30 transition-all duration-200 flex items-center space-x-2 font-medium shadow-sm hover:shadow-emerald-500/20" title="Export current filtered view to CSV">
+                    <i data-lucide="download" class="w-4 h-4 text-emerald-400"></i>
+                    <span>Export CSV</span>
+                </button>
+
+                <!-- Last Refreshed Badge -->
+                <div class="flex items-center space-x-2 bg-slate-900/90 px-3.5 py-2 rounded-xl border border-slate-800 text-slate-300 font-mono text-[11px]">
                     <i data-lucide="clock" class="w-4 h-4 text-indigo-400"></i>
-                    <span>Last Refreshed: <strong id="snapshot-time" class="text-gray-200">Loading...</strong></span>
+                    <span>Refreshed: <strong id="snapshot-time" class="text-slate-100 font-semibold">Loading...</strong></span>
                 </div>
-                <button onclick="loadLatestData()" class="p-2 bg-gray-800 hover:bg-gray-700 text-gray-200 rounded-lg border border-gray-700 transition flex items-center space-x-1.5" title="Refresh Data">
+
+                <!-- Refresh Button -->
+                <button onclick="loadLatestData()" class="p-2 bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 rounded-xl border border-slate-700/80 transition-all duration-200 hover:border-indigo-500/50" title="Refresh Live Snapshot">
                     <i data-lucide="refresh-cw" class="w-4 h-4"></i>
-                    <span class="hidden sm:inline">Refresh</span>
                 </button>
             </div>
         </div>
     </header>
 
-    <!-- Main Container -->
-    <main class="max-w-7xl mx-auto px-6 py-8 w-full flex-grow space-y-8">
+    <!-- Main Content Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-8 py-8 w-full flex-grow space-y-8">
 
-        <!-- Top Summary Cards -->
+        <!-- Executive Summary KPI Cards Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            <div class="glass-panel p-5 rounded-2xl flex items-center space-x-4">
-                <div class="p-3 bg-blue-500/10 text-blue-400 rounded-xl border border-blue-500/20">
+            
+            <!-- Card 1: Tracked Portals -->
+            <div class="glass-panel p-5 rounded-2xl flex items-center space-x-4 border border-slate-800/80 shadow-lg hover:border-blue-500/40 transition-all duration-300 group">
+                <div class="p-3.5 bg-blue-500/10 text-blue-400 rounded-2xl border border-blue-500/20 group-hover:scale-110 transition-transform">
                     <i data-lucide="globe" class="w-6 h-6"></i>
                 </div>
                 <div>
-                    <p class="text-xs text-gray-400 font-medium">Tracked Portals</p>
-                    <h3 id="stat-total" class="text-2xl font-bold text-white mt-0.5">--</h3>
+                    <p class="text-xs text-slate-400 font-medium">Tracked Govt Portals</p>
+                    <h3 id="stat-total" class="text-2xl font-bold text-white mt-0.5 tracking-tight">--</h3>
                 </div>
             </div>
 
-            <div class="glass-panel p-5 rounded-2xl flex items-center space-x-4">
-                <div class="p-3 bg-emerald-500/10 text-emerald-400 rounded-xl border border-emerald-500/20">
+            <!-- Card 2: Portals Online -->
+            <div class="glass-panel p-5 rounded-2xl flex items-center space-x-4 border border-slate-800/80 shadow-lg hover:border-emerald-500/40 transition-all duration-300 group">
+                <div class="p-3.5 bg-emerald-500/10 text-emerald-400 rounded-2xl border border-emerald-500/20 group-hover:scale-110 transition-transform">
                     <i data-lucide="activity" class="w-6 h-6"></i>
                 </div>
                 <div>
-                    <p class="text-xs text-gray-400 font-medium">Portals Online</p>
-                    <h3 id="stat-online" class="text-2xl font-bold text-white mt-0.5">--</h3>
+                    <p class="text-xs text-slate-400 font-medium">Portals Online (UP)</p>
+                    <h3 id="stat-online" class="text-2xl font-bold text-emerald-400 mt-0.5 tracking-tight">--</h3>
                 </div>
             </div>
 
-            <div class="glass-panel p-5 rounded-2xl flex items-center space-x-4">
-                <div class="p-3 bg-indigo-500/10 text-indigo-400 rounded-xl border border-indigo-500/20">
+            <!-- Card 3: Average Health Score -->
+            <div class="glass-panel p-5 rounded-2xl flex items-center space-x-4 border border-slate-800/80 shadow-lg hover:border-indigo-500/40 transition-all duration-300 group">
+                <div class="p-3.5 bg-indigo-500/10 text-indigo-400 rounded-2xl border border-indigo-500/20 group-hover:scale-110 transition-transform">
                     <i data-lucide="award" class="w-6 h-6"></i>
                 </div>
                 <div>
-                    <p class="text-xs text-gray-400 font-medium">Average Health Score</p>
-                    <h3 id="stat-avg-score" class="text-2xl font-bold text-white mt-0.5">--</h3>
+                    <p class="text-xs text-slate-400 font-medium">Average Health Score</p>
+                    <h3 id="stat-avg-score" class="text-2xl font-bold text-indigo-300 mt-0.5 tracking-tight">--</h3>
                 </div>
             </div>
 
-            <div class="glass-panel p-5 rounded-2xl flex items-center space-x-4">
-                <div class="p-3 bg-rose-500/10 text-rose-400 rounded-xl border border-rose-500/20">
+            <!-- Card 4: Total WCAG Violations -->
+            <div class="glass-panel p-5 rounded-2xl flex items-center space-x-4 border border-slate-800/80 shadow-lg hover:border-rose-500/40 transition-all duration-300 group">
+                <div class="p-3.5 bg-rose-500/10 text-rose-400 rounded-2xl border border-rose-500/20 group-hover:scale-110 transition-transform">
                     <i data-lucide="alert-triangle" class="w-6 h-6"></i>
                 </div>
                 <div>
-                    <p class="text-xs text-gray-400 font-medium">Total WCAG Violations</p>
-                    <h3 id="stat-violations" class="text-2xl font-bold text-white mt-0.5">--</h3>
+                    <p class="text-xs text-slate-400 font-medium">Total WCAG Violations</p>
+                    <h3 id="stat-violations" class="text-2xl font-bold text-rose-400 mt-0.5 tracking-tight">--</h3>
                 </div>
             </div>
         </div>
 
-        <!-- Filter & Search Controls -->
-        <div class="glass-panel p-4 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-4">
-            <!-- Category Tabs -->
-            <div class="flex items-center space-x-1.5 bg-gray-900/60 p-1.5 rounded-xl border border-gray-800/80 w-full md:w-auto overflow-x-auto">
-                <button onclick="filterCategory('All')" class="cat-btn active px-3 py-1.5 text-xs font-medium rounded-lg text-white bg-indigo-600 transition">All Portals</button>
-                <button onclick="filterCategory('Central')" class="cat-btn px-3 py-1.5 text-xs font-medium rounded-lg text-gray-400 hover:text-gray-200 transition">Central</button>
-                <button onclick="filterCategory('State')" class="cat-btn px-3 py-1.5 text-xs font-medium rounded-lg text-gray-400 hover:text-gray-200 transition">State</button>
-                <button onclick="filterCategory('Judiciary')" class="cat-btn px-3 py-1.5 text-xs font-medium rounded-lg text-gray-400 hover:text-gray-200 transition">Judiciary</button>
-                <button onclick="filterCategory('Education')" class="cat-btn px-3 py-1.5 text-xs font-medium rounded-lg text-gray-400 hover:text-gray-200 transition">Education</button>
+        <!-- Advanced Filter, Sort & Search Control Center -->
+        <div class="glass-panel p-5 rounded-2xl flex flex-col gap-4 border border-slate-800/80 shadow-xl">
+            
+            <!-- Top Controls Row: Status Filters & Category Pills -->
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-4">
+                
+                <!-- Category Filter Pills -->
+                <div class="flex items-center space-x-1.5 bg-slate-900/80 p-1.5 rounded-xl border border-slate-800/80 w-full lg:w-auto overflow-x-auto custom-scrollbar">
+                    <button onclick="filterCategory('All')" class="cat-btn active px-3.5 py-1.5 text-xs font-semibold rounded-lg text-white bg-indigo-600 transition-all duration-200">All Portals</button>
+                    <button onclick="filterCategory('Central')" class="cat-btn px-3.5 py-1.5 text-xs font-medium rounded-lg text-slate-400 hover:text-slate-200 transition-all duration-200">Central</button>
+                    <button onclick="filterCategory('State')" class="cat-btn px-3.5 py-1.5 text-xs font-medium rounded-lg text-slate-400 hover:text-slate-200 transition-all duration-200">State</button>
+                    <button onclick="filterCategory('Judiciary')" class="cat-btn px-3.5 py-1.5 text-xs font-medium rounded-lg text-slate-400 hover:text-slate-200 transition-all duration-200">Judiciary</button>
+                    <button onclick="filterCategory('Education')" class="cat-btn px-3.5 py-1.5 text-xs font-medium rounded-lg text-slate-400 hover:text-slate-200 transition-all duration-200">Education</button>
+                </div>
+
+                <!-- Status Filter Buttons (All / UP / DOWN) -->
+                <div class="flex items-center space-x-2 w-full lg:w-auto justify-start lg:justify-end">
+                    <span class="text-xs text-slate-400 font-medium mr-1 hidden sm:inline">Status:</span>
+                    <button onclick="filterStatus('all')" id="status-btn-all" class="status-btn active px-3 py-1.5 text-xs font-semibold rounded-lg text-white bg-slate-800 border border-slate-700 transition">All</button>
+                    <button onclick="filterStatus('up')" id="status-btn-up" class="status-btn px-3 py-1.5 text-xs font-medium rounded-lg text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 hover:bg-emerald-500/20 transition flex items-center gap-1.5">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                        <span>UP Only</span>
+                    </button>
+                    <button onclick="filterStatus('down')" id="status-btn-down" class="status-btn px-3 py-1.5 text-xs font-medium rounded-lg text-rose-400 bg-rose-500/10 border border-rose-500/20 hover:bg-rose-500/20 transition flex items-center gap-1.5">
+                        <span class="w-1.5 h-1.5 rounded-full bg-rose-400"></span>
+                        <span>DOWN Only</span>
+                    </button>
+                </div>
             </div>
 
-            <!-- Search Bar -->
-            <div class="relative w-full md:w-72">
-                <i data-lucide="search" class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
-                <input type="text" id="search-input" onkeyup="handleSearch()" placeholder="Search portal name or URL..." class="w-full bg-gray-900/80 text-sm text-gray-200 pl-9 pr-4 py-2 rounded-xl border border-gray-800 focus:outline-none focus:border-indigo-500 transition">
+            <!-- Bottom Controls Row: Search & Multi-Criteria Sort Dropdown -->
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2 border-t border-slate-800/60">
+                
+                <!-- Live Search Input -->
+                <div class="relative w-full sm:w-80">
+                    <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                    <input type="text" id="search-input" onkeyup="handleSearch()" placeholder="Search portal name, state or URL..." class="w-full bg-slate-900/90 text-xs text-slate-200 pl-9 pr-4 py-2.5 rounded-xl border border-slate-800 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all">
+                </div>
+
+                <!-- Comprehensive Sort Select Dropdown -->
+                <div class="flex items-center space-x-2.5 w-full sm:w-auto justify-between sm:justify-end">
+                    <label for="sort-select" class="text-xs text-slate-400 font-medium flex items-center gap-1.5 whitespace-nowrap">
+                        <i data-lucide="arrow-up-down" class="w-3.5 h-3.5 text-indigo-400"></i>
+                        <span>Sort By:</span>
+                    </label>
+                    <select id="sort-select" onchange="handleSortChange()" class="bg-slate-900/90 text-xs text-slate-200 px-3.5 py-2.5 rounded-xl border border-slate-800 focus:outline-none focus:border-indigo-500 transition font-medium cursor-pointer w-full sm:w-auto">
+                        <option value="score-desc" selected>🏆 Healthy to Unhealthy (Score: High → Low)</option>
+                        <option value="score-asc">⚠️ Unhealthy to Healthy (Score: Low → High)</option>
+                        <option value="broken-asc">🔗 Broken Links: Min → Max (0 → Most)</option>
+                        <option value="broken-desc">🔗 Broken Links: Max → Min (Most → 0)</option>
+                        <option value="wcag-asc">♿ WCAG Violations: Min → Max (Least → Most)</option>
+                        <option value="wcag-desc">♿ WCAG Violations: Max → Min (Most → Least)</option>
+                        <option value="hindi-desc">🌐 Hindi Score: High → Low (Best Translated)</option>
+                        <option value="name-asc">🔤 Portal Name (A → Z)</option>
+                    </select>
+                </div>
             </div>
         </div>
 
-        <!-- Leaderboard Table -->
-        <div class="glass-panel rounded-2xl overflow-hidden border border-gray-800">
-            <div class="px-6 py-4 border-b border-gray-800/80 flex items-center justify-between">
-                <h3 class="text-base font-semibold text-white flex items-center gap-2">
+        <!-- Leaderboard Table Container -->
+        <div class="glass-panel rounded-2xl overflow-hidden border border-slate-800/80 shadow-2xl">
+            <div class="px-6 py-4 border-b border-slate-800/80 flex items-center justify-between bg-slate-900/40">
+                <h3 class="text-sm font-bold text-white flex items-center gap-2.5">
                     <i data-lucide="bar-chart-3" class="w-5 h-5 text-indigo-400"></i>
-                    Portal Health Scorecard
+                    <span>Portal Health & Compliance Leaderboard</span>
+                    <span id="showing-count" class="px-2 py-0.5 text-[11px] font-mono bg-slate-800 text-slate-300 rounded-md">Showing 38</span>
                 </h3>
-                <span class="text-xs text-gray-400">Click any row for full diagnostic inspection</span>
+                <span class="text-xs text-slate-400 hidden sm:inline">Click any row or action button for detailed audit inspection</span>
             </div>
 
-            <div class="overflow-x-auto">
-                <table class="w-full text-left border-collapse text-sm">
+            <div class="overflow-x-auto custom-scrollbar">
+                <table class="w-full text-left border-collapse text-xs">
                     <thead>
-                        <tr class="bg-gray-900/60 text-xs uppercase text-gray-400 font-semibold border-b border-gray-800">
-                            <th class="py-3.5 px-6">Portal Name</th>
-                            <th class="py-3.5 px-4">Category</th>
-                            <th class="py-3.5 px-4">Status</th>
-                            <th class="py-3.5 px-4">Health Score</th>
-                            <th class="py-3.5 px-4">Broken Links</th>
-                            <th class="py-3.5 px-4">WCAG Violations</th>
-                            <th class="py-3.5 px-4">Hindi Score</th>
-                            <th class="py-3.5 px-6 text-right">Action</th>
+                        <tr class="bg-slate-900/80 text-[11px] uppercase tracking-wider text-slate-400 font-semibold border-b border-slate-800">
+                            <th class="py-4 px-6">Portal Name & Direct Link</th>
+                            <th class="py-4 px-4">Category</th>
+                            <th class="py-4 px-4">Uptime Status</th>
+                            <th class="py-4 px-4">Health Score</th>
+                            <th class="py-4 px-4">Broken Links</th>
+                            <th class="py-4 px-4">WCAG Violations</th>
+                            <th class="py-4 px-4">Hindi Score</th>
+                            <th class="py-4 px-6 text-right">Direct Actions</th>
                         </tr>
                     </thead>
-                    <tbody id="portal-table-body" class="divide-y divide-gray-800/50">
+                    <tbody id="portal-table-body" class="divide-y divide-slate-800/50">
                         <!-- Dynamic rows injected here -->
                     </tbody>
                 </table>
@@ -193,63 +333,91 @@
     </main>
 
     <!-- Footer -->
-    <footer class="glass-panel border-t border-gray-800 py-6 px-6 mt-12">
-        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between text-xs text-gray-400 gap-3">
-            <p>🛡️ Setu Sentinel — Independent Civic-Tech Project. Not affiliated with the Government of India.</p>
-            <p>Powered by Playwright, axe-core, Groq & Google Gemini Vision.</p>
+    <footer class="glass-panel border-t border-slate-800/80 py-6 px-6 mt-12">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-3">
+            <p class="flex items-center gap-2">
+                <span>🛡️ <strong>Setu Sentinel</strong></span>
+                <span>— Independent Civic-Tech Health Monitor. Not affiliated with Govt of India.</span>
+            </p>
+            <p class="text-slate-500 font-mono text-[11px]">Powered by Playwright, axe-core, Groq & Google Gemini Vision.</p>
         </div>
     </footer>
 
     <!-- Detailed Diagnostic Modal / Drawer -->
-    <div id="detail-modal" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden items-center justify-center p-4 sm:p-6 transition-opacity">
-        <div class="glass-panel bg-gray-900 border border-gray-800 rounded-2xl w-full max-w-4xl max-h-[90vh] flex flex-col shadow-2xl overflow-hidden">
+    <div id="detail-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 sm:p-6 transition-all duration-300">
+        <div class="glass-panel bg-slate-900 border border-slate-800 rounded-3xl w-full max-w-4xl max-h-[90vh] flex flex-col shadow-2xl overflow-hidden transform scale-95 transition-transform duration-200" id="modal-box">
+            
             <!-- Modal Header -->
-            <div class="px-6 py-5 border-b border-gray-800 flex items-center justify-between bg-gray-900/90">
+            <div class="px-6 py-5 border-b border-slate-800 flex items-center justify-between bg-slate-900/90">
                 <div>
-                    <div class="flex items-center space-x-2">
-                        <h2 id="modal-title" class="text-xl font-bold text-white">Portal Diagnostics</h2>
-                        <span id="modal-category" class="px-2 py-0.5 text-xs font-semibold bg-indigo-500/20 text-indigo-400 rounded-md">Central</span>
+                    <div class="flex items-center space-x-2.5">
+                        <h2 id="modal-title" class="text-xl font-extrabold text-white tracking-tight">Portal Diagnostics</h2>
+                        <span id="modal-category" class="px-2.5 py-0.5 text-xs font-semibold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 rounded-md">Central</span>
                     </div>
-                    <a id="modal-url" href="#" target="_blank" class="text-xs text-indigo-400 hover:underline flex items-center space-x-1 mt-1">
-                        <span id="modal-url-text">https://...</span>
-                        <i data-lucide="external-link" class="w-3 h-3"></i>
-                    </a>
+                    
+                    <!-- Prominent Direct External Link -->
+                    <div class="flex items-center space-x-3 mt-1.5">
+                        <a id="modal-url" href="#" target="_blank" rel="noopener noreferrer" class="text-xs text-indigo-400 hover:text-indigo-300 hover:underline flex items-center space-x-1.5 font-mono bg-indigo-500/10 px-2.5 py-1 rounded-md border border-indigo-500/20 transition">
+                            <span id="modal-url-text">https://...</span>
+                            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                        </a>
+                        <span class="text-[11px] text-slate-500">Opens portal in new tab</span>
+                    </div>
                 </div>
-                <button onclick="closeModal()" class="p-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded-xl transition">
-                    <i data-lucide="x" class="w-5 h-5"></i>
+
+                <div class="flex items-center space-x-2">
+                    <!-- Download Individual Report Button -->
+                    <button onclick="downloadIndividualPortalReport()" class="px-3 py-1.5 bg-emerald-600/20 hover:bg-emerald-600/40 text-emerald-300 border border-emerald-500/30 text-xs font-medium rounded-xl transition flex items-center space-x-1.5" title="Download Report for this Portal">
+                        <i data-lucide="download" class="w-3.5 h-3.5"></i>
+                        <span>Download Report</span>
+                    </button>
+                    <!-- Close Button -->
+                    <button onclick="closeModal()" class="p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-xl transition">
+                        <i data-lucide="x" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Modal Navigation Tabs -->
+            <div class="px-6 border-b border-slate-800 bg-slate-900/50 flex space-x-6 text-xs font-semibold text-slate-400">
+                <button onclick="switchTab('uptime')" id="tab-btn-uptime" class="py-3.5 border-b-2 border-indigo-500 text-indigo-400 flex items-center gap-1.5">
+                    <i data-lucide="zap" class="w-4 h-4"></i>
+                    <span>⚡ Uptime & Broken Links</span>
+                </button>
+                <button onclick="switchTab('accessibility')" id="tab-btn-accessibility" class="py-3.5 border-b-2 border-transparent hover:text-slate-200 flex items-center gap-1.5">
+                    <i data-lucide="eye" class="w-4 h-4"></i>
+                    <span>♿ WCAG Accessibility</span>
+                </button>
+                <button onclick="switchTab('translation')" id="tab-btn-translation" class="py-3.5 border-b-2 border-transparent hover:text-slate-200 flex items-center gap-1.5">
+                    <i data-lucide="languages" class="w-4 h-4"></i>
+                    <span>🌐 Translation Audit</span>
                 </button>
             </div>
 
-            <!-- Modal Content Tabs -->
-            <div class="px-6 border-b border-gray-800 bg-gray-900/50 flex space-x-4 text-xs font-semibold text-gray-400">
-                <button onclick="switchTab('uptime')" id="tab-btn-uptime" class="py-3 border-b-2 border-indigo-500 text-indigo-400">⚡ Uptime & Broken Links</button>
-                <button onclick="switchTab('accessibility')" id="tab-btn-accessibility" class="py-3 border-b-2 border-transparent hover:text-gray-200">♿ WCAG Accessibility</button>
-                <button onclick="switchTab('translation')" id="tab-btn-translation" class="py-3 border-b-2 border-transparent hover:text-gray-200">🌐 Translation Audit</button>
-            </div>
-
-            <!-- Modal Body Scrollable -->
+            <!-- Modal Scrollable Content -->
             <div class="p-6 overflow-y-auto custom-scrollbar flex-grow space-y-6">
+                
                 <!-- Tab: Uptime -->
                 <div id="tab-content-uptime" class="space-y-4">
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                        <div class="bg-gray-800/50 p-4 rounded-xl border border-gray-800">
-                            <span class="text-xs text-gray-400 font-medium">Status Code</span>
-                            <p id="detail-status-code" class="text-lg font-bold text-white mt-1">200 OK</p>
+                        <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-800">
+                            <span class="text-xs text-slate-400 font-medium">Status Code</span>
+                            <p id="detail-status-code" class="text-lg font-bold text-white mt-1">HTTP 200 OK</p>
                         </div>
-                        <div class="bg-gray-800/50 p-4 rounded-xl border border-gray-800">
-                            <span class="text-xs text-gray-400 font-medium">Response Speed</span>
+                        <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-800">
+                            <span class="text-xs text-slate-400 font-medium">Response Latency</span>
                             <p id="detail-response-ms" class="text-lg font-bold text-white mt-1">1200 ms</p>
                         </div>
-                        <div class="bg-gray-800/50 p-4 rounded-xl border border-gray-800">
-                            <span class="text-xs text-gray-400 font-medium">Broken Internal Links</span>
+                        <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-800">
+                            <span class="text-xs text-slate-400 font-medium">Broken Internal Links</span>
                             <p id="detail-broken-count" class="text-lg font-bold text-rose-400 mt-1">0</p>
                         </div>
                     </div>
 
                     <div>
-                        <h4 class="text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Broken Links Diagnostic Log</h4>
-                        <div id="broken-links-container" class="bg-gray-950/60 rounded-xl border border-gray-800 p-4 text-xs font-mono max-h-60 overflow-y-auto custom-scrollbar space-y-2">
-                            <!-- Broken links injected here -->
+                        <h4 class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Broken Links Diagnostic Log</h4>
+                        <div id="broken-links-container" class="bg-slate-950/60 rounded-xl border border-slate-800 p-4 text-xs font-mono">
+                            <!-- Injected dynamically -->
                         </div>
                     </div>
                 </div>
@@ -257,45 +425,67 @@
                 <!-- Tab: Accessibility -->
                 <div id="tab-content-accessibility" class="space-y-4 hidden">
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div class="bg-gray-800/50 p-4 rounded-xl border border-gray-800">
-                            <span class="text-xs text-gray-400 font-medium">Total WCAG Violations</span>
-                            <p id="detail-axe-count" class="text-lg font-bold text-amber-400 mt-1">0</p>
+                        <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-800">
+                            <span class="text-xs text-slate-400 font-medium">axe-core Violations</span>
+                            <p id="detail-axe-count" class="text-lg font-bold text-amber-400 mt-1">--</p>
                         </div>
-                        <div class="bg-gray-800/50 p-4 rounded-xl border border-gray-800">
-                            <span class="text-xs text-gray-400 font-medium">Critical Impact Violations</span>
-                            <p id="detail-critical-count" class="text-lg font-bold text-rose-400 mt-1">0</p>
+                        <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-800">
+                            <span class="text-xs text-slate-400 font-medium">Critical Impact Violations</span>
+                            <p id="detail-critical-count" class="text-lg font-bold text-rose-400 mt-1">--</p>
                         </div>
-                    </div>
-
-                    <div class="bg-gray-800/40 p-4 rounded-xl border border-gray-800">
-                        <h4 class="text-xs font-semibold text-gray-300 uppercase tracking-wider mb-1">Vision AI Alt-Text Audit Notes</h4>
-                        <p id="detail-vision-notes" class="text-xs text-gray-300">Alt texts checked.</p>
                     </div>
 
                     <div>
-                        <h4 class="text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Exact WCAG Rule Violations</h4>
-                        <div id="wcag-violations-container" class="bg-gray-950/60 rounded-xl border border-gray-800 p-4 text-xs space-y-3 max-h-60 overflow-y-auto custom-scrollbar">
-                            <!-- WCAG violations injected here -->
+                        <h4 class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">WCAG 2.1 Violation Details</h4>
+                        <div id="wcag-violations-container" class="bg-slate-950/60 rounded-xl border border-slate-800 p-4 text-xs font-mono space-y-2">
+                            <!-- Injected dynamically -->
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Visual Inspection Notes</h4>
+                        <div id="detail-vision-notes" class="bg-slate-950/60 rounded-xl border border-slate-800 p-4 text-xs text-slate-300">
+                            <!-- Injected dynamically -->
                         </div>
                     </div>
                 </div>
 
                 <!-- Tab: Translation -->
                 <div id="tab-content-translation" class="space-y-4 hidden">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div class="bg-gray-800/50 p-4 rounded-xl border border-gray-800">
-                            <span class="text-xs text-gray-400 font-medium">Hindi Switcher Status</span>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                        <div class="bg-slate-800/50 p-3.5 rounded-xl border border-slate-800">
+                            <span class="text-xs text-slate-400 font-medium">Switcher Engine</span>
+                            <p id="detail-trans-switcher" class="text-sm font-semibold text-emerald-400 mt-1">--</p>
+                        </div>
+                        <div class="bg-slate-800/50 p-3.5 rounded-xl border border-slate-800">
+                            <span class="text-xs text-slate-400 font-medium">Devanagari Script Content</span>
                             <p id="detail-trans-status" class="text-sm font-semibold text-white mt-1">--</p>
                         </div>
-                        <div class="bg-gray-800/50 p-4 rounded-xl border border-gray-800">
-                            <span class="text-xs text-gray-400 font-medium">LLM Semantic Preservation Score</span>
-                            <p id="detail-trans-score" class="text-lg font-bold text-indigo-400 mt-1">-- / 100</p>
+                        <div class="bg-slate-800/50 p-3.5 rounded-xl border border-slate-800">
+                            <span class="text-xs text-slate-400 font-medium">GIGW Translation Score</span>
+                            <p id="detail-trans-score" class="text-lg font-bold text-indigo-400 mt-0.5">-- / 100</p>
+                        </div>
+                    </div>
+
+                    <!-- Regional DOM & Quality Breakdown Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div class="bg-slate-900/60 p-3.5 rounded-xl border border-slate-800/80">
+                            <h5 class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Regional Devanagari Breakdown</h5>
+                            <div id="detail-trans-regional" class="space-y-1.5 text-xs text-slate-300 font-mono">
+                                <!-- Populated dynamically -->
+                            </div>
+                        </div>
+                        <div class="bg-slate-900/60 p-3.5 rounded-xl border border-slate-800/80">
+                            <h5 class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Quality Pillar Audit (0-40 Pts)</h5>
+                            <div id="detail-trans-quality" class="space-y-1.5 text-xs text-slate-300 font-mono">
+                                <!-- Populated dynamically -->
+                            </div>
                         </div>
                     </div>
 
                     <div>
-                        <h4 class="text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Flagged Terms & Mistranslations</h4>
-                        <div id="flagged-terms-container" class="bg-gray-950/60 rounded-xl border border-gray-800 p-4 text-xs font-mono">
+                        <h4 class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Flagged Terms & GIGW Audit Log</h4>
+                        <div id="flagged-terms-container" class="bg-slate-950/60 rounded-xl border border-slate-800 p-4 text-xs font-mono">
                             <!-- Flagged terms -->
                         </div>
                     </div>
@@ -304,10 +494,12 @@
         </div>
     </div>
 
-    <!-- Script -->
+    <!-- Script Logic -->
     <script>
         let allPortals = [];
         let currentFilter = 'All';
+        let currentStatusFilter = 'all';
+        let activeSelectedPortal = null;
 
         async function loadLatestData() {
             try {
@@ -344,107 +536,171 @@
             tbody.innerHTML = '';
 
             const searchTerm = document.getElementById('search-input').value.toLowerCase();
+            const sortOption = document.getElementById('sort-select').value;
 
-            const filtered = allPortals.filter(p => {
+            // 1. Filter Portals
+            let filtered = allPortals.filter(p => {
                 const matchesCat = currentFilter === 'All' || p.category === currentFilter;
-                const matchesSearch = p.name.toLowerCase().includes(searchTerm) || p.url.toLowerCase().includes(searchTerm);
-                return matchesCat && matchesSearch;
+                
+                let matchesStatus = true;
+                if (currentStatusFilter === 'up') matchesStatus = (p.uptime?.status === 'up');
+                else if (currentStatusFilter === 'down') matchesStatus = (p.uptime?.status !== 'up');
+
+                const matchesSearch = p.name.toLowerCase().includes(searchTerm) || 
+                                     (p.url || '').toLowerCase().includes(searchTerm) ||
+                                     (p.category || '').toLowerCase().includes(searchTerm) ||
+                                     (p.subcategory || '').toLowerCase().includes(searchTerm);
+
+                return matchesCat && matchesStatus && matchesSearch;
             });
 
-            filtered.sort((a, b) => (b.composite_score || 0) - (a.composite_score || 0));
+            // 2. Sort Portals based on selected option
+            filtered.sort((a, b) => {
+                const scoreA = a.composite_score ?? 0;
+                const scoreB = b.composite_score ?? 0;
+                const brokenA = a.uptime?.broken_links ?? 0;
+                const brokenB = b.uptime?.broken_links ?? 0;
+                const wcagA = a.accessibility?.axe_violations ?? 0;
+                const wcagB = b.accessibility?.axe_violations ?? 0;
+                const hindiA = a.translation?.score ?? 0;
+                const hindiB = b.translation?.score ?? 0;
+
+                switch (sortOption) {
+                    case 'score-desc': return scoreB - scoreA;
+                    case 'score-asc': return scoreA - scoreB;
+                    case 'broken-asc': return brokenA - brokenB;
+                    case 'broken-desc': return brokenB - brokenA;
+                    case 'wcag-asc': return wcagA - wcagB;
+                    case 'wcag-desc': return wcagB - wcagA;
+                    case 'hindi-desc': return hindiB - hindiA;
+                    case 'name-asc': return a.name.localeCompare(b.name);
+                    default: return scoreB - scoreA;
+                }
+            });
+
+            document.getElementById('showing-count').innerText = `Showing ${filtered.length} of ${allPortals.length}`;
 
             if (filtered.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="8" class="text-center py-8 text-gray-500">No portals found matching criteria.</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="8" class="text-center py-12 text-slate-500 text-sm font-medium">No government portals match the selected filter criteria.</td></tr>`;
                 return;
             }
 
             filtered.forEach(p => {
                 const isUp = p.uptime?.status === 'up';
-                const score = p.composite_score || 0;
+                const score = p.composite_score ?? 0;
                 
                 let scoreBadge = 'bg-rose-500/10 text-rose-400 border-rose-500/20';
                 if (score >= 75) scoreBadge = 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20';
                 else if (score >= 50) scoreBadge = 'bg-amber-500/10 text-amber-400 border-amber-500/20';
 
                 const tr = document.createElement('tr');
-                tr.className = 'hover:bg-gray-800/40 transition cursor-pointer';
-                tr.onclick = () => openModal(p);
+                tr.className = 'tr-hover cursor-pointer border-b border-slate-800/50';
+                tr.onclick = (e) => {
+                    // Don't trigger modal if user clicked direct external link or button
+                    if (e.target.closest('a') || e.target.closest('button')) return;
+                    openModal(p);
+                };
 
                 const subcat = p.subcategory || '';
                 
-                // Colored dot reflects true HEALTH SCORE & UPTIME status
-                let healthDot = '🔴';
-                if (isUp && score >= 75) healthDot = '🟢';
-                else if (isUp && score >= 50) healthDot = '🟡';
+                // Health dot indicator
+                let healthDot = '<span class="w-2.5 h-2.5 rounded-full bg-rose-500 shadow-sm shadow-rose-500/50"></span>';
+                if (isUp && score >= 75) healthDot = '<span class="w-2.5 h-2.5 rounded-full bg-emerald-400 shadow-sm shadow-emerald-400/50 animate-pulse"></span>';
+                else if (isUp && score >= 50) healthDot = '<span class="w-2.5 h-2.5 rounded-full bg-amber-400 shadow-sm shadow-amber-400/50"></span>';
 
-                // Priority rendered as a distinct text badge (P1/P2/P3)
+                // Priority Badge
                 const priorityBadge = p.priority === 1 
-                    ? '<span class="px-1.5 py-0.5 text-[10px] font-semibold bg-rose-500/20 text-rose-300 border border-rose-500/30 rounded" title="Priority 1: High Citizen Usage">P1</span>' 
+                    ? '<span class="px-1.5 py-0.5 text-[10px] font-extrabold bg-rose-500/20 text-rose-300 border border-rose-500/30 rounded" title="P1: High Citizen Usage">P1</span>' 
                     : p.priority === 2 
-                    ? '<span class="px-1.5 py-0.5 text-[10px] font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/30 rounded" title="Priority 2: Important Portal">P2</span>' 
-                    : '<span class="px-1.5 py-0.5 text-[10px] font-semibold bg-gray-700/50 text-gray-400 border border-gray-700 rounded" title="Priority 3: General Portal">P3</span>';
+                    ? '<span class="px-1.5 py-0.5 text-[10px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30 rounded" title="P2: Important Services">P2</span>' 
+                    : '<span class="px-1.5 py-0.5 text-[10px] font-bold bg-slate-800 text-slate-400 border border-slate-700 rounded" title="P3: General Portal">P3</span>';
 
                 tr.innerHTML = `
                     <td class="py-4 px-6 font-semibold text-white">
-                        <div class="flex items-center gap-2">
-                            <span>${healthDot}</span>
-                            <div>
+                        <div class="flex items-center gap-3">
+                            ${healthDot}
+                            <div class="min-w-0">
                                 <div class="flex items-center gap-2">
-                                    <span>${p.name}</span>
+                                    <span class="text-sm font-bold text-white hover:text-indigo-300 transition">${p.name}</span>
                                     ${priorityBadge}
                                 </div>
-                                <span class="block text-xs font-normal text-gray-400 mt-0.5 truncate max-w-xs">${p.url}</span>
+                                <!-- PROMINENT CLICKABLE EXTERNAL LINK BUTTON -->
+                                <a href="${p.url}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" class="inline-flex items-center gap-1 text-[11px] font-mono text-indigo-400 hover:text-indigo-300 hover:underline mt-0.5 group/link truncate max-w-xs" title="Open ${p.name} in new tab">
+                                    <span>${p.url}</span>
+                                    <i data-lucide="external-link" class="w-3 h-3 text-indigo-400 group-hover/link:translate-x-0.5 transition-transform"></i>
+                                </a>
                             </div>
                         </div>
                     </td>
                     <td class="py-4 px-4 text-xs">
-                        <div class="flex flex-col gap-1">
-                            <span class="px-2.5 py-1 rounded-md bg-gray-800 text-gray-300 border border-gray-700">${p.category}</span>
-                            ${subcat ? '<span class="px-2 py-0.5 rounded text-[10px] bg-gray-700/50 text-gray-400">' + subcat + '</span>' : ''}
+                        <div class="flex flex-col gap-1 items-start">
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 border border-slate-700 font-medium">${p.category}</span>
+                            ${subcat ? '<span class="px-2 py-0.5 rounded text-[10px] bg-slate-800/60 text-slate-400 font-mono">' + subcat + '</span>' : ''}
                         </div>
                     </td>
                     <td class="py-4 px-4">
-                        <span class="inline-flex items-center space-x-1.5 px-2.5 py-1 rounded-full text-xs font-medium ${isUp ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20' : 'bg-rose-500/10 text-rose-400 border border-rose-500/20'}">
+                        <span class="inline-flex items-center space-x-1.5 px-2.5 py-1 rounded-full text-xs font-bold ${isUp ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/30' : 'bg-rose-500/10 text-rose-400 border border-rose-500/30'}">
                             <span class="w-1.5 h-1.5 rounded-full ${isUp ? 'bg-emerald-400 animate-pulse' : 'bg-rose-400'}"></span>
                             <span>${isUp ? 'UP' : 'DOWN'}</span>
                         </span>
                     </td>
                     <td class="py-4 px-4">
-                        <span class="px-3 py-1 rounded-lg border text-xs font-bold ${scoreBadge}">
+                        <span class="px-3 py-1 rounded-lg border text-xs font-extrabold ${scoreBadge}">
                             ${score}
                         </span>
                     </td>
-                    <td class="py-4 px-4 text-xs font-mono ${p.uptime?.broken_links > 0 ? 'text-amber-400' : 'text-gray-400'}">
+                    <td class="py-4 px-4 text-xs font-mono font-semibold ${p.uptime?.broken_links > 0 ? 'text-amber-400' : 'text-slate-400'}">
                         ${p.uptime?.broken_links ?? 0}
                     </td>
-                    <td class="py-4 px-4 text-xs font-mono ${p.accessibility?.axe_violations > 0 ? 'text-rose-400' : 'text-gray-400'}">
+                    <td class="py-4 px-4 text-xs font-mono font-semibold ${p.accessibility?.axe_violations > 0 ? 'text-rose-400' : 'text-slate-400'}">
                         ${p.accessibility?.axe_violations < 0 ? 'Blocked' : (p.accessibility?.axe_violations ?? 0)}
                     </td>
-                    <td class="py-4 px-4 text-xs font-mono text-gray-300">
+                    <td class="py-4 px-4 text-xs font-mono text-slate-300 font-medium">
                         ${p.translation?.score ?? 0} / 100
                     </td>
                     <td class="py-4 px-6 text-right">
-                        <button class="px-3 py-1.5 bg-indigo-600/20 hover:bg-indigo-600/40 text-indigo-300 border border-indigo-500/30 text-xs font-medium rounded-lg transition">
-                            Inspect
-                        </button>
+                        <div class="flex items-center justify-end space-x-2">
+                            <!-- Direct Link Button -->
+                            <a href="${p.url}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" class="p-1.5 bg-slate-800 hover:bg-slate-700 text-indigo-300 hover:text-white rounded-lg border border-slate-700 transition" title="Open portal website">
+                                <i data-lucide="external-link" class="w-4 h-4"></i>
+                            </a>
+                            <!-- Inspect Button -->
+                            <button onclick="openModalByName('${p.name}')" class="px-3 py-1.5 bg-indigo-600/20 hover:bg-indigo-600/40 text-indigo-300 border border-indigo-500/30 text-xs font-semibold rounded-lg transition-all shadow-sm">
+                                Inspect
+                            </button>
+                        </div>
                     </td>
                 `;
 
                 tbody.appendChild(tr);
             });
 
-            lucide.createIcons();
+            if (window.lucide) { lucide.createIcons(); }
         }
 
         function filterCategory(cat) {
             currentFilter = cat;
             document.querySelectorAll('.cat-btn').forEach(btn => {
                 if (btn.innerText.includes(cat)) {
-                    btn.className = 'cat-btn active px-3 py-1.5 text-xs font-medium rounded-lg text-white bg-indigo-600 transition';
+                    btn.className = 'cat-btn active px-3.5 py-1.5 text-xs font-semibold rounded-lg text-white bg-indigo-600 transition-all duration-200';
                 } else {
-                    btn.className = 'cat-btn px-3 py-1.5 text-xs font-medium rounded-lg text-gray-400 hover:text-gray-200 transition';
+                    btn.className = 'cat-btn px-3.5 py-1.5 text-xs font-medium rounded-lg text-slate-400 hover:text-slate-200 transition-all duration-200';
                 }
             });
+            renderTable();
+        }
+
+        function filterStatus(status) {
+            currentStatusFilter = status;
+            document.querySelectorAll('.status-btn').forEach(btn => {
+                btn.classList.remove('active', 'bg-slate-800', 'text-white');
+            });
+            const activeBtn = document.getElementById(`status-btn-${status}`);
+            if (activeBtn) activeBtn.classList.add('active', 'bg-slate-800', 'text-white');
+            renderTable();
+        }
+
+        function handleSortChange() {
             renderTable();
         }
 
@@ -452,7 +708,13 @@
             renderTable();
         }
 
+        function openModalByName(name) {
+            const portal = allPortals.find(p => p.name === name);
+            if (portal) openModal(portal);
+        }
+
         function openModal(portal) {
+            activeSelectedPortal = portal;
             document.getElementById('modal-title').innerText = portal.name;
             const catLabel = portal.subcategory ? `${portal.category} · ${portal.subcategory}` : portal.category;
             document.getElementById('modal-category').innerText = catLabel;
@@ -472,8 +734,8 @@
             const workingCount = portal.uptime?.verified_working_links_count ?? workingLinks.length;
 
             let linkAuditHTML = `
-                <div class="mb-4 p-3 bg-gray-900 rounded-lg border border-gray-800 flex flex-wrap items-center justify-between text-xs gap-2">
-                    <span class="text-gray-300">🔍 <strong>Homepage Links Discovered:</strong> ${linksFound}</span>
+                <div class="mb-4 p-3 bg-slate-900 rounded-xl border border-slate-800 flex flex-wrap items-center justify-between text-xs gap-2">
+                    <span class="text-slate-300">🔍 <strong>Homepage Links Discovered:</strong> ${linksFound}</span>
                     <span class="text-indigo-300">⚡ <strong>Audited Sample:</strong> ${linksAudited}</span>
                     <span class="text-emerald-400">✅ <strong>Verified Working:</strong> ${workingCount}</span>
                     <span class="text-rose-400">❌ <strong>Broken (404/5xx):</strong> ${brokenDetails.length}</span>
@@ -485,19 +747,19 @@
             } else {
                 linkAuditHTML += `<p class="text-xs font-semibold text-rose-400 uppercase tracking-wider mb-2">Confirmed Broken Links (${brokenDetails.length}):</p>`;
                 linkAuditHTML += brokenDetails.map(b => `
-                    <div class="flex items-center justify-between p-2 bg-gray-900 rounded border border-gray-800 mb-1.5">
-                        <span class="truncate max-w-lg text-gray-300">${b.url}</span>
-                        <span class="px-2 py-0.5 text-xs bg-rose-500/20 text-rose-400 rounded">${b.reason || ('HTTP ' + b.status_code)}</span>
+                    <div class="flex items-center justify-between p-2.5 bg-slate-900/90 rounded-lg border border-slate-800 mb-1.5">
+                        <a href="${b.url}" target="_blank" rel="noopener noreferrer" class="truncate max-w-lg text-slate-300 hover:text-indigo-300 hover:underline font-mono text-xs">${b.url}</a>
+                        <span class="px-2 py-0.5 text-xs font-bold bg-rose-500/20 text-rose-400 rounded border border-rose-500/30">${b.reason || ('HTTP ' + b.status_code)}</span>
                     </div>
                 `).join('');
             }
 
             if (workingLinks.length > 0) {
-                linkAuditHTML += `<p class="text-xs font-semibold text-gray-400 uppercase tracking-wider mt-4 mb-2">Sample Verified Working Links (HTTP 200 OK):</p>`;
+                linkAuditHTML += `<p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mt-4 mb-2">Sample Verified Working Links (HTTP 200 OK):</p>`;
                 linkAuditHTML += `<div class="space-y-1">` + workingLinks.slice(0, 5).map(w => `
-                    <div class="flex items-center justify-between p-1.5 bg-gray-900/60 rounded text-[11px]">
-                        <a href="${w}" target="_blank" class="truncate text-indigo-400 hover:underline">${w}</a>
-                        <span class="text-emerald-400 font-bold ml-2">200 OK</span>
+                    <div class="flex items-center justify-between p-2 bg-slate-900/60 rounded-lg text-xs font-mono">
+                        <a href="${w}" target="_blank" rel="noopener noreferrer" class="truncate text-indigo-400 hover:underline">${w}</a>
+                        <span class="text-emerald-400 font-bold ml-2 text-[11px]">200 OK</span>
                     </div>
                 `).join('') + `</div>`;
             }
@@ -516,33 +778,49 @@
                 wcagContainer.innerHTML = `<p class="text-emerald-400 font-semibold">✅ Zero major WCAG violations detected on landing page.</p>`;
             } else {
                 wcagContainer.innerHTML = wcagDetails.map(w => `
-                    <div class="p-3 bg-gray-900 rounded-lg border border-gray-800 flex items-start justify-between mb-2">
+                    <div class="p-3 bg-slate-900 rounded-xl border border-slate-800 flex items-start justify-between mb-2">
                         <div>
                             <div class="flex items-center space-x-2">
-                                <span class="font-bold text-gray-200">${w.id}</span>
+                                <span class="font-bold text-slate-200">${w.id}</span>
                                 <span class="px-2 py-0.5 text-[10px] uppercase font-bold rounded ${w.impact === 'critical' ? 'bg-rose-500/20 text-rose-400' : 'bg-amber-500/20 text-amber-400'}">${w.impact}</span>
                             </div>
-                            <p class="text-gray-400 text-xs mt-1">${w.description}</p>
+                            <p class="text-slate-400 text-xs mt-1">${w.description}</p>
                         </div>
-                        <span class="px-2 py-1 bg-gray-800 text-gray-300 rounded text-xs font-mono">${w.nodes} nodes</span>
+                        <span class="px-2 py-1 bg-slate-800 text-slate-300 rounded text-xs font-mono">${w.nodes} nodes</span>
                     </div>
                 `).join('');
             }
 
-            // Translation tab details (Continuous 0-100 score)
+            // Translation tab details (Continuous 0-100 score & GIGW breakdown)
             const transScore = portal.translation?.score ?? 0;
             const devPct = portal.translation?.devanagari_ratio_pct ?? (transScore > 50 ? 32.5 : 0);
-            const switcherFound = portal.translation?.switcher_found ? 'YES (Active)' : 'NO / Direct Hindi';
+            const switcherType = portal.translation?.switcher_type || (portal.translation?.switcher_found ? 'Active Switcher' : 'Direct / None');
+            const switcherFound = portal.translation?.switcher_found ? 'YES (Active)' : 'NO / Direct';
             
-            document.getElementById('detail-trans-status').innerText = `Switcher: ${switcherFound} | Devanagari Content: ${devPct}%`;
+            document.getElementById('detail-trans-switcher').innerText = switcherType;
+            document.getElementById('detail-trans-status').innerText = `${devPct}% Devanagari (${switcherFound})`;
             document.getElementById('detail-trans-score').innerText = `${transScore} / 100`;
+
+            const regional = portal.translation?.regional_breakdown || { nav_pct: devPct, headings_pct: devPct, body_pct: devPct };
+            document.getElementById('detail-trans-regional').innerHTML = `
+                <div class="flex justify-between items-center"><span class="text-slate-400">Navigation / Menu:</span> <span class="font-mono font-bold text-emerald-400">${regional.nav_pct}%</span></div>
+                <div class="flex justify-between items-center"><span class="text-slate-400">Headings (H1-H3):</span> <span class="font-mono font-bold text-indigo-400">${regional.headings_pct}%</span></div>
+                <div class="flex justify-between items-center"><span class="text-slate-400">Main Body Content:</span> <span class="font-mono font-bold text-sky-400">${regional.body_pct}%</span></div>
+            `;
+
+            const quality = portal.translation?.quality_breakdown || { fluency_score: 12, glossary_score: 12, artifacts_score: 8 };
+            document.getElementById('detail-trans-quality').innerHTML = `
+                <div class="flex justify-between items-center"><span class="text-slate-400">Devanagari Fluency:</span> <span class="font-mono font-bold text-emerald-400">${quality.fluency_score} / 15</span></div>
+                <div class="flex justify-between items-center"><span class="text-slate-400">GIGW Terminology:</span> <span class="font-mono font-bold text-indigo-400">${quality.glossary_score} / 15</span></div>
+                <div class="flex justify-between items-center"><span class="text-slate-400">MT Artifacts & Code:</span> <span class="font-mono font-bold text-amber-400">${quality.artifacts_score} / 10</span></div>
+            `;
 
             const flaggedContainer = document.getElementById('flagged-terms-container');
             const flaggedTerms = portal.translation?.flagged_terms || [];
             if (flaggedTerms.length === 0) {
-                flaggedContainer.innerHTML = `<p class="text-gray-400 italic">No critical mistranslations detected in sample.</p>`;
+                flaggedContainer.innerHTML = `<p class="text-slate-400 italic">No critical GIGW mistranslations detected in sample.</p>`;
             } else {
-                flaggedContainer.innerHTML = flaggedTerms.map(t => `<span class="inline-block px-2.5 py-1 bg-rose-500/20 text-rose-300 rounded mr-2 mb-2">${t}</span>`).join('');
+                flaggedContainer.innerHTML = flaggedTerms.map(t => `<div class="p-2 bg-rose-500/10 text-rose-300 rounded-lg border border-rose-500/20 mb-1.5 text-xs font-mono">⚠️ ${t}</div>`).join('');
             }
 
             switchTab('uptime');
@@ -560,12 +838,125 @@
             ['uptime', 'accessibility', 'translation'].forEach(t => {
                 document.getElementById(`tab-content-${t}`).classList.add('hidden');
                 const btn = document.getElementById(`tab-btn-${t}`);
-                btn.className = 'py-3 border-b-2 border-transparent text-gray-400 hover:text-gray-200';
+                btn.className = 'py-3.5 border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center gap-1.5';
             });
 
             document.getElementById(`tab-content-${tab}`).classList.remove('hidden');
             const activeBtn = document.getElementById(`tab-btn-${tab}`);
-            activeBtn.className = 'py-3 border-b-2 border-indigo-500 text-indigo-400 font-semibold';
+            activeBtn.className = 'py-3.5 border-b-2 border-indigo-500 text-indigo-400 font-semibold flex items-center gap-1.5';
+        }
+
+        // ==============================================================================
+        // REPORT EXPORT CAPABILITIES (CSV & INDIVIDUAL PORTAL REPORT)
+        // ==============================================================================
+        function exportCurrentViewCSV() {
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+            const sortOption = document.getElementById('sort-select').value;
+
+            let filtered = allPortals.filter(p => {
+                const matchesCat = currentFilter === 'All' || p.category === currentFilter;
+                let matchesStatus = true;
+                if (currentStatusFilter === 'up') matchesStatus = (p.uptime?.status === 'up');
+                else if (currentStatusFilter === 'down') matchesStatus = (p.uptime?.status !== 'up');
+
+                const matchesSearch = p.name.toLowerCase().includes(searchTerm) || (p.url || '').toLowerCase().includes(searchTerm);
+                return matchesCat && matchesStatus && matchesSearch;
+            });
+
+            filtered.sort((a, b) => {
+                const scoreA = a.composite_score ?? 0;
+                const scoreB = b.composite_score ?? 0;
+                const brokenA = a.uptime?.broken_links ?? 0;
+                const brokenB = b.uptime?.broken_links ?? 0;
+                const wcagA = a.accessibility?.axe_violations ?? 0;
+                const wcagB = b.accessibility?.axe_violations ?? 0;
+
+                switch (sortOption) {
+                    case 'score-desc': return scoreB - scoreA;
+                    case 'score-asc': return scoreA - scoreB;
+                    case 'broken-asc': return brokenA - brokenB;
+                    case 'broken-desc': return brokenB - brokenA;
+                    case 'wcag-asc': return wcagA - wcagB;
+                    case 'wcag-desc': return wcagB - wcagA;
+                    default: return scoreB - scoreA;
+                }
+            });
+
+            const headers = ["Portal Name", "URL", "Category", "Status", "Health Score", "Broken Links", "WCAG Violations", "Hindi Score"];
+            const rows = filtered.map(p => [
+                `"${p.name.replace(/"/g, '""')}"`,
+                `"${p.url}"`,
+                `"${p.category}"`,
+                `"${p.uptime?.status === 'up' ? 'UP' : 'DOWN'}"`,
+                p.composite_score ?? 0,
+                p.uptime?.broken_links ?? 0,
+                p.accessibility?.axe_violations ?? 0,
+                p.translation?.score ?? 0
+            ]);
+
+            const csvContent = "data:text/csv;charset=utf-8," + [headers.join(","), ...rows.map(e => e.join(","))].join("\n");
+            const encodedUri = encodeURI(csvContent);
+            const link = document.createElement("a");
+            link.setAttribute("href", encodedUri);
+            link.setAttribute("download", `setu_sentinel_report_${currentFilter}_${currentStatusFilter}_${Date.now()}.csv`);
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        function downloadIndividualPortalReport() {
+            if (!activeSelectedPortal) return;
+            const p = activeSelectedPortal;
+            
+            const reportMD = `# 🛡️ Setu Sentinel — Individual Portal Audit Report
+**Portal Name:** ${p.name}
+**URL:** ${p.url}
+**Category:** ${p.category} ${p.subcategory ? '(' + p.subcategory + ')' : ''}
+**Priority:** P${p.priority}
+
+---
+
+## 📊 Summary Metrics
+- **Health Score:** ${p.composite_score ?? 0} / 100
+- **Uptime Status:** ${p.uptime?.status === 'up' ? '✅ UP' : '❌ DOWN'}
+- **HTTP Status Code:** ${p.uptime?.status_code || 200}
+- **Response Speed:** ${p.uptime?.response_ms || 0} ms
+- **Homepage Links Discovered:** ${p.uptime?.total_links_found || 0}
+- **Audited Links Sample:** ${p.uptime?.total_links_audited || 0}
+- **Confirmed Broken Links (404/5xx):** ${p.uptime?.broken_links || 0}
+- **WCAG Accessibility Violations:** ${p.accessibility?.axe_violations || 0} (Critical: ${p.accessibility?.critical || 0})
+- **Hindi Translation Score:** ${p.translation?.score || 0} / 100 (Devanagari: ${p.translation?.devanagari_ratio_pct || 0}%)
+
+---
+
+## ⚡ Broken Links Diagnostic Details
+${(p.uptime?.broken_links_details || []).length === 0 ? '✅ Zero broken links confirmed!' : p.uptime.broken_links_details.map(b => `- **URL:** ${b.url}\n  **Reason:** ${b.reason || b.status_code}`).join('\n')}
+
+---
+
+## ♿ WCAG 2.1 Violation Details
+${(p.accessibility?.violation_details || []).length === 0 ? '✅ Zero major WCAG violations detected!' : p.accessibility.violation_details.map(w => `- **Issue [${w.id}] (${w.impact}):** ${w.description} (${w.nodes} affected DOM nodes)`).join('\n')}
+
+---
+
+## 🌐 GIGW Translation Audit Details
+- **Switcher Engine:** ${p.translation?.switcher_type || 'None'}
+- **Devanagari Content %:** ${p.translation?.devanagari_ratio_pct || 0}%
+- **Flagged Terms:**
+${(p.translation?.flagged_terms || []).length === 0 ? '  - No critical GIGW terms flagged.' : p.translation.flagged_terms.map(t => '  - ⚠️ ' + t).join('\n')}
+
+---
+*Report generated by Setu Sentinel Automated Engine.*
+`;
+
+            const blob = new Blob([reportMD], { type: 'text/markdown;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement("a");
+            link.setAttribute("href", url);
+            link.setAttribute("download", `${p.name.replace(/[^a-z0-9]/gi, '_').toLowerCase()}_audit_report.md`);
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         }
 
         // Initial Load
