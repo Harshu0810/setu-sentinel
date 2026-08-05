@@ -20848,5 +20848,17 @@
     "is_broken": false,
     "reason": "OK",
     "last_checked": 1785922453.6974962
+  },
+  "https://edistrict.up.gov.in/edistrict/login/login.aspx?Xpr$lgnp=PmBe2Bh8Z3GzWb+1OGthifnkHNxBD6qT": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1785927068.079154
+  },
+  "https://esathi.up.gov.in/citizenservices/login/login.aspx?Xpr$lgnp=PmBe2Bh8Z3GzWb+1OGthifnkHNxBD6qT": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1785927068.079154
   }
 }
