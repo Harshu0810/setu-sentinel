@@ -1046,7 +1046,7 @@
         "response_ms": 2400,
         "total_links_found": 208,
         "total_links_audited": 208,
-        "verified_working_links_count": 206,
+        "verified_working_links_count": 208,
         "verified_working_links": [
           "https://twitter.com/mygovindia",
           "https://pledge.mygov.in/fightagainstdrugabuse/",
@@ -1059,19 +1059,8 @@
           "https://www.mygov.in/groups/",
           "https://www.facebook.com/MyGovIndia/"
         ],
-        "broken_links": 2,
-        "broken_links_details": [
-          {
-            "url": "https://www.linkedin.com/company/mygov-india/",
-            "status_code": 999,
-            "reason": "HTTP 999"
-          },
-          {
-            "url": "https://www.linkedin.com/company/mygov-india/mycompany/",
-            "status_code": 999,
-            "reason": "HTTP 999"
-          }
-        ],
+        "broken_links": 0,
+        "broken_links_details": [],
         "broken_forms": 0,
         "status_code": 200
       },
@@ -1168,7 +1157,7 @@
         "status": "url_fallback_success",
         "flagged_terms": []
       },
-      "composite_score": 54.3
+      "composite_score": 55.9
     },
     {
       "name": "UIDAI (Aadhaar)",
@@ -1256,7 +1245,7 @@
         "response_ms": 1230,
         "total_links_found": 89,
         "total_links_audited": 89,
-        "verified_working_links_count": 79,
+        "verified_working_links_count": 87,
         "verified_working_links": [
           "https://janaadhaar.rajasthan.gov.in/content/dam/doitassets/janaadhaar/PDF/News/3.46%20lakh%20ineligible%20candidates,%20fraud%20with%20Jan%20Aadhaar%20card,%20Rs%20435%20crore%20will%20be%20saved%20in%20government%20treasury.jpeg",
           "https://janaadhaar.rajasthan.gov.in/content/dam/doitassets/janaadhaar/PDF/News/arunachal%20pradesh.jpeg",
@@ -1269,40 +1258,10 @@
           "https://janaadhaar.rajasthan.gov.in/content/dam/doitassets/janaadhaar/PDF/News/Aadhaar%20and%20Jan%20Aadhaar%20number%20necessary%20for%20financial%20assistance%20given%20under%20Camel%20Conservation%20Scheme.JPG",
           "https://janaadhaar.rajasthan.gov.in/content/raj/janaadhaar/en/home.html"
         ],
-        "broken_links": 10,
+        "broken_links": 2,
         "broken_links_details": [
           {
-            "url": "https://janaadhaarapp.rajasthan.gov.in/publicJanAadhaar/viewAadhaarStatus",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
             "url": "https://janapp.rajasthan.gov.in/janaadhaar/viewaadharstatus",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "https://janaadhaarapp.rajasthan.gov.in/publicJanAadhaar/statistics/familyMembersWise",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "https://janaadhaar.rajasthan.gov.in/content/raj/janaadhaar/en/performance-dashboard.html",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "https://janaadhaarapp.rajasthan.gov.in/publicJanAadhaar/statistics/genderWise",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "https://janaadhaarapp.rajasthan.gov.in/publicJanAadhaar/eTransaction",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "https://janaadhaarapp.rajasthan.gov.in/publicJanAadhaar/viewJanAadhaarStatus",
             "status_code": 0,
             "reason": "Unreachable / Timeout"
           },
@@ -1310,16 +1269,6 @@
             "url": "https://janaadhaar.rajasthan.gov.in/content/raj/janaadhaar/en/latest-news/Jan_Aadhaar_on_DigiLocker.html",
             "status_code": 404,
             "reason": "HTTP 404"
-          },
-          {
-            "url": "https://janaadhaarapp.rajasthan.gov.in/publicJanAadhaar/statistics/ageWise",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "https://janaadhaarapp.rajasthan.gov.in/publicJanAadhaar/statistics/areaWise",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
           }
         ],
         "broken_forms": 0,
@@ -1390,7 +1339,7 @@
         "status": "switcher_success",
         "flagged_terms": []
       },
-      "composite_score": 68.6
+      "composite_score": 75.0
     },
     {
       "name": "GeM (Govt e-Marketplace)",
@@ -1831,7 +1780,7 @@
         "response_ms": 1969,
         "total_links_found": 155,
         "total_links_audited": 155,
-        "verified_working_links_count": 149,
+        "verified_working_links_count": 153,
         "verified_working_links": [
           "https://parivahan.gov.in/en/node/326",
           "https://parivahan.gov.in/content/website-policies",
@@ -1844,7 +1793,7 @@
           "https://morth.nic.in/en/central-motor-vehicles-rules-1989",
           "https://parivahan.gov.in/en/press-coverage/2019/april"
         ],
-        "broken_links": 6,
+        "broken_links": 2,
         "broken_links_details": [
           {
             "url": "http://nextmile.gov.in/",
@@ -1852,27 +1801,7 @@
             "reason": "Unreachable / Timeout"
           },
           {
-            "url": "https://mparivahan.parivahan.gov.in/",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "https://vahan.parivahan.gov.in/paidnrservices/",
-            "status_code": 404,
-            "reason": "HTTP 404"
-          },
-          {
-            "url": "https://parivahan.gov.in/en/high-contrast/enable?destination=/en/node",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
             "url": "https://nextmile.gov.in/",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "https://parivahan.gov.in/en/high-contrast/disable?destination=/en/node",
             "status_code": 0,
             "reason": "Unreachable / Timeout"
           }
@@ -1952,7 +1881,7 @@
         "status": "switcher_clicked_low_hindi",
         "flagged_terms": []
       },
-      "composite_score": 60.4
+      "composite_score": 63.6
     },
     {
       "name": "Rajasthan Sampark",
@@ -2207,7 +2136,7 @@
         "response_ms": 3370,
         "total_links_found": 686,
         "total_links_audited": 686,
-        "verified_working_links_count": 682,
+        "verified_working_links_count": 683,
         "verified_working_links": [
           "https://aaplesarkar.mahaonline.gov.in/mr/Login/Certificate_Documents?ServiceId=4576",
           "https://aaplesarkar.mahaonline.gov.in/mr/Login/Certificate_Documents?ServiceId=1866",
@@ -2220,13 +2149,8 @@
           "https://aaplesarkar.mahaonline.gov.in/mr/Login/Certificate_Documents?ServiceId=4355",
           "https://aaplesarkar.mahaonline.gov.in/mr/CommonForm/Help"
         ],
-        "broken_links": 4,
+        "broken_links": 3,
         "broken_links_details": [
-          {
-            "url": "https://maitri.maharashtra.gov.in/",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
           {
             "url": "https://www.nesdaportal.in/survey/public/",
             "status_code": 404,
@@ -2332,7 +2256,7 @@
         "status": "native_multilingual_detected",
         "flagged_terms": []
       },
-      "composite_score": 63.2
+      "composite_score": 64.0
     },
     {
       "name": "Seva Sindhu Karnataka",
@@ -2349,7 +2273,7 @@
         "response_ms": 1733,
         "total_links_found": 105,
         "total_links_audited": 105,
-        "verified_working_links_count": 75,
+        "verified_working_links_count": 76,
         "verified_working_links": [
           "https://kannadasiri.karnataka.gov.in/",
           "https://sevasindhu.karnataka.gov.in/com-port-kan.html",
@@ -2362,7 +2286,7 @@
           "https://sevasindhu.karnataka.gov.in/Gramaone/gramaone_franchise_kannada.html",
           "https://play.google.com/store/apps/details?id=com.capulustech.ksppqrs"
         ],
-        "broken_links": 30,
+        "broken_links": 29,
         "broken_links_details": [
           {
             "url": "https://play.google.com/store/apps/details?id=beco.bhkar.jn",
@@ -2490,11 +2414,6 @@
             "reason": "Unreachable / Timeout"
           },
           {
-            "url": "https://esamiksha.gov.in/Karnataka/",
-            "status_code": 404,
-            "reason": "HTTP 404"
-          },
-          {
             "url": "http://www.espandana.karnataka.gov.in/cms/portal/login.jsf",
             "status_code": 0,
             "reason": "Unreachable / Timeout"
@@ -2600,7 +2519,7 @@
         "response_ms": 1900,
         "total_links_found": 67,
         "total_links_audited": 67,
-        "verified_working_links_count": 63,
+        "verified_working_links_count": 64,
         "verified_working_links": [
           "https://edistrict.up.gov.in/eDistrictup/FooterLinks/Centre_Det.aspx",
           "http://164.100.181.16/ssdgsap/certVerify.aspx",
@@ -2613,7 +2532,7 @@
           "https://edistrict.up.gov.in/edistrictup/Event/8.jpg",
           "https://edistrict.up.gov.in/edistrictup/Event/1.jpg"
         ],
-        "broken_links": 4,
+        "broken_links": 3,
         "broken_links_details": [
           {
             "url": "https://blog.digitallocker.gov.in/more-than-2-crore-uttar-pradesh-citizens-can-now-access-their-digitized-certificates-in-digilocker/",
@@ -2627,11 +2546,6 @@
           },
           {
             "url": "http://edistrict.up.nic.in/AvailServices/ServiceList_hindi.html",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "https://esathi.up.gov.in/pmed/ServiceDashboard/SerDash.aspx",
             "status_code": 0,
             "reason": "Unreachable / Timeout"
           }
@@ -2725,7 +2639,7 @@
         "status": "native_multilingual_detected",
         "flagged_terms": []
       },
-      "composite_score": 79.1
+      "composite_score": 79.9
     },
     {
       "name": "Mee Seva (Andhra Pradesh)",
@@ -2985,7 +2899,7 @@
         "response_ms": 1447,
         "total_links_found": 49,
         "total_links_audited": 49,
-        "verified_working_links_count": 48,
+        "verified_working_links_count": 49,
         "verified_working_links": [
           "https://www.delhiwtsa24.in/",
           "https://www.digitalgujarat.gov.in/assets/img/GlimpsesSlider/vibrant.png",
@@ -2998,14 +2912,8 @@
           "https://india.gov.in/",
           "https://www.youtube.com/@digitalgujarat-dit"
         ],
-        "broken_links": 1,
-        "broken_links_details": [
-          {
-            "url": "https://swachhbharatmission.ddws.gov.in/",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          }
-        ],
+        "broken_links": 0,
+        "broken_links_details": [],
         "broken_forms": 0,
         "status_code": 200
       },
@@ -3081,7 +2989,7 @@
         "status": "no_language_switcher_found",
         "flagged_terms": []
       },
-      "composite_score": 56.9
+      "composite_score": 57.7
     },
     {
       "name": "RTPS Bihar",
@@ -3653,7 +3561,7 @@
         "response_ms": 5590,
         "total_links_found": 439,
         "total_links_audited": 439,
-        "verified_working_links_count": 430,
+        "verified_working_links_count": 432,
         "verified_working_links": [
           "https://mpedistrict.gov.in/MPL/ShowServiceDetail.aspx?param=A0G63zvle/qGfeMVf65B3xuehJazEysV",
           "https://mpedistrict.gov.in/MPL/ShowServiceDetail.aspx?param=hVxHiovaMUd62t8gdwYZUGvarKELMh+/o4StXr+2KYw=",
@@ -3666,7 +3574,7 @@
           "https://mpedistrict.gov.in/MPL/ShowServiceDetail.aspx?param=FXZVvXqOY+25Ml6ewLgXrfrb21S/ob1A4Evul9BquXE=",
           "https://mpedistrict.gov.in/MPL/ShowServiceDetail.aspx?param=mLgANj4vqrlscIBjnOoFI66l7K7t/0Hni4sgAojPrRoTRNNV+2bfoPKYlqGgJtns+MpgucViCN113hxAg058TGgDIxmTY4JA"
         ],
-        "broken_links": 9,
+        "broken_links": 7,
         "broken_links_details": [
           {
             "url": "https://rationmitra.nic.in/sLogin/Pages/sLogin.aspx",
@@ -3679,17 +3587,7 @@
             "reason": "Unreachable / Timeout"
           },
           {
-            "url": "https://myhpgas.in/myHPGas/NewConsumerRegistration.aspx",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
             "url": "https://rationmitra.nic.in/",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "https://services.mp.gov.in/main/citizen/login?p=16&t=1",
             "status_code": 0,
             "reason": "Unreachable / Timeout"
           },
@@ -3831,7 +3729,7 @@
         "status": "native_multilingual_detected",
         "flagged_terms": []
       },
-      "composite_score": 59.2
+      "composite_score": 60.8
     },
     {
       "name": "e-Shram",
@@ -3904,7 +3802,7 @@
         "response_ms": 2270,
         "total_links_found": 51,
         "total_links_audited": 51,
-        "verified_working_links_count": 49,
+        "verified_working_links_count": 50,
         "verified_working_links": [
           "https://uidai.gov.in/en/contact-support/have-any-question/1012-english-uk/faqs/aadhaar-online-services/aadhaar-lock-unlock.html",
           "https://scholarships.gov.in/aboutUs",
@@ -3917,13 +3815,8 @@
           "https://scholarships.gov.in/home",
           "https://scholarships.gov.in/siteMap"
         ],
-        "broken_links": 2,
+        "broken_links": 1,
         "broken_links_details": [
-          {
-            "url": "https://locator.csccloud.in/",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
           {
             "url": "https://scholarships.gov.in/Institutes",
             "status_code": 404,
@@ -3998,7 +3891,7 @@
         "status": "no_language_switcher_found",
         "flagged_terms": []
       },
-      "composite_score": 38.4
+      "composite_score": 39.2
     },
     {
       "name": "National Career Service",
@@ -4119,7 +4012,7 @@
         "response_ms": 2008,
         "total_links_found": 43,
         "total_links_audited": 43,
-        "verified_working_links_count": 37,
+        "verified_working_links_count": 41,
         "verified_working_links": [
           "https://swachhbharatmission.ddws.gov.in/studies-and-surveys",
           "https://www.vandemataram150.in/",
@@ -4132,13 +4025,8 @@
           "https://swachhbharatmission.ddws.gov.in/feedback",
           "https://swachhbharatmission.ddws.gov.in/hyperlinking-policy"
         ],
-        "broken_links": 6,
+        "broken_links": 2,
         "broken_links_details": [
-          {
-            "url": "https://swachhbharatmission.ddws.gov.in/",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
           {
             "url": "https://ejalshakti.gov.in/iwc_2026",
             "status_code": 503,
@@ -4148,21 +4036,6 @@
             "url": "https://ejalshakti.gov.in/ISC/Login.aspx",
             "status_code": 500,
             "reason": "HTTP 500"
-          },
-          {
-            "url": "https://swachhbharatmission.ddws.gov.in/guidelines",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "https://swachhbharatmission.ddws.gov.in/swachhata-samachar",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "https://swachhbharatmission.ddws.gov.in/press-releases",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
           }
         ],
         "broken_forms": 0,
@@ -4198,7 +4071,7 @@
         "status": "switcher_clicked_low_hindi",
         "flagged_terms": []
       },
-      "composite_score": 76.6
+      "composite_score": 79.8
     },
     {
       "name": "Skill India",

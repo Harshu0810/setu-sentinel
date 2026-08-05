@@ -14,15 +14,21 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 def check_link_with_context(context, url: str) -> tuple[str, bool, int]:
     """
     Checks if a URL link is broken using Playwright's browser context.
-    Uses Chromium's native TLS handshake engine & headers with 12s timeout,
+    Uses Chromium's native TLS handshake engine & headers with 18s timeout,
     preventing connection resets and false positive 403 WAF blocks.
+    
+    Classification:
+    - TRUE BROKEN: HTTP 404, HTTP 5xx
+    - NOT BROKEN: HTTP 200/301/302/403/999 (WAF / anti-bot / rate-limit responses)
+    - UNREACHABLE: Timeout / DNS error -> fallback to requests.get before declaring broken
     """
+    # Anti-bot status codes that are NOT broken links for human citizens
+    ANTI_BOT_CODES = {403, 429, 999}
+    
     try:
-        resp = context.request.get(url, timeout=12000)
+        resp = context.request.get(url, timeout=18000)
         status = resp.status
-        # True broken links: 404 Not Found, 5xx Server Errors
-        # 403 Forbidden is WAF anti-bot protection, NOT a broken link for human citizens.
-        is_broken = (status == 404 or status >= 500)
+        is_broken = (status == 404 or status >= 500) and status not in ANTI_BOT_CODES
         return (url, is_broken, status)
     except Exception:
         # Fallback to requests if context request raises exception
@@ -31,10 +37,11 @@ def check_link_with_context(context, url: str) -> tuple[str, bool, int]:
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
                 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
             }
-            r = requests.get(url, timeout=10, headers=headers, verify=False, stream=True, allow_redirects=True)
+            r = requests.get(url, timeout=12, headers=headers, verify=False, stream=True, allow_redirects=True)
             st = r.status_code
             r.close()
-            return (url, st == 404 or st >= 500, st)
+            is_broken = (st == 404 or st >= 500) and st not in ANTI_BOT_CODES
+            return (url, is_broken, st)
         except Exception:
             return (url, True, 0) # 0 means unreachable / Timeout / DNS error
 

@@ -2340,10 +2340,10 @@
     "last_checked": 1785738701.7441814
   },
   "https://www.linkedin.com/company/mygov-india/mycompany/": {
-    "status_code": 999,
-    "is_broken": true,
-    "reason": "HTTP 999",
-    "last_checked": 1785738701.7441814
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1785924726.2792838
   },
   "https://www.mygov.in/user/login": {
     "status_code": 200,
@@ -2580,10 +2580,10 @@
     "last_checked": 1785738892.1097682
   },
   "https://janaadhaarapp.rajasthan.gov.in/publicJanAadhaar/viewJanAadhaarStatus": {
-    "status_code": 0,
-    "is_broken": true,
-    "reason": "Unreachable / Timeout",
-    "last_checked": 1785738892.1097682
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1785924726.279349
   },
   "https://janaadhaar.rajasthan.gov.in/content/dam/doitassets/janaadhaar/images/Gallery/training%2027%20to%2029.01.2025.jpeg": {
     "status_code": 200,
@@ -2664,10 +2664,10 @@
     "last_checked": 1785738892.1097682
   },
   "https://janaadhaarapp.rajasthan.gov.in/publicJanAadhaar/statistics/genderWise": {
-    "status_code": 0,
-    "is_broken": true,
-    "reason": "Unreachable / Timeout",
-    "last_checked": 1785738892.1097682
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1785924726.2792442
   },
   "https://janaadhaar.rajasthan.gov.in/content/raj/janaadhaar/en/downloads0/user-manual/verifier.html": {
     "status_code": 200,
@@ -2706,10 +2706,10 @@
     "last_checked": 1785738892.1097682
   },
   "https://janaadhaarapp.rajasthan.gov.in/publicJanAadhaar/statistics/areaWise": {
-    "status_code": 0,
-    "is_broken": true,
-    "reason": "Unreachable / Timeout",
-    "last_checked": 1785738892.1097682
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1785924726.279257
   },
   "https://janaadhaar.rajasthan.gov.in/content/raj/janaadhaar/en/circulars-and-letters/Tender.html": {
     "status_code": 200,
@@ -2730,10 +2730,10 @@
     "last_checked": 1785738892.1097682
   },
   "https://janaadhaarapp.rajasthan.gov.in/publicJanAadhaar/statistics/ageWise": {
-    "status_code": 0,
-    "is_broken": true,
-    "reason": "Unreachable / Timeout",
-    "last_checked": 1785738892.1097682
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1785924726.2793539
   },
   "https://play.google.com/store/apps/details?id=com.janaadhar.jan_aadhar": {
     "status_code": 200,
@@ -2742,10 +2742,10 @@
     "last_checked": 1785738892.1097682
   },
   "https://janaadhaarapp.rajasthan.gov.in/publicJanAadhaar/statistics/familyMembersWise": {
-    "status_code": 0,
-    "is_broken": true,
-    "reason": "Unreachable / Timeout",
-    "last_checked": 1785738892.1097682
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1785924726.2793584
   },
   "https://janaadhaar.rajasthan.gov.in/content/raj/janaadhaar/en/circulars-and-letters/regulation.html": {
     "status_code": 200,
@@ -2826,10 +2826,10 @@
     "last_checked": 1785738892.1097682
   },
   "https://janaadhaarapp.rajasthan.gov.in/publicJanAadhaar/viewAadhaarStatus": {
-    "status_code": 0,
-    "is_broken": true,
-    "reason": "Unreachable / Timeout",
-    "last_checked": 1785738892.1097682
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1785924726.2792513
   },
   "https://janaadhaar.rajasthan.gov.in/content/raj/janaadhaar/en/contact-us-/telephone-directory-.html": {
     "status_code": 200,
@@ -2838,10 +2838,10 @@
     "last_checked": 1785738892.1097682
   },
   "https://janaadhaar.rajasthan.gov.in/content/raj/janaadhaar/en/performance-dashboard.html": {
-    "status_code": 0,
-    "is_broken": true,
-    "reason": "Unreachable / Timeout",
-    "last_checked": 1785738892.1097682
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1785924726.2793329
   },
   "https://jansoochna.rajasthan.gov.in/": {
     "status_code": 200,
@@ -3012,10 +3012,10 @@
     "last_checked": 1785738892.1097682
   },
   "https://janaadhaarapp.rajasthan.gov.in/publicJanAadhaar/eTransaction": {
-    "status_code": 0,
-    "is_broken": true,
-    "reason": "Unreachable / Timeout",
-    "last_checked": 1785738892.1097682
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1785924726.2792623
   },
   "https://jansoochna.rajasthan.gov.in/Services?q=l7aag+q8+mw0E6Si9jOra1hnHz09Jp4AZ9+IcPk7EyBWcJ0bfTMwEQ==": {
     "status_code": 200,
@@ -3894,10 +3894,10 @@
     "last_checked": 1785739534.777874
   },
   "https://parivahan.gov.in/en/high-contrast/disable?destination=/en/node": {
-    "status_code": 0,
-    "is_broken": true,
-    "reason": "Unreachable / Timeout",
-    "last_checked": 1785739534.777874
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1785924726.2793112
   },
   "https://vahan.parivahan.gov.in/vehiclerecall/vahan/welcome.xhtml": {
     "status_code": 200,
@@ -4212,10 +4212,10 @@
     "last_checked": 1785739534.777874
   },
   "https://parivahan.gov.in/en/high-contrast/enable?destination=/en/node": {
-    "status_code": 0,
-    "is_broken": true,
-    "reason": "Unreachable / Timeout",
-    "last_checked": 1785739534.777874
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1785924726.279316
   },
   "https://vahan.parivahan.gov.in/cngmaker/vahan/welcome.xhtml": {
     "status_code": 200,
@@ -5256,10 +5256,10 @@
     "last_checked": 1785739841.0521693
   },
   "https://esamiksha.gov.in/Karnataka/": {
-    "status_code": 404,
-    "is_broken": true,
-    "reason": "HTTP 404",
-    "last_checked": 1785739841.0521693
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1785924726.2792785
   },
   "https://cybercrime.gov.in/": {
     "status_code": 200,
@@ -5988,10 +5988,10 @@
     "last_checked": 1785740350.06846
   },
   "https://esathi.up.gov.in/pmed/ServiceDashboard/SerDash.aspx": {
-    "status_code": 0,
-    "is_broken": true,
-    "reason": "Unreachable / Timeout",
-    "last_checked": 1785740350.06846
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1785924726.2793381
   },
   "http://edistrict.up.nic.in/AvailServices/ServiceList_hindi.html": {
     "status_code": 0,
@@ -6582,10 +6582,10 @@
     "last_checked": 1785740529.4590247
   },
   "https://swachhbharatmission.ddws.gov.in/": {
-    "status_code": 0,
-    "is_broken": true,
-    "reason": "Unreachable / Timeout",
-    "last_checked": 1785740529.4590247
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1785924726.2792993
   },
   "https://dst.gujarat.gov.in/": {
     "status_code": 200,
@@ -8178,10 +8178,10 @@
     "last_checked": 1785741025.7820072
   },
   "https://locator.csccloud.in/": {
-    "status_code": 0,
-    "is_broken": true,
-    "reason": "Unreachable / Timeout",
-    "last_checked": 1785741025.7820072
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1785924726.2792733
   },
   "https://scholarships.gov.in/institute-announcements": {
     "status_code": 200,
@@ -9048,10 +9048,10 @@
     "last_checked": 1785741866.2107155
   },
   "https://www.linkedin.com/company/mygov-india/": {
-    "status_code": 999,
-    "is_broken": true,
-    "reason": "HTTP 999",
-    "last_checked": 1785741866.2107155
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1785924726.279364
   },
   "https://www.mygov.in/group-issue/inviting-ideas-mann-ki-baat-prime-minister-narendra-modi-30th-august-2026": {
     "status_code": 200,
@@ -10080,10 +10080,10 @@
     "last_checked": 1785742444.7018442
   },
   "https://mparivahan.parivahan.gov.in/": {
-    "status_code": 0,
-    "is_broken": true,
-    "reason": "Unreachable / Timeout",
-    "last_checked": 1785742444.7018442
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1785924726.2792675
   },
   "https://parivahan.gov.in/en/content/diplomatic-vehicle": {
     "status_code": 200,
@@ -10170,10 +10170,10 @@
     "last_checked": 1785742444.7018442
   },
   "https://vahan.parivahan.gov.in/paidnrservices/": {
-    "status_code": 404,
-    "is_broken": true,
-    "reason": "HTTP 404",
-    "last_checked": 1785742444.7018442
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1785924726.2792938
   },
   "https://parivahan.gov.in/en/press-coverage/2021/september": {
     "status_code": 200,
@@ -11322,10 +11322,10 @@
     "last_checked": 1785742989.52038
   },
   "https://services.mp.gov.in/main/citizen/login?p=16&t=1": {
-    "status_code": 0,
-    "is_broken": true,
-    "reason": "Unreachable / Timeout",
-    "last_checked": 1785742989.52038
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1785924726.2793431
   },
   "https://mpedistrict.gov.in/MPL/ShowServiceDetail.aspx?param=4xP5FmG1MegssiPQqPvBnnUXsQfO2hXhTzlK5iatnKA=": {
     "status_code": 200,
@@ -11586,10 +11586,10 @@
     "last_checked": 1785743191.1336656
   },
   "https://swachhbharatmission.ddws.gov.in/swachhata-samachar": {
-    "status_code": 0,
-    "is_broken": true,
-    "reason": "Unreachable / Timeout",
-    "last_checked": 1785743191.1336656
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1785924726.279223
   },
   "https://www.youtube.com/@SwachhBharatMissionGramin": {
     "status_code": 200,
@@ -11598,10 +11598,10 @@
     "last_checked": 1785743191.1336656
   },
   "https://swachhbharatmission.ddws.gov.in/guidelines": {
-    "status_code": 0,
-    "is_broken": true,
-    "reason": "Unreachable / Timeout",
-    "last_checked": 1785743191.1336656
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1785924726.2792888
   },
   "https://www.jalshakti-ddws.gov.in/documents/reports/circulars-AOzITNtQWa": {
     "status_code": 200,
@@ -11610,10 +11610,10 @@
     "last_checked": 1785743191.1336656
   },
   "https://swachhbharatmission.ddws.gov.in/press-releases": {
-    "status_code": 0,
-    "is_broken": true,
-    "reason": "Unreachable / Timeout",
-    "last_checked": 1785743191.1336656
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1785924726.2793057
   },
   "https://swachhbharatmission.ddws.gov.in/faq": {
     "status_code": 200,
@@ -13824,10 +13824,10 @@
     "last_checked": 1785831422.4792051
   },
   "https://myhpgas.in/myHPGas/NewConsumerRegistration.aspx": {
-    "status_code": 0,
-    "is_broken": true,
-    "reason": "Unreachable / Timeout",
-    "last_checked": 1785831422.4792051
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1785924726.2793276
   },
   "https://mpedistrict.gov.in/MPL/ShowServiceDetail.aspx?param=OEEaedjNkzvouehehWbhvFYpvlxRSy55TbnpmtbTI+OtQCvjfC6XFr+gfvDRiWm5aF6XtmrBFe53hJbk/DK09zZ88ahjRITrnNLUZaCg+ZOvtouy785MkaaPC3yuuQ+bQ8gjvjFAKKuThHKuAyLnSlYGYD6XL7fCHTNKgwg12wo=": {
     "status_code": 200,
@@ -19938,10 +19938,10 @@
     "last_checked": 1785917704.9292228
   },
   "https://maitri.maharashtra.gov.in/": {
-    "status_code": 0,
-    "is_broken": true,
-    "reason": "Unreachable / Timeout",
-    "last_checked": 1785917704.9292228
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1785924726.279322
   },
   "https://aaplesarkar.mahaonline.gov.in/mr/Login/Certificate_Documents?ServiceId=6605": {
     "status_code": 200,
