@@ -419,6 +419,17 @@
                         </div>
                     </div>
 
+                    <!-- Historical Score Trend Timeline -->
+                    <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800">
+                        <div class="flex items-center justify-between mb-2.5">
+                            <h4 class="text-xs font-semibold text-slate-300 uppercase tracking-wider">📈 30-Run Historical Health Trend</h4>
+                            <span id="history-trend-label" class="text-[11px] font-mono text-emerald-400">Stable</span>
+                        </div>
+                        <div id="history-sparkline-container" class="flex items-end space-x-1.5 h-16 pt-2 overflow-x-auto custom-scrollbar">
+                            <!-- Injected dynamically -->
+                        </div>
+                    </div>
+
                     <div>
                         <h4 class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Broken Links Diagnostic Log</h4>
                         <div id="broken-links-container" class="bg-slate-950/60 rounded-xl border border-slate-800 p-4 text-xs font-mono">
@@ -502,6 +513,7 @@
     <!-- Script Logic -->
     <script>
         let allPortals = [];
+        let historyManifest = null;
         let currentFilter = 'All';
         let currentStatusFilter = 'all';
         let activeSelectedPortal = null;
@@ -516,6 +528,14 @@
                 document.getElementById('snapshot-time').innerText = isNaN(dateObj) ? (data.run_at || 'Just now') : dateObj.toLocaleString();
                 allPortals = data.portals || [];
                 
+                // Fetch historical manifest for time-series trend sparklines
+                try {
+                    const hRes = await fetch('./data/history_manifest.json?t=' + Date.now());
+                    historyManifest = await hRes.json();
+                } catch (e) {
+                    console.log("No history manifest found yet");
+                }
+
                 renderMetrics();
                 renderTable();
             } catch (err) {
@@ -730,6 +750,46 @@
             document.getElementById('detail-status-code').innerText = portal.uptime?.status_code ? `HTTP ${portal.uptime.status_code}` : (portal.uptime?.status === 'up' ? 'HTTP 200 OK' : 'DOWN');
             document.getElementById('detail-response-ms').innerText = `${portal.uptime?.response_ms ?? 0} ms`;
             document.getElementById('detail-broken-count').innerText = portal.uptime?.broken_links ?? 0;
+
+            // Render Historical Sparkline Timeline Bars from historyManifest
+            const sparkContainer = document.getElementById('history-sparkline-container');
+            const trendLabel = document.getElementById('history-trend-label');
+            if (sparkContainer) {
+                if (historyManifest && historyManifest.history && historyManifest.history.length > 0) {
+                    const snapList = historyManifest.history.slice(-30);
+                    let barHTML = '';
+                    let firstScore = null;
+                    let lastScore = null;
+                    
+                    snapList.forEach(snap => {
+                        const portalData = snap.scores?.[portal.name] || {};
+                        const s = portalData.score ?? 0;
+                        if (firstScore === null && s > 0) firstScore = s;
+                        if (s > 0) lastScore = s;
+                        
+                        const heightPct = Math.max(10, Math.min(100, s));
+                        let colorClass = 'bg-emerald-500/80 hover:bg-emerald-400';
+                        if (s < 50) colorClass = 'bg-rose-500/80 hover:bg-rose-400';
+                        else if (s < 75) colorClass = 'bg-amber-500/80 hover:bg-amber-400';
+                        
+                        const dateStr = snap.timestamp ? new Date(snap.timestamp).toLocaleDateString() : '';
+                        barHTML += `<div class="w-3 ${colorClass} rounded-t transition-all group relative cursor-pointer" style="height: ${heightPct}%" title="${dateStr}: Score ${s}">
+                            <div class="absolute bottom-full mb-1 hidden group-hover:block bg-slate-900 text-white text-[10px] p-1 rounded border border-slate-700 whitespace-nowrap z-50">${dateStr}<br/>Score: <strong>${s}</strong></div>
+                        </div>`;
+                    });
+                    
+                    sparkContainer.innerHTML = barHTML;
+                    
+                    if (firstScore !== null && lastScore !== null) {
+                        const diff = lastScore - firstScore;
+                        if (diff > 2) trendLabel.innerHTML = `<span class="text-emerald-400 font-bold">📈 +${diff.toFixed(1)} pts trend</span>`;
+                        else if (diff < -2) trendLabel.innerHTML = `<span class="text-rose-400 font-bold">📉 ${diff.toFixed(1)} pts trend</span>`;
+                        else trendLabel.innerHTML = `<span class="text-slate-400 font-bold">➡️ Stable (${lastScore}/100)</span>`;
+                    }
+                } else {
+                    sparkContainer.innerHTML = `<span class="text-xs text-slate-500">Historical trend initializing after first 6-hr run snapshot.</span>`;
+                }
+            }
 
             const brokenContainer = document.getElementById('broken-links-container');
             const brokenDetails = portal.uptime?.broken_links_details || [];

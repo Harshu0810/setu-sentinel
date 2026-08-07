@@ -113,9 +113,9 @@ def main():
     print(f"Evaluation complete: {len(results)} portals checked.")
     print(f"Snapshot saved to {filepath} and {latest_path}")
     
-    # Auto-generate Validation & Verification Reports
-    reports_dir = os.path.join(os.path.dirname(__file__), "..", "reports")
-    generate_validation_report(latest_path, reports_dir)
+    from checks.generate_report import generate_history_manifest
+    manifest_file = os.path.join(os.path.dirname(__file__), "..", "data", "history_manifest.json")
+    generate_history_manifest(history_dir, manifest_file)
 
 if __name__ == "__main__":
     main()

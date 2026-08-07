@@ -186,7 +186,7 @@
     "subcategory": "Hub",
     "purpose": "Gateway to Gujarat state government departments and schemes",
     "priority": 2,
-    "languages": ["hi"]
+    "languages": ["gu", "hi"]
   },
   {
     "name": "Aaple Sarkar Maharashtra",
@@ -195,7 +195,7 @@
     "subcategory": "Citizen Services",
     "purpose": "500+ Maharashtra citizen services (certificates, licenses, registrations)",
     "priority": 3,
-    "languages": ["hi"]
+    "languages": ["mr", "hi"]
   },
   {
     "name": "Seva Sindhu Karnataka",
@@ -204,7 +204,7 @@
     "subcategory": "Citizen Services",
     "purpose": "880+ Karnataka citizen services under the e-District Mission Mode Project",
     "priority": 3,
-    "languages": ["hi"]
+    "languages": ["kn", "hi"]
   },
   {
     "name": "e-District UP",
@@ -222,7 +222,7 @@
     "subcategory": "Citizen Services",
     "purpose": "Andhra Pradesh citizen services successor to e-Seva",
     "priority": 3,
-    "languages": ["hi"]
+    "languages": ["te", "hi"]
   },
   {
     "name": "Mee Seva (Telangana)",
@@ -231,7 +231,7 @@
     "subcategory": "Citizen Services",
     "purpose": "Telangana's Mee Seva instance after the 2014 AP/Telangana split",
     "priority": 3,
-    "languages": ["hi"]
+    "languages": ["te", "hi"]
   },
   {
     "name": "Digital Gujarat",
@@ -240,7 +240,7 @@
     "subcategory": "Citizen Services",
     "purpose": "100+ online services, single window for Gujarat citizen services",
     "priority": 3,
-    "languages": ["hi"]
+    "languages": ["gu", "hi"]
   },
   {
     "name": "RTPS Bihar",
@@ -267,7 +267,7 @@
     "subcategory": "Citizen Services",
     "purpose": "Kerala's e-governance/digital literacy citizen service centre network",
     "priority": 3,
-    "languages": ["hi"]
+    "languages": ["ml", "hi"]
   },
   {
     "name": "Tamil Nadu e-Sevai",
@@ -276,7 +276,7 @@
     "subcategory": "Citizen Services",
     "purpose": "Certificates and land record e-services under the state e-District project",
     "priority": 3,
-    "languages": ["hi"]
+    "languages": ["ta", "hi"]
   },
   {
     "name": "MP e-District",

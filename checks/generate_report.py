@@ -199,7 +199,56 @@ def generate_validation_report(latest_data_path: str, output_dir: str):
         
     print(f"Validation & Verification Reports generated at:\n  - {json_path}\n  - {md_path}\n  - {html_path}")
 
+def generate_history_manifest(history_dir: str, output_manifest_path: str):
+    """
+    Aggregates all historical snapshot JSON files in data/history/ into a lightweight
+    time-series manifest (data/history_manifest.json) for sparkline trend charts in UI.
+    """
+    if not os.path.exists(history_dir):
+        return
+        
+    history_entries = []
+    files = sorted([f for f in os.listdir(history_dir) if f.endswith(".json")])
+    
+    for fname in files:
+        fpath = os.path.join(history_dir, fname)
+        try:
+            with open(fpath, "r", encoding="utf-8") as f:
+                snap = json.load(f)
+            ts = snap.get("run_at", fname.replace(".json", ""))
+            scores = {}
+            for p in snap.get("portals", []):
+                pname = p.get("name")
+                if pname:
+                    scores[pname] = {
+                        "score": p.get("composite_score", 0),
+                        "status": p.get("uptime", {}).get("status", "down"),
+                        "broken": p.get("uptime", {}).get("broken_links", 0),
+                        "wcag": p.get("accessibility", {}).get("axe_violations", 0)
+                    }
+            history_entries.append({
+                "timestamp": ts,
+                "scores": scores
+            })
+        except Exception:
+            continue
+            
+    manifest_data = {
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "snapshots_count": len(history_entries),
+        "history": history_entries
+    }
+    
+    with open(output_manifest_path, "w", encoding="utf-8") as f:
+        json.dump(manifest_data, f, indent=2)
+        
+    print(f"History Manifest compiled ({len(history_entries)} snapshots) -> {output_manifest_path}")
+
 if __name__ == "__main__":
     latest_path = os.path.join(os.path.dirname(__file__), "..", "data", "latest.json")
     reports_dir = os.path.join(os.path.dirname(__file__), "..", "reports")
     generate_validation_report(latest_path, reports_dir)
+    
+    hist_dir = os.path.join(os.path.dirname(__file__), "..", "data", "history")
+    manifest_file = os.path.join(os.path.dirname(__file__), "..", "data", "history_manifest.json")
+    generate_history_manifest(hist_dir, manifest_file)
