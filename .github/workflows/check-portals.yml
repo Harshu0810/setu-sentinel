@@ -26,6 +26,9 @@ jobs:
           pip install -r requirements.txt
           playwright install --with-deps chromium
 
+      - name: Run Regression Test Suite
+        run: python -m pytest tests/
+
       - name: Run checks
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}

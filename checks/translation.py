@@ -366,15 +366,35 @@ def check_portal_translation(url: str, target_lang: str = "hi") -> dict:
         Stealth().apply_stealth_sync(page)
         
         try:
-            response = page.goto(url, timeout=35000, wait_until="commit")
-            
             try:
-                page.wait_for_load_state("domcontentloaded", timeout=15000)
+                response = page.goto(url, timeout=35000, wait_until="commit")
+                try:
+                    page.wait_for_load_state("domcontentloaded", timeout=15000)
+                except Exception:
+                    pass
             except Exception:
-                pass
+                response = None
                 
+            title_text = (page.title() or "").lower()
             init_dom = extract_dom_translation_data(page)
             initial_text = init_dom["full_text"]
+            
+            # WAF 403 / Access Denied fallback via requests
+            if response is None or response.status in [403, 401] or "access denied" in title_text or len(initial_text) < 50:
+                try:
+                    import requests
+                    headers = {
+                        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+                        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+                        'Accept-Language': 'en-US,en;q=0.9,hi;q=0.8',
+                    }
+                    r = requests.get(url, headers=headers, verify=False, timeout=15)
+                    if r.status_code == 200 and len(r.text) > 200:
+                        page.set_content(r.text, wait_until="domcontentloaded")
+                        init_dom = extract_dom_translation_data(page)
+                        initial_text = init_dom["full_text"]
+                except Exception:
+                    pass
             
             if len(initial_text) < 30:
                 return {
@@ -470,19 +490,19 @@ def check_portal_translation(url: str, target_lang: str = "hi") -> dict:
             flagged_terms = []
             quality_breakdown = {"fluency_score": 0, "glossary_score": 0, "artifacts_score": 0}
             
-            if devanagari_char_count > 30 or switcher_works or active_ratio > 0.15:
+            if len(initial_text) >= 100:
                 try:
                     client, model = get_client("gemini")
                     llm_res = score_translation_quality(client, model, initial_text, hindi_text)
                 except Exception:
                     llm_res = rule_based_quality_check(initial_text, hindi_text)
                     
-                quality_score = min(40, max(0, llm_res.get("quality_score", 25)))
+                quality_score = min(40, max(0, llm_res.get("quality_score", 15)))
                 flagged_terms = llm_res.get("flagged_terms", [])
                 quality_breakdown = {
-                    "fluency_score": llm_res.get("fluency_score", 12),
-                    "glossary_score": llm_res.get("glossary_score", 12),
-                    "artifacts_score": llm_res.get("artifacts_score", 8)
+                    "fluency_score": llm_res.get("fluency_score", 5),
+                    "glossary_score": llm_res.get("glossary_score", 10),
+                    "artifacts_score": llm_res.get("artifacts_score", 5)
                 }
             else:
                 quality_score = 0
