@@ -21502,5 +21502,89 @@
     "is_broken": false,
     "reason": "OK",
     "last_checked": 1785929767.6990016
+  },
+  "http://www.incometax.gov.in/iec/foportal//latest-news#3a889734-3d79-463f-aaae-5f5a648764a4": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786093609.9314616
+  },
+  "https://www.passportindia.gov.in/psp/mPassportApp": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786093651.1410553
+  },
+  "https://services1.passportindia.gov.in/forms/PreLogin": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786093651.1410553
+  },
+  "https://www.passportindia.gov.in/psp": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786093651.1410553
+  },
+  "https://services1.passportindia.gov.in/forms/registration": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786093651.1410553
+  },
+  "https://www.passportindia.gov.in/psp#MainContent": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786093651.1410553
+  },
+  "https://www.passportindia.gov.in/psp/TatkaalPassports": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786093651.1410553
+  },
+  "https://www.passportindia.gov.in/psp#": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786093651.1410553
+  },
+  "https://pledge.mygov.in/har-kharid-pardarshi-kharid/": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786093766.8719387
+  },
+  "https://innovateindia.mygov.in/digital-shram-sankalp/": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786093766.8719387
+  },
+  "https://quiz.mygov.in/quiz/7th-national-online-quiz-on-insolvency-and-bankruptcy-code-2016": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786093766.8719387
+  },
+  "https://sevasindhuservices.karnataka.gov.in/directApply.do?serviceId=2627": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786094297.776732
+  },
+  "https://esathi.up.gov.in/citizenservices/login/login.aspx?Xpr$lgnp=65o0o0ip53Usmijkd+jSZ/nkHNxBD6qT": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786094323.9527612
+  },
+  "https://edistrict.up.gov.in/edistrict/login/login.aspx?Xpr$lgnp=65o0o0ip53Usmijkd+jSZ/nkHNxBD6qT": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786094323.9527612
   }
 }
