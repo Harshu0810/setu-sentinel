@@ -1,12 +1,12 @@
 def calculate_composite_score(uptime_data: dict, accessibility_data: dict, translation_data: dict) -> float:
-    # If the site is completely down, composite score is 0
+    # If the site is temporarily down/unreachable, Uptime score is 0 (preserves Acc & Trans trend integrity)
     if uptime_data.get("status") != "up":
-        return 0.0
-        
-    uptime_score = 100
-    broken_links = uptime_data.get("broken_links", 0)
-    if broken_links > 0:
-        uptime_score -= min(50, broken_links * 2) # -2 per broken link, max -50
+        uptime_score = 0
+    else:
+        uptime_score = 100
+        broken_links = uptime_data.get("broken_links", 0)
+        if broken_links > 0:
+            uptime_score -= min(50, broken_links * 2) # -2 per broken link, max -50
     
     acc_score = accessibility_data.get("score", 0)
     if acc_score < 0:

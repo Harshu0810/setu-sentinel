@@ -261,8 +261,28 @@ def check_portal_accessibility(url: str) -> dict:
                     pass
             
             inaccurate_alts = len(vision_notes)
-            score = 100 - (critical_count * 5) - ((axe_violations_count - critical_count) * 1) - (inaccurate_alts * 10)
-            score = max(0, min(100, score))
+            
+            # Sub-linear WCAG scoring formula: Base penalty per distinct rule + log2(node_count) multiplier
+            import math
+            total_penalty = 0.0
+            for v in violations:
+                nodes_n = max(1, len(v.get("nodes", [])))
+                impact = v.get("impact", "minor")
+                node_mult = 1.0 + math.log2(nodes_n)
+                
+                if impact == "critical":
+                    total_penalty += 12.0 * node_mult
+                elif impact == "serious":
+                    total_penalty += 8.0 * node_mult
+                elif impact == "moderate":
+                    total_penalty += 5.0 * node_mult
+                else:
+                    total_penalty += 3.0 * node_mult
+                    
+            if inaccurate_alts > 0:
+                total_penalty += 10.0 * (1.0 + math.log2(inaccurate_alts))
+                
+            score = max(0, min(100, round(100.0 - total_penalty)))
             
             return {
                 "axe_violations": axe_violations_count,

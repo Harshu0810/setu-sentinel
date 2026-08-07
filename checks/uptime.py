@@ -25,25 +25,34 @@ def check_link_with_context(context, url: str) -> tuple[str, bool, int]:
     # Anti-bot status codes that are NOT broken links for human citizens
     ANTI_BOT_CODES = {403, 429, 999}
     
-    try:
-        resp = context.request.get(url, timeout=18000)
-        status = resp.status
-        is_broken = (status == 404 or status >= 500) and status not in ANTI_BOT_CODES
-        return (url, is_broken, status)
-    except Exception:
-        # Fallback to requests if context request raises exception
+    for attempt in range(2):
         try:
-            headers = {
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
-            }
-            r = requests.get(url, timeout=12, headers=headers, verify=False, stream=True, allow_redirects=True)
-            st = r.status_code
-            r.close()
-            is_broken = (st == 404 or st >= 500) and st not in ANTI_BOT_CODES
-            return (url, is_broken, st)
+            resp = context.request.get(url, timeout=18000)
+            status = resp.status
+            is_broken = (status == 404 or status >= 500) and status not in ANTI_BOT_CODES
+            if not is_broken:
+                return (url, False, status)
+            if attempt == 0:
+                time.sleep(1.5)
+                continue
+            return (url, True, status)
         except Exception:
-            return (url, True, 0) # 0 means unreachable / Timeout / DNS error
+            if attempt == 0:
+                time.sleep(1.5)
+                continue
+            # Fallback to requests if context request fails twice
+            try:
+                headers = {
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+                }
+                r = requests.get(url, timeout=12, headers=headers, verify=False, stream=True, allow_redirects=True)
+                st = r.status_code
+                r.close()
+                is_broken = (st == 404 or st >= 500) and st not in ANTI_BOT_CODES
+                return (url, is_broken, st)
+            except Exception:
+                return (url, True, 0) # 0 means unreachable / Timeout / DNS error
 
 CACHE_FILE = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data", "link_cache.json"))
 
@@ -192,16 +201,24 @@ def check_portal_uptime(url: str) -> dict:
             if status in [403, 503]:
                 status = 200 # WAF anti-bot block, site is up for humans
                 
-            # Try extracting links with fallback retry if page is redirecting (e.g. Startup India)
+            # Extract links with JS hydration guard for SPA portals
             links = []
             try:
                 links = page.eval_on_selector_all("a[href]", "els => els.map(e => e.href)")
             except Exception:
-                time.sleep(1.5)
+                pass
+                
+            if len(links) == 0:
+                # SPA / JS Hydration Wait: Wait up to 3.5s for dynamic client-side link rendering
+                time.sleep(3.5)
                 try:
                     links = page.eval_on_selector_all("a[href]", "els => els.map(e => e.href)")
                 except Exception:
                     links = []
+                    
+            status_note = "OK"
+            if len(links) == 0:
+                status_note = "SPA / Client-Side JS Hydration Required"
 
             total_found, total_audited, working_links, broken_details = audit_portal_links(context, links)
             
@@ -215,7 +232,8 @@ def check_portal_uptime(url: str) -> dict:
                 "broken_links": len(broken_details),
                 "broken_links_details": broken_details,
                 "broken_forms": 0,
-                "status_code": status or 200
+                "status_code": status or 200,
+                "status_note": status_note
             }
         except Exception as primary_exc:
             # Resilient HTTP request fallback for anti-bot / connection reset / timeout sites (e.g., UIDAI, Startup India, SARAL Haryana)

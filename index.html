@@ -344,7 +344,7 @@
     </footer>
 
     <!-- Detailed Diagnostic Modal / Drawer -->
-    <div id="detail-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 sm:p-6 transition-all duration-300">
+    <div id="detail-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 sm:p-6 transition-all duration-300">
         <div class="glass-panel bg-slate-900 border border-slate-800 rounded-3xl w-full max-w-4xl max-h-[90vh] flex flex-col shadow-2xl overflow-hidden transform scale-95 transition-transform duration-200" id="modal-box">
             
             <!-- Modal Header -->
@@ -357,7 +357,7 @@
                     
                     <!-- Prominent Direct External Link -->
                     <div class="flex items-center space-x-3 mt-1.5">
-                        <a id="modal-url" href="#" target="_blank" rel="noopener noreferrer" class="text-xs text-indigo-400 hover:text-indigo-300 hover:underline flex items-center space-x-1.5 font-mono bg-indigo-500/10 px-2.5 py-1 rounded-md border border-indigo-500/20 transition">
+                        <a id="modal-url" href="#" target="_blank" rel="noopener noreferrer" class="text-xs text-indigo-400 hover:text-indigo-300 hover:underline flex items-center space-x-1.5 font-mono bg-indigo-500/10 px-2.5 py-1 rounded-md border border-indigo-500/20 transition" aria-label="Open portal website in a new browser tab">
                             <span id="modal-url-text">https://...</span>
                             <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
                         </a>
@@ -366,13 +366,18 @@
                 </div>
 
                 <div class="flex items-center space-x-2">
+                    <!-- File Issue Button -->
+                    <button onclick="exportGitHubIssueMarkdown()" class="px-3 py-1.5 bg-rose-600/20 hover:bg-rose-600/40 text-rose-300 border border-rose-500/30 text-xs font-medium rounded-xl transition flex items-center space-x-1.5" title="Copy Actionable Bug Report for GitHub Issue / Government Grievance" aria-label="Copy actionable bug report markdown">
+                        <i data-lucide="file-warning" class="w-3.5 h-3.5"></i>
+                        <span>File Issue</span>
+                    </button>
                     <!-- Download Individual Report Button -->
-                    <button onclick="downloadIndividualPortalReport()" class="px-3 py-1.5 bg-emerald-600/20 hover:bg-emerald-600/40 text-emerald-300 border border-emerald-500/30 text-xs font-medium rounded-xl transition flex items-center space-x-1.5" title="Download Report for this Portal">
+                    <button onclick="downloadIndividualPortalReport()" class="px-3 py-1.5 bg-emerald-600/20 hover:bg-emerald-600/40 text-emerald-300 border border-emerald-500/30 text-xs font-medium rounded-xl transition flex items-center space-x-1.5" title="Download Report for this Portal" aria-label="Download detailed JSON report for this portal">
                         <i data-lucide="download" class="w-3.5 h-3.5"></i>
                         <span>Download Report</span>
                     </button>
                     <!-- Close Button -->
-                    <button onclick="closeModal()" class="p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-xl transition">
+                    <button onclick="closeModal()" class="p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-xl transition" aria-label="Close portal details modal">
                         <i data-lucide="x" class="w-5 h-5"></i>
                     </button>
                 </div>
@@ -958,6 +963,58 @@ ${(p.translation?.flagged_terms || []).length === 0 ? '  - No critical GIGW term
             link.click();
             document.body.removeChild(link);
         }
+
+        function exportGitHubIssueMarkdown() {
+            if (!activeSelectedPortal) return;
+            const p = activeSelectedPortal;
+            
+            const issueMD = `### 🐛 [Audit Failure Report] ${p.name}
+**Target Portal:** [${p.name}](${p.url})  
+**Composite Health Score:** \`${p.composite_score ?? 0} / 100\`  
+**Audit Timestamp:** \`${new Date().toISOString()}\`  
+
+---
+
+#### 📌 Summary Breakdown
+- **Uptime Status:** ${p.uptime?.status === 'up' ? '✅ UP' : '❌ DOWN'} (HTTP ${p.uptime?.status_code || 200}, ${p.uptime?.response_ms || 0}ms)
+- **Broken Links:** \`${p.uptime?.broken_links || 0}\` confirmed
+- **WCAG Violations:** \`${p.accessibility?.axe_violations || 0}\` total (\`${p.accessibility?.critical || 0}\` critical)
+- **GIGW Translation Score:** \`${p.translation?.score || 0} / 100\`
+
+---
+
+#### ⚡ Confirmed Broken Links
+${(p.uptime?.broken_links_details || []).length === 0 ? '_None detected._' : p.uptime.broken_links_details.map(b => `- ❌ \`${b.url}\` (${b.reason || b.status_code})`).join('\n')}
+
+---
+
+#### ♿ Top WCAG Accessibility Violations
+${(p.accessibility?.violation_details || []).length === 0 ? '_None detected._' : p.accessibility.violation_details.map(w => `- ⚠️ **[${w.id}]** (\`${w.impact}\`): ${w.description} (${w.nodes} DOM nodes affected)`).join('\n')}
+
+---
+
+#### 🌐 GIGW Translation & Terminology Audit
+- **Language Switcher:** \`${p.translation?.switcher_type || 'None'}\`
+- **Flagged Terms:**
+${(p.translation?.flagged_terms || []).length === 0 ? '  - _No GIGW glossary terms flagged._' : p.translation.flagged_terms.map(t => '  - ⚠️ ' + t).join('\n')}
+
+---
+*Reported automatically via [Setu Sentinel](https://harshu0810.github.io/setu-sentinel/).*
+`;
+
+            navigator.clipboard.writeText(issueMD).then(() => {
+                alert(`✅ Markdown bug report for ${p.name} copied to clipboard!\n\nYou can now paste this directly into a GitHub Issue or Government Grievance portal.`);
+            }).catch(err => {
+                console.error("Clipboard copy failed", err);
+            });
+        }
+
+        // Global Keyboard Accessibility: Close modal on Escape key press
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
 
         // Initial Load
         loadLatestData();
