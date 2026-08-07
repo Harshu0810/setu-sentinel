@@ -175,18 +175,23 @@ python -m http.server 8000
 
 ---
 
-## ⚙️ GitHub Actions Automation Workflow
+## ⚙️ 🔄 Automated 6-Hour Pipeline Execution & Audit Scope
 
-Setu Sentinel runs automatically every 6 hours via `.github/workflows/check-portals.yml`:
+Setu Sentinel operates as an entirely hands-off, automated monitoring platform via GitHub Actions ([`.github/workflows/check-portals.yml`](file:///d:/Ultra/setu-sentinel/.github/workflows/check-portals.yml)):
 
 ```yaml
 on:
   schedule:
-    - cron: "0 */6 * * *"
-  workflow_dispatch: {}
+    - cron: "0 */6 * * *"   # Triggers automatically every 6 hours (00:00, 06:00, 12:00, 18:00 UTC)
+  workflow_dispatch: {}       # Enables manual trigger on-demand
 ```
 
-The workflow executes `python -m checks.run_all`, generates updated snapshots and reports, and commits them automatically to the repository main branch to keep the GitHub Pages live dashboard updated.
+### 📋 Full Scope Tested During Every 6-Hour Automated Run:
+1. **🌐 All 38 Portals:** Audits all Central, State, Judiciary, and Educational government portals in `data/portals.json`.
+2. **🔗 All 3,200+ Homepage Links:** Crawls and verifies every link discovered on portal landing pages using Playwright Chromium TLS contexts (maintaining **0 backlog**).
+3. **♿ All WCAG 2.1 Accessibility Violations:** Runs full `axe-core` accessibility engine + native 10-point DOM scanner for color contrast, ARIA labels, and form label errors.
+4. **🌐 All GIGW Translation Quality Metrics:** Executes 5-paradigm language switcher discovery, 3-region Devanagari script density analysis (Nav, Headings, Body), and GIGW official terminology glossary verification.
+5. **📊 Automated Snapshot & Live Dashboard Sync:** Calculates composite scores, commits timestamped snapshots to `data/history/` and `data/latest.json`, updates `reports/validation_report.html`, and pushes to GitHub `main` branch to update the live public dashboard automatically.
 
 ---
 
