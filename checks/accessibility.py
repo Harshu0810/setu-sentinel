@@ -155,15 +155,17 @@ NATIVE_ACCESSIBILITY_AUDITOR = """
 """
 
 def check_portal_accessibility(url: str) -> dict:
-    is_ci = os.environ.get("CI", "").lower() == "true"
+    is_headless = os.environ.get("HEADED", "").lower() != "true"
     
     with sync_playwright() as p:
         browser = p.chromium.launch(
-            headless=is_ci,
+            headless=is_headless,
             args=[
                 "--disable-blink-features=AutomationControlled",
                 "--no-sandbox",
-                "--disable-setuid-sandbox"
+                "--disable-setuid-sandbox",
+                "--disable-dev-shm-usage",
+                "--disable-gpu"
             ]
         )
         context = browser.new_context(

@@ -345,10 +345,19 @@ def check_portal_translation(url: str, target_lang: str = "hi") -> dict:
     - Multi-Strategy Language Switcher Discovery (0-30 pts): Tests 5 UI paradigms for language switching.
     - GIGW Official Terminology & LLM Semantic Quality Audit (0-40 pts): Evaluates grammar, official glossary, and MT artifacts.
     """
-    is_ci = os.environ.get("CI", "").lower() == "true"
+    is_headless = os.environ.get("HEADED", "").lower() != "true"
     
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=is_ci)
+        browser = p.chromium.launch(
+            headless=is_headless,
+            args=[
+                "--disable-blink-features=AutomationControlled",
+                "--no-sandbox",
+                "--disable-setuid-sandbox",
+                "--disable-dev-shm-usage",
+                "--disable-gpu"
+            ]
+        )
         context = browser.new_context(
             user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
             ignore_https_errors=True
