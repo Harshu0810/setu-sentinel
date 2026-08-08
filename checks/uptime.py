@@ -177,6 +177,22 @@ def check_portal_uptime_with_page(page, context, url: str) -> dict:
         load_time_ms = int((time.time() - start_time) * 1000)
         
         status = response.status if response else None
+        title_text = (page.title() or "").lower()
+        
+        # WAF 403 / Access Denied fallback via requests to populate DOM for Playwright link extraction
+        if response is None or status in [403, 401, 503] or "access denied" in title_text:
+            try:
+                headers = {
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+                    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+                }
+                r = requests.get(url, headers=headers, verify=False, timeout=15)
+                if r.status_code == 200 and len(r.text) > 200:
+                    page.set_content(r.text, wait_until="domcontentloaded")
+                    status = 200
+            except Exception:
+                pass
+            
         if status in [403, 503]:
             status = 200 # WAF anti-bot block, site is up for humans
             
@@ -205,6 +221,20 @@ def check_portal_uptime_with_page(page, context, url: str) -> dict:
                     links = page.eval_on_selector_all("a[href]", "els => els.map(e => e.href)")
                 except Exception:
                     links = []
+
+            # Secondary WAF fallback if links are still 0
+            if len(links) == 0:
+                try:
+                    headers = {
+                        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+                        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+                    }
+                    r = requests.get(url, headers=headers, verify=False, timeout=15)
+                    if r.status_code == 200 and len(r.text) > 200:
+                        page.set_content(r.text, wait_until="domcontentloaded")
+                        links = page.eval_on_selector_all("a[href]", "els => els.map(e => e.href)")
+                except Exception:
+                    pass
                 
         status_note = "OK"
         if len(links) == 0:

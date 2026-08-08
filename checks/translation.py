@@ -79,6 +79,17 @@ def rule_based_quality_check(english_text: str, hindi_text: str) -> dict:
     total_alpha = len(re.findall(r'[a-zA-Z\u0900-\u097F]', hindi_text))
     dev_pct = (devanagari_chars / max(1, total_alpha)) * 100
     
+    # Strict floor: if target script is under 5%, zero out quality score (cannot score English prose as Hindi)
+    if dev_pct < 5.0:
+        return {
+            "quality_score": 0,
+            "fluency_score": 0,
+            "glossary_score": 0,
+            "artifacts_score": 0,
+            "flagged_terms": ["Insufficient Devanagari script content (<5% script ratio)"],
+            "summary": "Rule-based GIGW Audit: 0/40 (Script content < 5%)"
+        }
+    
     if dev_pct >= 60:
         fluency_score = 15
     elif dev_pct >= 30:
@@ -314,14 +325,16 @@ def find_and_click_language_switcher(page, target_lang: str = "hi", script_patte
             (f".top-bar a:has-text('{eng}')", "Top Bar Utility Menu"),
         ])
     
-    # Common structural selectors for the target language
+    # Common structural selectors for the target language (strict word/path boundaries)
     direct_locators.extend([
-        (f"a[href*='{target_lang}.']", f"Subdomain Language Link ({target_lang}.*)"),
-        (f"a[href*='{target_lang.lower()}']", f"Language Route Link ({target_lang})"),
+        (f"a[href*='://{target_lang}.']", f"Subdomain Language Link ({target_lang}.*)"),
+        (f"a[href*='//{target_lang}.']", f"Subdomain Language Link ({target_lang}.*)"),
+        (f"a[href$='/{target_lang}']", f"Language Path Link (/{target_lang})"),
+        (f"a[href*='/{target_lang}/']", f"Language Route Link (/{target_lang}/)"),
+        (f"a[href*='lang={target_lang}']", f"URL Parameter Link (?lang={target_lang})"),
+        (f"a[href*='locale={target_lang}']", f"URL Parameter Link (?locale={target_lang})"),
         (f"[data-lang='{target_lang}']", "Data Attribute Switcher"),
         (f".lang-{target_lang}", "Class-based Switcher"),
-        (f"a[href*='lang={target_lang}']", f"URL Parameter Link (?lang={target_lang})"),
-        (f"a[href*='/{target_lang}']", f"Relative Path Link (/{target_lang})"),
     ])
     # Hindi-specific legacy selectors
     if target_lang == "hi":
@@ -468,21 +481,25 @@ def check_portal_translation_with_page(page, url: str, target_lang: str = "hi") 
         else:
             clicked, sw_type, switched_text = find_and_click_language_switcher(page, target_lang, script_pattern)
             if clicked:
-                has_switcher = True
-                switcher_type = sw_type
-                switcher_score = 15
-                
                 post_dom = extract_dom_translation_data(page, script_pattern)
                 new_target_chars = len(re.findall(script_pattern, post_dom["full_text"]))
                 
-                if new_target_chars > target_char_count + 40 or post_dom["full_ratio"] > 0.25:
+                if (new_target_chars > target_char_count + 40 or post_dom["full_ratio"] > 0.10) and post_dom["full_ratio"] >= 0.05:
+                    has_switcher = True
                     switcher_works = True
+                    switcher_type = sw_type
                     switcher_score = 30
                     translated_text = post_dom["full_text"]
                     status = "switcher_success"
                 else:
-                    status = "switcher_clicked_low_target"
-            else:
+                    # Clicked link did NOT produce target script content (false positive click on unrelated English link)
+                    has_switcher = False
+                    switcher_works = False
+                    switcher_type = "None"
+                    switcher_score = 0
+                    status = "no_language_switcher_found"
+            
+            if not has_switcher:
                 # Paradigm 5: URL Navigation Fallbacks
                 subdomain_fb = url.replace("://www.", f"://{target_lang}.").replace("://", f"://{target_lang}.") if f"://{target_lang}." not in url else None
                 fallback_urls = [
@@ -508,7 +525,7 @@ def check_portal_translation_with_page(page, url: str, target_lang: str = "hi") 
                                 pass
                         fb_dom = extract_dom_translation_data(page, script_pattern)
                         fb_target_chars = len(re.findall(script_pattern, fb_dom["full_text"]))
-                        if fb_dom["full_ratio"] > 0.20 or fb_target_chars > 50:
+                        if fb_dom["full_ratio"] >= 0.05 and (fb_dom["full_ratio"] > 0.20 or fb_target_chars > 50):
                             has_switcher = True
                             switcher_works = True
                             switcher_type = f"URL Route ({fb_url})"
