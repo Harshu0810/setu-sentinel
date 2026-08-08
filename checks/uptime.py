@@ -4,7 +4,6 @@ import urllib3
 import os
 import json
 from urllib.parse import urlparse
-from concurrent.futures import ThreadPoolExecutor
 from playwright.sync_api import sync_playwright
 from playwright_stealth import Stealth
 
@@ -156,7 +155,118 @@ def audit_portal_links(context, links: list[str]) -> tuple[int, int, list[str], 
     
     return total_found, total_audited, all_working, all_broken
 
+def check_portal_uptime_with_page(page, context, url: str) -> dict:
+    """Core uptime check using an externally-managed page/context (for browser consolidation)."""
+    try:
+        start_time = time.time()
+        response = page.goto(url, timeout=35000, wait_until="commit")
+        
+        try:
+            page.wait_for_load_state("domcontentloaded", timeout=15000)
+        except Exception:
+            pass
+            
+        # Auto-dismiss popups / modal dialogs / cookie banners
+        try:
+            page.evaluate("""() => {
+                document.querySelectorAll('.modal .close, .popup-close, [aria-label="Close"], .btn-close, #cookie-accept, .close-btn, .modal-close').forEach(b => b.click());
+            }""")
+        except Exception:
+            pass
+            
+        load_time_ms = int((time.time() - start_time) * 1000)
+        
+        status = response.status if response else None
+        if status in [403, 503]:
+            status = 200 # WAF anti-bot block, site is up for humans
+            
+        # Extract links with JS hydration guard for SPA portals
+        links = []
+        try:
+            links = page.eval_on_selector_all("a[href]", "els => els.map(e => e.href)")
+        except Exception:
+            pass
+            
+        if len(links) == 0:
+            # SPA / JS Hydration: Adaptive polling — check every 1s up to 8s total
+            for _poll in range(8):
+                time.sleep(1.0)
+                try:
+                    links = page.eval_on_selector_all("a[href]", "els => els.map(e => e.href)")
+                except Exception:
+                    links = []
+                if len(links) > 0:
+                    break
+            
+            # Final attempt: wait for network to settle (catches late-hydrating Next.js/React apps)
+            if len(links) == 0:
+                try:
+                    page.wait_for_load_state("networkidle", timeout=5000)
+                    links = page.eval_on_selector_all("a[href]", "els => els.map(e => e.href)")
+                except Exception:
+                    links = []
+                
+        status_note = "OK"
+        if len(links) == 0:
+            status_note = "SPA / Client-Side JS Hydration Required"
+
+        total_found, total_audited, working_links, broken_details = audit_portal_links(context, links)
+        
+        return {
+            "status": "up" if status and status < 400 else "down",
+            "response_ms": load_time_ms,
+            "total_links_found": total_found,
+            "total_links_audited": total_audited,
+            "verified_working_links_count": len(working_links),
+            "verified_working_links": working_links[:10],
+            "broken_links": len(broken_details),
+            "broken_links_details": broken_details,
+            "broken_forms": 0,
+            "status_code": status or 200,
+            "status_note": status_note
+        }
+    except Exception as primary_exc:
+        # Resilient HTTP request fallback
+        try:
+            headers = {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+            }
+            r = requests.get(url, timeout=12, headers=headers, verify=False, stream=True, allow_redirects=True)
+            st = r.status_code
+            r.close()
+            if st < 500:
+                cache = load_link_cache()
+                domain = urlparse(url).netloc
+                cached_for_domain = [u for u in cache.keys() if domain in u and not cache[u].get("is_broken")]
+                return {
+                    "status": "up",
+                    "response_ms": 2500,
+                    "total_links_found": len(cached_for_domain),
+                    "total_links_audited": len(cached_for_domain),
+                    "verified_working_links_count": len(cached_for_domain),
+                    "verified_working_links": cached_for_domain[:10],
+                    "broken_links": 0,
+                    "broken_links_details": [],
+                    "broken_forms": 0,
+                    "status_code": st
+                }
+        except Exception:
+            pass
+            
+        return {
+            "status": "down",
+            "error": str(primary_exc),
+            "total_links_found": 0,
+            "total_links_audited": 0,
+            "verified_working_links_count": 0,
+            "verified_working_links": [],
+            "broken_links": 0,
+            "broken_links_details": []
+        }
+
 def check_portal_uptime(url: str) -> dict:
+    """Standalone uptime check — launches its own browser. Use check_portal_uptime_with_page for shared browser."""
     is_headless = os.environ.get("HEADED", "").lower() != "true"
     
     with sync_playwright() as p:
@@ -179,101 +289,7 @@ def check_portal_uptime(url: str) -> dict:
         Stealth().apply_stealth_sync(page)
         
         try:
-            start_time = time.time()
-            response = page.goto(url, timeout=35000, wait_until="commit")
-            
-            try:
-                page.wait_for_load_state("domcontentloaded", timeout=15000)
-            except Exception:
-                pass
-                
-            # Auto-dismiss popups / modal dialogs / cookie banners
-            try:
-                page.evaluate("""() => {
-                    document.querySelectorAll('.modal .close, .popup-close, [aria-label="Close"], .btn-close, #cookie-accept, .close-btn, .modal-close').forEach(b => b.click());
-                }""")
-            except Exception:
-                pass
-                
-            load_time_ms = int((time.time() - start_time) * 1000)
-            
-            status = response.status if response else None
-            if status in [403, 503]:
-                status = 200 # WAF anti-bot block, site is up for humans
-                
-            # Extract links with JS hydration guard for SPA portals
-            links = []
-            try:
-                links = page.eval_on_selector_all("a[href]", "els => els.map(e => e.href)")
-            except Exception:
-                pass
-                
-            if len(links) == 0:
-                # SPA / JS Hydration Wait: Wait up to 3.5s for dynamic client-side link rendering
-                time.sleep(3.5)
-                try:
-                    links = page.eval_on_selector_all("a[href]", "els => els.map(e => e.href)")
-                except Exception:
-                    links = []
-                    
-            status_note = "OK"
-            if len(links) == 0:
-                status_note = "SPA / Client-Side JS Hydration Required"
-
-            total_found, total_audited, working_links, broken_details = audit_portal_links(context, links)
-            
-            return {
-                "status": "up" if status and status < 400 else "down",
-                "response_ms": load_time_ms,
-                "total_links_found": total_found,
-                "total_links_audited": total_audited,
-                "verified_working_links_count": len(working_links),
-                "verified_working_links": working_links[:10], # Sample of verified working links
-                "broken_links": len(broken_details),
-                "broken_links_details": broken_details,
-                "broken_forms": 0,
-                "status_code": status or 200,
-                "status_note": status_note
-            }
-        except Exception as primary_exc:
-            # Resilient HTTP request fallback for anti-bot / connection reset / timeout sites (e.g., UIDAI, Startup India, SARAL Haryana)
-            try:
-                headers = {
-                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-                    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-                }
-                r = requests.get(url, timeout=12, headers=headers, verify=False, stream=True, allow_redirects=True)
-                st = r.status_code
-                r.close()
-                if st < 500: # 200, 301, 302, 403 are ALL proof the server is ONLINE for citizens
-                    cache = load_link_cache()
-                    # Retrieve any cached links for this domain
-                    domain = urlparse(url).netloc
-                    cached_for_domain = [u for u in cache.keys() if domain in u and not cache[u].get("is_broken")]
-                    return {
-                        "status": "up",
-                        "response_ms": 2500,
-                        "total_links_found": len(cached_for_domain),
-                        "total_links_audited": len(cached_for_domain),
-                        "verified_working_links_count": len(cached_for_domain),
-                        "verified_working_links": cached_for_domain[:10],
-                        "broken_links": 0,
-                        "broken_links_details": [],
-                        "broken_forms": 0,
-                        "status_code": st
-                    }
-            except Exception:
-                pass
-                
-            return {
-                "status": "down",
-                "error": str(primary_exc),
-                "total_links_found": 0,
-                "total_links_audited": 0,
-                "verified_working_links_count": 0,
-                "verified_working_links": [],
-                "broken_links": 0,
-                "broken_links_details": []
-            }
+            return check_portal_uptime_with_page(page, context, url)
         finally:
             browser.close()
+

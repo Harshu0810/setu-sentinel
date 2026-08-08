@@ -30,3 +30,23 @@ def get_client(provider: str = "groq") -> tuple[OpenAI, str]:
     
     client = OpenAI(base_url=cfg["base_url"], api_key=api_key)
     return client, cfg["model"]
+
+def get_client_with_fallback(preferred: str = "gemini", fallbacks: list = None) -> tuple[OpenAI, str]:
+    """
+    Try preferred provider, fall back to alternatives if API key is missing.
+    Returns (client, model) for the first provider with a configured API key.
+    """
+    if fallbacks is None:
+        fallbacks = ["groq"]
+    
+    for provider in [preferred] + fallbacks:
+        if provider not in PROVIDERS:
+            continue
+        cfg = PROVIDERS[provider]
+        api_key = os.environ.get(cfg["api_key_env"], "")
+        if api_key and api_key != "dummy-key-for-local":
+            client = OpenAI(base_url=cfg["base_url"], api_key=api_key)
+            return client, cfg["model"]
+    
+    # Last resort: return preferred even without a valid key (will fail at call time)
+    return get_client(preferred)

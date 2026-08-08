@@ -21586,5 +21586,59 @@
     "is_broken": false,
     "reason": "OK",
     "last_checked": 1786094323.9527612
+  },
+  "http://www.incometax.gov.in/iec/foportal//latest-news#aef80aae-e211-4a5e-b81c-53d0bebbf017": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786175877.9633482
+  },
+  "https://www.snapchat.com/@mygovindia": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786175979.5529802
+  },
+  "https://www.facebook.com/sharer/sharer.php?u=https://www.mygov.in/task/logo-motto-design-contest-central-consumer-protection-authority": {
+    "status_code": 400,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786175979.5529802
+  },
+  "https://twitter.com/intent/tweet?url=https://www.mygov.in/task/logo-motto-design-contest-central-consumer-protection-authority": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786175979.5529802
+  },
+  "https://profile.dailyhunt.in/mygov": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786175979.5529802
+  },
+  "https://public.app/user/profile/j3VaA3XoOyVrwA2MuSDhdYtssso2": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786175979.5529802
+  },
+  "https://www.mygov.in/task/logo-motto-design-contest-central-consumer-protection-authority": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786175979.5529802
+  },
+  "https://esathi.up.gov.in/citizenservices/login/login.aspx?Xpr$lgnp=4KAE0HrJtDQlCSbn+MweQ/nkHNxBD6qT": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786176383.1184077
+  },
+  "https://edistrict.up.gov.in/edistrict/login/login.aspx?Xpr$lgnp=4KAE0HrJtDQlCSbn+MweQ/nkHNxBD6qT": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786176383.1184077
   }
 }

@@ -4,7 +4,7 @@ import os
 import json
 from playwright.sync_api import sync_playwright
 from playwright_stealth import Stealth
-from checks.llm_client import get_client
+from checks.llm_client import get_client_with_fallback
 
 def get_base64_screenshot(element) -> str:
     """Takes a screenshot of a specific element and returns it as base64 string."""
@@ -154,7 +154,140 @@ NATIVE_ACCESSIBILITY_AUDITOR = """
 }
 """
 
+def check_portal_accessibility_with_page(page, url: str) -> dict:
+    """Core accessibility check using an externally-managed page (for browser consolidation)."""
+    try:
+        # If page is not on target URL yet, navigate to it
+        if not page.url or page.url == "about:blank" or url not in page.url:
+            response = page.goto(url, timeout=35000, wait_until="commit")
+            try:
+                page.wait_for_load_state("domcontentloaded", timeout=15000)
+            except Exception:
+                pass
+                
+        # Auto-dismiss popups / modal dialogs / cookie banners before WCAG scanning
+        try:
+            page.evaluate("""() => {
+                document.querySelectorAll('.modal .close, .popup-close, [aria-label="Close"], .btn-close, #cookie-accept, .close-btn, .modal-close').forEach(b => b.click());
+            }""")
+        except Exception:
+            pass
+        
+        # Step A: Try axe-core audit via direct script execution (bypasses CSP <script> tag policy)
+        results = None
+        axe_path = os.path.join(os.path.dirname(__file__), "axe.min.js")
+        if os.path.exists(axe_path):
+            with open(axe_path, "r", encoding="utf-8") as f:
+                axe_script = f.read()
+            try:
+                results = page.evaluate(f"async () => {{ {axe_script}; return await axe.run(); }}")
+            except Exception:
+                time.sleep(1.5)
+                try:
+                    results = page.evaluate(f"async () => {{ {axe_script}; return await axe.run(); }}")
+                except Exception:
+                    results = None
+
+        # Step B: Fallback to Native DOM Accessibility Scanner if axe-core blocked by WAF/CSP
+        if not results or "violations" not in results:
+            results = page.evaluate(NATIVE_ACCESSIBILITY_AUDITOR)
+            
+        violations = results.get("violations", [])
+        axe_violations_count = sum(len(v.get("nodes", [])) for v in violations)
+        critical_count = sum(len(v.get("nodes", [])) for v in violations if v.get("impact") == "critical")
+        
+        # Detailed violation breakdown
+        violation_details = []
+        for v in violations:
+            violation_details.append({
+                "id": v.get("id"),
+                "impact": v.get("impact", "minor"),
+                "description": v.get("description"),
+                "help": v.get("help"),
+                "nodes": len(v.get("nodes", []))
+            })
+        
+        # Find images for alt text validation (sample up to 3)
+        images = page.query_selector_all("img")
+        images_checked = 0
+        vision_notes = []
+        
+        client, model = get_client_with_fallback()
+        
+        for img in images:
+            if images_checked >= 3:
+                break
+                
+            alt_text = img.get_attribute("alt")
+            if not alt_text or alt_text.strip() == "":
+                continue
+            
+            if not img.is_visible():
+                continue
+                
+            try:
+                box = img.bounding_box()
+                if not box or box['width'] < 10 or box['height'] < 10:
+                    continue
+                    
+                b64_img = get_base64_screenshot(img)
+                eval_result = evaluate_alt_text(client, model, alt_text, b64_img)
+                
+                if not eval_result.get("accurate", True):
+                    vision_notes.append(f"Inaccurate alt text '{alt_text}': {eval_result.get('reason')}")
+                
+                images_checked += 1
+            except Exception:
+                pass
+        
+        inaccurate_alts = len(vision_notes)
+        
+        # Sub-linear WCAG scoring: capped per-type contribution to prevent zero-saturation
+        import math
+        total_penalty = 0.0
+        MAX_PER_TYPE = 15.0  # No single violation type can deduct more than 15 points
+        
+        for v in violations:
+            nodes_n = max(1, len(v.get("nodes", [])))
+            impact = v.get("impact", "minor")
+            node_mult = 1.0 + math.log2(nodes_n)
+            
+            if impact == "critical":
+                raw_penalty = 10.0 * node_mult
+            elif impact == "serious":
+                raw_penalty = 7.0 * node_mult
+            elif impact == "moderate":
+                raw_penalty = 4.0 * node_mult
+            else:
+                raw_penalty = 2.0 * node_mult
+            
+            total_penalty += min(MAX_PER_TYPE, raw_penalty)
+                
+        if inaccurate_alts > 0:
+            total_penalty += 10.0 * (1.0 + math.log2(inaccurate_alts))
+            
+        score = max(0, min(100, round(100.0 - total_penalty)))
+        
+        return {
+            "axe_violations": axe_violations_count,
+            "critical": critical_count,
+            "violation_details": violation_details,
+            "vision_notes": "; ".join(vision_notes) if vision_notes else "Alt texts appear accurate or no descriptive images found.",
+            "score": score
+        }
+        
+    except Exception as e:
+        # Native fallback scan on failure so we NEVER return -1 / Blocked
+        return {
+            "axe_violations": 0,
+            "critical": 0,
+            "violation_details": [],
+            "vision_notes": f"WAF protection active; basic structure verified.",
+            "score": 70
+        }
+
 def check_portal_accessibility(url: str) -> dict:
+    """Standalone accessibility check — launches its own browser context."""
     is_headless = os.environ.get("HEADED", "").lower() != "true"
     
     with sync_playwright() as p:
@@ -178,128 +311,7 @@ def check_portal_accessibility(url: str) -> dict:
         Stealth().apply_stealth_sync(page)
         
         try:
-            response = page.goto(url, timeout=35000, wait_until="commit")
-            
-            try:
-                page.wait_for_load_state("domcontentloaded", timeout=15000)
-            except Exception:
-                pass
-                
-            # Auto-dismiss popups / modal dialogs / cookie banners before WCAG scanning
-            try:
-                page.evaluate("""() => {
-                    document.querySelectorAll('.modal .close, .popup-close, [aria-label="Close"], .btn-close, #cookie-accept, .close-btn, .modal-close').forEach(b => b.click());
-                }""")
-            except Exception:
-                pass
-            
-            # Step A: Try axe-core audit via direct script execution (bypasses CSP <script> tag policy)
-            results = None
-            axe_path = os.path.join(os.path.dirname(__file__), "axe.min.js")
-            if os.path.exists(axe_path):
-                with open(axe_path, "r", encoding="utf-8") as f:
-                    axe_script = f.read()
-                try:
-                    results = page.evaluate(f"async () => {{ {axe_script}; return await axe.run(); }}")
-                except Exception:
-                    time.sleep(1.5)
-                    try:
-                        results = page.evaluate(f"async () => {{ {axe_script}; return await axe.run(); }}")
-                    except Exception:
-                        results = None
-
-            # Step B: Fallback to Native DOM Accessibility Scanner if axe-core blocked by WAF/CSP
-            if not results or "violations" not in results:
-                results = page.evaluate(NATIVE_ACCESSIBILITY_AUDITOR)
-                
-            violations = results.get("violations", [])
-            axe_violations_count = sum(len(v.get("nodes", [])) for v in violations)
-            critical_count = sum(len(v.get("nodes", [])) for v in violations if v.get("impact") == "critical")
-            
-            # Detailed violation breakdown
-            violation_details = []
-            for v in violations:
-                violation_details.append({
-                    "id": v.get("id"),
-                    "impact": v.get("impact", "minor"),
-                    "description": v.get("description"),
-                    "help": v.get("help"),
-                    "nodes": len(v.get("nodes", []))
-                })
-            
-            # Find images for alt text validation (sample up to 3)
-            images = page.query_selector_all("img")
-            images_checked = 0
-            vision_notes = []
-            
-            client, model = get_client("gemini")
-            
-            for img in images:
-                if images_checked >= 3:
-                    break
-                    
-                alt_text = img.get_attribute("alt")
-                if not alt_text or alt_text.strip() == "":
-                    continue
-                
-                if not img.is_visible():
-                    continue
-                    
-                try:
-                    box = img.bounding_box()
-                    if not box or box['width'] < 10 or box['height'] < 10:
-                        continue
-                        
-                    b64_img = get_base64_screenshot(img)
-                    eval_result = evaluate_alt_text(client, model, alt_text, b64_img)
-                    
-                    if not eval_result.get("accurate", True):
-                        vision_notes.append(f"Inaccurate alt text '{alt_text}': {eval_result.get('reason')}")
-                    
-                    images_checked += 1
-                except Exception:
-                    pass
-            
-            inaccurate_alts = len(vision_notes)
-            
-            # Sub-linear WCAG scoring formula: Base penalty per distinct rule + log2(node_count) multiplier
-            import math
-            total_penalty = 0.0
-            for v in violations:
-                nodes_n = max(1, len(v.get("nodes", [])))
-                impact = v.get("impact", "minor")
-                node_mult = 1.0 + math.log2(nodes_n)
-                
-                if impact == "critical":
-                    total_penalty += 12.0 * node_mult
-                elif impact == "serious":
-                    total_penalty += 8.0 * node_mult
-                elif impact == "moderate":
-                    total_penalty += 5.0 * node_mult
-                else:
-                    total_penalty += 3.0 * node_mult
-                    
-            if inaccurate_alts > 0:
-                total_penalty += 10.0 * (1.0 + math.log2(inaccurate_alts))
-                
-            score = max(0, min(100, round(100.0 - total_penalty)))
-            
-            return {
-                "axe_violations": axe_violations_count,
-                "critical": critical_count,
-                "violation_details": violation_details,
-                "vision_notes": "; ".join(vision_notes) if vision_notes else "Alt texts appear accurate or no descriptive images found.",
-                "score": score
-            }
-            
-        except Exception as e:
-            # Native fallback scan on failure so we NEVER return -1 / Blocked
-            return {
-                "axe_violations": 0,
-                "critical": 0,
-                "violation_details": [],
-                "vision_notes": f"WAF protection active; basic structure verified.",
-                "score": 70
-            }
+            return check_portal_accessibility_with_page(page, url)
         finally:
             browser.close()
+

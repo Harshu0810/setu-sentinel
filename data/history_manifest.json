@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-07T09:27:51.992801+00:00",
-  "snapshots_count": 26,
+  "generated_at": "2026-08-08T08:11:05.697167+00:00",
+  "snapshots_count": 27,
   "history": [
     {
       "timestamp": "2026-08-02T06:48:33.068158Z",
@@ -4989,6 +4989,239 @@
           "status": "up",
           "broken": 3,
           "wcag": 10
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-08T08:11:04.349499+00:00",
+      "scores": {
+        "National Portal of India": {
+          "score": 72.1,
+          "status": "up",
+          "broken": 0,
+          "wcag": 5
+        },
+        "DigiLocker": {
+          "score": 55.9,
+          "status": "up",
+          "broken": 0,
+          "wcag": 23
+        },
+        "UMANG": {
+          "score": 49.6,
+          "status": "up",
+          "broken": 0,
+          "wcag": 79
+        },
+        "eCourts": {
+          "score": 63.4,
+          "status": "up",
+          "broken": 0,
+          "wcag": 38
+        },
+        "Income Tax e-Filing": {
+          "score": 48.4,
+          "status": "up",
+          "broken": 0,
+          "wcag": 86
+        },
+        "Passport Seva": {
+          "score": 43.9,
+          "status": "up",
+          "broken": 0,
+          "wcag": 73
+        },
+        "Rajasthan State Portal": {
+          "score": 76.3,
+          "status": "up",
+          "broken": 0,
+          "wcag": 7
+        },
+        "Rajasthan SSO": {
+          "score": 71.8,
+          "status": "up",
+          "broken": 0,
+          "wcag": 1
+        },
+        "e-Mitra Rajasthan": {
+          "score": 61.0,
+          "status": "up",
+          "broken": 0,
+          "wcag": 90
+        },
+        "Jan Soochna Portal": {
+          "score": 58.4,
+          "status": "up",
+          "broken": 1,
+          "wcag": 13
+        },
+        "MyGov": {
+          "score": 43.9,
+          "status": "up",
+          "broken": 0,
+          "wcag": 196
+        },
+        "UIDAI (Aadhaar)": {
+          "score": 83.6,
+          "status": "up",
+          "broken": 1,
+          "wcag": 7
+        },
+        "Jan Aadhaar Rajasthan": {
+          "score": 72.3,
+          "status": "up",
+          "broken": 2,
+          "wcag": 36
+        },
+        "GeM (Govt e-Marketplace)": {
+          "score": 45.5,
+          "status": "up",
+          "broken": 10,
+          "wcag": 119
+        },
+        "RTU Kota": {
+          "score": 75.4,
+          "status": "up",
+          "broken": 0,
+          "wcag": 1
+        },
+        "Ayushman Bharat (PM-JAY)": {
+          "score": 21.0,
+          "status": "down",
+          "broken": 0,
+          "wcag": 0
+        },
+        "GST Portal": {
+          "score": 70.3,
+          "status": "up",
+          "broken": 0,
+          "wcag": 9
+        },
+        "EPFO Unified Portal": {
+          "score": 21.0,
+          "status": "down",
+          "broken": 0,
+          "wcag": 0
+        },
+        "Parivahan Sewa": {
+          "score": 67.5,
+          "status": "up",
+          "broken": 2,
+          "wcag": 56
+        },
+        "Rajasthan Sampark": {
+          "score": 70.0,
+          "status": "up",
+          "broken": 0,
+          "wcag": 72
+        },
+        "Gujarat State Portal": {
+          "score": 52.1,
+          "status": "up",
+          "broken": 1,
+          "wcag": 33
+        },
+        "Aaple Sarkar Maharashtra": {
+          "score": 67.0,
+          "status": "up",
+          "broken": 3,
+          "wcag": 74
+        },
+        "Seva Sindhu Karnataka": {
+          "score": 52.7,
+          "status": "up",
+          "broken": 29,
+          "wcag": 30
+        },
+        "e-District UP": {
+          "score": 67.6,
+          "status": "up",
+          "broken": 3,
+          "wcag": 24
+        },
+        "Mee Seva (Andhra Pradesh)": {
+          "score": 46.8,
+          "status": "up",
+          "broken": 2,
+          "wcag": 56
+        },
+        "Mee Seva (Telangana)": {
+          "score": 47.6,
+          "status": "up",
+          "broken": 1,
+          "wcag": 38
+        },
+        "Digital Gujarat": {
+          "score": 55.0,
+          "status": "up",
+          "broken": 0,
+          "wcag": 27
+        },
+        "RTPS Bihar": {
+          "score": 60.6,
+          "status": "up",
+          "broken": 14,
+          "wcag": 85
+        },
+        "SARAL Haryana": {
+          "score": 77.6,
+          "status": "up",
+          "broken": 1,
+          "wcag": 28
+        },
+        "Akshaya Kerala": {
+          "score": 47.6,
+          "status": "up",
+          "broken": 1,
+          "wcag": 98
+        },
+        "Tamil Nadu e-Sevai": {
+          "score": 67.9,
+          "status": "up",
+          "broken": 3,
+          "wcag": 15
+        },
+        "MP e-District": {
+          "score": 64.4,
+          "status": "up",
+          "broken": 7,
+          "wcag": 223
+        },
+        "e-Shram": {
+          "score": 75.1,
+          "status": "up",
+          "broken": 0,
+          "wcag": 3
+        },
+        "National Scholarship Portal": {
+          "score": 52.4,
+          "status": "up",
+          "broken": 1,
+          "wcag": 45
+        },
+        "National Career Service": {
+          "score": 69.4,
+          "status": "up",
+          "broken": 0,
+          "wcag": 3
+        },
+        "Swachh Bharat Mission": {
+          "score": 72.3,
+          "status": "up",
+          "broken": 2,
+          "wcag": 6
+        },
+        "Skill India": {
+          "score": 66.4,
+          "status": "up",
+          "broken": 0,
+          "wcag": 4
+        },
+        "Startup India": {
+          "score": 63.7,
+          "status": "up",
+          "broken": 3,
+          "wcag": 31
         }
       }
     }

@@ -6,13 +6,14 @@ from checks.translation import check_portal_translation, rule_based_quality_chec
 
 def test_india_gov_in_never_zeros():
     """
-    Regression Test: National Portal of India (india.gov.in) must NEVER post a false-negative 0/100 score.
-    WAF 403 or SPA rendering must be handled via requests/stealth fallback.
+    Regression Test: National Portal of India (india.gov.in) must find language switcher AND score >= 25.
+    WAF 403 or SPA rendering must be handled via requests/stealth/hydration fallback.
     """
     res = check_portal_translation("https://india.gov.in")
     assert res is not None
     assert isinstance(res.get("score"), (int, float))
-    assert res.get("score") > 0, "Regression detected: india.gov.in posted a false-negative 0/100 score!"
+    assert res.get("switcher_found") is True, f"Language switcher detection failed on india.gov.in: {res}"
+    assert res.get("score") >= 25, f"Score too low for india.gov.in: {res.get('score')}"
 
 def test_rule_based_quality_check_valid_hindi():
     """
