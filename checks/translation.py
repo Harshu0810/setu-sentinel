@@ -40,6 +40,15 @@ def get_script_regex(lang: str) -> str:
     """Returns the Unicode regex pattern for the given language's script."""
     return INDIC_SCRIPTS.get(lang, INDIC_SCRIPTS["hi"])
 
+# ==============================================================================
+# OFFICIAL GOVT OF INDIA PUNYCODE (.भारत / .xn--h2brj9c) IDN DOMAIN MAPPING
+# ==============================================================================
+INDIC_IDN_DOMAINS = {
+    "india.gov.in": "https://xn--i1bj3fqcyde.xn--11b7cb3a6a.xn--h2brj9c",      # भारतसरकार.राष्ट्रीयपोर्टल.भारत
+    "www.india.gov.in": "https://xn--i1bj3fqcyde.xn--11b7cb3a6a.xn--h2brj9c",  # भारतसरकार.राष्ट्रीयपोर्टल.भारत
+}
+
+
 
 # GIGW OFFICIAL GOVERNMENT TERMINOLOGY GLOSSARY & RULE-BASED AUDITOR
 # ==============================================================================
@@ -500,7 +509,11 @@ def check_portal_translation_with_page(page, url: str, target_lang: str = "hi") 
                     status = "no_language_switcher_found"
             
             if not has_switcher:
-                # Paradigm 5: URL Navigation Fallbacks
+                # Paradigm 5: URL Navigation & Punycode (.भारत) IDN Fallbacks
+                from urllib.parse import urlparse
+                domain = urlparse(url).netloc
+                idn_url = INDIC_IDN_DOMAINS.get(domain)
+                
                 subdomain_fb = url.replace("://www.", f"://{target_lang}.").replace("://", f"://{target_lang}.") if f"://{target_lang}." not in url else None
                 fallback_urls = [
                     url.rstrip('/') + f'/{target_lang}',
@@ -510,6 +523,8 @@ def check_portal_translation_with_page(page, url: str, target_lang: str = "hi") 
                 ]
                 if subdomain_fb and subdomain_fb != url:
                     fallback_urls.insert(0, subdomain_fb)
+                if idn_url:
+                    fallback_urls.insert(0, idn_url)
                     
                 found_fb = False
                 for fb_url in fallback_urls:
