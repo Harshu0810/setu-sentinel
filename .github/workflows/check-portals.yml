@@ -8,7 +8,7 @@ on:
 jobs:
   check:
     runs-on: ubuntu-latest    # 4 vCPU / 16GB RAM / 14GB SSD on public repos, free
-    timeout-minutes: 30
+    timeout-minutes: 60
     permissions:
       contents: write
     steps:
