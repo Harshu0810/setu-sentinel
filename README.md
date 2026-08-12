@@ -8,7 +8,6 @@
 [![Engine](https://img.shields.io/badge/Playwright-Chromium-orange?style=for-the-badge&logo=playwright)](https://playwright.dev)
 [![LLM Provider](https://img.shields.io/badge/LLM-Gemini%20%7C%20Groq%20%7C%20Ollama-purple?style=for-the-badge)](https://console.groq.com)
 [![CI/CD](https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/Harshu0810/setu-sentinel/actions)
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
 ---
 
@@ -422,6 +421,3 @@ on:
 
 ---
 
-## 📜 License
-
-Distributed under the MIT License. See `LICENSE` for more details.

@@ -4402,7 +4402,7 @@
     },
     {
       "name": "National Career Service",
-      "url": "https://www.ncs.gov.in",
+      "url": "https://ncs.gov.in",
       "category": "Central",
       "subcategory": "Employment",
       "purpose": "Digital job-matching platform, modernised employment exchanges",
@@ -4411,34 +4411,174 @@
         "hi"
       ],
       "uptime": {
-        "status": "down",
-        "response_ms": 353,
-        "total_links_found": 0,
-        "total_links_audited": 0,
-        "verified_working_links_count": 0,
-        "verified_working_links": [],
-        "broken_links": 0,
-        "broken_links_details": [],
+        "status": "up",
+        "response_ms": 8025,
+        "total_links_found": 56,
+        "total_links_audited": 56,
+        "verified_working_links_count": 36,
+        "verified_working_links": [
+          "https://play.google.com/store/apps/details?id=com.gov.ncs&hl=en_GB",
+          "https://www.facebook.com/ShobhaBJP?mibextid=wwXIfr&rdid=XnAbzvdFyriQk29z&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1GbQQbYDfr%2F%3Fmibextid%3DwwXIfr#",
+          "https://www.facebook.com/NationalCareerService/",
+          "https://ncs.gov.in/instructionalvideos",
+          "https://ncs.gov.in/jobseeker-list",
+          "https://ncs.gov.in/mentoring-center",
+          "https://ncs.gov.in/about-ncsc-da",
+          "https://maps.app.goo.gl/iaSctqVhL8YY4TeJ6",
+          "https://ncs.gov.in/home/job-post",
+          "https://betacloud.ncs.gov.in/cc-portal/"
+        ],
+        "broken_links": 20,
+        "broken_links_details": [
+          {
+            "url": "https://www.ncs.gov.in/",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "https://www.ncs.gov.in/Pages/nesm.aspx",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "https://www.ncs.gov.in/_layouts/15/ncsp/calendar.aspx",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "https://www.ncs.gov.in/employer/_layouts/15/NCSP/employer/JobPosting.aspx?JT=5qfCAxcaKGY%3D",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "https://www.ncs.gov.in/Pages/NCSEExStatics.aspx",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "https://www.ncs.gov.in/_layouts/15/ncsp/user-management/login.aspx?ReturnUrl=%2femployer%2f_layouts%2f15%2fAuthenticate.aspx%3fSource%3d%252Femployer%252F%255Flayouts%252F15%252FNCSP%252Femployer%252FJobPosting%252Easpx%253FJT%253D5qfCAxcaKGY%25253D&Source=%2Femployer%2F%5Flayouts%2F15%2FNCSP%2Femployer%2FJobPosting%2Easpx%3FJT%3D5qfCAxcaKGY%253D",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "https://www.ncs.gov.in/_layouts/15/NCSP/successstoryvideos.aspx",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "https://www.ncs.gov.in/content-repository/Pages/BrowseBySectors.aspx",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "https://www.ncs.gov.in/Pages/Documents.aspx",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "https://www.ncs.gov.in/_layouts/15/ncsp/ViewStaticAnalyticReports.aspx",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "https://www.ncs.gov.in/Pages/NCSPolicyDocuments.aspx",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "https://www.ncs.gov.in/_layouts/15/ncsp/ViewStaticReport.aspx",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "https://www.ncs.gov.in/Pages/Newsletters.aspx",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "https://ncs.gov.in/login/employer",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "https://www.ncs.gov.in/Pages/CareerSchemes.aspx",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "https://dget.ncs.gov.in/main.aspx",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://www.ncs.gov.in/_layouts/15/ncsp/NICSTraining.aspx",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "https://www.ncs.gov.in/Pages/RecruitmentAgencies.aspx",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "https://ncs.gov.in/home/job-fair/jobFairs",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "https://www.ncs.gov.in/_layouts/15/ncsp/viewfraudemployers.aspx",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          }
+        ],
         "broken_forms": 0,
-        "status_code": 404,
-        "status_note": "SPA / Client-Side JS Hydration Required"
+        "status_code": 200,
+        "status_note": "OK"
       },
       "accessibility": {
-        "axe_violations": 4,
-        "critical": 0,
+        "axe_violations": 172,
+        "critical": 24,
         "violation_details": [
           {
-            "id": "html-has-lang",
+            "id": "button-name",
+            "impact": "critical",
+            "description": "Ensures buttons have discernible text",
+            "help": "Buttons must have discernible text",
+            "nodes": 4
+          },
+          {
+            "id": "color-contrast",
             "impact": "serious",
-            "description": "Ensures every HTML document has a lang attribute",
-            "help": "<html> element must have a lang attribute",
+            "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "nodes": 2
+          },
+          {
+            "id": "heading-order",
+            "impact": "moderate",
+            "description": "Ensures the order of headings is semantically correct",
+            "help": "Heading levels should only increase by one",
+            "nodes": 3
+          },
+          {
+            "id": "image-alt",
+            "impact": "critical",
+            "description": "Ensures <img> elements have alternate text or a role of none or presentation",
+            "help": "Images must have alternate text",
+            "nodes": 20
+          },
+          {
+            "id": "list",
+            "impact": "serious",
+            "description": "Ensures that lists are structured correctly",
+            "help": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
             "nodes": 1
           },
           {
-            "id": "landmark-one-main",
-            "impact": "moderate",
-            "description": "Ensures the document has a main landmark",
-            "help": "Document should have one main landmark",
+            "id": "listitem",
+            "impact": "serious",
+            "description": "Ensures <li> elements are used semantically",
+            "help": "<li> elements must be contained in a <ul> or <ol>",
             "nodes": 1
           },
           {
@@ -4446,16 +4586,16 @@
             "impact": "moderate",
             "description": "Ensures all page content is contained by landmarks",
             "help": "All page content should be contained by landmarks",
-            "nodes": 2
+            "nodes": 141
           }
         ],
-        "vision_notes": "Alt texts appear accurate or no descriptive images found.",
-        "score": 81
+        "vision_notes": "Inaccurate alt text 'india-flag': API Error: Error code: 404 - [{'error': {'code': 404, 'message': 'This model models/gemini-2.0-flash is no longer available. Please update your code to use a newer model for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/migrate-to-interactions).', 'status': 'NOT_FOUND'}}]; Inaccurate alt text 'linkedln': API Error: Error code: 404 - [{'error': {'code': 404, 'message': 'This model models/gemini-2.0-flash is no longer available. Please update your code to use a newer model for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/migrate-to-interactions).', 'status': 'NOT_FOUND'}}]; Inaccurate alt text 'facebook': API Error: Error code: 404 - [{'error': {'code': 404, 'message': 'This model models/gemini-2.0-flash is no longer available. Please update your code to use a newer model for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/migrate-to-interactions).', 'status': 'NOT_FOUND'}}]",
+        "score": 0
       },
       "translation": {
         "language": "hi",
         "score": 0,
-        "devanagari_ratio_pct": 0.0,
+        "devanagari_ratio_pct": 0.9,
         "switcher_found": false,
         "switcher_type": "None",
         "status": "no_language_switcher_found",
@@ -4469,9 +4609,11 @@
           "glossary_score": 0,
           "artifacts_score": 0
         },
-        "flagged_terms": []
+        "flagged_terms": [
+          "Insufficient Devanagari script content (<5% script ratio)"
+        ]
       },
-      "composite_score": 24.3
+      "composite_score": 24.0
     },
     {
       "name": "Swachh Bharat Mission",

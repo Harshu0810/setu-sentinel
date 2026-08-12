@@ -8334,10 +8334,10 @@
     "last_checked": 1786447836.043557
   },
   "http://www.labour.gov.in/applications-and-appeals": {
-    "status_code": 200,
+    "status_code": 403,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1785741090.0935755
+    "last_checked": 1786517723.4492424
   },
   "https://betacloud.ncs.gov.in/e-migrate": {
     "status_code": 200,
@@ -8346,16 +8346,16 @@
     "last_checked": 1785741090.0935755
   },
   "https://www.ncs.gov.in/_layouts/15/ncsp/user-management/login.aspx?ReturnUrl=%2femployer%2f_layouts%2f15%2fAuthenticate.aspx%3fSource%3d%252Femployer%252F%255Flayouts%252F15%252FNCSP%252Femployer%252FJobPosting%252Easpx%253FJT%253D5qfCAxcaKGY%25253D&Source=%2Femployer%2F%5Flayouts%2F15%2FNCSP%2Femployer%2FJobPosting%2Easpx%3FJT%3D5qfCAxcaKGY%253D": {
-    "status_code": 200,
-    "is_broken": false,
-    "reason": "OK",
-    "last_checked": 1785741090.0935755
+    "status_code": 404,
+    "is_broken": true,
+    "reason": "HTTP 404",
+    "last_checked": 1786517723.4492424
   },
   "https://betacloud.ncs.gov.in/cc-portal/": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1785741090.0935755
+    "last_checked": 1786517723.4492424
   },
   "https://betacloud.ncs.gov.in/mentoring-center": {
     "status_code": 200,
@@ -8367,19 +8367,19 @@
     "status_code": 400,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1785741090.0935755
+    "last_checked": 1786517723.4492424
   },
   "https://www.instagram.com/mansukhmandviya/?igsh=MW10NmtsbHFvNWtr#": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1785741090.0935755
+    "last_checked": 1786517723.4492424
   },
   "https://www.instagram.com/shobhabjp/?igsh=MTRkb2tjYTNrazl6dQ%3D%3D#": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1785741090.0935755
+    "last_checked": 1786517723.4492424
   },
   "https://betacloud.ncs.gov.in/skill-provider": {
     "status_code": 200,
@@ -8403,13 +8403,13 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1785741090.0935755
+    "last_checked": 1786517723.4492424
   },
   "https://www.ncs.gov.in/_layouts/15/ncsp/calendar.aspx": {
-    "status_code": 200,
-    "is_broken": false,
-    "reason": "OK",
-    "last_checked": 1785741090.0935755
+    "status_code": 404,
+    "is_broken": true,
+    "reason": "HTTP 404",
+    "last_checked": 1786517723.4492424
   },
   "https://betacloud.ncs.gov.in/jobseeker-list": {
     "status_code": 200,
@@ -8421,31 +8421,31 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1785741090.0935755
+    "last_checked": 1786517723.4492424
   },
   "https://emigrate.gov.in/#/emigrate": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1785741090.0935755
+    "last_checked": 1786517723.4492424
   },
   "https://www.youtube.com/channel/UC67PKUJUW0jcAwR5TBn0cdw": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1785741090.0935755
+    "last_checked": 1786517723.4492424
   },
   "https://www.ncs.gov.in/employer/_layouts/15/NCSP/employer/JobPosting.aspx?JT=5qfCAxcaKGY%3D": {
-    "status_code": 200,
-    "is_broken": false,
-    "reason": "OK",
-    "last_checked": 1785741090.0935755
+    "status_code": 404,
+    "is_broken": true,
+    "reason": "HTTP 404",
+    "last_checked": 1786517723.4492424
   },
   "https://www.ncs.gov.in/Pages/RecruitmentAgencies.aspx": {
-    "status_code": 200,
-    "is_broken": false,
-    "reason": "OK",
-    "last_checked": 1785741090.0935755
+    "status_code": 404,
+    "is_broken": true,
+    "reason": "HTTP 404",
+    "last_checked": 1786517723.4492424
   },
   "https://betacloud.ncs.gov.in/latest-update": {
     "status_code": 200,
@@ -8454,16 +8454,16 @@
     "last_checked": 1785741090.0935755
   },
   "https://www.ncs.gov.in/Pages/Newsletters.aspx": {
-    "status_code": 200,
-    "is_broken": false,
-    "reason": "OK",
-    "last_checked": 1785741090.0935755
+    "status_code": 404,
+    "is_broken": true,
+    "reason": "HTTP 404",
+    "last_checked": 1786517723.4492424
   },
   "https://www.ncs.gov.in/_layouts/15/ncsp/NICSTraining.aspx": {
-    "status_code": 200,
-    "is_broken": false,
-    "reason": "OK",
-    "last_checked": 1785741090.0935755
+    "status_code": 404,
+    "is_broken": true,
+    "reason": "HTTP 404",
+    "last_checked": 1786517723.4492424
   },
   "https://betacloud.ncs.gov.in/career-center": {
     "status_code": 200,
@@ -8481,31 +8481,31 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1785741090.0935755
+    "last_checked": 1786517723.4492424
   },
   "https://www.ncs.gov.in/_layouts/15/ncsp/viewfraudemployers.aspx": {
-    "status_code": 200,
-    "is_broken": false,
-    "reason": "OK",
-    "last_checked": 1785741090.0935755
+    "status_code": 404,
+    "is_broken": true,
+    "reason": "HTTP 404",
+    "last_checked": 1786517723.4492424
   },
   "https://www.ncs.gov.in/Pages/Documents.aspx": {
-    "status_code": 200,
-    "is_broken": false,
-    "reason": "OK",
-    "last_checked": 1785741090.0935755
+    "status_code": 404,
+    "is_broken": true,
+    "reason": "HTTP 404",
+    "last_checked": 1786517723.4492424
   },
   "https://www.ncs.gov.in/_layouts/15/NCSP/successstoryvideos.aspx": {
-    "status_code": 200,
-    "is_broken": false,
-    "reason": "OK",
-    "last_checked": 1785741090.0935755
+    "status_code": 404,
+    "is_broken": true,
+    "reason": "HTTP 404",
+    "last_checked": 1786517723.4492424
   },
   "https://www.ncs.gov.in/content-repository/Pages/BrowseBySectors.aspx": {
-    "status_code": 200,
-    "is_broken": false,
-    "reason": "OK",
-    "last_checked": 1785741090.0935755
+    "status_code": 404,
+    "is_broken": true,
+    "reason": "HTTP 404",
+    "last_checked": 1786517723.4492424
   },
   "https://betacloud.ncs.gov.in/cvbuilder": {
     "status_code": 200,
@@ -8517,31 +8517,31 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1785741090.0935755
+    "last_checked": 1786517723.4492424
   },
   "https://employmentexchange-g4hpbpgwb0g9c9g4.centralindia-01.azurewebsites.net/": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1785741090.0935755
+    "last_checked": 1786517723.4492424
   },
   "https://www.ncs.gov.in/Pages/CareerSchemes.aspx": {
-    "status_code": 200,
-    "is_broken": false,
-    "reason": "OK",
-    "last_checked": 1785741090.0935755
+    "status_code": 404,
+    "is_broken": true,
+    "reason": "HTTP 404",
+    "last_checked": 1786517723.4492424
   },
   "https://app.powerbi.com/view?r=eyJrIjoiZWY3YTA5ODUtM2U0OC00NWExLWJiYjgtZGVjZjJkNjNjNmVlIiwidCI6ImVmYTllNTA2LTlkYmYtNDE5Yi05ZmFiLWJkN2UxOTk2OTMyOSJ9": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1785741090.0935755
+    "last_checked": 1786517723.4492424
   },
   "https://www.ncs.gov.in/Pages/nesm.aspx": {
-    "status_code": 200,
-    "is_broken": false,
-    "reason": "OK",
-    "last_checked": 1785741090.0935755
+    "status_code": 404,
+    "is_broken": true,
+    "reason": "HTTP 404",
+    "last_checked": 1786517723.4492424
   },
   "https://betacloud.ncs.gov.in/home/job-fair/jobFairs": {
     "status_code": 404,
@@ -8550,16 +8550,16 @@
     "last_checked": 1785741090.0935755
   },
   "https://www.ncs.gov.in/_layouts/15/ncsp/ViewStaticAnalyticReports.aspx": {
-    "status_code": 200,
-    "is_broken": false,
-    "reason": "OK",
-    "last_checked": 1785741090.0935755
+    "status_code": 404,
+    "is_broken": true,
+    "reason": "HTTP 404",
+    "last_checked": 1786517723.4492424
   },
   "https://www.instagram.com/nationalcareerservice/?hl=en": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1785741090.0935755
+    "last_checked": 1786517723.4492424
   },
   "https://betacloud.ncs.gov.in/about-ncsc-da": {
     "status_code": 200,
@@ -8571,19 +8571,19 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1785741090.0935755
+    "last_checked": 1786517723.4492424
   },
   "https://www.ncs.gov.in/_layouts/15/ncsp/ViewStaticReport.aspx": {
-    "status_code": 200,
-    "is_broken": false,
-    "reason": "OK",
-    "last_checked": 1785741090.0935755
+    "status_code": 404,
+    "is_broken": true,
+    "reason": "HTTP 404",
+    "last_checked": 1786517723.4492424
   },
   "https://skilling.wadhwanifoundation.org/en/register?instituteCode=DGEM-91-910652&featureKey=placement-prep%22": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1785741090.0935755
+    "last_checked": 1786517723.4492424
   },
   "https://betacloud.ncs.gov.in/instructionalvideos": {
     "status_code": 200,
@@ -8595,25 +8595,25 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1785741090.0935755
+    "last_checked": 1786517723.4492424
   },
   "https://www.ncs.gov.in/": {
-    "status_code": 200,
-    "is_broken": false,
-    "reason": "OK",
-    "last_checked": 1785741090.0935755
+    "status_code": 404,
+    "is_broken": true,
+    "reason": "HTTP 404",
+    "last_checked": 1786517723.4492424
   },
   "https://www.facebook.com/mansukhmandviya?mibextid=wwXIfr&rdid=fTYRuovFfQlns77t&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F16D9rCCqNW%2F%3Fmibextid%3DwwXIfr#": {
     "status_code": 400,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1785741090.0935755
+    "last_checked": 1786517723.4492424
   },
   "https://maps.app.goo.gl/iaSctqVhL8YY4TeJ6": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1785741090.0935755
+    "last_checked": 1786517723.4492424
   },
   "https://betacloud.ncs.gov.in/home/job-post": {
     "status_code": 200,
@@ -8628,16 +8628,16 @@
     "last_checked": 1785741090.0935755
   },
   "https://dget.ncs.gov.in/main.aspx": {
-    "status_code": 200,
-    "is_broken": false,
-    "reason": "OK",
-    "last_checked": 1785741090.0935755
+    "status_code": 0,
+    "is_broken": true,
+    "reason": "Unreachable / Timeout",
+    "last_checked": 1786517723.4492424
   },
   "https://www.ncs.gov.in/Pages/NCSPolicyDocuments.aspx": {
-    "status_code": 200,
-    "is_broken": false,
-    "reason": "OK",
-    "last_checked": 1785741090.0935755
+    "status_code": 404,
+    "is_broken": true,
+    "reason": "HTTP 404",
+    "last_checked": 1786517723.4492424
   },
   "https://betacloud.ncs.gov.in/job-listing?genderPreference=FEMALE": {
     "status_code": 200,
@@ -8655,7 +8655,7 @@
     "status_code": 400,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1785741090.0935755
+    "last_checked": 1786517723.4492424
   },
   "https://betacloud.ncs.gov.in/#": {
     "status_code": 200,
@@ -8664,10 +8664,10 @@
     "last_checked": 1785741090.0935755
   },
   "https://www.ncs.gov.in/Pages/NCSEExStatics.aspx": {
-    "status_code": 200,
-    "is_broken": false,
-    "reason": "OK",
-    "last_checked": 1785741090.0935755
+    "status_code": 404,
+    "is_broken": true,
+    "reason": "HTTP 404",
+    "last_checked": 1786517723.4492424
   },
   "https://www.skillindiadigital.gov.in/home": {
     "status_code": 200,
@@ -22168,5 +22168,113 @@
     "is_broken": false,
     "reason": "OK",
     "last_checked": 1786447336.8160596
+  },
+  "https://ncs.gov.in/instructionalvideos": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786517723.4492424
+  },
+  "https://ncs.gov.in/jobseeker-list": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786517723.4492424
+  },
+  "https://ncs.gov.in/skill-provider": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786517723.4492424
+  },
+  "https://ncs.gov.in/mentoring-center": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786517723.4492424
+  },
+  "https://ncs.gov.in/login/employer": {
+    "status_code": 404,
+    "is_broken": true,
+    "reason": "HTTP 404",
+    "last_checked": 1786517723.4492424
+  },
+  "https://ncs.gov.in/job-listing?pwdCandidateWelcome=true": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786517723.4492424
+  },
+  "https://ncs.gov.in/job-listing": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786517723.4492424
+  },
+  "https://ncs.gov.in/career-counsellors": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786517723.4492424
+  },
+  "https://ncs.gov.in/#": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786517723.4492424
+  },
+  "https://ncs.gov.in/latest-update": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786517723.4492424
+  },
+  "https://ncs.gov.in/e-migrate": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786517723.4492424
+  },
+  "https://ncs.gov.in/home/job-post": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786517723.4492424
+  },
+  "https://ncs.gov.in/career-center": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786517723.4492424
+  },
+  "https://ncs.gov.in/cvbuilder": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786517723.4492424
+  },
+  "https://ncs.gov.in/home/job-fair/jobFairs": {
+    "status_code": 404,
+    "is_broken": true,
+    "reason": "HTTP 404",
+    "last_checked": 1786517723.4492424
+  },
+  "https://ncs.gov.in/job-listing?genderPreference=FEMALE": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786517723.4492424
+  },
+  "https://ncs.gov.in/about-ncsc-da": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786517723.4492424
+  },
+  "https://ncs.gov.in/job-listing?isGovernmentJob=true": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786517723.4492424
   }
 }
