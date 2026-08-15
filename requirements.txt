@@ -4,5 +4,4 @@ openai==1.14.2
 streamlit==1.32.2
 requests==2.31.0
 python-dotenv==1.0.1
-playwright-stealth==1.0.6
-
+playwright-stealth>=2.0.0
