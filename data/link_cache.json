@@ -22666,5 +22666,47 @@
     "is_broken": false,
     "reason": "OK",
     "last_checked": 1786950334.892782
+  },
+  "https://blog.mygov.in/winners-announcement-for-drug-free-india-awareness-quiz-2-0-and-3-0/": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786971195.2375214
+  },
+  "https://www.mygov.in/blog/winners-announcement-drug-free-india-awareness-quiz-20-and-30": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786971195.2375214
+  },
+  "https://serviceonline.bihar.gov.in/#collapseSixOnenew": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786972553.3280218
+  },
+  "https://serviceonline.bihar.gov.in/#collapseSixOneMnew": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786972553.3280218
+  },
+  "https://serviceonline.bihar.gov.in/#eng_collapseSixOneMnew": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786972553.3280218
+  },
+  "https://serviceonline.bihar.gov.in/serviceLink.html?serviceToken=7t7fowRPyw": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786972553.3280218
+  },
+  "https://serviceonline.bihar.gov.in/#eng_collapseSixOnenew": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1786972553.3280218
   }
 }
