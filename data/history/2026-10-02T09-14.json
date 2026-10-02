@@ -952,9 +952,9 @@
           "artifacts_score": 10
         },
         "flagged_terms": [
-          "Missing GIGW Term: 'Department' (Expected: \u0935\u093f\u092d\u093e\u0917)",
-          "Missing GIGW Term: 'About Us' (Expected: \u0939\u092e\u093e\u0930\u0947 \u092c\u093e\u0930\u0947 \u092e\u0947\u0902)",
-          "Missing GIGW Term: 'Home' (Expected: \u092e\u0941\u0916\u094d\u092f \u092a\u0943\u0937\u094d\u0920)"
+          "Missing GIGW Term: 'Department' (Expected: विभाग)",
+          "Missing GIGW Term: 'About Us' (Expected: हमारे बारे में)",
+          "Missing GIGW Term: 'Home' (Expected: मुख्य पृष्ठ)"
         ]
       },
       "composite_score": 60.5
@@ -1129,7 +1129,7 @@
             "nodes": 1
           }
         ],
-        "vision_notes": "Inaccurate alt text 'Language selection': API Error: Error code: 404 - [{'error': {'code': 404, 'message': 'This model models/gemini-2.0-flash is no longer available. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).', 'status': 'NOT_FOUND'}}]; Inaccurate alt text 'UIDAI \u2014 Unique Identification Authority of India logo': API Error: Error code: 404 - [{'error': {'code': 404, 'message': 'This model models/gemini-2.0-flash is no longer available. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).', 'status': 'NOT_FOUND'}}]; Inaccurate alt text 'Menu icon': API Error: Error code: 404 - [{'error': {'code': 404, 'message': 'This model models/gemini-2.0-flash is no longer available. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).', 'status': 'NOT_FOUND'}}]",
+        "vision_notes": "Inaccurate alt text 'Language selection': API Error: Error code: 404 - [{'error': {'code': 404, 'message': 'This model models/gemini-2.0-flash is no longer available. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).', 'status': 'NOT_FOUND'}}]; Inaccurate alt text 'UIDAI — Unique Identification Authority of India logo': API Error: Error code: 404 - [{'error': {'code': 404, 'message': 'This model models/gemini-2.0-flash is no longer available. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).', 'status': 'NOT_FOUND'}}]; Inaccurate alt text 'Menu icon': API Error: Error code: 404 - [{'error': {'code': 404, 'message': 'This model models/gemini-2.0-flash is no longer available. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).', 'status': 'NOT_FOUND'}}]",
         "score": 52
       },
       "translation": {
@@ -1298,7 +1298,7 @@
           "artifacts_score": 6
         },
         "flagged_terms": [
-          "Missing GIGW Term: 'About Us' (Expected: \u0939\u092e\u093e\u0930\u0947 \u092c\u093e\u0930\u0947 \u092e\u0947\u0902)",
+          "Missing GIGW Term: 'About Us' (Expected: हमारे बारे में)",
           "Untranslated UI Elements: Screen Reader Access, Copyright"
         ]
       },
@@ -1835,7 +1835,7 @@
         "score": 95,
         "devanagari_ratio_pct": 85.3,
         "switcher_found": true,
-        "switcher_type": "Direct Text Link ('\u0939\u093f\u0928\u094d\u0926\u0940')",
+        "switcher_type": "Direct Text Link ('हिन्दी')",
         "status": "switcher_success",
         "regional_breakdown": {
           "nav_pct": 94.9,
@@ -1848,8 +1848,8 @@
           "artifacts_score": 8
         },
         "flagged_terms": [
-          "Missing GIGW Term: 'Department' (Expected: \u0935\u093f\u092d\u093e\u0917)",
-          "Missing GIGW Term: 'Home' (Expected: \u092e\u0941\u0916\u094d\u092f \u092a\u0943\u0937\u094d\u0920)",
+          "Missing GIGW Term: 'Department' (Expected: विभाग)",
+          "Missing GIGW Term: 'Home' (Expected: मुख्य पृष्ठ)",
           "Untranslated UI Elements: Screen Reader Access"
         ]
       },
@@ -3124,7 +3124,7 @@
         "score": 100,
         "devanagari_ratio_pct": 97.7,
         "switcher_found": true,
-        "switcher_type": "Direct Text Link ('\u0939\u093f\u0902\u0926\u0940')",
+        "switcher_type": "Direct Text Link ('हिंदी')",
         "status": "switcher_success",
         "regional_breakdown": {
           "nav_pct": 90.9,
@@ -3715,9 +3715,9 @@
           "https://ncs.gov.in/cvbuilder",
           "https://ncs.gov.in/#",
           "https://www.youtube.com/channel/UC67PKUJUW0jcAwR5TBn0cdw",
-          "https://ncsdocsstorage.blob.core.windows.net/ncsdocsstorage/common%2Fwhatsnew%2Fnewsletter_1786551484415.pdf?sv=2023-11-03&spr=https&st=2026-08-12T16%3A13%3A04Z&se=2028-08-12T16%3A18%3A04Z&sr=b&sp=r&sig=J6d35Ykkg%2FeUOZf0PfJoDniyrL1B8z5ZUIctdiE5UXc%3D",
+          "https://ncsdocsstorage.blob.core.windows.net/ncsdocsstorage/common%2Fwhatsnew%2Fnewsletter_1786551484415.pdf",
           "https://ncs.gov.in/about-ncsc-da",
-          "https://ncsdocsstorage.blob.core.windows.net/ncsdocsstorage/common%2Fwhatsnew%2Fnewsletter_1786551955970.pdf?sv=2023-11-03&spr=https&st=2026-08-12T16%3A20%3A56Z&se=2028-08-12T16%3A25%3A56Z&sr=b&sp=r&sig=xxmfZ2IWn8GaGFjPWXNVCRTlfR65Q1F9Lgy69b8wV6w%3D"
+          "https://ncsdocsstorage.blob.core.windows.net/ncsdocsstorage/common%2Fwhatsnew%2Fnewsletter_1786551955970.pdf"
         ],
         "broken_links": 2,
         "broken_links_details": [

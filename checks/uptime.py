@@ -4,12 +4,51 @@ import requests
 import urllib3
 import os
 import json
-from urllib.parse import urlparse
+from urllib.parse import urlparse, urlunparse, parse_qs, urlencode
+import re
 from playwright.sync_api import sync_playwright
 from playwright_stealth import Stealth
 
 # Disable insecure request warnings for broken govt SSL certs
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+# ── Credential-stripping sanitizer ──────────────────────────────────────────
+# Azure SAS, AWS pre-signed, and GCS signed URL query params that carry secrets
+_SENSITIVE_QUERY_PARAMS = {
+    # Azure Blob Storage SAS tokens
+    'sig', 'sv', 'se', 'sp', 'sr', 'spr', 'st', 'sip', 'sdd',
+    # AWS S3 pre-signed URLs
+    'x-amz-signature', 'x-amz-credential', 'x-amz-security-token',
+    'x-amz-date', 'x-amz-algorithm', 'x-amz-signedheaders', 'x-amz-expires',
+    # GCS signed URLs
+    'x-goog-signature', 'x-goog-credential', 'x-goog-date',
+    'x-goog-algorithm', 'x-goog-signedheaders', 'x-goog-expires',
+}
+
+def sanitize_url(url: str) -> str:
+    """Strips cloud-storage credential tokens from a URL to prevent secret leaks in public data.
+    
+    Removes Azure SAS (sig=), AWS pre-signed (X-Amz-Signature=), and GCS signed
+    (X-Goog-Signature=) query parameters while preserving the base resource path.
+    Returns the sanitized URL, or the original if no sensitive params are found.
+    """
+    if not url or '?' not in url:
+        return url
+    try:
+        parsed = urlparse(url)
+        params = parse_qs(parsed.query, keep_blank_values=True)
+        # Check if any param name (case-insensitive) matches a sensitive key
+        cleaned = {k: v for k, v in params.items() if k.lower() not in _SENSITIVE_QUERY_PARAMS}
+        if len(cleaned) == len(params):
+            return url  # Nothing to strip
+        new_query = urlencode(cleaned, doseq=True)
+        return urlunparse(parsed._replace(query=new_query))
+    except Exception:
+        return url
+
+def sanitize_url_list(urls: list[str]) -> list[str]:
+    """Sanitizes a list of URLs, stripping any embedded credentials."""
+    return [sanitize_url(u) for u in urls]
 
 def resolve_domain_doh(domain: str) -> list[str]:
     """Queries Google DNS-over-HTTPS (DoH) to check if domain has valid A records."""
@@ -100,8 +139,10 @@ def load_link_cache() -> dict:
 def save_link_cache(cache: dict):
     try:
         os.makedirs(os.path.dirname(CACHE_FILE), exist_ok=True)
+        # Ensure cache keys are sanitized before writing to disk
+        clean_cache = {sanitize_url(k): v for k, v in cache.items()}
         with open(CACHE_FILE, "w", encoding="utf-8") as f:
-            json.dump(cache, f, indent=2)
+            json.dump(clean_cache, f, indent=2)
     except Exception as e:
         print(f"  [Cache Warning] Failed to save cache file: {e}")
 
@@ -112,7 +153,8 @@ def audit_portal_links(context, links: list[str]) -> tuple[int, int, list[str], 
     - Audits up to 100 NEW / untested links per portal run to prevent anti-bot WAF blocks.
     - Returns (total_found, total_audited, working_links_list, broken_links_details).
     """
-    valid_links = [l for l in links if l and l.startswith('http') and not any(l.endswith(ext) for ext in ['.pdf', '.zip', '.doc', '.xlsx'])]
+    # Sanitize URLs immediately upon extraction so no credentials enter audit or cache
+    valid_links = [sanitize_url(l) for l in links if l and l.startswith('http') and not any(l.endswith(ext) for ext in ['.pdf', '.zip', '.doc', '.xlsx'])]
     valid_links = list(set(valid_links))
     
     total_found = len(valid_links)
@@ -156,24 +198,24 @@ def audit_portal_links(context, links: list[str]) -> tuple[int, int, list[str], 
             "last_checked": now
         }
         
-        # Save both original url and returned url_res for redirect robustness
-        cache[url] = entry
-        cache[url_res] = entry
+        # Save both original url and returned url_res for redirect robustness (sanitized)
+        cache[sanitize_url(url)] = entry
+        cache[sanitize_url(url_res)] = entry
         
         if is_broken:
             fresh_broken.append({
-                "url": url_res,
+                "url": sanitize_url(url_res),
                 "status_code": status,
                 "reason": reason
             })
         else:
-            fresh_working.append(url_res)
+            fresh_working.append(sanitize_url(url_res))
             
     # Save updated cache to disk
     if batch_to_audit or not os.path.exists(CACHE_FILE) or os.path.getsize(CACHE_FILE) == 0:
         save_link_cache(cache)
         
-    all_working = list(set(cached_working + fresh_working))
+    all_working = list(set(sanitize_url_list(cached_working) + fresh_working))
     
     # Deduplicate broken links
     broken_map = {}
@@ -322,9 +364,9 @@ def check_portal_uptime_with_page(page, context, url: str) -> dict:
             "total_links_found": total_found,
             "total_links_audited": total_audited,
             "verified_working_links_count": len(working_links),
-            "verified_working_links": working_links[:10],
+            "verified_working_links": sanitize_url_list(working_links[:10]),
             "broken_links": len(broken_details),
-            "broken_links_details": broken_details,
+            "broken_links_details": [{**b, "url": sanitize_url(b.get("url", ""))} for b in broken_details],
             "broken_forms": 0,
             "status_code": status or 200,
             "status_note": status_note,
@@ -350,7 +392,7 @@ def check_portal_uptime_with_page(page, context, url: str) -> dict:
                     "total_links_found": len(cached_for_domain),
                     "total_links_audited": len(cached_for_domain),
                     "verified_working_links_count": len(cached_for_domain),
-                    "verified_working_links": cached_for_domain[:10],
+                    "verified_working_links": sanitize_url_list(cached_for_domain[:10]),
                     "broken_links": 0,
                     "broken_links_details": [],
                     "broken_forms": 0,

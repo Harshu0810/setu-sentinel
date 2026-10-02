@@ -636,9 +636,9 @@
           "artifacts_score": 10
         },
         "flagged_terms": [
-          "Missing GIGW Term: 'Department' (Expected: \u0935\u093f\u092d\u093e\u0917)",
-          "Missing GIGW Term: 'About Us' (Expected: \u0939\u092e\u093e\u0930\u0947 \u092c\u093e\u0930\u0947 \u092e\u0947\u0902)",
-          "Missing GIGW Term: 'Home' (Expected: \u092e\u0941\u0916\u094d\u092f \u092a\u0943\u0937\u094d\u0920)"
+          "Missing GIGW Term: 'Department' (Expected: विभाग)",
+          "Missing GIGW Term: 'About Us' (Expected: हमारे बारे में)",
+          "Missing GIGW Term: 'Home' (Expected: मुख्य पृष्ठ)"
         ]
       },
       "composite_score": 76.7
@@ -869,7 +869,7 @@
           "artifacts_score": 6
         },
         "flagged_terms": [
-          "Missing GIGW Term: 'About Us' (Expected: \u0939\u092e\u093e\u0930\u0947 \u092c\u093e\u0930\u0947 \u092e\u0947\u0902)",
+          "Missing GIGW Term: 'About Us' (Expected: हमारे बारे में)",
           "Untranslated UI Elements: Screen Reader Access, Copyright"
         ]
       },
@@ -1216,7 +1216,7 @@
         "score": 95,
         "devanagari_ratio_pct": 87.6,
         "switcher_found": true,
-        "switcher_type": "Direct Text Link ('\u0939\u093f\u0928\u094d\u0926\u0940')",
+        "switcher_type": "Direct Text Link ('हिन्दी')",
         "status": "switcher_success",
         "regional_breakdown": {
           "nav_pct": 94.9,
@@ -1229,8 +1229,8 @@
           "artifacts_score": 8
         },
         "flagged_terms": [
-          "Missing GIGW Term: 'Department' (Expected: \u0935\u093f\u092d\u093e\u0917)",
-          "Missing GIGW Term: 'Home' (Expected: \u092e\u0941\u0916\u094d\u092f \u092a\u0943\u0937\u094d\u0920)",
+          "Missing GIGW Term: 'Department' (Expected: विभाग)",
+          "Missing GIGW Term: 'Home' (Expected: मुख्य पृष्ठ)",
           "Untranslated UI Elements: Screen Reader Access"
         ]
       },
@@ -1965,8 +1965,8 @@
           "https://ncs.gov.in/#",
           "https://x.com/NCSIndia/status/1859590085831950502",
           "https://ncs.gov.in/career-center",
-          "https://ncsdocsstorage.blob.core.windows.net/ncsdocsstorage/common%2Fwhatsnew%2Fnewsletter_1786551617657.pdf?sv=2023-11-03&spr=https&st=2026-08-12T16%3A15%3A17Z&se=2028-08-12T16%3A20%3A17Z&sr=b&sp=r&sig=G%2FY64KuWJ7omAX%2FO5dSUYceIgR7afPaR3j%2FuQQcnr7A%3D",
-          "https://ncsdocsstorage.blob.core.windows.net/ncsdocsstorage/common%2Fwhatsnew%2Fnewsletter_1786551528070.pdf?sv=2023-11-03&spr=https&st=2026-08-12T16%3A13%3A48Z&se=2028-08-12T16%3A18%3A48Z&sr=b&sp=r&sig=Nnemh5gGUYkpY8mIy0DDSjh0YhUESCQSm3xhfZQQlM8%3D",
+          "https://ncsdocsstorage.blob.core.windows.net/ncsdocsstorage/common%2Fwhatsnew%2Fnewsletter_1786551617657.pdf",
+          "https://ncsdocsstorage.blob.core.windows.net/ncsdocsstorage/common%2Fwhatsnew%2Fnewsletter_1786551528070.pdf",
           "https://www.instagram.com/nationalcareerservice/?hl=en",
           "https://ncs.gov.in/job-listing",
           "https://ncs.gov.in/about-ncsc-da",
