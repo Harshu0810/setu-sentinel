@@ -1,4 +1,5 @@
 import time
+import socket
 import requests
 import urllib3
 import os
@@ -9,6 +10,35 @@ from playwright_stealth import Stealth
 
 # Disable insecure request warnings for broken govt SSL certs
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+def resolve_domain_doh(domain: str) -> list[str]:
+    """Queries Google DNS-over-HTTPS (DoH) to check if domain has valid A records."""
+    try:
+        r = requests.get(f"https://dns.google/resolve?name={domain}&type=A", timeout=4)
+        if r.status_code == 200:
+            data = r.json()
+            return [ans['data'] for ans in data.get('Answer', []) if ans.get('type') == 1]
+    except Exception:
+        pass
+    return []
+
+def check_domain_dns(domain: str) -> bool:
+    """Checks if domain resolves via local OS DNS or fallback DoH."""
+    try:
+        socket.gethostbyname(domain)
+        return True
+    except Exception:
+        ips = resolve_domain_doh(domain)
+        return len(ips) > 0
+
+def check_tcp_port(domain: str, port: int = 443, timeout: float = 4.0) -> bool:
+    """Fast pre-flight TCP connect test to detect dead ports or dropped SYN packets before launching heavy browser."""
+    try:
+        sock = socket.create_connection((domain, port), timeout=timeout)
+        sock.close()
+        return True
+    except Exception:
+        return False
 
 def check_link_with_context(context, url: str) -> tuple[str, bool, int]:
     """
@@ -26,13 +56,13 @@ def check_link_with_context(context, url: str) -> tuple[str, bool, int]:
     
     for attempt in range(2):
         try:
-            resp = context.request.get(url, timeout=18000)
+            resp = context.request.get(url, timeout=10000)
             status = resp.status
             is_broken = (status == 404 or status >= 500) and status not in ANTI_BOT_CODES
             if not is_broken:
                 return (url, False, status)
             if attempt == 0:
-                time.sleep(1.5)
+                time.sleep(1.0)
                 continue
             return (url, True, status)
         except Exception:
@@ -109,8 +139,8 @@ def audit_portal_links(context, links: list[str]) -> tuple[int, int, list[str], 
         else:
             uncached_links.append(url)
             
-    # Audit up to 100 uncached links live per run (incremental batching)
-    batch_to_audit = uncached_links[:100]
+    # Audit up to 35 uncached links live per run (incremental batching)
+    batch_to_audit = uncached_links[:35]
     
     fresh_working = []
     fresh_broken = []
@@ -157,12 +187,56 @@ def audit_portal_links(context, links: list[str]) -> tuple[int, int, list[str], 
 
 def check_portal_uptime_with_page(page, context, url: str) -> dict:
     """Core uptime check using an externally-managed page/context (for browser consolidation)."""
+    domain = urlparse(url).netloc
+    port = urlparse(url).port or (443 if url.startswith('https') else 80)
+    has_dns = check_domain_dns(domain)
+    
+    # Fast pre-flight TCP check: if port is unreachable on both default and fallback port,
+    # we know TCP packets are dropped or refused.
+    tcp_connected = check_tcp_port(domain, port, timeout=4.0)
+    if not tcp_connected and port == 443:
+        # Check HTTP port 80 in case server redirects from 80
+        tcp_connected = check_tcp_port(domain, 80, timeout=2.5)
+
+    if not tcp_connected:
+        # Pre-flight failed: Try requests fallback directly before spending 25s in Playwright
+        try:
+            headers = {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+            }
+            r = requests.get(url, timeout=6, headers=headers, verify=False, stream=True, allow_redirects=True)
+            st = r.status_code
+            r.close()
+            if st < 500:
+                tcp_connected = True
+        except Exception:
+            pass
+
+    if not tcp_connected:
+        # Both Playwright pre-flight and requests failed to establish TCP connection
+        return {
+            "status": "down",
+            "error": "TCP_CONNECT_TIMEOUT: Connection dropped or port unreachable",
+            "has_dns": has_dns,
+            "is_network_drop": True,
+            "total_links_found": 0,
+            "total_links_audited": 0,
+            "verified_working_links_count": 0,
+            "verified_working_links": [],
+            "broken_links": 0,
+            "broken_links_details": [],
+            "broken_forms": 0,
+            "status_code": 0,
+            "status_note": "TCP Connection Dropped / Unreachable"
+        }
+
     try:
         start_time = time.time()
-        response = page.goto(url, timeout=35000, wait_until="commit")
+        response = page.goto(url, timeout=25000, wait_until="commit")
         
         try:
-            page.wait_for_load_state("domcontentloaded", timeout=15000)
+            page.wait_for_load_state("domcontentloaded", timeout=12000)
         except Exception:
             pass
             
@@ -183,10 +257,10 @@ def check_portal_uptime_with_page(page, context, url: str) -> dict:
         if response is None or status in [403, 401, 503] or "access denied" in title_text:
             try:
                 headers = {
-                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
                     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
                 }
-                r = requests.get(url, headers=headers, verify=False, timeout=15)
+                r = requests.get(url, headers=headers, verify=False, timeout=12)
                 if r.status_code == 200 and len(r.text) > 200:
                     page.set_content(r.text, wait_until="domcontentloaded")
                     status = 200
@@ -204,8 +278,8 @@ def check_portal_uptime_with_page(page, context, url: str) -> dict:
             pass
             
         if len(links) == 0:
-            # SPA / JS Hydration: Adaptive polling — check every 1s up to 8s total
-            for _poll in range(8):
+            # SPA / JS Hydration: Adaptive polling — check every 1s up to 6s total
+            for _poll in range(6):
                 time.sleep(1.0)
                 try:
                     links = page.eval_on_selector_all("a[href]", "els => els.map(e => e.href)")
@@ -217,7 +291,7 @@ def check_portal_uptime_with_page(page, context, url: str) -> dict:
             # Final attempt: wait for network to settle (catches late-hydrating Next.js/React apps)
             if len(links) == 0:
                 try:
-                    page.wait_for_load_state("networkidle", timeout=5000)
+                    page.wait_for_load_state("networkidle", timeout=4000)
                     links = page.eval_on_selector_all("a[href]", "els => els.map(e => e.href)")
                 except Exception:
                     links = []
@@ -226,10 +300,10 @@ def check_portal_uptime_with_page(page, context, url: str) -> dict:
             if len(links) == 0:
                 try:
                     headers = {
-                        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+                        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
                         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
                     }
-                    r = requests.get(url, headers=headers, verify=False, timeout=15)
+                    r = requests.get(url, headers=headers, verify=False, timeout=10)
                     if r.status_code == 200 and len(r.text) > 200:
                         page.set_content(r.text, wait_until="domcontentloaded")
                         links = page.eval_on_selector_all("a[href]", "els => els.map(e => e.href)")
@@ -253,21 +327,22 @@ def check_portal_uptime_with_page(page, context, url: str) -> dict:
             "broken_links_details": broken_details,
             "broken_forms": 0,
             "status_code": status or 200,
-            "status_note": status_note
+            "status_note": status_note,
+            "has_dns": True,
+            "is_network_drop": False
         }
     except Exception as primary_exc:
         # Resilient HTTP request fallback
         try:
             headers = {
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
                 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
             }
-            r = requests.get(url, timeout=12, headers=headers, verify=False, stream=True, allow_redirects=True)
+            r = requests.get(url, timeout=10, headers=headers, verify=False, stream=True, allow_redirects=True)
             st = r.status_code
             r.close()
             if st < 500:
                 cache = load_link_cache()
-                domain = urlparse(url).netloc
                 cached_for_domain = [u for u in cache.keys() if domain in u and not cache[u].get("is_broken")]
                 return {
                     "status": "up",
@@ -279,20 +354,33 @@ def check_portal_uptime_with_page(page, context, url: str) -> dict:
                     "broken_links": 0,
                     "broken_links_details": [],
                     "broken_forms": 0,
-                    "status_code": st
+                    "status_code": st,
+                    "status_note": "HTTP Fallback Verified",
+                    "has_dns": True,
+                    "is_network_drop": False
                 }
         except Exception:
             pass
             
+        err_str = str(primary_exc)
+        is_net_drop = any(term in err_str for term in [
+            "Timeout", "ERR_TIMED_OUT", "ERR_CONNECTION_REFUSED",
+            "ERR_SOCKET_NOT_CONNECTED", "ERR_NAME_NOT_RESOLVED", "ConnectTimeout"
+        ])
         return {
             "status": "down",
-            "error": str(primary_exc),
+            "error": err_str,
+            "has_dns": has_dns,
+            "is_network_drop": is_net_drop,
             "total_links_found": 0,
             "total_links_audited": 0,
             "verified_working_links_count": 0,
             "verified_working_links": [],
             "broken_links": 0,
-            "broken_links_details": []
+            "broken_links_details": [],
+            "broken_forms": 0,
+            "status_code": None,
+            "status_note": None
         }
 
 def check_portal_uptime(url: str) -> dict:

@@ -29,6 +29,12 @@ jobs:
       - name: Run Regression Test Suite
         run: python -m pytest tests/
 
+      - name: Configure DNS Resolvers
+        run: |
+          sudo systemd-resolve --set-dns=8.8.8.8 --interface=$(ip route show default | awk '{print $5}') 2>/dev/null || true
+          echo "nameserver 8.8.8.8" | sudo tee -a /etc/resolv.conf 2>/dev/null || true
+          echo "nameserver 1.1.1.1" | sudo tee -a /etc/resolv.conf 2>/dev/null || true
+
       - name: Run checks
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}

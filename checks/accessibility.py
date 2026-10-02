@@ -180,13 +180,22 @@ def check_portal_accessibility_with_page(page, url: str) -> dict:
             with open(axe_path, "r", encoding="utf-8") as f:
                 axe_script = f.read()
             try:
-                results = page.evaluate(f"async () => {{ {axe_script}; return await axe.run(); }}")
-            except Exception:
-                time.sleep(1.5)
-                try:
-                    results = page.evaluate(f"async () => {{ {axe_script}; return await axe.run(); }}")
-                except Exception:
-                    results = None
+                eval_script = f"""async () => {{
+                    {axe_script};
+                    const axePromise = axe.run({{
+                        iframes: false,
+                        elementRef: false,
+                        runOnly: {{
+                            type: 'tag',
+                            values: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']
+                        }}
+                    }});
+                    const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error('Axe timeout')), 10000));
+                    return await Promise.race([axePromise, timeoutPromise]);
+                }}"""
+                results = page.evaluate(eval_script)
+            except Exception as axe_err:
+                results = None
 
         # Step B: Fallback to Native DOM Accessibility Scanner if axe-core blocked by WAF/CSP
         if not results or "violations" not in results:
