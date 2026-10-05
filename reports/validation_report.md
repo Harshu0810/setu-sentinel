@@ -1,12 +1,12 @@
 # 🛡️ Setu Sentinel — Validation & Verification Report
-**Generated:** 2026-10-05T05:05:40.227887+00:00 | **Target Portals:** 38 | **Independent Audit**
+**Generated:** 2026-10-05T14:17:53.102473+00:00 | **Target Portals:** 38 | **Independent Audit**
 
 ## 📊 Executive Audit Summary
 - **Portals Evaluated:** 38 (36 Online, 2 Offline)
-- **Total Links Discovered Across Homepages:** 3272
-- **Sampled Links Audited with Chromium TLS:** 2530
-- **Verified Working Links:** 2394 (HTTP 200/203/301/302)
-- **Confirmed Broken Links (True 404/5xx):** 136
+- **Total Links Discovered Across Homepages:** 3259
+- **Sampled Links Audited with Chromium TLS:** 2552
+- **Verified Working Links:** 2418 (HTTP 200/203/301/302)
+- **Confirmed Broken Links (True 404/5xx):** 134
 
 ---
 
@@ -35,7 +35,7 @@
 | **Parivahan Sewa** | Central | ✅ UP | 156 | 156 | 147 | 9 | 70/100 | 95/100 | **82.3** |
 | **Rajasthan Sampark** | State | ✅ UP | 7 | 7 | 7 | 0 | 70/100 | 100/100 | **91.0** |
 | **Gujarat State Portal** | State | ✅ UP | 94 | 55 | 54 | 1 | 0/100 | 30/100 | **48.2** |
-| **Aaple Sarkar Maharashtra** | State | ✅ UP | 686 | 350 | 321 | 29 | 70/100 | 51/100 | **56.3** |
+| **Aaple Sarkar Maharashtra** | State | ✅ UP | 686 | 385 | 356 | 29 | 70/100 | 51/100 | **56.3** |
 | **Seva Sindhu Karnataka** | State | ✅ UP | 107 | 107 | 77 | 30 | 42/100 | 60/100 | **50.6** |
 | **e-District UP** | State | ✅ UP | 67 | 67 | 63 | 4 | 0/100 | 100/100 | **66.8** |
 | **Mee Seva (Andhra Pradesh)** | State | ✅ UP | 34 | 34 | 32 | 2 | 0/100 | 0/100 | **38.4** |
@@ -51,7 +51,7 @@
 | **National Career Service** | Central | ✅ UP | 57 | 57 | 54 | 3 | 70/100 | 0/100 | **58.6** |
 | **Swachh Bharat Mission** | Central | ✅ UP | 45 | 45 | 44 | 1 | 70/100 | 0/100 | **60.2** |
 | **Skill India** | Central | ✅ UP | 0 | 0 | 0 | 0 | 70/100 | 0/100 | **61.0** |
-| **Startup India** | Central | ✅ UP | 82 | 82 | 79 | 3 | 70/100 | 30/100 | **67.6** |
+| **Startup India** | Central | ✅ UP | 69 | 69 | 68 | 1 | 70/100 | 30/100 | **69.2** |
 
 ---
 
