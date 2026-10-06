@@ -12927,7 +12927,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1786844835.8901734
+    "last_checked": 1791245054.3998363
   },
   "https://aaplesarkar.mahaonline.gov.in/mr/Login/Certificate_Documents?ServiceId=1680": {
     "status_code": 200,
@@ -15105,7 +15105,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1786781240.4863954
+    "last_checked": 1791245054.3998363
   },
   "https://aaplesarkar.mahaonline.gov.in/mr/Login/Certificate_Documents?ServiceId=1381": {
     "status_code": 200,
@@ -26194,5 +26194,239 @@
     "is_broken": false,
     "reason": "OK",
     "last_checked": 1791209628.4549453
+  },
+  "https://www.facebook.com/sharer/sharer.php?u=https://www.mygov.in/task/know-your-panchayat%E2%80%99s-score-panchayat-advancement-index-pai": {
+    "status_code": 400,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1791244528.7262402
+  },
+  "https://twitter.com/intent/tweet?url=https://www.mygov.in/task/peyjal-gatha-national-water-stories-water-ideas-challenge": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1791244528.7262402
+  },
+  "https://twitter.com/intent/tweet?url=https://www.mygov.in/task/know-your-panchayat%E2%80%99s-score-panchayat-advancement-index-pai": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1791244528.7262402
+  },
+  "https://www.mygov.in/task/peyjal-gatha-national-water-stories-water-ideas-challenge": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1791244528.7262402
+  },
+  "https://www.facebook.com/sharer/sharer.php?u=https://www.mygov.in/task/peyjal-gatha-national-water-stories-water-ideas-challenge": {
+    "status_code": 400,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1791244528.7262402
+  },
+  "https://www.mygov.in/task/know-your-panchayat%E2%80%99s-score-panchayat-advancement-index-pai": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1791244528.7262402
+  },
+  "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=8099": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1791245054.3998363
+  },
+  "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=3552": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1791245054.3998363
+  },
+  "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=4407": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1791245054.3998363
+  },
+  "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=9079": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1791245054.3998363
+  },
+  "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=1864": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1791245054.3998363
+  },
+  "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=4563": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1791245054.3998363
+  },
+  "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=7106": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1791245054.3998363
+  },
+  "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=2496": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1791245054.3998363
+  },
+  "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=5921": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1791245054.3998363
+  },
+  "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=4347": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1791245054.3998363
+  },
+  "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=4059": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1791245054.3998363
+  },
+  "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=8537": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1791245054.3998363
+  },
+  "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=9055": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1791245054.3998363
+  },
+  "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=4288": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1791245054.3998363
+  },
+  "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=1261": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1791245054.3998363
+  },
+  "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=3557": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1791245054.3998363
+  },
+  "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=1851": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1791245054.3998363
+  },
+  "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=8213": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1791245054.3998363
+  },
+  "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=5867": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1791245054.3998363
+  },
+  "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=8253": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1791245054.3998363
+  },
+  "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=2480": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1791245054.3998363
+  },
+  "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=8256": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1791245054.3998363
+  },
+  "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=4377": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1791245054.3998363
+  },
+  "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=3245": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1791245054.3998363
+  },
+  "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=1048": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1791245054.3998363
+  },
+  "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=4394": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1791245054.3998363
+  },
+  "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=2476": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1791245054.3998363
+  },
+  "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=8994": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1791245054.3998363
+  },
+  "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=3234": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1791245054.3998363
+  },
+  "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=4082": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1791245054.3998363
+  },
+  "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=5777": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1791245054.3998363
+  },
+  "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=4556": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1791245054.3998363
+  },
+  "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=4557": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1791245054.3998363
   }
 }
