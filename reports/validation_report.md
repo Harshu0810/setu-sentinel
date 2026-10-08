@@ -1,5 +1,5 @@
 # 🛡️ Setu Sentinel — Validation & Verification Report
-**Generated:** 2026-10-08T13:25:48.907634+00:00 | **Target Portals:** 38 | **Independent Audit**
+**Generated:** 2026-10-08T23:20:26.502765+00:00 | **Target Portals:** 38 | **Independent Audit**
 
 ## 📊 Executive Audit Summary
 - **Portals Evaluated:** 38 (36 Online, 2 Offline)
@@ -48,7 +48,7 @@
 | **MP e-District** | State | ✅ UP | 441 | 137 | 134 | 3 | 0/100 | 100/100 | **67.6** |
 | **e-Shram** | Central | ✅ UP | 1 | 1 | 1 | 0 | 70/100 | 32/100 | **70.6** |
 | **National Scholarship Portal** | Central | ✅ UP | 51 | 51 | 48 | 3 | 70/100 | 0/100 | **58.6** |
-| **National Career Service** | Central | ✅ UP | 70 | 70 | 67 | 3 | 70/100 | 31/100 | **67.9** |
+| **National Career Service** | Central | ✅ UP | 70 | 70 | 67 | 3 | 70/100 | 0/100 | **58.6** |
 | **Swachh Bharat Mission** | Central | ✅ UP | 45 | 45 | 44 | 1 | 70/100 | 0/100 | **60.2** |
 | **Skill India** | Central | ✅ UP | 0 | 0 | 0 | 0 | 70/100 | 0/100 | **61.0** |
 | **Startup India** | Central | ✅ UP | 82 | 82 | 79 | 3 | 70/100 | 30/100 | **67.6** |
