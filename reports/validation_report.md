@@ -1,12 +1,12 @@
 # 🛡️ Setu Sentinel — Validation & Verification Report
-**Generated:** 2026-10-09T05:36:22.518809+00:00 | **Target Portals:** 38 | **Independent Audit**
+**Generated:** 2026-10-09T13:32:47.067425+00:00 | **Target Portals:** 38 | **Independent Audit**
 
 ## 📊 Executive Audit Summary
 - **Portals Evaluated:** 38 (36 Online, 2 Offline)
-- **Total Links Discovered Across Homepages:** 3289
-- **Sampled Links Audited with Chromium TLS:** 2883
-- **Verified Working Links:** 2745 (HTTP 200/203/301/302)
-- **Confirmed Broken Links (True 404/5xx):** 138
+- **Total Links Discovered Across Homepages:** 3316
+- **Sampled Links Audited with Chromium TLS:** 2267
+- **Verified Working Links:** 2128 (HTTP 200/203/301/302)
+- **Confirmed Broken Links (True 404/5xx):** 139
 
 ---
 
@@ -14,26 +14,26 @@
 
 | Portal Name | Category | Uptime | Links Discovered | Links Audited | Working Links | Broken Links | WCAG Score | Hindi Score | Composite Score |
 |---|---|---|---|---|---|---|---|---|---|
-| **National Portal of India** | Central | ✅ UP | 65 | 65 | 65 | 0 | 70/100 | 0/100 | **61.0** |
-| **DigiLocker** | Central | ✅ UP | 45 | 45 | 45 | 0 | 70/100 | 0/100 | **61.0** |
+| **National Portal of India** | Central | ✅ UP | 65 | 36 | 36 | 0 | 70/100 | 0/100 | **61.0** |
+| **DigiLocker** | Central | ✅ UP | 45 | 36 | 36 | 0 | 70/100 | 0/100 | **61.0** |
 | **UMANG** | Central | ✅ UP | 28 | 28 | 28 | 0 | 70/100 | 0/100 | **61.0** |
-| **eCourts** | Judiciary | ✅ UP | 47 | 47 | 47 | 0 | 70/100 | 0/100 | **61.0** |
-| **Income Tax e-Filing** | Central | ✅ UP | 114 | 114 | 114 | 0 | 70/100 | 0/100 | **61.0** |
+| **eCourts** | Judiciary | ✅ UP | 47 | 35 | 35 | 0 | 70/100 | 0/100 | **61.0** |
+| **Income Tax e-Filing** | Central | ✅ UP | 114 | 37 | 37 | 0 | 70/100 | 0/100 | **61.0** |
 | **Passport Seva** | Central | ✅ UP | 7 | 7 | 7 | 0 | 70/100 | 0/100 | **61.0** |
-| **Rajasthan State Portal** | State | ✅ UP | 14 | 14 | 14 | 0 | 70/100 | 100/100 | **91.0** |
-| **Rajasthan SSO** | State | ✅ UP | 8 | 8 | 8 | 0 | 70/100 | 0/100 | **61.0** |
-| **e-Mitra Rajasthan** | State | ✅ UP | 26 | 26 | 26 | 0 | 70/100 | 16/100 | **65.8** |
+| **Rajasthan State Portal** | State | ✅ UP | 14 | 14 | 14 | 0 | 70/100 | 96/100 | **89.8** |
+| **Rajasthan SSO** | State | ✅ UP | 8 | 8 | 7 | 1 | 70/100 | 0/100 | **60.2** |
+| **e-Mitra Rajasthan** | State | ✅ UP | 26 | 26 | 26 | 0 | 70/100 | 10/100 | **64.0** |
 | **Jan Soochna Portal** | State | ✅ UP | 19 | 19 | 18 | 1 | 70/100 | 61/100 | **78.5** |
-| **MyGov** | Central | ✅ UP | 206 | 206 | 205 | 1 | 70/100 | 0/100 | **60.2** |
-| **UIDAI (Aadhaar)** | Central | ✅ UP | 35 | 35 | 34 | 1 | 70/100 | 3/100 | **61.1** |
-| **Jan Aadhaar Rajasthan** | State | ✅ UP | 92 | 92 | 83 | 9 | 70/100 | 0/100 | **53.8** |
+| **MyGov** | Central | ✅ UP | 233 | 136 | 135 | 1 | 70/100 | 0/100 | **60.2** |
+| **UIDAI (Aadhaar)** | Central | ✅ UP | 35 | 35 | 27 | 8 | 70/100 | 3/100 | **55.5** |
+| **Jan Aadhaar Rajasthan** | State | ✅ UP | 92 | 40 | 34 | 6 | 70/100 | 0/100 | **56.2** |
 | **GeM (Govt e-Marketplace)** | Central | ✅ UP | 198 | 137 | 131 | 6 | 0/100 | 31/100 | **44.5** |
 | **RTU Kota** | Education | ✅ UP | 2 | 2 | 2 | 0 | 70/100 | 0/100 | **61.0** |
 | **Ayushman Bharat (PM-JAY)** | Central | ❌ DOWN | 0 | 0 | 0 | 0 | 70/100 | 0/100 | **21.0** |
 | **GST Portal** | Central | ✅ UP | 14 | 14 | 14 | 0 | 70/100 | 0/100 | **61.0** |
 | **EPFO Unified Portal** | Central | ❌ DOWN | 0 | 0 | 0 | 0 | 70/100 | 0/100 | **21.0** |
-| **Parivahan Sewa** | Central | ✅ UP | 156 | 156 | 147 | 9 | 70/100 | 95/100 | **82.3** |
-| **Rajasthan Sampark** | State | ✅ UP | 7 | 7 | 7 | 0 | 70/100 | 100/100 | **91.0** |
+| **Parivahan Sewa** | Central | ✅ UP | 156 | 36 | 28 | 8 | 70/100 | 95/100 | **83.1** |
+| **Rajasthan Sampark** | State | ✅ UP | 7 | 7 | 6 | 1 | 70/100 | 100/100 | **90.2** |
 | **Gujarat State Portal** | State | ✅ UP | 94 | 55 | 54 | 1 | 0/100 | 30/100 | **48.2** |
 | **Aaple Sarkar Maharashtra** | State | ✅ UP | 686 | 686 | 656 | 30 | 70/100 | 51/100 | **56.3** |
 | **Seva Sindhu Karnataka** | State | ✅ UP | 107 | 107 | 77 | 30 | 42/100 | 60/100 | **50.6** |
@@ -41,17 +41,17 @@
 | **Mee Seva (Andhra Pradesh)** | State | ✅ UP | 34 | 34 | 32 | 2 | 0/100 | 0/100 | **38.4** |
 | **Mee Seva (Telangana)** | State | ✅ UP | 15 | 15 | 14 | 1 | 45/100 | 0/100 | **52.7** |
 | **Digital Gujarat** | State | ✅ UP | 49 | 49 | 48 | 1 | 42/100 | 60/100 | **69.8** |
-| **RTPS Bihar** | State | ✅ UP | 333 | 333 | 313 | 20 | 70/100 | 88/100 | **71.4** |
+| **RTPS Bihar** | State | ✅ UP | 333 | 194 | 178 | 16 | 70/100 | 88/100 | **74.6** |
 | **SARAL Haryana** | State | ✅ UP | 37 | 37 | 36 | 1 | 30/100 | 100/100 | **78.2** |
-| **Akshaya Kerala** | State | ✅ UP | 56 | 56 | 55 | 1 | 70/100 | 0/100 | **60.2** |
+| **Akshaya Kerala** | State | ✅ UP | 56 | 35 | 32 | 3 | 70/100 | 0/100 | **58.6** |
 | **Tamil Nadu e-Sevai** | State | ✅ UP | 38 | 36 | 29 | 7 | 36/100 | 60/100 | **63.2** |
 | **MP e-District** | State | ✅ UP | 441 | 137 | 134 | 3 | 0/100 | 100/100 | **67.6** |
 | **e-Shram** | Central | ✅ UP | 1 | 1 | 1 | 0 | 70/100 | 32/100 | **70.6** |
-| **National Scholarship Portal** | Central | ✅ UP | 51 | 51 | 48 | 3 | 70/100 | 0/100 | **58.6** |
-| **National Career Service** | Central | ✅ UP | 70 | 70 | 67 | 3 | 70/100 | 0/100 | **58.6** |
-| **Swachh Bharat Mission** | Central | ✅ UP | 45 | 45 | 44 | 1 | 70/100 | 0/100 | **60.2** |
+| **National Scholarship Portal** | Central | ✅ UP | 51 | 36 | 32 | 4 | 70/100 | 1/100 | **58.1** |
+| **National Career Service** | Central | ✅ UP | 70 | 54 | 52 | 2 | 70/100 | 0/100 | **59.4** |
+| **Swachh Bharat Mission** | Central | ✅ UP | 45 | 36 | 35 | 1 | 70/100 | 0/100 | **60.2** |
 | **Skill India** | Central | ✅ UP | 0 | 0 | 0 | 0 | 70/100 | 0/100 | **61.0** |
-| **Startup India** | Central | ✅ UP | 82 | 82 | 79 | 3 | 70/100 | 30/100 | **67.6** |
+| **Startup India** | Central | ✅ UP | 82 | 35 | 34 | 1 | 70/100 | 30/100 | **69.2** |
 
 ---
 
