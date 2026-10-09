@@ -28348,5 +28348,17 @@
     "is_broken": false,
     "reason": "OK",
     "last_checked": 1791465886.190904
+  },
+  "https://www.mygov.in/blog/winner-announcement-logo-design-contest-commemorating-75-years-india-germany-diplomatic": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1791523431.3396828
+  },
+  "https://quiz.mygov.in/quiz/online-quiz-on-cyber-hygiene-practices-2": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1791523431.3396828
   }
 }

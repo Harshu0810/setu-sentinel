@@ -1,11 +1,11 @@
 # 🛡️ Setu Sentinel — Validation & Verification Report
-**Generated:** 2026-10-08T23:20:26.502765+00:00 | **Target Portals:** 38 | **Independent Audit**
+**Generated:** 2026-10-09T05:36:22.518809+00:00 | **Target Portals:** 38 | **Independent Audit**
 
 ## 📊 Executive Audit Summary
 - **Portals Evaluated:** 38 (36 Online, 2 Offline)
-- **Total Links Discovered Across Homepages:** 3315
-- **Sampled Links Audited with Chromium TLS:** 2909
-- **Verified Working Links:** 2771 (HTTP 200/203/301/302)
+- **Total Links Discovered Across Homepages:** 3289
+- **Sampled Links Audited with Chromium TLS:** 2883
+- **Verified Working Links:** 2745 (HTTP 200/203/301/302)
 - **Confirmed Broken Links (True 404/5xx):** 138
 
 ---
@@ -24,7 +24,7 @@
 | **Rajasthan SSO** | State | ✅ UP | 8 | 8 | 8 | 0 | 70/100 | 0/100 | **61.0** |
 | **e-Mitra Rajasthan** | State | ✅ UP | 26 | 26 | 26 | 0 | 70/100 | 16/100 | **65.8** |
 | **Jan Soochna Portal** | State | ✅ UP | 19 | 19 | 18 | 1 | 70/100 | 61/100 | **78.5** |
-| **MyGov** | Central | ✅ UP | 232 | 232 | 231 | 1 | 70/100 | 0/100 | **60.2** |
+| **MyGov** | Central | ✅ UP | 206 | 206 | 205 | 1 | 70/100 | 0/100 | **60.2** |
 | **UIDAI (Aadhaar)** | Central | ✅ UP | 35 | 35 | 34 | 1 | 70/100 | 3/100 | **61.1** |
 | **Jan Aadhaar Rajasthan** | State | ✅ UP | 92 | 92 | 83 | 9 | 70/100 | 0/100 | **53.8** |
 | **GeM (Govt e-Marketplace)** | Central | ✅ UP | 198 | 137 | 131 | 6 | 0/100 | 31/100 | **44.5** |
