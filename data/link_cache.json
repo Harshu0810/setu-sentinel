@@ -945,7 +945,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790929275.8736682
+    "last_checked": 1791634244.747843
   },
   "https://www.incometax.gov.in/iec/foportal/help/ca/servicesavailable": {
     "status_code": 200,
@@ -1167,7 +1167,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790929275.8736682
+    "last_checked": 1791634244.747843
   },
   "https://eportal.incometax.gov.in/iec/foservices/#/pre-login/verifyServiceRequest": {
     "status_code": 200,
@@ -1341,13 +1341,13 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790929275.8736682
+    "last_checked": 1791634244.747843
   },
   "https://www.protean-tinpan.com/": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790929275.8736682
+    "last_checked": 1791634244.747843
   },
   "https://www.whatsapp.com/Incometaxindia/": {
     "status_code": 400,
@@ -1443,7 +1443,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790929275.8736682
+    "last_checked": 1791634244.747843
   },
   "https://www.incometax.gov.in/iec/foportal/contact-us": {
     "status_code": 200,
@@ -1995,7 +1995,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790929402.9329975
+    "last_checked": 1791634304.9791474
   },
   "https://goa.mygov.in/": {
     "status_code": 200,
@@ -2025,7 +2025,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790943106.9567988
+    "last_checked": 1791634304.9791474
   },
   "https://www.mygov.in/bharat-matters": {
     "status_code": 200,
@@ -2061,7 +2061,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790978503.9411263
+    "last_checked": 1791634304.9791474
   },
   "https://www.whatsapp.com/channel/0029Va4WxI4ISTkQcvGgWY1H/": {
     "status_code": 200,
@@ -2079,13 +2079,13 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790929402.9329975
+    "last_checked": 1791634304.9791474
   },
   "https://www.mygov.in/campaigns/": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790929402.9329975
+    "last_checked": 1791634304.9791474
   },
   "https://www.mygov.in/mygovapp": {
     "status_code": 200,
@@ -2103,7 +2103,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790929402.9329975
+    "last_checked": 1791634304.9791474
   },
   "https://assam.mygov.in/": {
     "status_code": 200,
@@ -2145,7 +2145,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790978503.9411263
+    "last_checked": 1791634304.9791474
   },
   "https://upsconline.nic.in/ora/ora-candidate/realms/candidate-portal/protocol/openid-connect/auth?client_id=account&redirect_uri=https%3A%2F%2Fupsconline.nic.in%2Fora%2Fora-candidate%2Frealms%2Fcandidate-portal%2Faccount%2Flogin-redirect&state=0%2F0acc0bb0-bdf6-3515-b60e-b85fe7cae107&response_type=code&scope=openid": {
     "status_code": 404,
@@ -2163,7 +2163,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790929402.9329975
+    "last_checked": 1791634304.9791474
   },
   "https://www.mygov.in/campaigns/independence-day/?target=webview&type=campaign&nid=0": {
     "status_code": 200,
@@ -2193,7 +2193,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790931715.305756
+    "last_checked": 1791634810.758118
   },
   "https://innovateindia.mygov.in/mascot-design-contest-for-india-post/": {
     "status_code": 200,
@@ -2265,7 +2265,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791002137.2563295
+    "last_checked": 1791634304.9791474
   },
   "https://innovateindia.mygov.in/bioe3/": {
     "status_code": 200,
@@ -2301,7 +2301,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790943106.9567988
+    "last_checked": 1791634304.9791474
   },
   "https://chhattisgarh.mygov.in/": {
     "status_code": 200,
@@ -2313,7 +2313,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790929402.9329975
+    "last_checked": 1791634304.9791474
   },
   "https://pledge.mygov.in/energy-conservation-2026/": {
     "status_code": 200,
@@ -2343,7 +2343,7 @@
     "status_code": 999,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790929402.9329975
+    "last_checked": 1791634304.9791474
   },
   "https://www.mygov.in/user/login": {
     "status_code": 200,
@@ -3723,7 +3723,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790931715.305756
+    "last_checked": 1791634810.758118
   },
   "https://parivahan.gov.in/en/press-coverage/2018/november": {
     "status_code": 200,
@@ -3756,10 +3756,10 @@
     "last_checked": 1791551642.6876624
   },
   "https://vahan.parivahan.gov.in/makermodel/vahan/dashboard.xhtml": {
-    "status_code": 200,
-    "is_broken": false,
-    "reason": "OK",
-    "last_checked": 1790930091.857615
+    "status_code": 0,
+    "is_broken": true,
+    "reason": "Unreachable / Timeout",
+    "last_checked": 1791634810.758118
   },
   "https://vahan.parivahan.gov.in/vahan4dashboard/": {
     "status_code": 0,
@@ -3771,13 +3771,13 @@
     "status_code": 0,
     "is_broken": true,
     "reason": "Unreachable / Timeout",
-    "last_checked": 1790943606.8594267
+    "last_checked": 1791634810.758118
   },
   "https://vahan.parivahan.gov.in/tcreports/tcreports/ui/login/login.xhtml": {
-    "status_code": 200,
-    "is_broken": false,
-    "reason": "OK",
-    "last_checked": 1790931715.305756
+    "status_code": 0,
+    "is_broken": true,
+    "reason": "Unreachable / Timeout",
+    "last_checked": 1791634810.758118
   },
   "https://parivahan.gov.in/hi": {
     "status_code": 200,
@@ -3789,19 +3789,19 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790931715.305756
+    "last_checked": 1791634810.758118
   },
   "https://parivahan.gov.in/en/content/licensing-related-fees-charges": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790930091.857615
+    "last_checked": 1791634810.758118
   },
   "https://vahan.parivahan.gov.in/sldmaker/vahan/dashboard.xhtml": {
-    "status_code": 200,
-    "is_broken": false,
-    "reason": "OK",
-    "last_checked": 1790930091.857615
+    "status_code": 0,
+    "is_broken": true,
+    "reason": "Unreachable / Timeout",
+    "last_checked": 1791634810.758118
   },
   "https://parivahan.gov.in/en/node/328": {
     "status_code": 200,
@@ -3843,7 +3843,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790930091.857615
+    "last_checked": 1791634810.758118
   },
   "https://parivahan.gov.in/en/content/hp-termination": {
     "status_code": 200,
@@ -3852,10 +3852,10 @@
     "last_checked": 1791609427.2661884
   },
   "https://vscrap.parivahan.gov.in/vehiclescrap/vahan/welcome.xhtml": {
-    "status_code": 200,
-    "is_broken": false,
-    "reason": "OK",
-    "last_checked": 1790931715.305756
+    "status_code": 0,
+    "is_broken": true,
+    "reason": "Unreachable / Timeout",
+    "last_checked": 1791634810.758118
   },
   "https://parivahan.gov.in/en/content/vehicle-related-services": {
     "status_code": 200,
@@ -3867,7 +3867,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790930091.857615
+    "last_checked": 1791634810.758118
   },
   "https://parivahan.gov.in/en/calendar": {
     "status_code": 200,
@@ -3879,7 +3879,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790930091.857615
+    "last_checked": 1791634810.758118
   },
   "https://vahan.parivahan.gov.in/vltdmaker/vahan/dashboard.xhtml": {
     "status_code": 0,
@@ -3927,7 +3927,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790930091.857615
+    "last_checked": 1791634810.758118
   },
   "https://parivahan.gov.in/en/press-coverage/2020/october": {
     "status_code": 200,
@@ -3945,13 +3945,13 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790930091.857615
+    "last_checked": 1791634810.758118
   },
   "https://parivahan.gov.in/en/content/no-objection-certificate": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790930091.857615
+    "last_checked": 1791634810.758118
   },
   "https://vahan.parivahan.gov.in/vahan/vahan/ui/login/login.xhtml": {
     "status_code": 0,
@@ -3969,7 +3969,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790930091.857615
+    "last_checked": 1791634810.758118
   },
   "https://parivahan.gov.in/rcdlstatus/?pur_cd=101": {
     "status_code": 200,
@@ -4023,7 +4023,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790930091.857615
+    "last_checked": 1791634810.758118
   },
   "https://parivahan.gov.in/en/content/videos": {
     "status_code": 200,
@@ -4053,7 +4053,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790943606.8594267
+    "last_checked": 1791634810.758118
   },
   "https://parivahan.gov.in/content/screen-reader-access": {
     "status_code": 200,
@@ -4065,7 +4065,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790943606.8594267
+    "last_checked": 1791634810.758118
   },
   "https://parivahan.gov.in/en/content/temporary-registration": {
     "status_code": 200,
@@ -4095,7 +4095,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790931715.305756
+    "last_checked": 1791634810.758118
   },
   "https://puc.parivahan.gov.in/puc/": {
     "status_code": 0,
@@ -4107,7 +4107,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790930091.857615
+    "last_checked": 1791634810.758118
   },
   "https://analytics.parivahan.gov.in/analytics/": {
     "status_code": 200,
@@ -4155,7 +4155,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790943606.8594267
+    "last_checked": 1791634810.758118
   },
   "https://parivahan.gov.in/en/content/renewal": {
     "status_code": 200,
@@ -4179,7 +4179,7 @@
     "status_code": 0,
     "is_broken": true,
     "reason": "Unreachable / Timeout",
-    "last_checked": 1790931715.305756
+    "last_checked": 1791634810.758118
   },
   "https://parivahan.gov.in/content/website-policies": {
     "status_code": 200,
@@ -4191,13 +4191,13 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790931715.305756
+    "last_checked": 1791634810.758118
   },
   "https://sarathi.parivahan.gov.in/SarathiReport/sarathiHomePublic.do": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790930091.857615
+    "last_checked": 1791634810.758118
   },
   "https://amritmahotsav.nic.in/": {
     "status_code": 200,
@@ -4233,7 +4233,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790930091.857615
+    "last_checked": 1791634810.758118
   },
   "https://parivahan.gov.in/en/content/permanent-registration": {
     "status_code": 200,
@@ -4299,7 +4299,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790930091.857615
+    "last_checked": 1791634810.758118
   },
   "https://parivahan.gov.in/en/notification-and-advisories/Advisory": {
     "status_code": 200,
@@ -6105,7 +6105,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790931312.9526215
+    "last_checked": 1791634304.9791474
   },
   "http://164.100.181.16/ssdgsap/certVerify.aspx": {
     "status_code": 200,
@@ -8931,7 +8931,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790978503.9411263
+    "last_checked": 1791634304.9791474
   },
   "https://ddd.mygov.in/": {
     "status_code": 200,
@@ -8940,10 +8940,10 @@
     "last_checked": 1791550713.83458
   },
   "https://data.gov.in/": {
-    "status_code": 200,
-    "is_broken": false,
-    "reason": "OK",
-    "last_checked": 1790929402.9329975
+    "status_code": 0,
+    "is_broken": true,
+    "reason": "Unreachable / Timeout",
+    "last_checked": 1791634304.9791474
   },
   "https://www.mygov.in/#pledge-section": {
     "status_code": 200,
@@ -9045,7 +9045,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791002137.2563295
+    "last_checked": 1791634304.9791474
   },
   "https://www.linkedin.com/company/mygov-india/": {
     "status_code": 999,
@@ -9069,13 +9069,13 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791002137.2563295
+    "last_checked": 1791634304.9791474
   },
   "https://www.mygov.in/podcast/scientific-cultivation-potatoes-dr-r-b-verma": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790943106.9567988
+    "last_checked": 1791634304.9791474
   },
   "https://www.mygov.in/simple-page/terms-conditions": {
     "status_code": 200,
@@ -9099,13 +9099,13 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790929402.9329975
+    "last_checked": 1791634304.9791474
   },
   "https://gujarat.mygov.in/": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790929402.9329975
+    "last_checked": 1791634304.9791474
   },
   "https://www.mygov.in/mygov-survey/public-consultation-university-townships-initiative": {
     "status_code": 200,
@@ -9123,7 +9123,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790943106.9567988
+    "last_checked": 1791634304.9791474
   },
   "https://innovateindia.mygov.in/csir-societal-platform-2024/": {
     "status_code": 200,
@@ -9261,7 +9261,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790929402.9329975
+    "last_checked": 1791634304.9791474
   },
   "https://transformingindia.mygov.in/": {
     "status_code": 200,
@@ -9291,7 +9291,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790929402.9329975
+    "last_checked": 1791634304.9791474
   },
   "https://www.facebook.com/MyGovIndia": {
     "status_code": 400,
@@ -9309,7 +9309,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790943106.9567988
+    "last_checked": 1791634304.9791474
   },
   "https://www.mygov.in/mygov-archives": {
     "status_code": 200,
@@ -9333,7 +9333,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791002137.2563295
+    "last_checked": 1791634304.9791474
   },
   "https://jk.mygov.in/": {
     "status_code": 200,
@@ -9381,7 +9381,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790929402.9329975
+    "last_checked": 1791634304.9791474
   },
   "https://www.mygov.in/simple-page/associate-mygov": {
     "status_code": 200,
@@ -9399,7 +9399,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790929402.9329975
+    "last_checked": 1791634304.9791474
   },
   "https://www.mygov.in/home/blog": {
     "status_code": 200,
@@ -10095,7 +10095,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790930091.857615
+    "last_checked": 1791634810.758118
   },
   "https://parivahan.gov.in/en/press-coverage/2021/november": {
     "status_code": 200,
@@ -10113,7 +10113,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790930091.857615
+    "last_checked": 1791634810.758118
   },
   "https://vahan.parivahan.gov.in/mobileupdate/": {
     "status_code": 0,
@@ -10170,10 +10170,10 @@
     "last_checked": 1791551642.6876624
   },
   "https://vahan.parivahan.gov.in/paidnrservices/": {
-    "status_code": 200,
-    "is_broken": false,
-    "reason": "OK",
-    "last_checked": 1790930091.857615
+    "status_code": 0,
+    "is_broken": true,
+    "reason": "Unreachable / Timeout",
+    "last_checked": 1791634810.758118
   },
   "https://parivahan.gov.in/en/press-coverage/2021/september": {
     "status_code": 200,
@@ -10215,13 +10215,13 @@
     "status_code": 0,
     "is_broken": true,
     "reason": "Unreachable / Timeout",
-    "last_checked": 1790930091.857615
+    "last_checked": 1791634810.758118
   },
   "https://parivahan.gov.in/en/node/327": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790930091.857615
+    "last_checked": 1791634810.758118
   },
   "https://parivahan.gov.in/en/content/permit-related-services": {
     "status_code": 200,
@@ -10242,16 +10242,16 @@
     "last_checked": 1791551642.6876624
   },
   "https://vahan.parivahan.gov.in/vahanbacklog/vahan/ui/login/login.xhtml": {
-    "status_code": 200,
-    "is_broken": false,
-    "reason": "OK",
-    "last_checked": 1790930091.857615
+    "status_code": 0,
+    "is_broken": true,
+    "reason": "Unreachable / Timeout",
+    "last_checked": 1791634810.758118
   },
   "https://parivahan.gov.in/en/press-coverage/2021/may": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790930091.857615
+    "last_checked": 1791634810.758118
   },
   "https://parivahan.gov.in/en/content/issue-duplicate-trade-certificate": {
     "status_code": 200,
@@ -10281,7 +10281,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790930091.857615
+    "last_checked": 1791634810.758118
   },
   "https://vahan.parivahan.gov.in/vahangreensewa/vahan/welcome.xhtml": {
     "status_code": 0,
@@ -11835,7 +11835,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790929402.9329975
+    "last_checked": 1791634304.9791474
   },
   "https://secure.mygov.in/user/login": {
     "status_code": 200,
@@ -13149,7 +13149,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790979152.482587
+    "last_checked": 1791635281.6741176
   },
   "https://serviceonline.bihar.gov.in/#eng_collapseElevenMOne": {
     "status_code": 200,
@@ -13197,7 +13197,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791027099.3293905
+    "last_checked": 1791635281.6741176
   },
   "http://serviceonline.bihar.gov.in/serviceLinkHome.html?serviceToken=eZ4yxCBRWc499&newLink=Y&%3Ccsrf:token%20uri=%27serviceLinkHome.html%27/%3E": {
     "status_code": 200,
@@ -13251,7 +13251,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790979152.482587
+    "last_checked": 1791635281.6741176
   },
   "https://serviceonline.bihar.gov.in/#collapseSixFive": {
     "status_code": 200,
@@ -13371,13 +13371,13 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790943943.8283868
+    "last_checked": 1791635281.6741176
   },
   "https://serviceonline.bihar.gov.in/#collapseThirtyOneM": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791003600.2641137
+    "last_checked": 1791635281.6741176
   },
   "https://serviceonline.bihar.gov.in/#eng_collapseNineteenTwo": {
     "status_code": 200,
@@ -13389,7 +13389,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791027099.3293905
+    "last_checked": 1791635281.6741176
   },
   "https://vahan.parivahan.gov.in/puc/": {
     "status_code": 0,
@@ -13413,7 +13413,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791027099.3293905
+    "last_checked": 1791635281.6741176
   },
   "https://serviceonline.bihar.gov.in/#collapseSixOne": {
     "status_code": 200,
@@ -13461,7 +13461,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790931546.5303767
+    "last_checked": 1791635281.6741176
   },
   "https://serviceonline.bihar.gov.in/#collapseSixFourM": {
     "status_code": 200,
@@ -13509,7 +13509,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790932046.6130123
+    "last_checked": 1791635281.6741176
   },
   "https://serviceonline.bihar.gov.in/#eng_collapseFoodMTwo": {
     "status_code": 200,
@@ -13557,7 +13557,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790979152.482587
+    "last_checked": 1791635281.6741176
   },
   "https://serviceonline.bihar.gov.in/#eng_collapseOneTwo": {
     "status_code": 200,
@@ -13707,7 +13707,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791003600.2641137
+    "last_checked": 1791635281.6741176
   },
   "https://nibandhan.bihar.gov.in/Society/Home.aspx": {
     "status_code": 200,
@@ -15363,7 +15363,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791027099.3293905
+    "last_checked": 1791635281.6741176
   },
   "https://serviceonline.bihar.gov.in/#collapseFoodMTwo": {
     "status_code": 200,
@@ -15411,7 +15411,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791003600.2641137
+    "last_checked": 1791635281.6741176
   },
   "https://serviceonline.bihar.gov.in/#collapseExciseMOne": {
     "status_code": 200,
@@ -15483,7 +15483,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790931546.5303767
+    "last_checked": 1791635281.6741176
   },
   "https://serviceonline.bihar.gov.in/#eng_collapseFifteenTwoM": {
     "status_code": 200,
@@ -15561,7 +15561,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791003600.2641137
+    "last_checked": 1791635281.6741176
   },
   "https://qrgo.page.link/fmxvX": {
     "status_code": 200,
@@ -15591,7 +15591,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790931546.5303767
+    "last_checked": 1791635281.6741176
   },
   "https://serviceonline.bihar.gov.in/#eng_collapseFooOne": {
     "status_code": 200,
@@ -15675,7 +15675,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791027099.3293905
+    "last_checked": 1791635281.6741176
   },
   "https://serviceonline.bihar.gov.in/#eng_collapseReg": {
     "status_code": 200,
@@ -15687,7 +15687,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790931546.5303767
+    "last_checked": 1791635281.6741176
   },
   "https://swcs.bihar.gov.in/knye": {
     "status_code": 404,
@@ -15795,7 +15795,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791027099.3293905
+    "last_checked": 1791635281.6741176
   },
   "https://serviceonline.bihar.gov.in/#collapseNineteen": {
     "status_code": 200,
@@ -15879,7 +15879,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790931546.5303767
+    "last_checked": 1791635281.6741176
   },
   "https://serviceonline.bihar.gov.in/#eng_collapseHomeMTwo": {
     "status_code": 200,
@@ -17427,7 +17427,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790931546.5303767
+    "last_checked": 1791635281.6741176
   },
   "https://serviceonline.bihar.gov.in/#eng_collapseOneOne": {
     "status_code": 200,
@@ -17595,7 +17595,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790979152.482587
+    "last_checked": 1791635281.6741176
   },
   "https://serviceonline.bihar.gov.in/#eng_collapseOneFourM": {
     "status_code": 200,
@@ -17673,7 +17673,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790943943.8283868
+    "last_checked": 1791635281.6741176
   },
   "https://serviceonline.bihar.gov.in/#collapseSixMo": {
     "status_code": 200,
@@ -17709,7 +17709,7 @@
     "status_code": 0,
     "is_broken": true,
     "reason": "Unreachable / Timeout",
-    "last_checked": 1790931546.5303767
+    "last_checked": 1791635281.6741176
   },
   "https://serviceonline.bihar.gov.in/#collapseHomeTwo": {
     "status_code": 200,
@@ -17757,7 +17757,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791027099.3293905
+    "last_checked": 1791635281.6741176
   },
   "http://serviceonline.bihar.gov.in/serviceLinkHome.html?serviceToken=SzZ4fWxkw0497&newLink=Y&%3Ccsrf:token%20uri=%27serviceLinkHome.html%27/%3E": {
     "status_code": 200,
@@ -17781,7 +17781,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790979152.482587
+    "last_checked": 1791635281.6741176
   },
   "https://mpedistrict.gov.in/MPL/ShowServiceDetail.aspx?param=2UTu+HT5tnHscoJIBdB11nhNuwzuqQOn": {
     "status_code": 200,
@@ -18201,7 +18201,7 @@
     "status_code": 404,
     "is_broken": true,
     "reason": "HTTP 404",
-    "last_checked": 1790932233.3566132
+    "last_checked": 1791635601.2824597
   },
   "https://www.startupindia.gov.in/content/sih/en/nsa-landing.html": {
     "status_code": 200,
@@ -19107,7 +19107,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791003600.2641137
+    "last_checked": 1791635281.6741176
   },
   "https://serviceonline.bihar.gov.in/#collapseSixSixM": {
     "status_code": 200,
@@ -19161,7 +19161,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790931546.5303767
+    "last_checked": 1791635281.6741176
   },
   "https://serviceonline.bihar.gov.in/#eng_collapseFifteenTwo": {
     "status_code": 200,
@@ -19209,7 +19209,7 @@
     "status_code": 0,
     "is_broken": true,
     "reason": "Unreachable / Timeout",
-    "last_checked": 1791003600.2641137
+    "last_checked": 1791635281.6741176
   },
   "https://vahan.parivahan.gov.in/vahanservice/vahan/ui/usermgmt/login.xhtml": {
     "status_code": 0,
@@ -19353,7 +19353,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790932046.6130123
+    "last_checked": 1791635281.6741176
   },
   "https://serviceonline.bihar.gov.in/#collapseSixSix": {
     "status_code": 200,
@@ -19371,7 +19371,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791003600.2641137
+    "last_checked": 1791635281.6741176
   },
   "https://serviceonline.bihar.gov.in/#collapseNineteenTwoM": {
     "status_code": 200,
@@ -19407,7 +19407,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790931546.5303767
+    "last_checked": 1791635281.6741176
   },
   "https://serviceonline.bihar.gov.in/#eng_collapseTwentyone": {
     "status_code": 200,
@@ -19467,19 +19467,19 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790931546.5303767
+    "last_checked": 1791635281.6741176
   },
   "https://serviceonline.bihar.gov.in/#eng_collapseOneTwoM": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791027099.3293905
+    "last_checked": 1791635281.6741176
   },
   "https://serviceonline.bihar.gov.in/#eng_collapseTwentysixM": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790943943.8283868
+    "last_checked": 1791635281.6741176
   },
   "https://serviceonline.bihar.gov.in/#eng_collapseTwentyseven": {
     "status_code": 200,
@@ -22839,7 +22839,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790929275.8736682
+    "last_checked": 1791634244.747843
   },
   "http://www.incometax.gov.in/iec/foportal//e-Campaigns/e-mail#0595228c-b70b-4f7b-8397-e4fccfbfa0de": {
     "status_code": 200,
@@ -23001,7 +23001,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790929402.9329975
+    "last_checked": 1791634304.9791474
   },
   "https://quiz.mygov.in/quiz/national-consumer-iq-quiz-2026": {
     "status_code": 200,
@@ -23757,7 +23757,7 @@
     "status_code": 400,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790943106.9567988
+    "last_checked": 1791634304.9791474
   },
   "https://twitter.com/intent/tweet?url=https://www.mygov.in/task/shramdan-photo-contest-2026": {
     "status_code": 200,
@@ -24051,7 +24051,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1790978503.9411263
+    "last_checked": 1791634304.9791474
   },
   "https://static.mygov.in/static/s3fs-public/ebook/atmanirbhar-bharat-be-ours/index.html": {
     "status_code": 200,
@@ -24309,13 +24309,13 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791002137.2563295
+    "last_checked": 1791634304.9791474
   },
   "https://quiz.mygov.in/quiz/shaheed-bhagat-singh-the-legacy-quiz/": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791002137.2563295
+    "last_checked": 1791634304.9791474
   },
   "https://quiz.mygov.in/quiz/human-rights-quiz-2026-celebrating-life-liberty-equality-and-dignity": {
     "status_code": 200,
@@ -24543,145 +24543,145 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791026475.5320084
+    "last_checked": 1791634244.747843
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=4343": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791027009.4345634
+    "last_checked": 1791635190.4028962
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=7090": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791027009.4345634
+    "last_checked": 1791635190.4028962
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=4077": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791027009.4345634
+    "last_checked": 1791635190.4028962
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=1671": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791027009.4345634
+    "last_checked": 1791635190.4028962
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=1848": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791027009.4345634
+    "last_checked": 1791635190.4028962
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=8536": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791027009.4345634
+    "last_checked": 1791635190.4028962
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=3549": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791027009.4345634
+    "last_checked": 1791635190.4028962
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=5931": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791027009.4345634
+    "last_checked": 1791635190.4028962
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=3262": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791027009.4345634
+    "last_checked": 1791635190.4028962
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=4518": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791027009.4345634
+    "last_checked": 1791635190.4028962
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=6604": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791027009.4345634
+    "last_checked": 1791635190.4028962
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=1866": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791027009.4345634
+    "last_checked": 1791635190.4028962
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=9044": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791027009.4345634
+    "last_checked": 1791635190.4028962
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=6081": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791027009.4345634
+    "last_checked": 1791635190.4028962
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=4357": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791027009.4345634
+    "last_checked": 1791635190.4028962
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=4561": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791027009.4345634
+    "last_checked": 1791635190.4028962
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=9095": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791027009.4345634
+    "last_checked": 1791635190.4028962
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=1381": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791027009.4345634
+    "last_checked": 1791635190.4028962
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=1662": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791027009.4345634
+    "last_checked": 1791635190.4028962
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=4576": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791027009.4345634
+    "last_checked": 1791635190.4028962
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=1678": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791027009.4345634
+    "last_checked": 1791635190.4028962
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=4375": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791027009.4345634
+    "last_checked": 1791635190.4028962
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=4512": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791027009.4345634
+    "last_checked": 1791635190.4028962
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=9051": {
     "status_code": 200,
@@ -24693,67 +24693,67 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791027009.4345634
+    "last_checked": 1791635190.4028962
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=9031": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791027009.4345634
+    "last_checked": 1791635190.4028962
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=3538": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791027009.4345634
+    "last_checked": 1791635190.4028962
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=9106": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791027009.4345634
+    "last_checked": 1791635190.4028962
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=5811": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791027009.4345634
+    "last_checked": 1791635190.4028962
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=7124": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791027009.4345634
+    "last_checked": 1791635190.4028962
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=8945": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791027009.4345634
+    "last_checked": 1791635190.4028962
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=1122": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791027009.4345634
+    "last_checked": 1791635190.4028962
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=8261": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791027009.4345634
+    "last_checked": 1791635190.4028962
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=2238": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791027009.4345634
+    "last_checked": 1791635190.4028962
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=4374": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791027009.4345634
+    "last_checked": 1791635190.4028962
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=3524": {
     "status_code": 200,
@@ -28372,5 +28372,17 @@
     "is_broken": false,
     "reason": "OK",
     "last_checked": 1791550713.83458
+  },
+  "https://www.facebook.com/share.php?u=https%3A%2F%2Fblog.mygov.in%2Fwinner-announcement-for-moes-foundation-day-quiz-advancing-earth-sciences-empowering-the-nation": {
+    "status_code": 400,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1791634304.9791474
+  },
+  "https://blog.mygov.in/winners-announced-for-bharat-gi-quiz-celebrate-indias-heritage": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1791634304.9791474
   }
 }
