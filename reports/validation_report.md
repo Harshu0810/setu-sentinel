@@ -1,11 +1,11 @@
 # 🛡️ Setu Sentinel — Validation & Verification Report
-**Generated:** 2026-10-13T14:07:51.023225+00:00 | **Target Portals:** 38 | **Independent Audit**
+**Generated:** 2026-10-13T22:41:15.004984+00:00 | **Target Portals:** 38 | **Independent Audit**
 
 ## 📊 Executive Audit Summary
 - **Portals Evaluated:** 38 (36 Online, 2 Offline)
-- **Total Links Discovered Across Homepages:** 3273
-- **Sampled Links Audited with Chromium TLS:** 2806
-- **Verified Working Links:** 2638 (HTTP 200/203/301/302)
+- **Total Links Discovered Across Homepages:** 3300
+- **Sampled Links Audited with Chromium TLS:** 2868
+- **Verified Working Links:** 2700 (HTTP 200/203/301/302)
 - **Confirmed Broken Links (True 404/5xx):** 168
 
 ---
@@ -24,8 +24,8 @@
 | **Rajasthan SSO** | State | ✅ UP | 8 | 8 | 7 | 1 | 70/100 | 0/100 | **60.2** |
 | **e-Mitra Rajasthan** | State | ✅ UP | 26 | 26 | 26 | 0 | 70/100 | 16/100 | **65.8** |
 | **Jan Soochna Portal** | State | ✅ UP | 19 | 19 | 18 | 1 | 70/100 | 61/100 | **78.5** |
-| **MyGov** | Central | ✅ UP | 204 | 204 | 202 | 2 | 70/100 | 0/100 | **59.4** |
-| **UIDAI (Aadhaar)** | Central | ✅ UP | 35 | 35 | 27 | 8 | 70/100 | 3/100 | **55.5** |
+| **MyGov** | Central | ✅ UP | 231 | 231 | 229 | 2 | 70/100 | 0/100 | **59.4** |
+| **UIDAI (Aadhaar)** | Central | ✅ UP | 35 | 35 | 27 | 8 | 70/100 | 0/100 | **54.6** |
 | **Jan Aadhaar Rajasthan** | State | ✅ UP | 92 | 92 | 82 | 10 | 70/100 | 0/100 | **53.0** |
 | **GeM (Govt e-Marketplace)** | Central | ✅ UP | 198 | 137 | 131 | 6 | 0/100 | 31/100 | **44.5** |
 | **RTU Kota** | Education | ✅ UP | 2 | 2 | 2 | 0 | 70/100 | 0/100 | **61.0** |
@@ -35,7 +35,7 @@
 | **Parivahan Sewa** | Central | ✅ UP | 156 | 156 | 120 | 36 | 70/100 | 95/100 | **69.5** |
 | **Rajasthan Sampark** | State | ✅ UP | 7 | 7 | 6 | 1 | 70/100 | 100/100 | **90.2** |
 | **Gujarat State Portal** | State | ✅ UP | 94 | 55 | 54 | 1 | 0/100 | 30/100 | **48.2** |
-| **Aaple Sarkar Maharashtra** | State | ✅ UP | 664 | 603 | 596 | 7 | 70/100 | 51/100 | **70.7** |
+| **Aaple Sarkar Maharashtra** | State | ✅ UP | 664 | 638 | 631 | 7 | 70/100 | 51/100 | **70.7** |
 | **Seva Sindhu Karnataka** | State | ✅ UP | 107 | 107 | 77 | 30 | 42/100 | 60/100 | **50.6** |
 | **e-District UP** | State | ✅ UP | 67 | 67 | 63 | 4 | 0/100 | 100/100 | **66.8** |
 | **Mee Seva (Andhra Pradesh)** | State | ✅ UP | 34 | 34 | 32 | 2 | 0/100 | 0/100 | **38.4** |
