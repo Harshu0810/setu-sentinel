@@ -1,12 +1,12 @@
 # 🛡️ Setu Sentinel — Validation & Verification Report
-**Generated:** 2026-10-14T21:39:17.427417+00:00 | **Target Portals:** 38 | **Independent Audit**
+**Generated:** 2026-10-15T04:10:05.414696+00:00 | **Target Portals:** 38 | **Independent Audit**
 
 ## 📊 Executive Audit Summary
 - **Portals Evaluated:** 38 (36 Online, 2 Offline)
-- **Total Links Discovered Across Homepages:** 3296
-- **Sampled Links Audited with Chromium TLS:** 2890
+- **Total Links Discovered Across Homepages:** 3295
+- **Sampled Links Audited with Chromium TLS:** 2889
 - **Verified Working Links:** 2719 (HTTP 200/203/301/302)
-- **Confirmed Broken Links (True 404/5xx):** 171
+- **Confirmed Broken Links (True 404/5xx):** 170
 
 ---
 
@@ -25,7 +25,7 @@
 | **e-Mitra Rajasthan** | State | ✅ UP | 26 | 26 | 26 | 0 | 70/100 | 16/100 | **65.8** |
 | **Jan Soochna Portal** | State | ✅ UP | 19 | 19 | 18 | 1 | 70/100 | 61/100 | **78.5** |
 | **MyGov** | Central | ✅ UP | 231 | 231 | 229 | 2 | 70/100 | 0/100 | **59.4** |
-| **UIDAI (Aadhaar)** | Central | ✅ UP | 35 | 35 | 27 | 8 | 70/100 | 0/100 | **54.6** |
+| **UIDAI (Aadhaar)** | Central | ✅ UP | 35 | 35 | 27 | 8 | 70/100 | 3/100 | **55.5** |
 | **Jan Aadhaar Rajasthan** | State | ✅ UP | 92 | 92 | 82 | 10 | 70/100 | 0/100 | **53.0** |
 | **GeM (Govt e-Marketplace)** | Central | ✅ UP | 198 | 137 | 131 | 6 | 0/100 | 31/100 | **44.5** |
 | **RTU Kota** | Education | ✅ UP | 2 | 2 | 2 | 0 | 70/100 | 0/100 | **61.0** |
@@ -51,7 +51,7 @@
 | **National Career Service** | Central | ✅ UP | 70 | 70 | 67 | 3 | 70/100 | 0/100 | **58.6** |
 | **Swachh Bharat Mission** | Central | ✅ UP | 45 | 45 | 42 | 3 | 70/100 | 0/100 | **58.6** |
 | **Skill India** | Central | ✅ UP | 0 | 0 | 0 | 0 | 70/100 | 0/100 | **61.0** |
-| **Startup India** | Central | ✅ UP | 81 | 81 | 79 | 2 | 70/100 | 30/100 | **68.4** |
+| **Startup India** | Central | ✅ UP | 80 | 80 | 79 | 1 | 70/100 | 30/100 | **69.2** |
 
 ---
 
