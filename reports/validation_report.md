@@ -1,12 +1,12 @@
 # 🛡️ Setu Sentinel — Validation & Verification Report
-**Generated:** 2026-10-15T04:10:05.414696+00:00 | **Target Portals:** 38 | **Independent Audit**
+**Generated:** 2026-10-15T11:20:48.579934+00:00 | **Target Portals:** 38 | **Independent Audit**
 
 ## 📊 Executive Audit Summary
 - **Portals Evaluated:** 38 (36 Online, 2 Offline)
-- **Total Links Discovered Across Homepages:** 3295
-- **Sampled Links Audited with Chromium TLS:** 2889
-- **Verified Working Links:** 2719 (HTTP 200/203/301/302)
-- **Confirmed Broken Links (True 404/5xx):** 170
+- **Total Links Discovered Across Homepages:** 3302
+- **Sampled Links Audited with Chromium TLS:** 2896
+- **Verified Working Links:** 2725 (HTTP 200/203/301/302)
+- **Confirmed Broken Links (True 404/5xx):** 171
 
 ---
 
@@ -17,14 +17,14 @@
 | **National Portal of India** | Central | ✅ UP | 65 | 65 | 64 | 1 | 70/100 | 0/100 | **60.2** |
 | **DigiLocker** | Central | ✅ UP | 45 | 45 | 45 | 0 | 70/100 | 0/100 | **61.0** |
 | **UMANG** | Central | ✅ UP | 28 | 28 | 28 | 0 | 70/100 | 0/100 | **61.0** |
-| **eCourts** | Judiciary | ✅ UP | 44 | 44 | 40 | 4 | 70/100 | 2/100 | **58.4** |
+| **eCourts** | Judiciary | ✅ UP | 50 | 50 | 47 | 3 | 70/100 | 1/100 | **58.9** |
 | **Income Tax e-Filing** | Central | ✅ UP | 116 | 116 | 116 | 0 | 70/100 | 0/100 | **61.0** |
 | **Passport Seva** | Central | ✅ UP | 7 | 7 | 7 | 0 | 70/100 | 0/100 | **61.0** |
 | **Rajasthan State Portal** | State | ✅ UP | 20 | 20 | 19 | 1 | 70/100 | 92/100 | **87.8** |
 | **Rajasthan SSO** | State | ✅ UP | 8 | 8 | 7 | 1 | 70/100 | 0/100 | **60.2** |
 | **e-Mitra Rajasthan** | State | ✅ UP | 26 | 26 | 26 | 0 | 70/100 | 16/100 | **65.8** |
 | **Jan Soochna Portal** | State | ✅ UP | 19 | 19 | 18 | 1 | 70/100 | 61/100 | **78.5** |
-| **MyGov** | Central | ✅ UP | 231 | 231 | 229 | 2 | 70/100 | 0/100 | **59.4** |
+| **MyGov** | Central | ✅ UP | 230 | 230 | 228 | 2 | 70/100 | 0/100 | **59.4** |
 | **UIDAI (Aadhaar)** | Central | ✅ UP | 35 | 35 | 27 | 8 | 70/100 | 3/100 | **55.5** |
 | **Jan Aadhaar Rajasthan** | State | ✅ UP | 92 | 92 | 82 | 10 | 70/100 | 0/100 | **53.0** |
 | **GeM (Govt e-Marketplace)** | Central | ✅ UP | 198 | 137 | 131 | 6 | 0/100 | 31/100 | **44.5** |
@@ -51,7 +51,7 @@
 | **National Career Service** | Central | ✅ UP | 70 | 70 | 67 | 3 | 70/100 | 0/100 | **58.6** |
 | **Swachh Bharat Mission** | Central | ✅ UP | 45 | 45 | 42 | 3 | 70/100 | 0/100 | **58.6** |
 | **Skill India** | Central | ✅ UP | 0 | 0 | 0 | 0 | 70/100 | 0/100 | **61.0** |
-| **Startup India** | Central | ✅ UP | 80 | 80 | 79 | 1 | 70/100 | 30/100 | **69.2** |
+| **Startup India** | Central | ✅ UP | 82 | 82 | 79 | 3 | 70/100 | 43/100 | **71.5** |
 
 ---
 
