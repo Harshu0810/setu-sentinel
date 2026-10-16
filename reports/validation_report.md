@@ -1,12 +1,12 @@
 # 🛡️ Setu Sentinel — Validation & Verification Report
-**Generated:** 2026-10-16T04:05:07.377919+00:00 | **Target Portals:** 38 | **Independent Audit**
+**Generated:** 2026-10-16T11:17:15.177631+00:00 | **Target Portals:** 38 | **Independent Audit**
 
 ## 📊 Executive Audit Summary
 - **Portals Evaluated:** 38 (36 Online, 2 Offline)
-- **Total Links Discovered Across Homepages:** 3299
-- **Sampled Links Audited with Chromium TLS:** 2893
-- **Verified Working Links:** 2722 (HTTP 200/203/301/302)
-- **Confirmed Broken Links (True 404/5xx):** 171
+- **Total Links Discovered Across Homepages:** 3260
+- **Sampled Links Audited with Chromium TLS:** 2854
+- **Verified Working Links:** 2685 (HTTP 200/203/301/302)
+- **Confirmed Broken Links (True 404/5xx):** 169
 
 ---
 
@@ -20,11 +20,11 @@
 | **eCourts** | Judiciary | ✅ UP | 50 | 50 | 47 | 3 | 70/100 | 1/100 | **58.9** |
 | **Income Tax e-Filing** | Central | ✅ UP | 116 | 116 | 116 | 0 | 70/100 | 0/100 | **61.0** |
 | **Passport Seva** | Central | ✅ UP | 7 | 7 | 7 | 0 | 70/100 | 0/100 | **61.0** |
-| **Rajasthan State Portal** | State | ✅ UP | 20 | 20 | 19 | 1 | 70/100 | 92/100 | **87.8** |
+| **Rajasthan State Portal** | State | ✅ UP | 21 | 21 | 20 | 1 | 70/100 | 92/100 | **87.8** |
 | **Rajasthan SSO** | State | ✅ UP | 8 | 8 | 7 | 1 | 70/100 | 0/100 | **60.2** |
 | **e-Mitra Rajasthan** | State | ✅ UP | 26 | 26 | 26 | 0 | 70/100 | 16/100 | **65.8** |
 | **Jan Soochna Portal** | State | ✅ UP | 19 | 19 | 18 | 1 | 70/100 | 61/100 | **78.5** |
-| **MyGov** | Central | ✅ UP | 227 | 227 | 225 | 2 | 70/100 | 0/100 | **59.4** |
+| **MyGov** | Central | ✅ UP | 200 | 200 | 198 | 2 | 70/100 | 0/100 | **59.4** |
 | **UIDAI (Aadhaar)** | Central | ✅ UP | 35 | 35 | 27 | 8 | 70/100 | 3/100 | **55.5** |
 | **Jan Aadhaar Rajasthan** | State | ✅ UP | 92 | 92 | 82 | 10 | 70/100 | 0/100 | **53.0** |
 | **GeM (Govt e-Marketplace)** | Central | ✅ UP | 198 | 137 | 131 | 6 | 0/100 | 31/100 | **44.5** |
@@ -51,7 +51,7 @@
 | **National Career Service** | Central | ✅ UP | 70 | 70 | 67 | 3 | 70/100 | 0/100 | **58.6** |
 | **Swachh Bharat Mission** | Central | ✅ UP | 45 | 45 | 42 | 3 | 70/100 | 0/100 | **58.6** |
 | **Skill India** | Central | ✅ UP | 0 | 0 | 0 | 0 | 70/100 | 0/100 | **61.0** |
-| **Startup India** | Central | ✅ UP | 82 | 82 | 79 | 3 | 70/100 | 30/100 | **67.6** |
+| **Startup India** | Central | ✅ UP | 69 | 69 | 68 | 1 | 70/100 | 30/100 | **69.2** |
 
 ---
 
