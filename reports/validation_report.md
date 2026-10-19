@@ -1,12 +1,12 @@
 # 🛡️ Setu Sentinel — Validation & Verification Report
-**Generated:** 2026-10-19T12:58:42.140409+00:00 | **Target Portals:** 38 | **Independent Audit**
+**Generated:** 2026-10-19T22:25:27.512630+00:00 | **Target Portals:** 38 | **Independent Audit**
 
 ## 📊 Executive Audit Summary
-- **Portals Evaluated:** 38 (35 Online, 3 Offline)
-- **Total Links Discovered Across Homepages:** 2597
-- **Sampled Links Audited with Chromium TLS:** 2191
-- **Verified Working Links:** 2029 (HTTP 200/203/301/302)
-- **Confirmed Broken Links (True 404/5xx):** 162
+- **Portals Evaluated:** 38 (36 Online, 2 Offline)
+- **Total Links Discovered Across Homepages:** 3274
+- **Sampled Links Audited with Chromium TLS:** 2560
+- **Verified Working Links:** 2393 (HTTP 200/203/301/302)
+- **Confirmed Broken Links (True 404/5xx):** 167
 
 ---
 
@@ -35,13 +35,13 @@
 | **Parivahan Sewa** | Central | ✅ UP | 156 | 156 | 120 | 36 | 70/100 | 95/100 | **69.5** |
 | **Rajasthan Sampark** | State | ✅ UP | 7 | 7 | 6 | 1 | 70/100 | 100/100 | **90.2** |
 | **Gujarat State Portal** | State | ✅ UP | 94 | 55 | 54 | 1 | 0/100 | 30/100 | **48.2** |
-| **Aaple Sarkar Maharashtra** | State | ❌ DOWN | 0 | 0 | 0 | 0 | 70/100 | 0/100 | **21.0** |
+| **Aaple Sarkar Maharashtra** | State | ✅ UP | 664 | 356 | 354 | 2 | 70/100 | 51/100 | **74.7** |
 | **Seva Sindhu Karnataka** | State | ✅ UP | 107 | 107 | 77 | 30 | 42/100 | 60/100 | **50.6** |
 | **e-District UP** | State | ✅ UP | 67 | 67 | 63 | 4 | 0/100 | 100/100 | **66.8** |
 | **Mee Seva (Andhra Pradesh)** | State | ✅ UP | 34 | 34 | 32 | 2 | 0/100 | 0/100 | **38.4** |
 | **Mee Seva (Telangana)** | State | ✅ UP | 15 | 15 | 14 | 1 | 45/100 | 0/100 | **52.7** |
 | **Digital Gujarat** | State | ✅ UP | 49 | 49 | 48 | 1 | 42/100 | 60/100 | **69.8** |
-| **RTPS Bihar** | State | ✅ UP | 333 | 333 | 306 | 27 | 70/100 | 88/100 | **67.4** |
+| **RTPS Bihar** | State | ✅ UP | 333 | 333 | 305 | 28 | 70/100 | 88/100 | **67.4** |
 | **SARAL Haryana** | State | ✅ UP | 37 | 37 | 36 | 1 | 30/100 | 100/100 | **78.2** |
 | **Akshaya Kerala** | State | ✅ UP | 56 | 56 | 53 | 3 | 70/100 | 0/100 | **58.6** |
 | **Tamil Nadu e-Sevai** | State | ✅ UP | 38 | 36 | 29 | 7 | 36/100 | 60/100 | **63.2** |
@@ -51,7 +51,7 @@
 | **National Career Service** | Central | ✅ UP | 70 | 70 | 67 | 3 | 70/100 | 0/100 | **58.6** |
 | **Swachh Bharat Mission** | Central | ✅ UP | 45 | 45 | 43 | 2 | 70/100 | 0/100 | **59.4** |
 | **Skill India** | Central | ✅ UP | 0 | 0 | 0 | 0 | 70/100 | 0/100 | **61.0** |
-| **Startup India** | Central | ✅ UP | 69 | 69 | 68 | 1 | 70/100 | 30/100 | **69.2** |
+| **Startup India** | Central | ✅ UP | 82 | 82 | 79 | 3 | 70/100 | 30/100 | **67.6** |
 
 ---
 
