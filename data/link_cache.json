@@ -4572,10 +4572,10 @@
     "last_checked": 1786446460.2871964
   },
   "https://mahait.org/": {
-    "status_code": 0,
-    "is_broken": true,
-    "reason": "Unreachable / Timeout",
-    "last_checked": 1791552062.6496463
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1792514839.8586836
   },
   "https://aaplesarkar.mahaonline.gov.in/mr/Login/Certificate_Documents?ServiceId=5026": {
     "status_code": 200,
@@ -19941,7 +19941,7 @@
     "status_code": 0,
     "is_broken": true,
     "reason": "Unreachable / Timeout",
-    "last_checked": 1791782450.0320346
+    "last_checked": 1792514839.8586836
   },
   "https://aaplesarkar.mahaonline.gov.in/mr/Login/Certificate_Documents?ServiceId=6605": {
     "status_code": 200,
@@ -23931,7 +23931,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791552062.6496463
+    "last_checked": 1792514839.8586836
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=4002": {
     "status_code": 200,
@@ -24153,13 +24153,13 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791585985.9307358
+    "last_checked": 1792514839.8586836
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=5026": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791585985.9307358
+    "last_checked": 1792514839.8586836
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=5780": {
     "status_code": 200,
@@ -24171,13 +24171,13 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791585985.9307358
+    "last_checked": 1792514839.8586836
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=9103": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791585985.9307358
+    "last_checked": 1792514839.8586836
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=3243": {
     "status_code": 200,
@@ -24273,7 +24273,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791585985.9307358
+    "last_checked": 1792514839.8586836
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=4385": {
     "status_code": 200,
@@ -24345,7 +24345,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791609807.6752477
+    "last_checked": 1792514839.8586836
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=4064": {
     "status_code": 200,
@@ -24579,7 +24579,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791635190.4028962
+    "last_checked": 1792514839.8586836
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=3549": {
     "status_code": 200,
@@ -24597,7 +24597,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791635190.4028962
+    "last_checked": 1792514839.8586836
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=4518": {
     "status_code": 200,
@@ -24663,7 +24663,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791635190.4028962
+    "last_checked": 1792514839.8586836
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=1678": {
     "status_code": 200,
@@ -24705,7 +24705,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791635190.4028962
+    "last_checked": 1792514839.8586836
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=9106": {
     "status_code": 200,
@@ -24747,7 +24747,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791635190.4028962
+    "last_checked": 1792514839.8586836
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=4374": {
     "status_code": 200,
@@ -24855,7 +24855,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791695164.108198
+    "last_checked": 1792514839.8586836
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=3237": {
     "status_code": 200,
@@ -24903,13 +24903,13 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791695164.108198
+    "last_checked": 1792514839.8586836
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=7129": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791668008.6586077
+    "last_checked": 1792514839.8586836
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=3787": {
     "status_code": 200,
@@ -24957,7 +24957,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791668008.6586077
+    "last_checked": 1792514839.8586836
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=5760": {
     "status_code": 200,
@@ -25113,7 +25113,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791668008.6586077
+    "last_checked": 1792514839.8586836
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=4570": {
     "status_code": 200,
@@ -25197,19 +25197,19 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791755470.5321355
+    "last_checked": 1792514839.8586836
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=1841": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791817409.4880257
+    "last_checked": 1792514839.8586836
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=9102": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791722012.7239256
+    "last_checked": 1792514839.8586836
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=6053": {
     "status_code": 200,
@@ -25311,7 +25311,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791782450.0320346
+    "last_checked": 1792514839.8586836
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=4017": {
     "status_code": 200,
@@ -25455,7 +25455,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791755470.5321355
+    "last_checked": 1792514839.8586836
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=4137": {
     "status_code": 200,
@@ -25623,7 +25623,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791755470.5321355
+    "last_checked": 1792514839.8586836
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=2456": {
     "status_code": 200,
@@ -25749,7 +25749,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791755470.5321355
+    "last_checked": 1792514839.8586836
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=3228": {
     "status_code": 200,
@@ -25893,7 +25893,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791900230.7440588
+    "last_checked": 1792514839.8586836
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=4313": {
     "status_code": 200,
@@ -25941,7 +25941,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791782450.0320346
+    "last_checked": 1792514839.8586836
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=4345": {
     "status_code": 200,
@@ -26037,7 +26037,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791851551.6111162
+    "last_checked": 1792514839.8586836
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=1040": {
     "status_code": 200,
@@ -26061,7 +26061,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791817409.4880257
+    "last_checked": 1792514839.8586836
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=2318": {
     "status_code": 200,
@@ -26157,7 +26157,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791817409.4880257
+    "last_checked": 1792514839.8586836
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=1679": {
     "status_code": 200,
@@ -26187,7 +26187,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791817409.4880257
+    "last_checked": 1792514839.8586836
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=4371": {
     "status_code": 200,
@@ -26367,7 +26367,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791851551.6111162
+    "last_checked": 1792514839.8586836
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=3245": {
     "status_code": 200,
@@ -26625,7 +26625,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791900230.7440588
+    "last_checked": 1792514839.8586836
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=7122": {
     "status_code": 200,
@@ -26649,13 +26649,13 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791899658.709227
+    "last_checked": 1792514260.8864946
   },
   "https://myaadhaarbeta.uidai.gov.in/genericGenerateOrRetrieveVID/": {
     "status_code": 0,
     "is_broken": true,
     "reason": "Unreachable / Timeout",
-    "last_checked": 1791899724.0308452
+    "last_checked": 1792514302.7182171
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=4562": {
     "status_code": 200,
@@ -26691,7 +26691,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791900230.7440588
+    "last_checked": 1792514839.8586836
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=5022": {
     "status_code": 200,
@@ -28551,19 +28551,19 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791899658.709227
+    "last_checked": 1792514260.8864946
   },
   "https://www.mygov.in/mygov-survey/pm-gatishakti-planning-viksit-bharat": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791899658.709227
+    "last_checked": 1792514260.8864946
   },
   "https://www.mygov.in/group-issue/pm-gatishakti-integrated-planning-viksit-bharat-inviting-suggestions-national-transport": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791899658.709227
+    "last_checked": 1792514260.8864946
   },
   "https://www.facebook.com/share.php?u=https%3A%2F%2Fblog.mygov.in%2Fwinner-announcement-for-bharat-innovates-quiz": {
     "status_code": 400,
