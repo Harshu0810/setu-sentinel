@@ -29074,5 +29074,11 @@
     "is_broken": false,
     "reason": "OK",
     "last_checked": 1792447786.7131581
+  },
+  "https://quiz.mygov.in/quiz/cyber-security-awareness-quiz-2026": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1792555217.952359
   }
 }
