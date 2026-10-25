@@ -1,11 +1,11 @@
 # 🛡️ Setu Sentinel — Validation & Verification Report
-**Generated:** 2026-10-25T04:13:46.753866+00:00 | **Target Portals:** 38 | **Independent Audit**
+**Generated:** 2026-10-25T11:16:31.222235+00:00 | **Target Portals:** 38 | **Independent Audit**
 
 ## 📊 Executive Audit Summary
 - **Portals Evaluated:** 38 (36 Online, 2 Offline)
-- **Total Links Discovered Across Homepages:** 3258
-- **Sampled Links Audited with Chromium TLS:** 2891
-- **Verified Working Links:** 2715 (HTTP 200/203/301/302)
+- **Total Links Discovered Across Homepages:** 3340
+- **Sampled Links Audited with Chromium TLS:** 2973
+- **Verified Working Links:** 2797 (HTTP 200/203/301/302)
 - **Confirmed Broken Links (True 404/5xx):** 176
 
 ---
@@ -16,7 +16,7 @@
 |---|---|---|---|---|---|---|---|---|---|
 | **National Portal of India** | Central | ✅ UP | 65 | 65 | 64 | 1 | 70/100 | 0/100 | **60.2** |
 | **DigiLocker** | Central | ✅ UP | 45 | 45 | 45 | 0 | 70/100 | 0/100 | **61.0** |
-| **UMANG** | Central | ✅ UP | 2 | 2 | 2 | 0 | 70/100 | 0/100 | **61.0** |
+| **UMANG** | Central | ✅ UP | 30 | 30 | 30 | 0 | 70/100 | 0/100 | **61.0** |
 | **eCourts** | Judiciary | ✅ UP | 50 | 50 | 47 | 3 | 70/100 | 1/100 | **58.9** |
 | **Income Tax e-Filing** | Central | ✅ UP | 116 | 116 | 116 | 0 | 70/100 | 0/100 | **61.0** |
 | **Passport Seva** | Central | ✅ UP | 7 | 7 | 7 | 0 | 70/100 | 0/100 | **61.0** |
@@ -51,7 +51,7 @@
 | **National Career Service** | Central | ✅ UP | 70 | 70 | 67 | 3 | 70/100 | 0/100 | **58.6** |
 | **Swachh Bharat Mission** | Central | ✅ UP | 45 | 45 | 42 | 3 | 70/100 | 0/100 | **58.6** |
 | **Skill India** | Central | ✅ UP | 0 | 0 | 0 | 0 | 70/100 | 0/100 | **61.0** |
-| **Startup India** | Central | ✅ UP | 16 | 16 | 14 | 2 | 70/100 | 30/100 | **68.4** |
+| **Startup India** | Central | ✅ UP | 70 | 70 | 68 | 2 | 70/100 | 30/100 | **68.4** |
 
 ---
 
