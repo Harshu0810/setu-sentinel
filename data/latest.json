@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-10-26T04:14:49.294134+00:00",
+  "run_at": "2026-10-26T12:47:15.869789+00:00",
   "total_portals": 38,
   "portals": [
     {
@@ -14,21 +14,21 @@
       ],
       "uptime": {
         "status": "up",
-        "response_ms": 205,
+        "response_ms": 124,
         "total_links_found": 65,
         "total_links_audited": 65,
         "verified_working_links_count": 64,
         "verified_working_links": [
-          "https://www.india.gov.in/spotlight/details/prime-minister-road-accident-victims-hospitalisation-and-assured-treatment-scheme-pm-rahat",
+          "https://www.india.gov.in/my-government/schemes",
+          "https://www.india.gov.in/category/driving-transport",
           "https://www.india.gov.in/services/details/bhavishya-pension-sanction-and-payment-tracking-system",
-          "https://www.india.gov.in/category/defence-foreign-affairs",
-          "https://www.india.gov.in/about-us#data-sources",
-          "https://www.india.gov.in/category/youth-sports-culture",
-          "https://pgportal.gov.in/",
-          "https://www.india.gov.in/spotlight/details/pradhan-mantri-anusuchit-jaati-abhyuday-yojana-pm-ajay",
-          "https://x.com/indiagovin",
-          "https://www.india.gov.in/category/science-it-communication",
-          "https://www.india.gov.in/explore-india/facts-of-india"
+          "https://www.india.gov.in/spotlight",
+          "https://www.india.gov.in/category/agriculture-rural-environment",
+          "https://www.india.gov.in/explore-india/odop",
+          "https://www.india.gov.in/services/details/online-textbooks-of-national-council-of-educational-research-and-training",
+          "https://www.facebook.com/nationalportalofindia",
+          "https://www.india.gov.in/services/details/esanjeevani-national-telemedicine-service",
+          "https://www.india.gov.in/spotlight/details/pradhan-mantri-anusuchit-jaati-abhyuday-yojana-pm-ajay"
         ],
         "broken_links": 1,
         "broken_links_details": [
@@ -86,21 +86,21 @@
       ],
       "uptime": {
         "status": "up",
-        "response_ms": 1857,
+        "response_ms": 1502,
         "total_links_found": 45,
         "total_links_audited": 45,
         "verified_working_links_count": 45,
         "verified_working_links": [
-          "https://www.digilocker.gov.in/web/dashboard/issuers?state=Maharashtra",
-          "https://play.google.com/store/apps/details?id=com.digilocker.android",
-          "https://www.digilocker.gov.in/#",
-          "https://www.digilocker.gov.in/web/dashboard/issuers?state=Bihar",
-          "https://www.digilocker.gov.in/web/about/circulars",
-          "https://www.digilocker.gov.in/web/dashboard/issuers?state=Odisha",
-          "https://www.digilocker.gov.in/web/dashboard/issuers?id=993",
-          "https://www.digilocker.gov.in/",
+          "https://www.digilocker.gov.in/web/partners/partner-faq",
           "https://digilocker.meripehchaan.gov.in/",
-          "https://www.digilocker.gov.in/web/dashboard/issuers?state=Gujarat"
+          "https://www.digilocker.gov.in/web/signup",
+          "https://www.digilocker.gov.in/web/about/about-digilocker",
+          "https://www.digilocker.gov.in/web/dashboard/issuers?id=18",
+          "https://www.digilocker.gov.in/web/dashboard/issuers?id=2",
+          "https://www.digilocker.gov.in/web/login",
+          "https://www.digilocker.gov.in/web/partners/introductions",
+          "https://www.digilocker.gov.in/web/dashboard/issuers?id=19",
+          "https://www.digilocker.gov.in/"
         ],
         "broken_links": 0,
         "broken_links_details": [],
@@ -152,21 +152,21 @@
       ],
       "uptime": {
         "status": "up",
-        "response_ms": 1729,
-        "total_links_found": 30,
-        "total_links_audited": 30,
-        "verified_working_links_count": 30,
+        "response_ms": 1891,
+        "total_links_found": 28,
+        "total_links_audited": 28,
+        "verified_working_links_count": 28,
         "verified_working_links": [
+          "https://web.umang.gov.in/landing/services?stateId=10",
           "https://web.umang.gov.in/web_new/department?url=dept%2F62&dept_id=62&dept_name=CPGRAMS",
-          "https://web.umang.gov.in/landing/video_presentation",
-          "https://web.umang.gov.in/landing/services?stateId=2",
-          "https://web.umang.gov.in/landing/accessibility",
-          "https://web.umang.gov.in/landing/services?stateId=30",
-          "https://web.umang.gov.in/landing/partners",
           "https://web.umang.gov.in/landing/scheme/dashboard",
-          "https://web.umang.gov.in/landing/jobs",
-          "https://web.umang.gov.in/landing/aboutus",
-          "https://web.umang.gov.in/landing/services?stateId=10"
+          "https://web.umang.gov.in/help/privacy-policy.htm",
+          "https://web.umang.gov.in/landing/digilocker",
+          "https://play.google.com/store/apps/details?id=com.cdotindia.capsachet&hl=en_IN",
+          "https://web.umang.gov.in/landing/services?stateId=30",
+          "https://web.umang.gov.in/help/terms-and-conditions.htm",
+          "https://itunes.apple.com/in/app/umang/id1236448857?mt=8",
+          "https://web.umang.gov.in/landing/dashboard"
         ],
         "broken_links": 0,
         "broken_links_details": [],
@@ -185,15 +185,15 @@
       },
       "translation": {
         "language": "hi",
-        "score": 0,
-        "devanagari_ratio_pct": 0.0,
-        "switcher_found": false,
-        "switcher_type": "None",
-        "status": "no_language_switcher_found",
+        "score": 32,
+        "devanagari_ratio_pct": 3.7,
+        "switcher_found": true,
+        "switcher_type": "Native Multilingual Portal",
+        "status": "native_multilingual_detected",
         "regional_breakdown": {
           "nav_pct": 0.0,
           "headings_pct": 0.0,
-          "body_pct": 0.0
+          "body_pct": 6.9
         },
         "quality_breakdown": {
           "fluency_score": 0,
@@ -204,7 +204,7 @@
           "Insufficient Devanagari script content (<5% script ratio)"
         ]
       },
-      "composite_score": 61.0
+      "composite_score": 70.6
     },
     {
       "name": "eCourts",
@@ -300,21 +300,21 @@
       ],
       "uptime": {
         "status": "up",
-        "response_ms": 2792,
+        "response_ms": 2765,
         "total_links_found": 116,
         "total_links_audited": 116,
         "verified_working_links_count": 116,
         "verified_working_links": [
-          "https://www.incometax.gov.in/iec/foportal/help/individual/return-applicable-0#returnsandforms",
           "https://www.incometax.gov.in/iec/foportal/help/company/return-applicable#returnsandforms",
-          "https://www.incometax.gov.in/iec/foportal/help/individual/return-applicable#taxdeductions",
-          "https://www.incometax.gov.in/iec/foportal/sites/default/files/2026-10/Notification-133-2026.pdf#",
+          "https://www.incometaxindia.gov.in/history-of-direct-taxation",
+          "https://www.incometax.gov.in/iec/foportal/help/individual/return-applicable-0#taxslabs",
+          "https://www.incometax.gov.in/iec/foportal/sites/default/files/2022-11/TAXPAYERS-CHARTER-hindi.pdf#",
+          "https://www.incometax.gov.in/iec/foportal/help",
+          "https://www.facebook.com/Incometaxindia/",
+          "https://www.incometax.gov.in/iec/foportal/using-the-portal/browser-support",
           "https://www.incometax.gov.in/iec/foportal/help/non-company/return-applicable-0#returnsandforms",
-          "https://www.incometax.gov.in/iec/foportal/help/individual-business-profession#taxslabs",
-          "http://www.incometax.gov.in/iec/foportal/contact-us",
-          "https://www.incometax.gov.in/iec/foportal/help/firm-llp/how-to-file-tax-returns",
-          "https://www.incometax.gov.in/iec/foportal/latest-news",
-          "https://www.incometax.gov.in/iec/foportal/help/all-topics/tax-payer/individual/business-professional/how-to-file-tax-returns"
+          "https://eportal.incometax.gov.in/iec/foservices/#/fo-greivance/view",
+          "https://eportal.incometax.gov.in/iec/foservices/#/TaxCalc/calculator"
         ],
         "broken_links": 0,
         "broken_links_details": [],
@@ -366,18 +366,18 @@
       ],
       "uptime": {
         "status": "up",
-        "response_ms": 3195,
+        "response_ms": 3426,
         "total_links_found": 7,
         "total_links_audited": 7,
         "verified_working_links_count": 7,
         "verified_working_links": [
-          "https://services1.passportindia.gov.in/forms/registration",
-          "https://www.passportindia.gov.in/psp/TatkaalPassports",
-          "https://www.passportindia.gov.in/psp#",
           "https://www.passportindia.gov.in/psp/mPassportApp",
           "https://www.passportindia.gov.in/psp#MainContent",
-          "https://www.passportindia.gov.in/psp",
-          "https://services1.passportindia.gov.in/forms/PreLogin"
+          "https://www.passportindia.gov.in/psp/TatkaalPassports",
+          "https://services1.passportindia.gov.in/forms/registration",
+          "https://www.passportindia.gov.in/psp#",
+          "https://services1.passportindia.gov.in/forms/PreLogin",
+          "https://www.passportindia.gov.in/psp"
         ],
         "broken_links": 0,
         "broken_links_details": [],
@@ -429,21 +429,21 @@
       ],
       "uptime": {
         "status": "up",
-        "response_ms": 3669,
+        "response_ms": 3518,
         "total_links_found": 21,
         "total_links_audited": 21,
         "verified_working_links_count": 20,
         "verified_working_links": [
+          "https://rajasthan.gov.in/pages/state-scheme-dashboard",
           "https://www.ux4g.gov.in/contact",
-          "https://rajasthan.gov.in/pages/government-order/images/409/43/2979",
           "https://rajasthan.gov.in/jankalyan-category-and-entry-type/0/50/92",
-          "https://rajasthan.gov.in/pages/feedback-form",
+          "https://emitra.rajasthan.gov.in/",
+          "https://www.facebook.com/RajCMO/",
+          "https://rajasthan.gov.in/jankalyan-category-and-entry-type/0/50/89",
           "https://department.rajasthan.gov.in/pages/sm/department-page/375559/3385",
           "https://rajasthan.gov.in/",
-          "https://www.facebook.com/RajCMO/",
-          "https://rajasthan.gov.in/pages/grid-data/0/17",
-          "https://rajasthan.gov.in/pages/state-scheme-dashboard",
-          "https://emitra.rajasthan.gov.in/emitra/report/guideline"
+          "https://sampark.rajasthan.gov.in/",
+          "https://rajasthan.gov.in/pages/sitemap"
         ],
         "broken_links": 1,
         "broken_links_details": [
@@ -499,19 +499,19 @@
       ],
       "uptime": {
         "status": "up",
-        "response_ms": 1726,
+        "response_ms": 1884,
         "total_links_found": 8,
         "total_links_audited": 8,
         "verified_working_links_count": 8,
         "verified_working_links": [
           "https://sso.rajasthan.gov.in/sitemap",
-          "https://sso.rajasthan.gov.in/",
           "https://sso.rajasthan.gov.in/policies",
-          "https://onelink.to/mshz7g",
+          "https://sso.rajasthan.gov.in/register",
+          "https://sso.rajasthan.gov.in/",
+          "https://sso.rajasthan.gov.in/passwordpolicy",
           "https://www.bis.gov.in/",
           "https://sso.rajasthan.gov.in/signin",
-          "https://sso.rajasthan.gov.in/register",
-          "https://sso.rajasthan.gov.in/passwordpolicy"
+          "https://onelink.to/mshz7g"
         ],
         "broken_links": 0,
         "broken_links_details": [],
@@ -563,21 +563,21 @@
       ],
       "uptime": {
         "status": "up",
-        "response_ms": 4172,
+        "response_ms": 3789,
         "total_links_found": 28,
         "total_links_audited": 28,
         "verified_working_links_count": 28,
         "verified_working_links": [
-          "https://emitra.rajasthan.gov.in/emitra/accessblity-statement",
-          "https://emitra.rajasthan.gov.in/emitra/about",
-          "https://emitra.rajasthan.gov.in/emitra/report/circular-office-order",
-          "https://emitra.rajasthan.gov.in/emitra/contact",
-          "https://emitra.rajasthan.gov.in/emitra/report/txn-history",
-          "https://emitra.rajasthan.gov.in/emitra/screen-reader",
+          "https://play.google.com/store/apps/details?id=in.gov.semt.rajeev.emitrapayment&hl=en",
+          "https://emitra.rajasthan.gov.in/emitra/feedback",
+          "https://emitra.rajasthan.gov.in/emitra/home",
           "https://emitra.rajasthan.gov.in/emitra/rate",
           "https://sso.rajasthan.gov.in/",
-          "https://emitra.rajasthan.gov.in/emitra/user-SiteMap",
-          "https://emitra.rajasthan.gov.in/emitra/b2c-services"
+          "https://emitra.rajasthan.gov.in/#offcanvasExample",
+          "https://www.ux4g.gov.in/",
+          "https://emitra.rajasthan.gov.in/emitra/eoi",
+          "https://emitra.rajasthan.gov.in/emitra/online-verification",
+          "https://emitra.rajasthan.gov.in/emitra/report/circular-office-order"
         ],
         "broken_links": 0,
         "broken_links_details": [],
@@ -629,21 +629,21 @@
       ],
       "uptime": {
         "status": "up",
-        "response_ms": 5208,
+        "response_ms": 4412,
         "total_links_found": 19,
         "total_links_audited": 19,
         "verified_working_links_count": 18,
         "verified_working_links": [
-          "https://india.gov.in/",
-          "https://jansoochna.rajasthan.gov.in/#",
-          "https://jansoochna.rajasthan.gov.in/Home/InformationOfScheme",
-          "https://jansoochna.rajasthan.gov.in/Home/SchemeEligibility",
+          "https://jansoochna.rajasthan.gov.in/Home/JanSoochna",
+          "https://jansoochna.rajasthan.gov.in/CMS/Sitemap",
           "https://jansoochna.rajasthan.gov.in/Home/SchemePenetration",
-          "https://jansoochna.rajasthan.gov.in/Home/Schemes",
-          "https://jansoochna.rajasthan.gov.in/CMS/Circulars",
-          "https://jansoochna.rajasthan.gov.in/CMS/AccessblityStatement",
+          "https://india.gov.in/",
+          "https://rajasthan.gov.in/",
+          "https://jansoochna.rajasthan.gov.in/#demo",
           "https://jansoochna.rajasthan.gov.in/CMS/FlashModule",
-          "https://rajasthan.gov.in/"
+          "https://jansoochna.rajasthan.gov.in/Home/Schemes",
+          "https://dipr.rajasthan.gov.in/home",
+          "https://jansoochna.rajasthan.gov.in/Home/InformationOfScheme"
         ],
         "broken_links": 1,
         "broken_links_details": [
@@ -703,28 +703,38 @@
       ],
       "uptime": {
         "status": "up",
-        "response_ms": 4058,
-        "total_links_found": 230,
-        "total_links_audited": 230,
-        "verified_working_links_count": 219,
+        "response_ms": 709,
+        "total_links_found": 203,
+        "total_links_audited": 203,
+        "verified_working_links_count": 193,
         "verified_working_links": [
-          "https://twitter.com/intent/tweet?url=https://www.mygov.in/task/logo-design-competition-pashu-aushadhi",
-          "https://twitter.com/intent/tweet?url=https%3A%2F%2Fblog.mygov.in%2Fwinner-announcement-for-bharat-innovates-quiz&text=Winner%20Announcement%20for%20Bharat%20Innovates%20Quiz",
-          "https://www.facebook.com/share.php?u=https%3A%2F%2Fblog.mygov.in%2Fwinner-announcement-for-slogan-writing-contest-for-pm-surya-ghar-muft-bijli-yojana",
-          "https://www.mygov.in/#pledge-section",
-          "https://www.linkedin.com/company/mygov-india/",
-          "https://meity.dashboard.nic.in/",
-          "https://www.facebook.com/share.php?u=https%3A%2F%2Fblog.mygov.in%2Fwinner-announcement-for-moes-foundation-day-quiz-advancing-earth-sciences-empowering-the-nation",
-          "https://quiz.mygov.in/quiz/national-quiz-competition-on-consumer-protection-law-2026",
-          "https://www.mygov.in/blog/winner-announcement-human-rights-quiz-2026-celebrating-life-liberty-equality-and-dignity",
-          "https://www.mygov.in/#reading-blog"
+          "https://www.mygov.in/mygov-archives",
+          "https://www.mygov.in/mygovsocial",
+          "https://www.facebook.com/sharer/sharer.php?u=https://www.mygov.in/task/cyber-safe-yuva-reel-contest-2026",
+          "https://www.mygov.in/#mkb-wrapper",
+          "https://www.mygov.in/mygov-tenders",
+          "https://pmevents.mygov.in/",
+          "https://www.mygov.in/groups/",
+          "https://www.mygov.in/#skip_section",
+          "https://quiz.mygov.in/quiz/dr-b-r-ambedkars-life-and-contributions-quiz-competition-2026",
+          "https://www.mygov.in/sitemap"
         ],
-        "broken_links": 11,
+        "broken_links": 10,
         "broken_links_details": [
           {
             "url": "https://upsconline.nic.in/ora/ora-candidate/realms/candidate-portal/protocol/openid-connect/auth?client_id=account&redirect_uri=https%3A%2F%2Fupsconline.nic.in%2Fora%2Fora-candidate%2Frealms%2Fcandidate-portal%2Faccount%2Flogin-redirect&state=0%2F0acc0bb0-bdf6-3515-b60e-b85fe7cae107&response_type=code&scope=openid",
             "status_code": 404,
             "reason": "HTTP 404"
+          },
+          {
+            "url": "https://tripura.mygov.in/",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://odisha.mygov.in/",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
           },
           {
             "url": "https://self4society.mygov.in/",
@@ -737,12 +747,7 @@
             "reason": "Unreachable / Timeout"
           },
           {
-            "url": "https://tamilnadu.mygov.in/",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "https://odisha.mygov.in/",
+            "url": "https://ddd.mygov.in/",
             "status_code": 0,
             "reason": "Unreachable / Timeout"
           },
@@ -752,17 +757,12 @@
             "reason": "Unreachable / Timeout"
           },
           {
-            "url": "https://blog.mygov.in/winner-announcement-for-moes-foundation-day-quiz-advancing-earth-sciences-empowering-the-nation",
-            "status_code": 404,
-            "reason": "HTTP 404"
-          },
-          {
-            "url": "https://ddd.mygov.in/",
+            "url": "https://data.gov.in/",
             "status_code": 0,
             "reason": "Unreachable / Timeout"
           },
           {
-            "url": "https://tripura.mygov.in/",
+            "url": "https://tamilnadu.mygov.in/",
             "status_code": 0,
             "reason": "Unreachable / Timeout"
           },
@@ -770,11 +770,6 @@
             "url": "https://chhattisgarh.mygov.in/",
             "status_code": 404,
             "reason": "HTTP 404"
-          },
-          {
-            "url": "https://data.gov.in/",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
           }
         ],
         "broken_forms": 0,
@@ -811,7 +806,7 @@
           "Insufficient Devanagari script content (<5% script ratio)"
         ]
       },
-      "composite_score": 52.2
+      "composite_score": 53.0
     },
     {
       "name": "UIDAI (Aadhaar)",
@@ -825,24 +820,29 @@
       ],
       "uptime": {
         "status": "up",
-        "response_ms": 1944,
+        "response_ms": 2003,
         "total_links_found": 35,
         "total_links_audited": 35,
         "verified_working_links_count": 27,
         "verified_working_links": [
-          "https://uidai.gov.in/hi/developer-section",
+          "https://uidai.gov.in/hi/faq",
           "https://uidai.gov.in/hi/vision-and-mission",
-          "https://uidai.gov.in/hi/website-policies",
-          "https://uidai.gov.in/hi/updating-data-on-aadhaar",
-          "https://uidai.gov.in/hi/circulars",
-          "https://uidai.gov.in/hi/aadhaar-dashboard",
-          "https://apps.apple.com/in/app/aadhaar/id6744029871",
           "https://www.instagram.com/aadhaar_official/?hl=en",
+          "https://uidai.gov.in/hi/enrolment-and-updates",
+          "https://uidai.gov.in/hi/aadhaar-dashboard",
+          "https://uidai.gov.in/en#main-content",
+          "https://apps.apple.com/in/app/aadhaar/id6744029871",
+          "https://uidai.gov.in/hi",
           "https://www.youtube.com/user/AadhaarUID",
-          "https://uidai.gov.in/hi/documents"
+          "https://uidai.gov.in/hi/site-map"
         ],
         "broken_links": 8,
         "broken_links_details": [
+          {
+            "url": "https://myaadhaarbeta.uidai.gov.in/pvc/en",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
           {
             "url": "https://myaadhaarbeta.uidai.gov.in/retrieve-eid-uid/en",
             "status_code": 0,
@@ -854,17 +854,7 @@
             "reason": "Unreachable / Timeout"
           },
           {
-            "url": "https://myaadhaarbeta.uidai.gov.in/",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
             "url": "https://myaadhaarbeta.uidai.gov.in/check-aadhaar-validity/en",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "https://myaadhaarbeta.uidai.gov.in/CheckAadhaarStatus/en",
             "status_code": 0,
             "reason": "Unreachable / Timeout"
           },
@@ -874,7 +864,12 @@
             "reason": "Unreachable / Timeout"
           },
           {
-            "url": "https://myaadhaarbeta.uidai.gov.in/pvc/en",
+            "url": "https://myaadhaarbeta.uidai.gov.in/",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://myaadhaarbeta.uidai.gov.in/CheckAadhaarStatus/en",
             "status_code": 0,
             "reason": "Unreachable / Timeout"
           },
@@ -899,15 +894,15 @@
       },
       "translation": {
         "language": "hi",
-        "score": 4,
-        "devanagari_ratio_pct": 1.2,
+        "score": 0,
+        "devanagari_ratio_pct": 0.5,
         "switcher_found": false,
         "switcher_type": "None",
         "status": "no_language_switcher_found",
         "regional_breakdown": {
-          "nav_pct": 15.9,
+          "nav_pct": 0.0,
           "headings_pct": 0.0,
-          "body_pct": 1.0
+          "body_pct": 0.8
         },
         "quality_breakdown": {
           "fluency_score": 0,
@@ -918,7 +913,7 @@
           "Insufficient Devanagari script content (<5% script ratio)"
         ]
       },
-      "composite_score": 55.8
+      "composite_score": 54.6
     },
     {
       "name": "Jan Aadhaar Rajasthan",
@@ -932,31 +927,31 @@
       ],
       "uptime": {
         "status": "up",
-        "response_ms": 3217,
+        "response_ms": 3652,
         "total_links_found": 92,
         "total_links_audited": 92,
         "verified_working_links_count": 83,
         "verified_working_links": [
-          "https://food.rajasthan.gov.in/",
+          "https://janaadhaar.rajasthan.gov.in/content/raj/janaadhaar/en/media.html",
+          "https://janaadhaar.rajasthan.gov.in/content/raj/janaadhaar/en/grievance-/block-helpdesk-contact-details.html",
+          "https://sje.rajasthan.gov.in/",
+          "https://janaadhaar.rajasthan.gov.in/content/raj/janaadhaar/en/about-us.html",
           "https://janaadhaar.rajasthan.gov.in/content/raj/janaadhaar/en/downloads0/iec-publications.html",
-          "https://janaadhaar.rajasthan.gov.in/content/raj/janaadhaar/en/downloads0/user-manual/e-mitras.html",
-          "https://janaadhaar.rajasthan.gov.in/content/raj/janaadhaar/en/circulars-and-letters/annual-administrative-report.html",
-          "https://janaadhaar.rajasthan.gov.in/content/raj/janaadhaar/en/downloads0/jan-aadhaar-2-0-training-material.html",
-          "https://janaadhaar.rajasthan.gov.in/content/raj/janaadhaar/en/circulars-and-letters/meeting-minutes/mom-of-rajasthan-jan-aadhaar-authority-.html",
-          "https://janaadhaar.rajasthan.gov.in/content/raj/janaadhaar/en/performance-dashboard/aadhaar-notification.html",
+          "https://janaadhaar.rajasthan.gov.in/content/raj/janaadhaar/en/performance-dashboard/State_Schemes_Notified_Under_Aadhaar_Act.html",
+          "https://janaadhaar.rajasthan.gov.in/content/dam/doitassets/janaadhaar/images/Gallery/award%202024.JPG",
           "https://janaadhaar.rajasthan.gov.in/content/raj/janaadhaar/en/circulars-and-letters/meeting-minutes.html",
-          "https://www.bis.gov.in/",
-          "https://janaadhaar.rajasthan.gov.in/content/raj/janaadhaar/en/media/advertisement.html"
+          "https://janaadhaar.rajasthan.gov.in/content/raj/janaadhaar/en/screen-reader-access.html",
+          "https://janaadhaar.rajasthan.gov.in/content/raj/janaadhaar/en/performance-dashboard/aadhaar-notification.html"
         ],
         "broken_links": 9,
         "broken_links_details": [
           {
-            "url": "https://janaadhaarapp.rajasthan.gov.in/publicJanAadhaar/statistics/areaWise",
+            "url": "https://janaadhaarapp.rajasthan.gov.in/publicJanAadhaar/statistics/ageWise",
             "status_code": 0,
             "reason": "Unreachable / Timeout"
           },
           {
-            "url": "https://janaadhaarapp.rajasthan.gov.in/publicJanAadhaar/statistics/familyMembersWise",
+            "url": "https://janaadhaarapp.rajasthan.gov.in/publicJanAadhaar/viewJanAadhaarStatus",
             "status_code": 0,
             "reason": "Unreachable / Timeout"
           },
@@ -971,17 +966,17 @@
             "reason": "HTTP 404"
           },
           {
-            "url": "https://janaadhaarapp.rajasthan.gov.in/publicJanAadhaar/statistics/genderWise",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
             "url": "https://janaadhaarapp.rajasthan.gov.in/publicJanAadhaar/eTransaction",
             "status_code": 0,
             "reason": "Unreachable / Timeout"
           },
           {
-            "url": "https://janaadhaarapp.rajasthan.gov.in/publicJanAadhaar/viewJanAadhaarStatus",
+            "url": "https://janaadhaarapp.rajasthan.gov.in/publicJanAadhaar/statistics/genderWise",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://janaadhaarapp.rajasthan.gov.in/publicJanAadhaar/statistics/areaWise",
             "status_code": 0,
             "reason": "Unreachable / Timeout"
           },
@@ -991,7 +986,7 @@
             "reason": "Unreachable / Timeout"
           },
           {
-            "url": "https://janaadhaarapp.rajasthan.gov.in/publicJanAadhaar/statistics/ageWise",
+            "url": "https://janaadhaarapp.rajasthan.gov.in/publicJanAadhaar/statistics/familyMembersWise",
             "status_code": 0,
             "reason": "Unreachable / Timeout"
           }
@@ -1226,13 +1221,13 @@
       ],
       "uptime": {
         "status": "up",
-        "response_ms": 122,
+        "response_ms": 106,
         "total_links_found": 2,
         "total_links_audited": 2,
         "verified_working_links_count": 2,
         "verified_working_links": [
-          "https://www.cloudflare.com/?utm_source=challenge&utm_campaign=m",
-          "https://www.cloudflare.com/privacypolicy/"
+          "https://www.cloudflare.com/privacypolicy/",
+          "https://www.cloudflare.com/?utm_source=challenge&utm_campaign=m"
         ],
         "broken_links": 0,
         "broken_links_details": [],
@@ -1327,21 +1322,21 @@
       ],
       "uptime": {
         "status": "up",
-        "response_ms": 1973,
+        "response_ms": 1860,
         "total_links_found": 14,
         "total_links_audited": 14,
         "verified_working_links_count": 14,
         "verified_working_links": [
-          "https://selfservice.gstsystem.in/",
-          "https://services.gst.gov.in/services/advisory/advisoryandreleases",
           "https://www.gst.gov.in/help/offlineutility",
-          "https://reg.gst.gov.in/registration",
-          "https://www.gst.gov.in/help/refund",
+          "https://www.gst.gov.in/help/returns",
           "https://reg.gst.gov.in/registration/msr",
-          "https://www.gst.gov.in/",
+          "https://www.gst.gov.in/help/enrollmentwithgst",
+          "https://www.gst.gov.in/help/appeal",
+          "https://selfservice.gstsystem.in/",
+          "https://www.gst.gov.in/help/refund",
           "https://www.youtube.com/channel/UCFYpOk92qurlO5t-Z_y-bOQ",
           "https://services.gst.gov.in/services/login",
-          "https://www.gst.gov.in/help/appeal"
+          "https://reg.gst.gov.in/registration"
         ],
         "broken_links": 0,
         "broken_links_details": [],
@@ -1436,96 +1431,36 @@
       ],
       "uptime": {
         "status": "up",
-        "response_ms": 3296,
+        "response_ms": 2517,
         "total_links_found": 156,
         "total_links_audited": 156,
         "verified_working_links_count": 119,
         "verified_working_links": [
+          "https://parivahan.gov.in/en/content/press-coverage-2018",
+          "https://parivahan.gov.in/en/press-coverage/2018/september",
+          "https://parivahan.gov.in/en/content/permit-related-services",
+          "https://parivahan.gov.in/en/content/vehicle-related-services",
+          "https://parivahan.gov.in/en/press-coverage/2021/augustt",
           "https://parivahan.gov.in/en/notification-and-advisories/Draft%20Notification",
-          "https://parivahan.gov.in/en/content/press-coverage-2020",
-          "https://parivahan.gov.in/en/forms-all",
-          "https://parivahan.gov.in/#main-list",
-          "http://morth.nic.in/",
-          "https://parivahan.gov.in/en/node/327",
-          "https://amritmahotsav.nic.in/",
-          "https://parivahan.gov.in/content/website-policies",
-          "https://parivahan.gov.in/en/press-coverage/2019/march",
-          "https://parivahan.gov.in/en/content/about-us"
+          "https://sarathi.parivahan.gov.in/SarathiReport/DashBoardGr.do",
+          "https://parivahan.gov.in/en/node/579",
+          "https://parivahan.gov.in/en/calendar",
+          "https://parivahan.gov.in/en/content/permanent-license"
         ],
         "broken_links": 37,
         "broken_links_details": [
           {
+            "url": "https://vahan.parivahan.gov.in/fancy/",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://vahan.parivahan.gov.in/makermodel/vahan/welcome.xhtml",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
             "url": "https://parivahan.gov.in/en/high-contrast/enable?destination=/en/node",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "https://vahan.parivahan.gov.in/vltdmaker/vahan/dashboard.xhtml",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "https://nmba.dosje.gov.in/",
-            "status_code": 500,
-            "reason": "HTTP 500"
-          },
-          {
-            "url": "https://echallan.parivahan.gov.in/echallanreport/#/",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "http://nextmile.gov.in/",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "https://parivahan.gov.in/en/high-contrast/disable?destination=/en/node",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "https://vahan.parivahan.gov.in/vahantc/vahan/ui/welcome.xhtml",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "https://puc.parivahan.gov.in/puccdashboard/",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "https://vahan.parivahan.gov.in/sldmaker/vahan/dashboard.xhtml",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "https://vahan.parivahan.gov.in/vahan4dashboard/",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "https://vscrap.parivahan.gov.in/vehiclescrap/vahan/welcome.xhtml",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "https://vahan.parivahan.gov.in/sldmaker/vahan/welcome.xhtml",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "https://vahan.parivahan.gov.in/nrservices/",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "https://vahan.parivahan.gov.in/paidnrservices/",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "https://puc.parivahan.gov.in/puc/",
             "status_code": 0,
             "reason": "Unreachable / Timeout"
           },
@@ -1535,62 +1470,27 @@
             "reason": "Unreachable / Timeout"
           },
           {
-            "url": "https://vahan.parivahan.gov.in/vahanbacklog/vahan/ui/login/login.xhtml",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
             "url": "https://vahan.parivahan.gov.in/mobileupdate/",
             "status_code": 0,
             "reason": "Unreachable / Timeout"
           },
           {
-            "url": "https://vahan.parivahan.gov.in/aitp/",
+            "url": "https://parivahan.gov.in/en/high-contrast/disable?destination=/en/node",
             "status_code": 0,
             "reason": "Unreachable / Timeout"
           },
           {
-            "url": "https://vahan.parivahan.gov.in/tcreports/tcreports/ui/login/login.xhtml",
+            "url": "https://vahan.parivahan.gov.in/sldmaker/vahan/welcome.xhtml",
             "status_code": 0,
             "reason": "Unreachable / Timeout"
           },
           {
-            "url": "https://www.indiacode.nic.in/handle/123456789/1798?view_type=browse&sam_handle=123456789/1362",
+            "url": "https://vahan.parivahan.gov.in/sldmaker/vahan/dashboard.xhtml",
             "status_code": 0,
             "reason": "Unreachable / Timeout"
           },
           {
-            "url": "https://vahan.parivahan.gov.in/fancy/",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "https://echallan.parivahan.gov.in/",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "https://vahan.parivahan.gov.in/vahanreport/vahan/login.xhtml",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "https://vahan.parivahan.gov.in/AFMS/#/",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "https://vahan.parivahan.gov.in/vahanauc/v1_0/ui/welcome.xhtml",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "https://vahan.parivahan.gov.in/makermodel/vahan/dashboard.xhtml",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "https://nextmile.gov.in/",
+            "url": "https://vahan.parivahan.gov.in/nrservices/",
             "status_code": 0,
             "reason": "Unreachable / Timeout"
           },
@@ -1600,27 +1500,22 @@
             "reason": "Unreachable / Timeout"
           },
           {
-            "url": "https://data.gov.in/",
+            "url": "https://vahan.parivahan.gov.in/vltdmaker/vahan/dashboard.xhtml",
             "status_code": 0,
             "reason": "Unreachable / Timeout"
           },
           {
-            "url": "https://vahan.parivahan.gov.in/vahangreensewa/vahan/welcome.xhtml",
+            "url": "https://puc.parivahan.gov.in/puc/",
             "status_code": 0,
             "reason": "Unreachable / Timeout"
           },
           {
-            "url": "https://vahan.parivahan.gov.in/vahan/vahan/ui/login/login.xhtml",
+            "url": "https://vahan.parivahan.gov.in/AFMS/#/",
             "status_code": 0,
             "reason": "Unreachable / Timeout"
           },
           {
-            "url": "https://gem.gov.in/",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "https://vahan.parivahan.gov.in/vltdmaker/vahan/welcome.xhtml",
+            "url": "https://vahan.parivahan.gov.in/aitp/",
             "status_code": 0,
             "reason": "Unreachable / Timeout"
           },
@@ -1630,12 +1525,112 @@
             "reason": "Unreachable / Timeout"
           },
           {
+            "url": "https://vahan.parivahan.gov.in/paidnrservices/",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://www.indiacode.nic.in/handle/123456789/1798?view_type=browse&sam_handle=123456789/1362",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://nmba.dosje.gov.in/",
+            "status_code": 500,
+            "reason": "HTTP 500"
+          },
+          {
+            "url": "https://vahan.parivahan.gov.in/vahangreensewa/vahan/welcome.xhtml",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://gem.gov.in/",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://vahan.parivahan.gov.in/makermodel/vahan/dashboard.xhtml",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://vahan.parivahan.gov.in/vahan/vahan/ui/login/login.xhtml",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "http://nextmile.gov.in/",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
             "url": "https://fancy.parivahan.gov.in/fancy/faces/public/login.xhtml",
             "status_code": 0,
             "reason": "Unreachable / Timeout"
           },
           {
-            "url": "https://vahan.parivahan.gov.in/makermodel/vahan/welcome.xhtml",
+            "url": "https://vahan.parivahan.gov.in/tcreports/tcreports/ui/login/login.xhtml",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://echallan.parivahan.gov.in/",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://vahan.parivahan.gov.in/vahanauc/v1_0/ui/welcome.xhtml",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://vscrap.parivahan.gov.in/vehiclescrap/vahan/welcome.xhtml",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://nextmile.gov.in/",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://data.gov.in/",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://vahan.parivahan.gov.in/vltdmaker/vahan/welcome.xhtml",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://vahan.parivahan.gov.in/vahanreport/vahan/login.xhtml",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://echallan.parivahan.gov.in/echallanreport/#/",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://vahan.parivahan.gov.in/vahantc/vahan/ui/welcome.xhtml",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://vahan.parivahan.gov.in/vahanbacklog/vahan/ui/login/login.xhtml",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://puc.parivahan.gov.in/puccdashboard/",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://vahan.parivahan.gov.in/vahan4dashboard/",
             "status_code": 0,
             "reason": "Unreachable / Timeout"
           }
@@ -1690,17 +1685,17 @@
       ],
       "uptime": {
         "status": "up",
-        "response_ms": 7931,
+        "response_ms": 7256,
         "total_links_found": 7,
         "total_links_audited": 7,
         "verified_working_links_count": 6,
         "verified_working_links": [
+          "https://apps.apple.com/in/app/raj-sampark-2-0/id6739140124",
+          "https://doitc.rajasthan.gov.in/",
           "https://play.google.com/store/apps/details?id=com.rajsampark.versiontwo",
           "https://rajasthan.gov.in/",
-          "https://doitc.rajasthan.gov.in/",
-          "https://cmo.rajasthan.gov.in/",
           "https://pgportal.gov.in/Home/LodgeGrievance",
-          "https://apps.apple.com/in/app/raj-sampark-2-0/id6739140124"
+          "https://cmo.rajasthan.gov.in/"
         ],
         "broken_links": 1,
         "broken_links_details": [
@@ -1726,14 +1721,14 @@
       "translation": {
         "language": "hi",
         "score": 100,
-        "devanagari_ratio_pct": 92.6,
+        "devanagari_ratio_pct": 95.2,
         "switcher_found": true,
         "switcher_type": "Native Multilingual Portal",
         "status": "native_multilingual_detected",
         "regional_breakdown": {
           "nav_pct": 0.0,
-          "headings_pct": 0.0,
-          "body_pct": 100.0
+          "headings_pct": 50.0,
+          "body_pct": 97.8
         },
         "quality_breakdown": {
           "fluency_score": 15,
@@ -1812,21 +1807,21 @@
       ],
       "uptime": {
         "status": "up",
-        "response_ms": 4919,
+        "response_ms": 4479,
         "total_links_found": 664,
         "total_links_audited": 664,
         "verified_working_links_count": 658,
         "verified_working_links": [
-          "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=7091",
-          "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=6970",
-          "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=1662",
-          "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=9063",
-          "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=9046",
-          "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=1668",
-          "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=4377",
-          "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=4086",
-          "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=9032",
-          "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=8097"
+          "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=1823",
+          "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=1122",
+          "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=5814",
+          "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=1048",
+          "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=4557",
+          "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=3319",
+          "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=2486",
+          "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=8096",
+          "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=4516",
+          "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=5757"
         ],
         "broken_links": 6,
         "broken_links_details": [
@@ -1836,12 +1831,7 @@
             "reason": "HTTP 404"
           },
           {
-            "url": "https://www.nesdaportal.in/survey/public/",
-            "status_code": 404,
-            "reason": "HTTP 404"
-          },
-          {
-            "url": "https://appsto.re/in/7wKefb.i",
+            "url": "https://mrtsinspectionreport.mahait.org/",
             "status_code": 0,
             "reason": "Unreachable / Timeout"
           },
@@ -1851,12 +1841,17 @@
             "reason": "Unreachable / Timeout"
           },
           {
-            "url": "https://mrtsinspectionreport.mahait.org/",
+            "url": "https://www.nesdaportal.in/survey/public/",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "http://cscservices.mahaonline.gov.in/DashBoard/Login.aspx",
             "status_code": 0,
             "reason": "Unreachable / Timeout"
           },
           {
-            "url": "http://cscservices.mahaonline.gov.in/DashBoard/Login.aspx",
+            "url": "https://appsto.re/in/7wKefb.i",
             "status_code": 0,
             "reason": "Unreachable / Timeout"
           }
@@ -2609,131 +2604,31 @@
       ],
       "uptime": {
         "status": "up",
-        "response_ms": 11754,
+        "response_ms": 7627,
         "total_links_found": 333,
         "total_links_audited": 333,
         "verified_working_links_count": 306,
         "verified_working_links": [
-          "https://serviceonline.bihar.gov.in/#eng_collapseSixM",
-          "https://serviceonline.bihar.gov.in/#eng_collapseElevenTwo",
-          "https://serviceonline.bihar.gov.in/#eng_collapseSixNineM",
-          "https://serviceonline.bihar.gov.in/#collapseHomeTwo",
-          "https://serviceonline.bihar.gov.in/#eng_collapseFoodMTwo",
-          "https://qrgo.page.link/VoZsf",
-          "https://serviceonline.bihar.gov.in/#collapseLand",
-          "https://serviceonline.bihar.gov.in/#eng_collapseNineteenM",
-          "https://serviceonline.bihar.gov.in/#collapseTwentyTwo",
-          "https://serviceonline.bihar.gov.in/#collapseEleven"
+          "https://serviceonline.bihar.gov.in/#eng_collapseHel",
+          "https://serviceonline.bihar.gov.in/#collapseTenM",
+          "https://qrgo.page.link/NQ8ad",
+          "https://serviceonline.bihar.gov.in/#collapseTwentythree",
+          "https://serviceonline.bihar.gov.in/#collapseOneFiveM",
+          "https://anydesk.com/remote-desktop",
+          "https://serviceonline.bihar.gov.in/#eng_collapseHome",
+          "https://serviceonline.bihar.gov.in/#collapseOneM",
+          "https://serviceonline.bihar.gov.in/#collapseOneThreeM",
+          "https://serviceonline.bihar.gov.in/#collapseTwentyM"
         ],
         "broken_links": 27,
         "broken_links_details": [
-          {
-            "url": "https://nibandhan.bihar.gov.in/Marriage/OnlineLoginMarriage.aspx",
-            "status_code": 404,
-            "reason": "HTTP 404"
-          },
-          {
-            "url": "https://serviceonline.bihar.gov.in/RtpsReportView/",
-            "status_code": 404,
-            "reason": "HTTP 404"
-          },
-          {
-            "url": "https://pmjay.gov.in/",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "https://vahan.parivahan.gov.in/npermit/",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "https://vahan.parivahan.gov.in/fancy/faces/public/login.xhtml",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "https://vahan.parivahan.gov.in/vahan/vahan/ui/login/login.xhtml",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "https://vahan.parivahan.gov.in/vahanservice/vahan/ui/statevalidation/homepage.xhtml",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
           {
             "url": "https://ndal-alis.gov.in/armslicence/",
             "status_code": 0,
             "reason": "Unreachable / Timeout"
           },
           {
-            "url": "https://vahan.parivahan.gov.in/cngmaker/vahan/welcome.xhtml",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "http://sirflrd.bih.nic.in/",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "https://play.google.com/store/apps/details?id=com.org.ep.serviceplusapp",
-            "status_code": 404,
-            "reason": "HTTP 404"
-          },
-          {
-            "url": "https://vahan.parivahan.gov.in/vahanservice/vahan/ui/usermgmt/login.xhtml",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "http://servicereport.nic.in:8080/lrd/Verification.jsp",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "https://bocw.bihar.gov.in/",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "http://parimarjan.bihar.gov.in/biharBhumireport/frm_LPC_StatusNew",
-            "status_code": 404,
-            "reason": "HTTP 404"
-          },
-          {
-            "url": "https://echallan.parivahan.gov.in/",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "http://bhumijankari.bihar.gov.in/Admin/MVR/MVRParameter.aspx",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "https://vahan.parivahan.gov.in/sldmaker/vahan/welcome.xhtml",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "http://parimarjan.bihar.gov.in/biharBhumireport/MutationStatusNew",
-            "status_code": 404,
-            "reason": "HTTP 404"
-          },
-          {
-            "url": "https://vahan.parivahan.gov.in/checkpost/faces/login.xhtml?faces-redirect=true#",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "https://swcs.bihar.gov.in/RtpsReportView/lrddashboard.jsp",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "http://servicereport.nic.in/lrd/Verification.jsp",
+            "url": "https://pmjay.gov.in/",
             "status_code": 0,
             "reason": "Unreachable / Timeout"
           },
@@ -2743,7 +2638,17 @@
             "reason": "Unreachable / Timeout"
           },
           {
-            "url": "https://vahan.parivahan.gov.in/puc/",
+            "url": "https://vahan.parivahan.gov.in/checkpost/faces/login.xhtml?faces-redirect=true#",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://vahan.parivahan.gov.in/npermit/",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "http://servicereport.nic.in/lrd/Verification.jsp",
             "status_code": 0,
             "reason": "Unreachable / Timeout"
           },
@@ -2753,7 +2658,42 @@
             "reason": "HTTP 404"
           },
           {
-            "url": "https://swcs.bihar.gov.in/knye",
+            "url": "https://nibandhan.bihar.gov.in/Marriage/OnlineLoginMarriage.aspx",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "https://vahan.parivahan.gov.in/cngmaker/vahan/welcome.xhtml",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "http://parimarjan.bihar.gov.in/biharBhumireport/MutationStatusNew",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "https://vahan.parivahan.gov.in/vahan/vahan/ui/login/login.xhtml",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "http://parimarjan.bihar.gov.in/biharBhumireport/frm_LPC_StatusNew",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "https://swcs.bihar.gov.in/RtpsReportView/lrddashboard.jsp",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "http://servicereport.nic.in:8080/lrd/Verification.jsp",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://vahan.parivahan.gov.in/sldmaker/vahan/welcome.xhtml",
             "status_code": 0,
             "reason": "Unreachable / Timeout"
           },
@@ -2761,6 +2701,61 @@
             "url": "http://rconline.bihar.gov.in/",
             "status_code": 503,
             "reason": "HTTP 503"
+          },
+          {
+            "url": "https://vahan.parivahan.gov.in/puc/",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "http://sirflrd.bih.nic.in/",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://swcs.bihar.gov.in/knye",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "http://bhumijankari.bihar.gov.in/Admin/MVR/MVRParameter.aspx",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://vahan.parivahan.gov.in/fancy/faces/public/login.xhtml",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://vahan.parivahan.gov.in/vahanservice/vahan/ui/statevalidation/homepage.xhtml",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://play.google.com/store/apps/details?id=com.org.ep.serviceplusapp",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "https://bocw.bihar.gov.in/",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://serviceonline.bihar.gov.in/RtpsReportView/",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
+            "url": "https://vahan.parivahan.gov.in/vahanservice/vahan/ui/usermgmt/login.xhtml",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://echallan.parivahan.gov.in/",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
           }
         ],
         "broken_forms": 0,
@@ -2904,29 +2899,24 @@
       ],
       "uptime": {
         "status": "up",
-        "response_ms": 5192,
+        "response_ms": 5247,
         "total_links_found": 56,
         "total_links_audited": 56,
         "verified_working_links_count": 53,
         "verified_working_links": [
+          "https://akshaya.kerala.gov.in/service-category/40/e-district",
           "https://akshaya.kerala.gov.in/service-category/58/insurance",
-          "https://akshaya.kerala.gov.in/service-category/65/citizen-services",
-          "https://akshaya.kerala.gov.in/gallery/photos",
-          "https://akshaya.kerala.gov.in/#",
-          "https://plus.google.com/share?url=https%3A%2F%2Fakshaya.kerala.gov.in%2F",
-          "https://akshaya.kerala.gov.in/events/68/contact-toll-free-number-155300-bsnl-0471-2335523-others",
-          "https://akshaya.kerala.gov.in/gallery/videos",
-          "https://akshaya.kerala.gov.in/notices",
-          "https://akshaya.kerala.gov.in/notices/409/project-assistant-rank-list-2026",
-          "https://akshaya.kerala.gov.in/service-category/40/e-district"
+          "http://cmo.kerala.gov.in/",
+          "https://akshaya.kerala.gov.in/about/institutional-framework",
+          "https://akshaya.kerala.gov.in/downloads",
+          "https://akshaya.kerala.gov.in/gallery/photos/51/kasaragod",
+          "https://akshaya.kerala.gov.in/events/396/notification-manager-service-delivery-vacancy-in-akshaya-project-under-kerala-state-it-mission-2026",
+          "https://akshaya.kerala.gov.in/faqs-on-service",
+          "https://akshaya.kerala.gov.in/service-category/55/education",
+          "https://akshaya.kerala.gov.in/notices"
         ],
         "broken_links": 3,
         "broken_links_details": [
-          {
-            "url": "https://akshaya.kerala.gov.in/index-home-variation-html5-video.html#",
-            "status_code": 404,
-            "reason": "HTTP 404"
-          },
           {
             "url": "https://kerala.gov.in/",
             "status_code": 503,
@@ -2936,6 +2926,11 @@
             "url": "http://itmission.kerala.gov.in/",
             "status_code": 0,
             "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://akshaya.kerala.gov.in/index-home-variation-html5-video.html#",
+            "status_code": 404,
+            "reason": "HTTP 404"
           }
         ],
         "broken_forms": 0,
@@ -3255,7 +3250,7 @@
       ],
       "uptime": {
         "status": "up",
-        "response_ms": 1919,
+        "response_ms": 1944,
         "total_links_found": 1,
         "total_links_audited": 1,
         "verified_working_links_count": 1,
@@ -3310,21 +3305,21 @@
       ],
       "uptime": {
         "status": "up",
-        "response_ms": 3460,
+        "response_ms": 3313,
         "total_links_found": 51,
         "total_links_audited": 51,
         "verified_working_links_count": 46,
         "verified_working_links": [
-          "https://dcf.aishe.nic.in/aishenew/#/details/knowAisheCode",
-          "https://scholarships.gov.in/nsphelpdesk",
-          "https://play.google.com/store/apps/details?id=in.gov.scholarships.nspotr&pli=1",
-          "https://scholarships.gov.in/otrapplication/#/login-page",
-          "https://scholarships.gov.in/siteMap",
-          "https://scholarships.gov.in/CSCURL",
+          "https://scholarships.gov.in/copyright-policy",
+          "https://scholarships.gov.in/studentFAQs",
+          "https://scholarships.gov.in/nodelOfficerDetails",
           "https://scholarships.gov.in/hyperlinkPolicy_New",
-          "https://scholarships.gov.in/aboutUs",
-          "https://scholarships.gov.in/home",
-          "https://scholarships.gov.in/All-Scholarships"
+          "https://scholarships.gov.in/Public",
+          "https://scholarships.gov.in/ApplicationForm/",
+          "https://scholarships.gov.in/pfmshelpdesk",
+          "https://scholarships.gov.in/otrapplication/#/login-page",
+          "https://scholarships.gov.in/terms-conditions",
+          "https://scholarships.gov.in/aboutUs"
         ],
         "broken_links": 5,
         "broken_links_details": [
@@ -3334,22 +3329,22 @@
             "reason": "HTTP 404"
           },
           {
-            "url": "https://uidai.gov.in/en/contact-support/have-any-question/1012-english-uk/faqs/aadhaar-online-services/aadhaar-lock-unlock.html",
-            "status_code": 404,
-            "reason": "HTTP 404"
-          },
-          {
-            "url": "https://locator.csccloud.in/",
-            "status_code": 0,
-            "reason": "Unreachable / Timeout"
-          },
-          {
             "url": "https://myaadhaar.uidai.gov.in/",
             "status_code": 0,
             "reason": "Unreachable / Timeout"
           },
           {
+            "url": "https://uidai.gov.in/en/contact-support/have-any-question/1012-english-uk/faqs/aadhaar-online-services/aadhaar-lock-unlock.html",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
+          {
             "url": "https://pfms.nic.in/SitePages/KnowYourPayment_Dw_NewNew.aspx",
+            "status_code": 0,
+            "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://locator.csccloud.in/",
             "status_code": 0,
             "reason": "Unreachable / Timeout"
           }
@@ -3402,24 +3397,29 @@
       ],
       "uptime": {
         "status": "up",
-        "response_ms": 6378,
+        "response_ms": 6492,
         "total_links_found": 70,
         "total_links_audited": 70,
         "verified_working_links_count": 67,
         "verified_working_links": [
+          "https://ncs.gov.in/job-listing",
+          "https://ncsdocsstorage.blob.core.windows.net/ncsdocsstorage/common%2Fwhatsnew%2Fnewsletter_1788784512907.pdf",
           "https://www.ncs.gov.in/_layouts/15/ncsp/calendar.aspx",
-          "https://ncs.gov.in/job-listing?functionalAreas=BFSI",
-          "https://ncs.gov.in/terms&condition",
-          "https://ncs.gov.in/disclaimer",
-          "https://ncs.gov.in/EExStats",
-          "https://maps.app.goo.gl/iaSctqVhL8YY4TeJ6",
-          "https://ncs.gov.in/job-listing?isGovernmentJob=true",
-          "https://ncs.gov.in/skillWiseDevPortal",
-          "https://ncs.gov.in/job-listing?functionalAreas=Tourism%20and%20Hospitality,Hospitality%20%26%20Food%20Service",
-          "https://apps.apple.com/in/app/national-career-service-ncs/id6759326457"
+          "https://www.youtube.com/channel/UC67PKUJUW0jcAwR5TBn0cdw",
+          "https://ncs.gov.in/about-ncsc-da",
+          "https://ncsdocsstorage.blob.core.windows.net/ncsdocsstorage/common%2Fwhatsnew%2Fnewsletter_1786551955970.pdf",
+          "https://ncs.gov.in/grievance_feedback",
+          "https://ncs.gov.in/job-listing?functionalAreas=Mining%20and%20Quarrying,Oil%20Gas%20%26%20Energy,Water%20Supply%20Waste%20Mgmt",
+          "https://ncs.gov.in/mentoring-center",
+          "https://ncsdocsstorage.blob.core.windows.net/ncsdocsstorage/common%2Fwhatsnew%2Fnewsletter_1788344874218.xlsx"
         ],
         "broken_links": 3,
         "broken_links_details": [
+          {
+            "url": "https://ncs.gov.in/login/employer",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
           {
             "url": "https://ncs.gov.in/home/job-fair/jobFairs",
             "status_code": 404,
@@ -3429,11 +3429,6 @@
             "url": "https://dget.ncs.gov.in/main.aspx",
             "status_code": 0,
             "reason": "Unreachable / Timeout"
-          },
-          {
-            "url": "https://ncs.gov.in/login/employer",
-            "status_code": 404,
-            "reason": "HTTP 404"
           }
         ],
         "broken_forms": 0,
@@ -3484,33 +3479,33 @@
       ],
       "uptime": {
         "status": "up",
-        "response_ms": 11718,
+        "response_ms": 6397,
         "total_links_found": 45,
         "total_links_audited": 45,
         "verified_working_links_count": 42,
         "verified_working_links": [
-          "https://swachhbharatmission.ddws.gov.in/technical-notes",
-          "https://swachhbharatmission.ddws.gov.in/privacy-policy",
-          "https://swachhbharatmission.ddws.gov.in/contact-us",
-          "https://x.com/swachhbharat",
-          "https://sbm.gov.in/sbm_dbt/secure/login.aspx",
-          "https://whatsapp.com/channel/0029Vb2r0pw0G0Xbrwoafq3T/116",
-          "https://india.gov.in/",
           "https://swachhbharatmission.ddws.gov.in/archives",
+          "https://swachhbharatmission.ddws.gov.in/feedback",
+          "https://india.gov.in/",
+          "https://jigsaw.w3.org/css-validator/check/referer",
+          "https://swachhbharatmission.ddws.gov.in/guidelines",
+          "https://swachhbharatmission.ddws.gov.in/hyperlinking-policy",
+          "https://swachhbharatmission.ddws.gov.in/shs-bulletin-2026",
+          "https://swachhbharatmission.ddws.gov.in/communication-material",
           "https://validator.w3.org/check?uri=referer",
-          "https://swachhbharatmission.ddws.gov.in/copyright-policy"
+          "https://swachhatahiseva.gov.in/"
         ],
         "broken_links": 3,
         "broken_links_details": [
           {
-            "url": "https://ejalshakti.gov.in/ISC/Login.aspx",
-            "status_code": 500,
-            "reason": "HTTP 500"
-          },
-          {
             "url": "https://india.gov.in/hi",
             "status_code": 0,
             "reason": "Unreachable / Timeout"
+          },
+          {
+            "url": "https://ejalshakti.gov.in/ISC/Login.aspx",
+            "status_code": 500,
+            "reason": "HTTP 500"
           },
           {
             "url": "https://ejalshakti.gov.in/iwc_2026",
@@ -3566,7 +3561,7 @@
       ],
       "uptime": {
         "status": "up",
-        "response_ms": 377,
+        "response_ms": 344,
         "total_links_found": 0,
         "total_links_audited": 0,
         "verified_working_links_count": 0,
@@ -3609,31 +3604,36 @@
       ],
       "uptime": {
         "status": "up",
-        "response_ms": 3969,
-        "total_links_found": 70,
-        "total_links_audited": 70,
-        "verified_working_links_count": 68,
+        "response_ms": 4176,
+        "total_links_found": 82,
+        "total_links_audited": 82,
+        "verified_working_links_count": 79,
         "verified_working_links": [
-          "https://commerce.gov.in/",
-          "https://www.startupindia.gov.in/content/sih/en/notifications.html",
-          "https://www.startupindia.gov.in/content/sih/en/intellectual-property-rights.html",
-          "https://www.startupindia.gov.in/content/sih/en/edit-your-expired-application.html",
-          "https://www.startupindia.gov.in/content/sih/en/bharat-startup-grand-challenge.html",
-          "https://www.startupindia.gov.in/content/sih/en/home-page.html",
-          "https://www.startupindia.gov.in/bhaskar/register",
-          "https://www.startupindia.gov.in/content/sih/en/bloglist.html",
-          "https://www.startupindia.gov.in/",
-          "https://www.startupindia.gov.in/content/sih/en/government-schemes.html"
+          "https://www.facebook.com/StartupIndia/",
+          "https://www.startupindia.gov.in/content/sih/en/reources/knowledge-bank.html",
+          "https://www.startupindia.gov.in/content/sih/en/state-startup-policies.html",
+          "https://www.startupindia.gov.in/content/sih/en/startupindia-mybharat.html",
+          "https://www.startupindia.gov.in/content/sih/en/search.html?roles=Mentor&page=0",
+          "https://www.startupindia.gov.in/content/sih/en/tejas.html",
+          "https://www.startupindia.gov.in/content/sih/en/about_us/faqs.html",
+          "https://www.startupindia.gov.in/content/sih/en/about_us/contact-us.html",
+          "https://www.startupindia.gov.in/content/sih/en/reources/online-courses.html",
+          "https://www.startupindia.gov.in/digital-map/maps"
         ],
-        "broken_links": 2,
+        "broken_links": 3,
         "broken_links_details": [
+          {
+            "url": "https://www.startupindia.gov.in/content/sih/en/_tel_1800115565",
+            "status_code": 404,
+            "reason": "HTTP 404"
+          },
           {
             "url": "https://www.startupindia.gov.in/content/sih/en/forum.html#",
             "status_code": 404,
             "reason": "HTTP 404"
           },
           {
-            "url": "https://www.startupindia.gov.in/content/sih/en/_tel_1800115565",
+            "url": "https://www.startupindia.gov.in/content/sih/en/forum.html",
             "status_code": 404,
             "reason": "HTTP 404"
           }
@@ -3654,7 +3654,7 @@
       "translation": {
         "language": "hi",
         "score": 30,
-        "devanagari_ratio_pct": 4.1,
+        "devanagari_ratio_pct": 0.6,
         "switcher_found": true,
         "switcher_type": "Native Multilingual Portal",
         "status": "native_multilingual_detected",
@@ -3672,7 +3672,7 @@
           "Insufficient Devanagari script content (<5% script ratio)"
         ]
       },
-      "composite_score": 68.4
+      "composite_score": 67.6
     }
   ]
 }
