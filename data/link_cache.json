@@ -26655,7 +26655,7 @@
     "status_code": 0,
     "is_broken": true,
     "reason": "Unreachable / Timeout",
-    "last_checked": 1792514302.7182171
+    "last_checked": 1793123332.6984024
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=4562": {
     "status_code": 200,
@@ -28557,13 +28557,13 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1792514260.8864946
+    "last_checked": 1793123264.8856664
   },
   "https://www.mygov.in/group-issue/pm-gatishakti-integrated-planning-viksit-bharat-inviting-suggestions-national-transport": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1792514260.8864946
+    "last_checked": 1793123264.8856664
   },
   "https://www.facebook.com/share.php?u=https%3A%2F%2Fblog.mygov.in%2Fwinner-announcement-for-bharat-innovates-quiz": {
     "status_code": 400,
@@ -29308,5 +29308,23 @@
     "is_broken": false,
     "reason": "OK",
     "last_checked": 1793101965.1270642
+  },
+  "https://blog.mygov.in/winner-announcement-for-epfo-foundation-day-quiz-2026": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1793123264.8856664
+  },
+  "https://twitter.com/intent/tweet?url=https%3A%2F%2Fblog.mygov.in%2Fwinner-announcement-for-epfo-foundation-day-quiz-2026&text=Winner%20Announcement%20for%20EPFO%20Foundation%20Day%20Quiz%202026": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1793123264.8856664
+  },
+  "https://www.facebook.com/share.php?u=https%3A%2F%2Fblog.mygov.in%2Fwinner-announcement-for-epfo-foundation-day-quiz-2026": {
+    "status_code": 400,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1793123264.8856664
   }
 }
