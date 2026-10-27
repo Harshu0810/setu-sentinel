@@ -22929,7 +22929,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791608909.612994
+    "last_checked": 1793138494.6293552
   },
   "https://www.facebook.com/sharer/sharer.php?u=https://www.mygov.in/task/video-contest-use-medleapr-speed-investigation": {
     "status_code": 400,
@@ -23757,7 +23757,7 @@
     "status_code": 400,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791634304.9791474
+    "last_checked": 1793138494.6293552
   },
   "https://twitter.com/intent/tweet?url=https://www.mygov.in/task/shramdan-photo-contest-2026": {
     "status_code": 200,
@@ -24033,7 +24033,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1791608909.612994
+    "last_checked": 1793138494.6293552
   },
   "https://www.mygov.in/task/shramdan-photo-contest-2026": {
     "status_code": 200,
@@ -29326,5 +29326,17 @@
     "is_broken": false,
     "reason": "OK",
     "last_checked": 1793123264.8856664
+  },
+  "https://blog.mygov.in/winner-announcement-for-mural-design-contest-for-bharat-renewable-energy-summit-and-expo-2026/": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1793138494.6293552
+  },
+  "https://www.mygov.in/blog/winner-announcement-mural-design-contest-bharat-renewable-energy-summit-and-expo-2026": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1793138494.6293552
   }
 }

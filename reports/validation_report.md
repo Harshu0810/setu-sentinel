@@ -1,12 +1,12 @@
 # 🛡️ Setu Sentinel — Validation & Verification Report
-**Generated:** 2026-10-27T18:02:17.493690+00:00 | **Target Portals:** 38 | **Independent Audit**
+**Generated:** 2026-10-27T22:14:14.454011+00:00 | **Target Portals:** 38 | **Independent Audit**
 
 ## 📊 Executive Audit Summary
 - **Portals Evaluated:** 38 (36 Online, 2 Offline)
-- **Total Links Discovered Across Homepages:** 3245
-- **Sampled Links Audited with Chromium TLS:** 2878
-- **Verified Working Links:** 2710 (HTTP 200/203/301/302)
-- **Confirmed Broken Links (True 404/5xx):** 168
+- **Total Links Discovered Across Homepages:** 3312
+- **Sampled Links Audited with Chromium TLS:** 2945
+- **Verified Working Links:** 2768 (HTTP 200/203/301/302)
+- **Confirmed Broken Links (True 404/5xx):** 177
 
 ---
 
@@ -24,9 +24,9 @@
 | **Rajasthan SSO** | State | ✅ UP | 8 | 8 | 8 | 0 | 70/100 | 0/100 | **61.0** |
 | **e-Mitra Rajasthan** | State | ✅ UP | 28 | 28 | 28 | 0 | 70/100 | 9/100 | **63.7** |
 | **Jan Soochna Portal** | State | ✅ UP | 19 | 19 | 19 | 0 | 70/100 | 43/100 | **73.9** |
-| **MyGov** | Central | ✅ UP | 230 | 230 | 218 | 12 | 70/100 | 0/100 | **51.4** |
-| **UIDAI (Aadhaar)** | Central | ✅ UP | 35 | 35 | 27 | 8 | 70/100 | 0/100 | **54.6** |
-| **Jan Aadhaar Rajasthan** | State | ✅ UP | 0 | 0 | 0 | 0 | 70/100 | 0/100 | **61.0** |
+| **MyGov** | Central | ✅ UP | 205 | 205 | 193 | 12 | 70/100 | 0/100 | **51.4** |
+| **UIDAI (Aadhaar)** | Central | ✅ UP | 35 | 35 | 27 | 8 | 70/100 | 4/100 | **55.8** |
+| **Jan Aadhaar Rajasthan** | State | ✅ UP | 92 | 92 | 83 | 9 | 70/100 | 0/100 | **53.8** |
 | **GeM (Govt e-Marketplace)** | Central | ✅ UP | 198 | 137 | 131 | 6 | 0/100 | 31/100 | **44.5** |
 | **RTU Kota** | Education | ✅ UP | 2 | 2 | 2 | 0 | 70/100 | 0/100 | **61.0** |
 | **Ayushman Bharat (PM-JAY)** | Central | ❌ DOWN | 0 | 0 | 0 | 0 | 70/100 | 0/100 | **21.0** |
@@ -46,7 +46,7 @@
 | **Akshaya Kerala** | State | ✅ UP | 56 | 56 | 53 | 3 | 70/100 | 0/100 | **58.6** |
 | **Tamil Nadu e-Sevai** | State | ✅ UP | 38 | 36 | 29 | 7 | 36/100 | 60/100 | **63.2** |
 | **MP e-District** | State | ✅ UP | 441 | 137 | 134 | 3 | 0/100 | 100/100 | **67.6** |
-| **e-Shram** | Central | ✅ UP | 1 | 1 | 1 | 0 | 70/100 | 57/100 | **78.1** |
+| **e-Shram** | Central | ✅ UP | 1 | 1 | 1 | 0 | 70/100 | 32/100 | **70.6** |
 | **National Scholarship Portal** | Central | ✅ UP | 51 | 51 | 46 | 5 | 70/100 | 0/100 | **57.0** |
 | **National Career Service** | Central | ✅ UP | 70 | 70 | 67 | 3 | 70/100 | 0/100 | **58.6** |
 | **Swachh Bharat Mission** | Central | ✅ UP | 45 | 45 | 42 | 3 | 70/100 | 0/100 | **58.6** |
