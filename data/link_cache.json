@@ -28431,13 +28431,13 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1792469477.2101147
+    "last_checked": 1793101975.3038433
   },
   "https://www.facebook.com/share.php?u=https%3A%2F%2Fblog.mygov.in%2Fwinners-announced-for-bharat-gi-quiz-celebrate-indias-heritage": {
     "status_code": 400,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1792469477.2101147
+    "last_checked": 1793101975.3038433
   },
   "https://uidai.gov.in/te#main-content": {
     "status_code": 200,
@@ -28497,7 +28497,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1792469477.2101147
+    "last_checked": 1793101975.3038433
   },
   "https://www.facebook.com/sharer/sharer.php?u=https://www.mygov.in/task/nsg-poster-making-competition": {
     "status_code": 400,
@@ -28509,13 +28509,13 @@
     "status_code": 400,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1792469477.2101147
+    "last_checked": 1793101975.3038433
   },
   "https://blog.mygov.in/winner-announcement-for-logo-design-contest-commemorating-75-years-of-india-germany-diplomatic-relations": {
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1792469477.2101147
+    "last_checked": 1793101975.3038433
   },
   "https://www.facebook.com/sharer/sharer.php?u=https://www.mygov.in/task/reel-contest-8-years-ayushman-bharat-pm-jay": {
     "status_code": 400,
@@ -29224,5 +29224,89 @@
     "is_broken": false,
     "reason": "OK",
     "last_checked": 1793074883.139276
+  },
+  "https://jansoochna.rajasthan.gov.in/about": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1793101965.1270642
+  },
+  "https://jansoochna.rajasthan.gov.in/home": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1793101965.1270642
+  },
+  "https://jansoochna.rajasthan.gov.in/privacy-policy": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1793101965.1270642
+  },
+  "https://jansoochna.rajasthan.gov.in/screen-reader-access": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1793101965.1270642
+  },
+  "https://jansoochna.rajasthan.gov.in/blog": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1793101965.1270642
+  },
+  "https://jansoochna.rajasthan.gov.in/contact": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1793101965.1270642
+  },
+  "https://jansoochna.rajasthan.gov.in/sitemap": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1793101965.1270642
+  },
+  "https://jansoochna.rajasthan.gov.in/feedback": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1793101965.1270642
+  },
+  "https://risl.rajasthan.gov.in/": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1793101965.1270642
+  },
+  "https://jansoochna.rajasthan.gov.in/nodalofficerdetails": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1793101965.1270642
+  },
+  "https://jansoochna.rajasthan.gov.in/faq": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1793101965.1270642
+  },
+  "https://jansoochna.rajasthan.gov.in/accessibility": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1793101965.1270642
+  },
+  "https://jansoochna.rajasthan.gov.in/downloads": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1793101965.1270642
+  },
+  "https://jansoochna.rajasthan.gov.in/disclaimer": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1793101965.1270642
   }
 }
