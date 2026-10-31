@@ -1,12 +1,12 @@
 # 🛡️ Setu Sentinel — Validation & Verification Report
-**Generated:** 2026-10-30T22:41:55.298754+00:00 | **Target Portals:** 38 | **Independent Audit**
+**Generated:** 2026-10-31T05:15:49.418007+00:00 | **Target Portals:** 38 | **Independent Audit**
 
 ## 📊 Executive Audit Summary
 - **Portals Evaluated:** 38 (35 Online, 3 Offline)
 - **Total Links Discovered Across Homepages:** 2672
-- **Sampled Links Audited with Chromium TLS:** 2302
-- **Verified Working Links:** 2135 (HTTP 200/203/301/302)
-- **Confirmed Broken Links (True 404/5xx):** 167
+- **Sampled Links Audited with Chromium TLS:** 2304
+- **Verified Working Links:** 2139 (HTTP 200/203/301/302)
+- **Confirmed Broken Links (True 404/5xx):** 165
 
 ---
 
@@ -14,17 +14,17 @@
 
 | Portal Name | Category | Uptime | Links Discovered | Links Audited | Working Links | Broken Links | WCAG Score | Hindi Score | Composite Score |
 |---|---|---|---|---|---|---|---|---|---|
-| **National Portal of India** | Central | ✅ UP | 64 | 64 | 63 | 1 | 70/100 | 0/100 | **60.2** |
+| **National Portal of India** | Central | ✅ UP | 64 | 64 | 64 | 0 | 70/100 | 0/100 | **61.0** |
 | **DigiLocker** | Central | ✅ UP | 46 | 46 | 46 | 0 | 70/100 | 0/100 | **61.0** |
 | **UMANG** | Central | ✅ UP | 28 | 28 | 28 | 0 | 70/100 | 0/100 | **61.0** |
 | **eCourts** | Judiciary | ✅ UP | 50 | 50 | 47 | 3 | 70/100 | 1/100 | **58.9** |
 | **Income Tax e-Filing** | Central | ✅ UP | 113 | 113 | 113 | 0 | 70/100 | 0/100 | **61.0** |
 | **Passport Seva** | Central | ✅ UP | 7 | 7 | 7 | 0 | 70/100 | 0/100 | **61.0** |
-| **Rajasthan State Portal** | State | ✅ UP | 21 | 21 | 18 | 3 | 70/100 | 89/100 | **85.3** |
+| **Rajasthan State Portal** | State | ✅ UP | 21 | 21 | 17 | 4 | 70/100 | 89/100 | **84.5** |
 | **Rajasthan SSO** | State | ✅ UP | 8 | 8 | 8 | 0 | 70/100 | 0/100 | **61.0** |
 | **e-Mitra Rajasthan** | State | ✅ UP | 28 | 28 | 28 | 0 | 70/100 | 9/100 | **63.7** |
 | **Jan Soochna Portal** | State | ✅ UP | 19 | 19 | 19 | 0 | 70/100 | 43/100 | **73.9** |
-| **MyGov** | Central | ✅ UP | 232 | 231 | 222 | 9 | 70/100 | 0/100 | **53.8** |
+| **MyGov** | Central | ✅ UP | 232 | 232 | 226 | 6 | 70/100 | 0/100 | **56.2** |
 | **UIDAI (Aadhaar)** | Central | ✅ UP | 35 | 35 | 27 | 8 | 70/100 | 4/100 | **55.8** |
 | **Jan Aadhaar Rajasthan** | State | ✅ UP | 89 | 89 | 83 | 6 | 70/100 | 0/100 | **56.2** |
 | **GeM (Govt e-Marketplace)** | Central | ✅ UP | 198 | 137 | 131 | 6 | 0/100 | 31/100 | **44.5** |
@@ -32,7 +32,7 @@
 | **Ayushman Bharat (PM-JAY)** | Central | ❌ DOWN | 0 | 0 | 0 | 0 | 70/100 | 0/100 | **21.0** |
 | **GST Portal** | Central | ✅ UP | 14 | 14 | 14 | 0 | 70/100 | 0/100 | **61.0** |
 | **EPFO Unified Portal** | Central | ❌ DOWN | 0 | 0 | 0 | 0 | 70/100 | 0/100 | **21.0** |
-| **Parivahan Sewa** | Central | ✅ UP | 156 | 154 | 117 | 37 | 70/100 | 95/100 | **69.5** |
+| **Parivahan Sewa** | Central | ✅ UP | 156 | 155 | 117 | 38 | 70/100 | 95/100 | **69.5** |
 | **Rajasthan Sampark** | State | ✅ UP | 7 | 7 | 6 | 1 | 70/100 | 100/100 | **90.2** |
 | **Gujarat State Portal** | State | ✅ UP | 140 | 140 | 140 | 0 | 70/100 | 0/100 | **61.0** |
 | **Aaple Sarkar Maharashtra** | State | ❌ DOWN | 0 | 0 | 0 | 0 | 70/100 | 0/100 | **21.0** |
