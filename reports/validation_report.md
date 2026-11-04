@@ -1,12 +1,12 @@
 # 🛡️ Setu Sentinel — Validation & Verification Report
-**Generated:** 2026-11-04T05:51:45.822124+00:00 | **Target Portals:** 38 | **Independent Audit**
+**Generated:** 2026-11-04T14:19:08.202735+00:00 | **Target Portals:** 38 | **Independent Audit**
 
 ## 📊 Executive Audit Summary
 - **Portals Evaluated:** 38 (35 Online, 3 Offline)
-- **Total Links Discovered Across Homepages:** 3310
-- **Sampled Links Audited with Chromium TLS:** 2943
-- **Verified Working Links:** 2779 (HTTP 200/203/301/302)
-- **Confirmed Broken Links (True 404/5xx):** 164
+- **Total Links Discovered Across Homepages:** 3274
+- **Sampled Links Audited with Chromium TLS:** 2907
+- **Verified Working Links:** 2744 (HTTP 200/203/301/302)
+- **Confirmed Broken Links (True 404/5xx):** 163
 
 ---
 
@@ -15,8 +15,8 @@
 | Portal Name | Category | Uptime | Links Discovered | Links Audited | Working Links | Broken Links | WCAG Score | Hindi Score | Composite Score |
 |---|---|---|---|---|---|---|---|---|---|
 | **National Portal of India** | Central | ✅ UP | 64 | 64 | 64 | 0 | 70/100 | 0/100 | **61.0** |
-| **DigiLocker** | Central | ✅ UP | 46 | 46 | 46 | 0 | 70/100 | 0/100 | **61.0** |
-| **UMANG** | Central | ✅ UP | 28 | 28 | 28 | 0 | 70/100 | 0/100 | **61.0** |
+| **DigiLocker** | Central | ✅ UP | 47 | 47 | 47 | 0 | 70/100 | 0/100 | **61.0** |
+| **UMANG** | Central | ✅ UP | 30 | 30 | 30 | 0 | 70/100 | 0/100 | **61.0** |
 | **eCourts** | Judiciary | ✅ UP | 49 | 49 | 47 | 2 | 70/100 | 1/100 | **59.7** |
 | **Income Tax e-Filing** | Central | ✅ UP | 113 | 113 | 113 | 0 | 70/100 | 0/100 | **61.0** |
 | **Passport Seva** | Central | ✅ UP | 7 | 7 | 7 | 0 | 70/100 | 0/100 | **61.0** |
@@ -24,8 +24,8 @@
 | **Rajasthan SSO** | State | ✅ UP | 8 | 8 | 8 | 0 | 70/100 | 0/100 | **61.0** |
 | **e-Mitra Rajasthan** | State | ✅ UP | 28 | 28 | 28 | 0 | 70/100 | 9/100 | **63.7** |
 | **Jan Soochna Portal** | State | ✅ UP | 19 | 19 | 19 | 0 | 70/100 | 43/100 | **73.9** |
-| **MyGov** | Central | ✅ UP | 230 | 230 | 226 | 4 | 70/100 | 0/100 | **57.8** |
-| **UIDAI (Aadhaar)** | Central | ✅ UP | 35 | 35 | 27 | 8 | 70/100 | 4/100 | **55.8** |
+| **MyGov** | Central | ✅ UP | 203 | 203 | 199 | 4 | 70/100 | 0/100 | **57.8** |
+| **UIDAI (Aadhaar)** | Central | ✅ UP | 35 | 35 | 27 | 8 | 70/100 | 0/100 | **54.6** |
 | **Jan Aadhaar Rajasthan** | State | ✅ UP | 89 | 89 | 83 | 6 | 70/100 | 0/100 | **56.2** |
 | **GeM (Govt e-Marketplace)** | Central | ✅ UP | 198 | 137 | 131 | 6 | 0/100 | 31/100 | **44.5** |
 | **RTU Kota** | Education | ✅ UP | 2 | 2 | 2 | 0 | 70/100 | 0/100 | **61.0** |
@@ -51,7 +51,7 @@
 | **National Career Service** | Central | ✅ UP | 70 | 70 | 67 | 3 | 70/100 | 0/100 | **58.6** |
 | **Swachh Bharat Mission** | Central | ✅ UP | 45 | 45 | 42 | 3 | 70/100 | 0/100 | **58.6** |
 | **Skill India** | Central | ✅ UP | 0 | 0 | 0 | 0 | 70/100 | 0/100 | **61.0** |
-| **Startup India** | Central | ✅ UP | 83 | 83 | 80 | 3 | 70/100 | 43/100 | **71.5** |
+| **Startup India** | Central | ✅ UP | 71 | 71 | 69 | 2 | 70/100 | 30/100 | **68.4** |
 
 ---
 
