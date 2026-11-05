@@ -1,12 +1,12 @@
 # 🛡️ Setu Sentinel — Validation & Verification Report
-**Generated:** 2026-11-04T23:43:05.420103+00:00 | **Target Portals:** 38 | **Independent Audit**
+**Generated:** 2026-11-05T06:11:59.017495+00:00 | **Target Portals:** 38 | **Independent Audit**
 
 ## 📊 Executive Audit Summary
 - **Portals Evaluated:** 38 (35 Online, 3 Offline)
-- **Total Links Discovered Across Homepages:** 3316
-- **Sampled Links Audited with Chromium TLS:** 2949
-- **Verified Working Links:** 2785 (HTTP 200/203/301/302)
-- **Confirmed Broken Links (True 404/5xx):** 164
+- **Total Links Discovered Across Homepages:** 3304
+- **Sampled Links Audited with Chromium TLS:** 2937
+- **Verified Working Links:** 2774 (HTTP 200/203/301/302)
+- **Confirmed Broken Links (True 404/5xx):** 163
 
 ---
 
@@ -51,7 +51,7 @@
 | **National Career Service** | Central | ✅ UP | 70 | 70 | 67 | 3 | 70/100 | 0/100 | **58.6** |
 | **Swachh Bharat Mission** | Central | ✅ UP | 45 | 45 | 42 | 3 | 70/100 | 0/100 | **58.6** |
 | **Skill India** | Central | ✅ UP | 0 | 0 | 0 | 0 | 70/100 | 0/100 | **61.0** |
-| **Startup India** | Central | ✅ UP | 84 | 84 | 81 | 3 | 70/100 | 30/100 | **67.6** |
+| **Startup India** | Central | ✅ UP | 72 | 72 | 70 | 2 | 70/100 | 30/100 | **68.4** |
 
 ---
 
