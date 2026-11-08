@@ -1,5 +1,5 @@
 # 🛡️ Setu Sentinel — Validation & Verification Report
-**Generated:** 2026-11-08T05:36:08.668018+00:00 | **Target Portals:** 38 | **Independent Audit**
+**Generated:** 2026-11-08T13:19:32.656534+00:00 | **Target Portals:** 38 | **Independent Audit**
 
 ## 📊 Executive Audit Summary
 - **Portals Evaluated:** 38 (35 Online, 3 Offline)
@@ -25,7 +25,7 @@
 | **e-Mitra Rajasthan** | State | ✅ UP | 28 | 28 | 28 | 0 | 70/100 | 9/100 | **63.7** |
 | **Jan Soochna Portal** | State | ✅ UP | 19 | 19 | 19 | 0 | 70/100 | 43/100 | **73.9** |
 | **MyGov** | Central | ✅ UP | 200 | 200 | 196 | 4 | 70/100 | 0/100 | **57.8** |
-| **UIDAI (Aadhaar)** | Central | ✅ UP | 35 | 35 | 27 | 8 | 70/100 | 0/100 | **54.6** |
+| **UIDAI (Aadhaar)** | Central | ✅ UP | 35 | 35 | 27 | 8 | 70/100 | 4/100 | **55.8** |
 | **Jan Aadhaar Rajasthan** | State | ✅ UP | 89 | 89 | 83 | 6 | 70/100 | 0/100 | **56.2** |
 | **GeM (Govt e-Marketplace)** | Central | ✅ UP | 198 | 137 | 131 | 6 | 0/100 | 31/100 | **44.5** |
 | **RTU Kota** | Education | ✅ UP | 2 | 2 | 2 | 0 | 70/100 | 0/100 | **61.0** |
