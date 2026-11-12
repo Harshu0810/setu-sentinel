@@ -1,12 +1,12 @@
 # 🛡️ Setu Sentinel — Validation & Verification Report
-**Generated:** 2026-11-11T05:44:13.279218+00:00 | **Target Portals:** 38 | **Independent Audit**
+**Generated:** 2026-11-12T00:33:23.002394+00:00 | **Target Portals:** 38 | **Independent Audit**
 
 ## 📊 Executive Audit Summary
 - **Portals Evaluated:** 38 (35 Online, 3 Offline)
-- **Total Links Discovered Across Homepages:** 3289
-- **Sampled Links Audited with Chromium TLS:** 2922
-- **Verified Working Links:** 2760 (HTTP 200/203/301/302)
-- **Confirmed Broken Links (True 404/5xx):** 162
+- **Total Links Discovered Across Homepages:** 3278
+- **Sampled Links Audited with Chromium TLS:** 2842
+- **Verified Working Links:** 2681 (HTTP 200/203/301/302)
+- **Confirmed Broken Links (True 404/5xx):** 161
 
 ---
 
@@ -25,7 +25,7 @@
 | **e-Mitra Rajasthan** | State | ✅ UP | 28 | 28 | 28 | 0 | 70/100 | 9/100 | **63.7** |
 | **Jan Soochna Portal** | State | ✅ UP | 19 | 19 | 19 | 0 | 70/100 | 43/100 | **73.9** |
 | **MyGov** | Central | ✅ UP | 204 | 204 | 201 | 3 | 70/100 | 0/100 | **58.6** |
-| **UIDAI (Aadhaar)** | Central | ✅ UP | 35 | 35 | 27 | 8 | 70/100 | 0/100 | **54.6** |
+| **UIDAI (Aadhaar)** | Central | ✅ UP | 35 | 35 | 27 | 8 | 70/100 | 4/100 | **55.8** |
 | **Jan Aadhaar Rajasthan** | State | ✅ UP | 89 | 89 | 83 | 6 | 70/100 | 0/100 | **56.2** |
 | **GeM (Govt e-Marketplace)** | Central | ✅ UP | 198 | 137 | 131 | 6 | 0/100 | 31/100 | **44.5** |
 | **RTU Kota** | Education | ✅ UP | 2 | 2 | 2 | 0 | 70/100 | 0/100 | **61.0** |
@@ -35,7 +35,7 @@
 | **Parivahan Sewa** | Central | ✅ UP | 155 | 155 | 118 | 37 | 70/100 | 95/100 | **69.5** |
 | **Rajasthan Sampark** | State | ✅ UP | 7 | 7 | 6 | 1 | 70/100 | 100/100 | **90.2** |
 | **Gujarat State Portal** | State | ✅ UP | 140 | 140 | 140 | 0 | 70/100 | 0/100 | **61.0** |
-| **Aaple Sarkar Maharashtra** | State | ✅ UP | 664 | 664 | 658 | 6 | 70/100 | 51/100 | **71.5** |
+| **Aaple Sarkar Maharashtra** | State | ✅ UP | 664 | 595 | 590 | 5 | 70/100 | 51/100 | **72.3** |
 | **Seva Sindhu Karnataka** | State | ✅ UP | 107 | 107 | 77 | 30 | 42/100 | 60/100 | **50.6** |
 | **e-District UP** | State | ✅ UP | 67 | 67 | 63 | 4 | 0/100 | 100/100 | **66.8** |
 | **Mee Seva (Andhra Pradesh)** | State | ❌ DOWN | 0 | 0 | 0 | 0 | 70/100 | 0/100 | **21.0** |
@@ -51,7 +51,7 @@
 | **National Career Service** | Central | ✅ UP | 71 | 71 | 68 | 3 | 70/100 | 0/100 | **58.6** |
 | **Swachh Bharat Mission** | Central | ✅ UP | 45 | 45 | 42 | 3 | 70/100 | 0/100 | **58.6** |
 | **Skill India** | Central | ✅ UP | 0 | 0 | 0 | 0 | 70/100 | 0/100 | **61.0** |
-| **Startup India** | Central | ✅ UP | 83 | 83 | 81 | 2 | 70/100 | 30/100 | **68.4** |
+| **Startup India** | Central | ✅ UP | 72 | 72 | 70 | 2 | 70/100 | 30/100 | **68.4** |
 
 ---
 
