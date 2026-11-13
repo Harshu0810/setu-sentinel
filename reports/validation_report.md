@@ -1,12 +1,12 @@
 # 🛡️ Setu Sentinel — Validation & Verification Report
-**Generated:** 2026-11-12T23:39:54.927235+00:00 | **Target Portals:** 38 | **Independent Audit**
+**Generated:** 2026-11-13T06:09:06.102117+00:00 | **Target Portals:** 38 | **Independent Audit**
 
 ## 📊 Executive Audit Summary
 - **Portals Evaluated:** 38 (35 Online, 3 Offline)
-- **Total Links Discovered Across Homepages:** 3290
-- **Sampled Links Audited with Chromium TLS:** 2854
-- **Verified Working Links:** 2691 (HTTP 200/203/301/302)
-- **Confirmed Broken Links (True 404/5xx):** 163
+- **Total Links Discovered Across Homepages:** 3235
+- **Sampled Links Audited with Chromium TLS:** 2764
+- **Verified Working Links:** 2604 (HTTP 200/203/301/302)
+- **Confirmed Broken Links (True 404/5xx):** 160
 
 ---
 
@@ -24,18 +24,18 @@
 | **Rajasthan SSO** | State | ✅ UP | 8 | 8 | 8 | 0 | 70/100 | 0/100 | **61.0** |
 | **e-Mitra Rajasthan** | State | ✅ UP | 28 | 28 | 28 | 0 | 70/100 | 9/100 | **63.7** |
 | **Jan Soochna Portal** | State | ✅ UP | 19 | 19 | 19 | 0 | 70/100 | 43/100 | **73.9** |
-| **MyGov** | Central | ✅ UP | 204 | 204 | 201 | 3 | 70/100 | 0/100 | **58.6** |
-| **UIDAI (Aadhaar)** | Central | ✅ UP | 35 | 35 | 27 | 8 | 70/100 | 4/100 | **55.8** |
+| **MyGov** | Central | ✅ UP | 203 | 203 | 200 | 3 | 70/100 | 0/100 | **58.6** |
+| **UIDAI (Aadhaar)** | Central | ✅ UP | 35 | 35 | 27 | 8 | 70/100 | 0/100 | **54.6** |
 | **Jan Aadhaar Rajasthan** | State | ✅ UP | 89 | 89 | 83 | 6 | 70/100 | 0/100 | **56.2** |
 | **GeM (Govt e-Marketplace)** | Central | ✅ UP | 198 | 137 | 131 | 6 | 0/100 | 31/100 | **44.5** |
 | **RTU Kota** | Education | ✅ UP | 2 | 2 | 2 | 0 | 70/100 | 0/100 | **61.0** |
 | **Ayushman Bharat (PM-JAY)** | Central | ❌ DOWN | 0 | 0 | 0 | 0 | 70/100 | 0/100 | **21.0** |
 | **GST Portal** | Central | ✅ UP | 14 | 14 | 14 | 0 | 70/100 | 0/100 | **61.0** |
 | **EPFO Unified Portal** | Central | ❌ DOWN | 0 | 0 | 0 | 0 | 70/100 | 0/100 | **21.0** |
-| **Parivahan Sewa** | Central | ✅ UP | 155 | 155 | 118 | 37 | 70/100 | 95/100 | **69.5** |
+| **Parivahan Sewa** | Central | ✅ UP | 156 | 156 | 119 | 37 | 70/100 | 95/100 | **69.5** |
 | **Rajasthan Sampark** | State | ✅ UP | 7 | 7 | 6 | 1 | 70/100 | 100/100 | **90.2** |
 | **Gujarat State Portal** | State | ✅ UP | 140 | 140 | 140 | 0 | 70/100 | 0/100 | **61.0** |
-| **Aaple Sarkar Maharashtra** | State | ✅ UP | 664 | 595 | 589 | 6 | 70/100 | 51/100 | **71.5** |
+| **Aaple Sarkar Maharashtra** | State | ✅ UP | 664 | 560 | 555 | 5 | 70/100 | 51/100 | **72.3** |
 | **Seva Sindhu Karnataka** | State | ✅ UP | 107 | 107 | 77 | 30 | 42/100 | 60/100 | **50.6** |
 | **e-District UP** | State | ✅ UP | 67 | 67 | 63 | 4 | 0/100 | 100/100 | **66.8** |
 | **Mee Seva (Andhra Pradesh)** | State | ❌ DOWN | 0 | 0 | 0 | 0 | 70/100 | 0/100 | **21.0** |
@@ -43,7 +43,7 @@
 | **Digital Gujarat** | State | ✅ UP | 49 | 49 | 48 | 1 | 42/100 | 60/100 | **69.8** |
 | **RTPS Bihar** | State | ✅ UP | 333 | 333 | 307 | 26 | 70/100 | 88/100 | **67.4** |
 | **SARAL Haryana** | State | ✅ UP | 37 | 37 | 36 | 1 | 30/100 | 100/100 | **78.2** |
-| **Akshaya Kerala** | State | ✅ UP | 56 | 56 | 54 | 2 | 70/100 | 0/100 | **59.4** |
+| **Akshaya Kerala** | State | ✅ UP | 1 | 1 | 1 | 0 | 70/100 | 0/100 | **61.0** |
 | **Tamil Nadu e-Sevai** | State | ✅ UP | 38 | 36 | 29 | 7 | 36/100 | 60/100 | **63.2** |
 | **MP e-District** | State | ✅ UP | 441 | 137 | 134 | 3 | 0/100 | 100/100 | **67.6** |
 | **e-Shram** | Central | ✅ UP | 1 | 1 | 1 | 0 | 70/100 | 32/100 | **70.6** |
