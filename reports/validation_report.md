@@ -1,12 +1,12 @@
 # 🛡️ Setu Sentinel — Validation & Verification Report
-**Generated:** 2026-11-15T14:01:33.694163+00:00 | **Target Portals:** 38 | **Independent Audit**
+**Generated:** 2026-11-15T22:57:57.059158+00:00 | **Target Portals:** 38 | **Independent Audit**
 
 ## 📊 Executive Audit Summary
 - **Portals Evaluated:** 38 (35 Online, 3 Offline)
-- **Total Links Discovered Across Homepages:** 3269
-- **Sampled Links Audited with Chromium TLS:** 2868
-- **Verified Working Links:** 2705 (HTTP 200/203/301/302)
-- **Confirmed Broken Links (True 404/5xx):** 163
+- **Total Links Discovered Across Homepages:** 3254
+- **Sampled Links Audited with Chromium TLS:** 2853
+- **Verified Working Links:** 2689 (HTTP 200/203/301/302)
+- **Confirmed Broken Links (True 404/5xx):** 164
 
 ---
 
@@ -24,8 +24,8 @@
 | **Rajasthan SSO** | State | ✅ UP | 8 | 8 | 8 | 0 | 70/100 | 0/100 | **61.0** |
 | **e-Mitra Rajasthan** | State | ✅ UP | 28 | 28 | 28 | 0 | 70/100 | 9/100 | **63.7** |
 | **Jan Soochna Portal** | State | ✅ UP | 19 | 19 | 19 | 0 | 70/100 | 43/100 | **73.9** |
-| **MyGov** | Central | ✅ UP | 230 | 230 | 227 | 3 | 70/100 | 0/100 | **58.6** |
-| **UIDAI (Aadhaar)** | Central | ✅ UP | 35 | 35 | 27 | 8 | 70/100 | 4/100 | **55.8** |
+| **MyGov** | Central | ✅ UP | 203 | 203 | 200 | 3 | 70/100 | 0/100 | **58.6** |
+| **UIDAI (Aadhaar)** | Central | ✅ UP | 35 | 35 | 27 | 8 | 70/100 | 0/100 | **54.6** |
 | **Jan Aadhaar Rajasthan** | State | ✅ UP | 89 | 89 | 83 | 6 | 70/100 | 0/100 | **56.2** |
 | **GeM (Govt e-Marketplace)** | Central | ✅ UP | 198 | 137 | 131 | 6 | 0/100 | 31/100 | **44.5** |
 | **RTU Kota** | Education | ✅ UP | 2 | 2 | 2 | 0 | 70/100 | 0/100 | **61.0** |
@@ -51,7 +51,7 @@
 | **National Career Service** | Central | ✅ UP | 71 | 71 | 68 | 3 | 70/100 | 0/100 | **58.6** |
 | **Swachh Bharat Mission** | Central | ✅ UP | 45 | 45 | 43 | 2 | 70/100 | 0/100 | **59.4** |
 | **Skill India** | Central | ✅ UP | 0 | 0 | 0 | 0 | 70/100 | 0/100 | **61.0** |
-| **Startup India** | Central | ✅ UP | 72 | 72 | 70 | 2 | 70/100 | 30/100 | **68.4** |
+| **Startup India** | Central | ✅ UP | 84 | 84 | 81 | 3 | 70/100 | 30/100 | **67.6** |
 
 ---
 
