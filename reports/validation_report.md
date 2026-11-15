@@ -1,11 +1,11 @@
 # 🛡️ Setu Sentinel — Validation & Verification Report
-**Generated:** 2026-11-15T05:58:07.143825+00:00 | **Target Portals:** 38 | **Independent Audit**
+**Generated:** 2026-11-15T14:01:33.694163+00:00 | **Target Portals:** 38 | **Independent Audit**
 
 ## 📊 Executive Audit Summary
 - **Portals Evaluated:** 38 (35 Online, 3 Offline)
-- **Total Links Discovered Across Homepages:** 3281
-- **Sampled Links Audited with Chromium TLS:** 2880
-- **Verified Working Links:** 2717 (HTTP 200/203/301/302)
+- **Total Links Discovered Across Homepages:** 3269
+- **Sampled Links Audited with Chromium TLS:** 2868
+- **Verified Working Links:** 2705 (HTTP 200/203/301/302)
 - **Confirmed Broken Links (True 404/5xx):** 163
 
 ---
@@ -41,7 +41,7 @@
 | **Mee Seva (Andhra Pradesh)** | State | ❌ DOWN | 0 | 0 | 0 | 0 | 70/100 | 0/100 | **21.0** |
 | **Mee Seva (Telangana)** | State | ✅ UP | 15 | 15 | 14 | 1 | 45/100 | 0/100 | **52.7** |
 | **Digital Gujarat** | State | ✅ UP | 49 | 49 | 48 | 1 | 42/100 | 60/100 | **69.8** |
-| **RTPS Bihar** | State | ✅ UP | 333 | 333 | 306 | 27 | 70/100 | 88/100 | **67.4** |
+| **RTPS Bihar** | State | ✅ UP | 333 | 333 | 305 | 28 | 70/100 | 88/100 | **67.4** |
 | **SARAL Haryana** | State | ✅ UP | 37 | 37 | 36 | 1 | 30/100 | 100/100 | **78.2** |
 | **Akshaya Kerala** | State | ✅ UP | 20 | 20 | 19 | 1 | 70/100 | 60/100 | **78.2** |
 | **Tamil Nadu e-Sevai** | State | ✅ UP | 38 | 36 | 29 | 7 | 36/100 | 60/100 | **63.2** |
@@ -51,7 +51,7 @@
 | **National Career Service** | Central | ✅ UP | 71 | 71 | 68 | 3 | 70/100 | 0/100 | **58.6** |
 | **Swachh Bharat Mission** | Central | ✅ UP | 45 | 45 | 43 | 2 | 70/100 | 0/100 | **59.4** |
 | **Skill India** | Central | ✅ UP | 0 | 0 | 0 | 0 | 70/100 | 0/100 | **61.0** |
-| **Startup India** | Central | ✅ UP | 84 | 84 | 81 | 3 | 70/100 | 30/100 | **67.6** |
+| **Startup India** | Central | ✅ UP | 72 | 72 | 70 | 2 | 70/100 | 30/100 | **68.4** |
 
 ---
 
