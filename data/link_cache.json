@@ -18201,7 +18201,7 @@
     "status_code": 404,
     "is_broken": true,
     "reason": "HTTP 404",
-    "last_checked": 1794322437.3610053
+    "last_checked": 1795016532.9325893
   },
   "https://www.startupindia.gov.in/content/sih/en/nsa-landing.html": {
     "status_code": 200,
@@ -26655,7 +26655,7 @@
     "status_code": 0,
     "is_broken": true,
     "reason": "Unreachable / Timeout",
-    "last_checked": 1794374962.91158
+    "last_checked": 1795015539.006318
   },
   "https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=4562": {
     "status_code": 200,
@@ -28557,7 +28557,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1794374915.9320307
+    "last_checked": 1795015483.6592777
   },
   "https://www.mygov.in/group-issue/pm-gatishakti-integrated-planning-viksit-bharat-inviting-suggestions-national-transport": {
     "status_code": 200,
@@ -29757,7 +29757,7 @@
     "status_code": 200,
     "is_broken": false,
     "reason": "OK",
-    "last_checked": 1794374915.9320307
+    "last_checked": 1795015483.6592777
   },
   "https://www.instagram.com/reel/Dfm6tY3yx3t/": {
     "status_code": 200,
@@ -29926,5 +29926,47 @@
     "is_broken": false,
     "reason": "OK",
     "last_checked": 1794807570.1143994
+  },
+  "https://twitter.com/intent/tweet?url=https://www.mygov.in/task/eat-right-photography-contest-2026": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1795015483.6592777
+  },
+  "https://innovateindia.mygov.in/agri-innovate-agri-students-driving-smart-solutions-for-sustainable-farming/": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1795015483.6592777
+  },
+  "https://static.mygov.in/static/s3fs-public/ebook/Bharat-Matters-Indias-Narrative-Overseas-Vol-3-Issue-11-November-2026/index.html": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1795015483.6592777
+  },
+  "https://www.mygov.in/task/eat-right-photography-contest-2026": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1795015483.6592777
+  },
+  "https://static.mygov.in/static/s3fs-public/ebook/vocal-for-local/index.html": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1795015483.6592777
+  },
+  "https://www.facebook.com/sharer/sharer.php?u=https://www.mygov.in/task/eat-right-photography-contest-2026": {
+    "status_code": 400,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1795015483.6592777
+  },
+  "https://innovateindia.mygov.in/inviting-suggestions-for-the-proposed-alternate-mechanism-for-making-amendment-in-liability-and-itc-in-gst/": {
+    "status_code": 200,
+    "is_broken": false,
+    "reason": "OK",
+    "last_checked": 1795015483.6592777
   }
 }
