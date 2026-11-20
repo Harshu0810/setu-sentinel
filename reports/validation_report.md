@@ -1,5 +1,5 @@
 # 🛡️ Setu Sentinel — Validation & Verification Report
-**Generated:** 2026-11-20T00:46:40.088970+00:00 | **Target Portals:** 38 | **Independent Audit**
+**Generated:** 2026-11-20T15:27:16.540395+00:00 | **Target Portals:** 38 | **Independent Audit**
 
 ## 📊 Executive Audit Summary
 - **Portals Evaluated:** 38 (34 Online, 4 Offline)
@@ -46,7 +46,7 @@
 | **Akshaya Kerala** | State | ✅ UP | 20 | 20 | 19 | 1 | 70/100 | 60/100 | **78.2** |
 | **Tamil Nadu e-Sevai** | State | ✅ UP | 38 | 36 | 29 | 7 | 36/100 | 60/100 | **63.2** |
 | **MP e-District** | State | ✅ UP | 441 | 137 | 134 | 3 | 0/100 | 100/100 | **67.6** |
-| **e-Shram** | Central | ✅ UP | 1 | 1 | 1 | 0 | 70/100 | 57/100 | **78.1** |
+| **e-Shram** | Central | ✅ UP | 1 | 1 | 1 | 0 | 70/100 | 32/100 | **70.6** |
 | **National Scholarship Portal** | Central | ✅ UP | 50 | 50 | 45 | 5 | 70/100 | 0/100 | **57.0** |
 | **National Career Service** | Central | ✅ UP | 71 | 71 | 68 | 3 | 70/100 | 0/100 | **58.6** |
 | **Swachh Bharat Mission** | Central | ✅ UP | 45 | 45 | 43 | 2 | 70/100 | 0/100 | **59.4** |
