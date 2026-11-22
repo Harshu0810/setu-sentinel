@@ -1,11 +1,11 @@
 # 🛡️ Setu Sentinel — Validation & Verification Report
-**Generated:** 2026-11-22T06:16:55.602040+00:00 | **Target Portals:** 38 | **Independent Audit**
+**Generated:** 2026-11-22T14:40:34.786064+00:00 | **Target Portals:** 38 | **Independent Audit**
 
 ## 📊 Executive Audit Summary
 - **Portals Evaluated:** 38 (34 Online, 4 Offline)
 - **Total Links Discovered Across Homepages:** 2583
-- **Sampled Links Audited with Chromium TLS:** 2153
-- **Verified Working Links:** 1996 (HTTP 200/203/301/302)
+- **Sampled Links Audited with Chromium TLS:** 2184
+- **Verified Working Links:** 2027 (HTTP 200/203/301/302)
 - **Confirmed Broken Links (True 404/5xx):** 157
 
 ---
@@ -24,15 +24,15 @@
 | **Rajasthan SSO** | State | ✅ UP | 8 | 8 | 8 | 0 | 70/100 | 0/100 | **61.0** |
 | **e-Mitra Rajasthan** | State | ✅ UP | 28 | 28 | 28 | 0 | 70/100 | 9/100 | **63.7** |
 | **Jan Soochna Portal** | State | ✅ UP | 19 | 19 | 19 | 0 | 70/100 | 43/100 | **73.9** |
-| **MyGov** | Central | ✅ UP | 201 | 180 | 176 | 4 | 70/100 | 0/100 | **57.8** |
-| **UIDAI (Aadhaar)** | Central | ✅ UP | 35 | 35 | 27 | 8 | 70/100 | 4/100 | **55.8** |
+| **MyGov** | Central | ✅ UP | 201 | 201 | 197 | 4 | 70/100 | 0/100 | **57.8** |
+| **UIDAI (Aadhaar)** | Central | ✅ UP | 35 | 35 | 27 | 8 | 70/100 | 0/100 | **54.6** |
 | **Jan Aadhaar Rajasthan** | State | ✅ UP | 89 | 89 | 83 | 6 | 70/100 | 0/100 | **56.2** |
 | **GeM (Govt e-Marketplace)** | Central | ✅ UP | 198 | 137 | 131 | 6 | 0/100 | 31/100 | **44.5** |
 | **RTU Kota** | Education | ✅ UP | 2 | 2 | 2 | 0 | 70/100 | 0/100 | **61.0** |
 | **Ayushman Bharat (PM-JAY)** | Central | ❌ DOWN | 0 | 0 | 0 | 0 | 70/100 | 0/100 | **21.0** |
 | **GST Portal** | Central | ✅ UP | 14 | 14 | 14 | 0 | 70/100 | 0/100 | **61.0** |
 | **EPFO Unified Portal** | Central | ❌ DOWN | 0 | 0 | 0 | 0 | 70/100 | 0/100 | **21.0** |
-| **Parivahan Sewa** | Central | ✅ UP | 156 | 146 | 109 | 37 | 70/100 | 95/100 | **69.5** |
+| **Parivahan Sewa** | Central | ✅ UP | 156 | 156 | 119 | 37 | 70/100 | 95/100 | **69.5** |
 | **Rajasthan Sampark** | State | ✅ UP | 7 | 7 | 6 | 1 | 70/100 | 100/100 | **90.2** |
 | **Gujarat State Portal** | State | ✅ UP | 140 | 140 | 140 | 0 | 70/100 | 0/100 | **61.0** |
 | **Aaple Sarkar Maharashtra** | State | ❌ DOWN | 0 | 0 | 0 | 0 | 70/100 | 0/100 | **21.0** |
