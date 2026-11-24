@@ -1,5 +1,5 @@
 # 🛡️ Setu Sentinel — Validation & Verification Report
-**Generated:** 2026-11-23T23:57:23.073632+00:00 | **Target Portals:** 38 | **Independent Audit**
+**Generated:** 2026-11-24T09:28:54.952421+00:00 | **Target Portals:** 38 | **Independent Audit**
 
 ## 📊 Executive Audit Summary
 - **Portals Evaluated:** 38 (34 Online, 4 Offline)
@@ -51,7 +51,7 @@
 | **National Career Service** | Central | ✅ UP | 71 | 71 | 68 | 3 | 70/100 | 0/100 | **58.6** |
 | **Swachh Bharat Mission** | Central | ✅ UP | 45 | 45 | 43 | 2 | 70/100 | 0/100 | **59.4** |
 | **Skill India** | Central | ✅ UP | 0 | 0 | 0 | 0 | 70/100 | 0/100 | **61.0** |
-| **Startup India** | Central | ✅ UP | 83 | 83 | 80 | 3 | 70/100 | 14/100 | **62.8** |
+| **Startup India** | Central | ✅ UP | 83 | 83 | 80 | 3 | 70/100 | 30/100 | **67.6** |
 
 ---
 
